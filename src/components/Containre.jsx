@@ -1,4 +1,6 @@
+import Footer from "./Footer";
 import Navbar from "./Navbar";
+
 
 const Container = ({ children, mainStyle, name }) => {
     return (
@@ -8,6 +10,7 @@ const Container = ({ children, mainStyle, name }) => {
           <div className="w-full lg:w-full">
             <div className={`${mainStyle} bg-BackgroundColor `}>{children}</div>
           </div>
+          <Footer/>
         </div>
       </>
     );
