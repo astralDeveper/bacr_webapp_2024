@@ -1,10 +1,9 @@
 import React from 'react'
-import Container from '../components/Containre'
+import Container from '../components/Container'
 
 const Home = () => {
   return (
-    <Container>
-        sxxsdffdf
+    <Container heading={"Innovative HVACR Solutions for a Comfortable Tomorrow."} para={"Providing high-quality HVACR products, services, and solutions backed by industry-leading partners."} home mainStyle="items-center justify-center">
     </Container>
   )
 }
