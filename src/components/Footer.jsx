@@ -4,43 +4,44 @@ import { IMAGES } from "../utils/Images";
 const Footer = () => {
   const Data = [
     {
-      heading: "About Us",
+      heading: "Services",
       links: [
-        { link: "Company Overview", href: "http://link1.com" },
-        { link: "Company Profile", href: "http://link2.com" },
-        { link: "CEO’s Message", href: "http://link3.com" },
-        { link: "Projects", href: "http://link4.com" },
-        { link: "Certficates", href: "http://link4.com" },
-        { link: "Testimonials", href: "http://link4.com" },
+        { link: "Comfort Cooling", href: "http://service1.com" },
+        { link: "Process Cooling", href: "http://service2.com" },
+        { link: "Cold Chain Storage", href: "http://service3.com" },
+        { link: "Turnkey Solution", href: "http://service3.com" },
+        { link: "Eenergy Optimization", href: "http://service3.com" },
+        { link: "Operation maintenance", href: "http://service3.com" },
+        { link: "Troubleshooting", href: "http://service3.com" },
       ],
     },
     {
-      heading: "Products & Services",
+      heading: "Products",
       links: [
-        { link: "New Products", href: "http://service1.com" },
-        { link: "Used Equipment", href: "http://service2.com" },
-        { link: "BAC Store", href: "http://service3.com" },
-        { link: "Services", href: "http://service3.com" },
-        { link: "Blogs", href: "http://service3.com" },
-      ],
-    },
-    {
-      heading: "Resources",
-      links: [
-        { link: "Privacy Policy", href: "mailto:contact@example.com" },
-        { link: "Careers", href: "tel:+1234567890" },
-        { link: "Blogs", href: "tel:+1234567890" },
+        { link: "New Products", href: "mailto:contact@example.com" },
+        { link: "Used Equipments", href: "tel:+1234567890" },
+        { link: "BAC Store", href: "tel:+1234567890" },
       ],
     },
   ];
 
+  const links = [
+    { link: "Home" },
+    { link: "About Us" },
+    { link: "products" },
+    { link: "Services" },
+    { link: "Career" },
+    { link: "Contact Us" },
+    { link: "Blogs" },
+  ];
+
   const location =
-    "Suite # 404, 4th Floor, Tahir Plaza, Plot No. A-20, K.C.H.S.U. Block 7/8, Karachi, Pakistan.";
+    "Providing innovative air conditioning and HVACR solutions with reliability and excellence.";
 
   return (
     <div className="bg-[#004671] text-white w-full">
       <div className="max-w-[80%] mx-auto py-10">
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-center gap-x-6 gap-y-6">
+        <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 items-center gap-x-6 gap-y-6">
           <div className="flex justify-startq flex-col gap-y-4 py-0">
             <img
               className="w-28"
@@ -64,17 +65,29 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className=" grid grid-cols-3 gap-x-4">
+          {/* Pages Link Start Here */}
+          <div>
+            {links.map((item, idx) => (
+              <ul>
+                <li className="font-bold uppercase py-1 hover:underline cursor-pointer">
+                  {item.link}
+                </li>
+              </ul>
+            ))}
+          </div>
+          {/* pages Link end Here  */}
+
+          <div className=" grid grid-cols-2 gap-x-8">
             {Data.map((item, i) => {
               return (
-                <div className="" key={i}>
-                  <h2 className="font-bold pb-3">{item.heading}</h2>
+                <div key={i}>
+                  <h2 className="font-bold ">{item.heading}</h2>
                   <ul>
                     {item.links.map((items, ind) => {
                       return (
                         <div key={ind}>
                           <li
-                            className="md:text-[0.8rem] text-sm py-1 cursor-pointer hover:underline"
+                            className=" md:text-[0.8rem] py-1 cursor-pointer hover:underline"
                             href={items.href}
                           >
                             {items.link}
@@ -88,7 +101,7 @@ const Footer = () => {
             })}
           </div>
 
-          <div className="">
+          <div>
             <div>
               <h2 className="font-bold pb-3">Subscribe</h2>
               <div className="flex items-center ">
@@ -107,8 +120,10 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+
+            {/* Images Section Start Here  */}
             <div className="mt-4">
-              <h2 className="font-semibold pb-3">Certficates</h2>
+              <h2 className="font-bold pb-3">Certficates</h2>
               <div className="flex items-center gap-2">
                 <div className="bg-[#023B5E] p-2 rounded-md">
                   <img
@@ -140,6 +155,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+            {/* Images Section End Here */}
           </div>
         </div>
 
@@ -148,8 +164,11 @@ const Footer = () => {
         {/* line end */}
 
         {/* underline text start */}
-        <div className="text-center gap-2 py-2">
-          <p>&copy; 2023 Brothers Air Conditioing. All rights reserved </p>
+        <div className="text-center flex justify-between gap-2 py-2">
+          <p>&copy; 2023 Brothers Air Conditioing. All rights reserved</p>
+          <p className="text1 hover:underline cursor-pointer">
+            Our Privacy Policy
+          </p>
         </div>
         {/* underline text end */}
       </div>
@@ -158,16 +177,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-// const generateImagePath = (name) => `src/assets/images/${name}.png`;
-
-// const imageNames = [
-//   "logo"
-// ];
-
-// const IMAGES = imageNames.reduce((acc, name) => {
-//   acc[name.toUpperCase()] = generateImagePath(name);
-//   return acc;
-// }, {});
-
-// export { IMAGES };
