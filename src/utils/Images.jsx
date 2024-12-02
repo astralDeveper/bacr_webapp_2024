@@ -2,6 +2,7 @@ const generateImagePath = (name) => `src/assets/images/${name}.png`;
 
 const imageNames = [
   "logo",
+  "logowhite",
   "phone",
   "mail",
   "arrowdown",
@@ -11,7 +12,17 @@ const imageNames = [
   "youtube",
   "whatsapp",
   "manue",
-  "close"
+  "close",
+  "cartimgone",
+  "cartimgtwo",
+  "cartimgthree",
+  "cartimgfour",
+  "servicesimg",
+  "technology",
+  "servicerightimg",
+  "energy",
+  "service",
+
 ];
 
 const IMAGES = imageNames.reduce((acc, name) => {
