@@ -9,7 +9,9 @@ const imageNames = [
   "insta",
   "linkedin",
   "youtube",
-  "whatsapp"
+  "whatsapp",
+  "manue",
+  "close"
 ];
 
 const IMAGES = imageNames.reduce((acc, name) => {

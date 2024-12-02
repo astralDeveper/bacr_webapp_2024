@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    /* font-family: ; */
+}
 
 
 @layer utilities{
@@ -25,7 +28,7 @@
     }
 
     .text1{
-        @apply lg:text-[20px] md:text-[15px] sm:text-[16px] ;
+        @apply lg:text-[20px] md:text-[15px] sm:text-[16px] xs:text-[10px] ;
     }
     .text2{
         @apply text-[14px] ;
