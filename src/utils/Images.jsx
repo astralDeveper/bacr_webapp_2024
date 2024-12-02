@@ -22,6 +22,9 @@ const imageNames = [
   "servicerightimg",
   "energy",
   "service",
+  "icon",
+  "product1",
+  "search"
 
 ];
 

@@ -92,7 +92,7 @@ const Footer = () => {
             <div>
               <h2 className="font-bold pb-3">Subscribe</h2>
               <div className="flex items-center ">
-                <div class="flex rounded-lg shadow-sm">
+                <div className="flex rounded-lg shadow-sm">
                   <input
                     type="text"
                     placeholder="Your Email"

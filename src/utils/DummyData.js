@@ -9,15 +9,20 @@ export const navManue = [
   {
     title: "About Us",
     href: "/",
-    icon: true,
+    icon: false,
   },
   {
     title: "Products",
-    href: "/",
-    icon: true,
+    href: "/products",
+    icon: false,
   },
   {
     title: "Services",
+    href: "/",
+    icon: false,
+  },
+  {
+    title: "Projects",
     href: "/",
     icon: false,
   },
@@ -46,7 +51,7 @@ export const socialIcons = [
   },
 ];
 
-export const servicesCartData = [
+export const servicesDetailPgeCartData = [
   {
     img: IMAGES.TECHNOLOGY,
     title: "Advanced Technology Integration",
@@ -68,3 +73,324 @@ export const servicesCartData = [
     para: "Understanding that every project is unique, we offer customized design and engineering services to meet specific requirements and challenges. Whether it's a large-scale commercial facility or a smaller residential space, our experts work closely with clients to develop tailored solutions that optimize comfort and functionality",
   },
 ];
+
+export const Products=[
+  {
+    brands:"Flakt Group",
+    category:"AHU",
+    price:"1000",
+    capacity:"5Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+  },
+  {
+    brands:"Galletti Products",
+    category:"Coils",
+    price:"5000",
+    capacity:"10Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Tica Products",
+    category:"Chillers",
+    price:"10000",
+    capacity:"20Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },{
+    brands:"Flakt Group",
+    category:"Cooling Towers",
+    price:"2000",
+    capacity:"30",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Flakt Group",
+    category:"Heat Exchanger",
+    price:"1000",
+    capacity:"50Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Flakt Group",
+    category:"AHU",
+    price:"1000",
+    capacity:"5Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+  },
+  {
+    brands:"Galletti Products",
+    category:"Coils",
+    price:"5000",
+    capacity:"10Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Tica Products",
+    category:"Chillers",
+    price:"10000",
+    capacity:"20Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },{
+    brands:"Flakt Group",
+    category:"Cooling Towers",
+    price:"2000",
+    capacity:"30",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Flakt Group",
+    category:"Heat Exchanger",
+    price:"1000",
+    capacity:"50Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Flakt Group",
+    category:"AHU",
+    price:"1000",
+    capacity:"5Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+  },
+  {
+    brands:"Galletti Products",
+    category:"Coils",
+    price:"5000",
+    capacity:"10Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Tica Products",
+    category:"Chillers",
+    price:"10000",
+    capacity:"20Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },{
+    brands:"Flakt Group",
+    category:"Cooling Towers",
+    price:"2000",
+    capacity:"30",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Flakt Group",
+    category:"Heat Exchanger",
+    price:"1000",
+    capacity:"50Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Flakt Group",
+    category:"AHU",
+    price:"1000",
+    capacity:"5Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+  },
+  {
+    brands:"Galletti Products",
+    category:"Coils",
+    price:"5000",
+    capacity:"10Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Tica Products",
+    category:"Chillers",
+    price:"10000",
+    capacity:"20Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },{
+    brands:"Flakt Group",
+    category:"Cooling Towers",
+    price:"2000",
+    capacity:"30",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Flakt Group",
+    category:"Heat Exchanger",
+    price:"1000",
+    capacity:"50Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Flakt Group",
+    category:"AHU",
+    price:"1000",
+    capacity:"5Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+  },
+  {
+    brands:"Galletti Products",
+    category:"Coils",
+    price:"5000",
+    capacity:"10Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Tica Products",
+    category:"Chillers",
+    price:"10000",
+    capacity:"20Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },{
+    brands:"Flakt Group",
+    category:"Cooling Towers",
+    price:"2000",
+    capacity:"30",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Flakt Group",
+    category:"Heat Exchanger",
+    price:"1000",
+    capacity:"50Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Flakt Group",
+    category:"AHU",
+    price:"1000",
+    capacity:"5Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+  },
+  {
+    brands:"Galletti Products",
+    category:"Coils",
+    price:"5000",
+    capacity:"10Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Tica Products",
+    category:"Chillers",
+    price:"10000",
+    capacity:"20Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },{
+    brands:"Flakt Group",
+    category:"Cooling Towers",
+    price:"2000",
+    capacity:"30",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+  {
+    brands:"Flakt Group",
+    category:"Heat Exchanger",
+    price:"1000",
+    capacity:"50Tons",
+    productName:"Product name",
+    modelno:"5647",
+    images:IMAGES.PRODUCT1,
+    icon:IMAGES.ICON
+
+  },
+]

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('../src/assets/images/herosec.jpg')",
+        'hero-pattern': "url('../src/assets/images/herosec.png')",
       },
       colors:{
         backgroundColor1:"#064670",
@@ -18,6 +18,7 @@ export default {
         backgroundColor6:"#f2f6fa",
         backgroundColor7:"#d9eefa",
         backgroundColor8:"#0b800f",
+        backgroundColor9:"#F5F5F5",
         text1:"#ed8b3b",
         text2:"#0b2540",
         text3:"#333333",
