@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    /* font-family: ; */
+}
+
+
+@layer utilities{
+    .heading1{
+        @apply text-backgroundColor2 lg:text-[61px] md:text-[40px] sm:text-[20px] font-semibold ;
+    }
+    .heading2{
+        @apply text-text1 text-[14px];
+    }
+    .heading3{
+        @apply lg:text-[30px] md:text-[20px] sm:text-[12px] ;
+    }
+    .heading4{
+        @apply lg:text-[26px] md:text-[18px] sm:text-[12px] font-semibold  ;
+    }
+    .heading5{
+        @apply lg:text-[52px] md:text-[35px] sm:text-[20px] font-semibold ;
+    }
+    .heading6{
+        @apply lg:text-[42px] md:text-[20px] sm:text-[15px] font-semibold ;
+    }
+    .heading7{
+        @apply lg:text-[16px] md:text-[15px] sm:text-[12px] font-normal ;
+    }
+
+    .text1{
+        @apply lg:text-[20px] md:text-[15px] sm:text-[16px] xs:text-[10px] ;
+    }
+    .text2{
+        @apply text-[14px];
+    }
+}

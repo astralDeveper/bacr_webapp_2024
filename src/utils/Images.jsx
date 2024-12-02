@@ -16,8 +16,11 @@ const imageNames = [
   "cartimgthree",
   "cartimgfour",
   "servicesimg",
-  "serviceleftimg",
+  "technology",
   "servicerightimg",
+  "energy",
+  "service",
+
 ];
 
 const IMAGES = imageNames.reduce((acc, name) => {
