@@ -42,7 +42,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+*{
+  font-family:"poppins";
+}
 @layer utilities {
   .heading1 {
     @apply  lg:text-[61px] md:text-[40px] text-[20px] font-semibold;
@@ -63,6 +65,6 @@
     @apply lg:text-[26px] md:text-[18px] text-[12px] font-semibold;
   }
   .text1 {
-    @apply lg:text-[18px] md:text-[16px] text-[13px] font-normal;
+    @apply lg:text-[18px] md:text-[15px] text-[13px] font-normal;
   }
 }

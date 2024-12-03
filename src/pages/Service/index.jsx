@@ -5,7 +5,7 @@ import { servicesDetailPgeCartData } from "../../utils/DummyData";
 
 const ServiceDetailPage = () => {
   return (
-    <Container>
+    <Container image heading={"Comfort Cooling"} >
       <div className="w-full py-14">
         <div className="relative max-w-[80%] mx-auto">
           <img src={IMAGES.SERVICESIMG} alt={IMAGES.SERVICESIMG} />
