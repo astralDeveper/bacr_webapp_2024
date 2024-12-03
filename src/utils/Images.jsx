@@ -20,7 +20,8 @@ const imageNames = [
   "servicerightimg",
   "energy",
   "service",
-  "blog"
+  "blog",
+  "leftarrow",
 
 ];
 

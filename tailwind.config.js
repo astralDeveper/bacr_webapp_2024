@@ -35,29 +35,22 @@
 //   plugins: [],
 // }
 
-
-
-
-
-
+const flowbite = require("flowbite-react/tailwind");
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", flowbite.content()],
   theme: {
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"], // Custom font family
       },
       fontWeight: {
-        normal: '400',  // Normal weight
-        semiBold: '600', // Semi-bold weight
-        bold: '700', // Bold weight
+        normal: "400", // Normal weight
+        semiBold: "600", // Semi-bold weight
+        bold: "700", // Bold weight
       },
       backgroundImage: {
-        'hero-pattern': "url('../src/assets/images/herosec.jpg')",
+        "hero-pattern": "url('../src/assets/images/herosec.jpg')",
       },
       colors: {
         backgroundColor1: "#064670",
@@ -74,9 +67,9 @@ export default {
         text4: "#000000",
         text5: "#5f6382",
         text6: "#9e9d9d",
-        text7: "#454545"
-      }
+        text7: "#454545",
+      },
     },
   },
-  plugins: [],
-}
+  plugins: [flowbite.plugin()],
+};

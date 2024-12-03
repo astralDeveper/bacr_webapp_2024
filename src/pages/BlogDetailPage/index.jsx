@@ -225,7 +225,7 @@ const BlogDetailPage = () => {
           <h1 className="heading5 py-2">Conclusion: Why HVAC is Essential</h1>
           <p className="text1 text-text7">{para12}</p>
           <br />
-          <p className="text1 text-text7">{para13}</p>
+          <p className="text1 text-text7 pb-6">{para13}</p>
         </div>
         {/* HVAC Essential section end here  */}
       </div>
