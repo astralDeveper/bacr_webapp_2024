@@ -33,6 +33,7 @@ const imageNames = [
   "twitter",
   "pagenotfound",
   "blog1",
+  "clipboard"
 
 ];
 

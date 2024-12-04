@@ -9,11 +9,17 @@ import ProductDetails from "../../pages/Products/ProductDetails";
 import Service from "../../pages/ServiceDetailPage";
 import ContactUs from "../../pages/ContactUs";
 import Product from "../../pages/Products";
+import AboutUs from "../../pages/About";
+import Career from "../../pages/Career";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/about",
+    element: <AboutUs />,
   },
   {
     path: "services-detail",
@@ -50,6 +56,10 @@ export const router = createBrowserRouter([
   {
     path: "/contact_us",
     element: <ContactUs />,
+  },
+  {
+    path: "/career",
+    element: <Career />,
   },
 ]);
 

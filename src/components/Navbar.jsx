@@ -56,7 +56,7 @@ const Navbar = ({ mainStyle, heading, para, home, image }) => {
                 {/* Mobile Start */}
                 {
                     menueOpen && (
-                        <div className={`w-full p-2 2xl:hidden flex items-center flex-col bg-backgroundColor2 absolute left-0 top-0 h-full`} >
+                        <div className={`w-full p-2 2xl:hidden flex items-center flex-col bg-backgroundColor2 absolute left-0 top-0 h-full z-50`} >
                             <div className='flex items-end justify-end w-full cursor-pointer' onClick={() => { SetMenueOpen(!menueOpen) }} >
                                 <img src={IMAGES.CLOSE} alt={IMAGES.CLOSE} className='w-[30px]' />
                             </div>

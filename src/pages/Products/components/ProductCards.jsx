@@ -3,6 +3,7 @@ import { IMAGES } from '../../../utils/Images';
 import { Products } from '../../../utils/DummyData';
 import Button from '../../../components/Button';
 import { useNavigate } from 'react-router-dom';
+import TabBar from '../../../components/TabBar';
 
 const ProductCards = () => {
     const [brandsOpen, setBrandsOpen] = useState(false);
@@ -60,56 +61,9 @@ const ProductCards = () => {
     return (
 
         <div className='mt-20' >
-            <div>
-                {/* Tabs Navigation */}
-                <div className="lg:w-[70%] mx-auto flex items-center justify-around bg-backgroundColor9 rounded-lg">
-                    <Button
-                        onclick={() => { handleTabChange("new") }}
-                        btnStyle={`${tab === "new" ? "bg-backgroundColor3 text-backgroundColor2 transition-all duration-500 ease-linear " : "text-text4"
-                            } w-full rounded-md  lg:text-[18px] md:text-[14px] text-[10px] `}
-                        title={"New Products"}
-                    />
-                    <Button
-                        onclick={() => { handleTabChange("used") }}
-                        btnStyle={`${tab === "used" ? "bg-backgroundColor3 text-backgroundColor2 transition-all duration-500 ease-linear" : "text-text4"
-                            } w-full rounded-md lg:text-[18px] md:text-[14px] text-[10px]`}
-                        title={"Used Equipments"}
-                    />
-                    <Button
-                        onclick={() => { handleTabChange("store") }}
-                        btnStyle={`${tab === "store" ? "bg-backgroundColor3 text-backgroundColor2 transition-all duration-500 ease-linear" : "text-text4"
-                            } w-full rounded-md lg:text-[18px] md:text-[14px] text-[10px]`}
-                        title={"BAC Store"}
-                    />
-
-                </div>
-
-                <div className='lg:w-[70%] mx-auto'>
-                    <img src={IMAGES.SEARCH} alt="icon" className='translate-y-11 translate-x-3 w-[20px]  ' />
-                    <input type="text" placeholder='Search what you want...' className='px-10 border-2 w-full h-[67px] rounded-xl outline-none' onChange={(e) => setBrand(e.target.value)} />
-                </div>
-
-                {/* Tab Content */}
-                <div className="mt-6">
-                    {tab === "new" && (
-                        <div>
-                            <h2 className="text1">New Products</h2>
-                        </div>
-                    )}
-                    {tab === "used" && (
-                        <div>
-                            <h2 className="text1">Used Equipments</h2>
-                        </div>
-                    )}
-                    {tab === "store" && (
-                        <div>
-                            <h2 className="text1">BAC Store</h2>
-                        </div>
-                    )}
-                </div>
-            </div>
 
 
+            <TabBar tabtext1={"New Products"} tabtext2={"Used Equipments"} tabtext3={"BAC Store"} />
 
 
 
@@ -212,7 +166,7 @@ const ProductCards = () => {
                                     key={ind}
                                     className="bg-backgroundColor9 mt-4 lg:max-w-[370px] lg:max-h-[471px] p-6 rounded-xl shadow-md hover:bg-backgroundColor1 hover:text-backgroundColor2 group hover:transition-colors hover:duration-500 hover:ease-in-out cursor-pointer"
                                 >
-                                    <img src={item.images} alt={item.productName} className="w-full h-auto mb-4" />
+                                    <img src={item.images} alt={item.productName} className="lg:w-[289px] md:w-[200px] w-[150px] h-auto mb-4 mx-auto" />
                                     <div className="flex items-center justify-between">
                                         <p className="heading5">{item.productName}</p>
                                         <div className="flex items-center gap-2">
@@ -243,7 +197,7 @@ const ProductCards = () => {
                                     key={ind}
                                     className="bg-backgroundColor9 max-w-[370px] h-[471px] p-6 rounded-xl shadow-md hover:bg-backgroundColor1 hover:text-backgroundColor2 group hover:transition-colors hover:duration-500 hover:ease-in-out cursor-pointer"
                                 >
-                                    <img src={item.images} alt={item.productName} className="w-full h-auto mb-4" />
+                                    <img src={item.images} alt={item.productName} className="w-[289px] h-auto mb-4 mx-auto" />
                                     <div className="flex items-center justify-between">
                                         <p className="heading5">{item.productName}</p>
                                         <div className="flex items-center gap-2">
