@@ -101,10 +101,10 @@ const Navbar = ({ mainStyle, heading, para, home, image }) => {
             </div>
             {/*   gap-6 flex items-center justify-center flex-col */}
             {image &&
-                <div className={`w-[80%] mx-auto pb-28 `}>
-                    <div className={`lg:mt-14 md:mt-7 mt-4 ${active === "/" ? "" : "flex flex-col items-center justify-center  text-center"}  `} >
+                <div className={`w-[80%] mx-auto ${para ? 'pb-28' : 'py-6' } `}>
+                    <div className={`lg:mt-12 md:mt-7 mt-4 ${active === "/" ? "" : "flex flex-col items-center justify-center  text-center"}  `} >
                         <p className={`heading1 text-backgroundColor2 xl:w-[82%] w-full`} >{heading}</p>
-                        <p className={`text1 text-backgroundColor2 xl:w-[34%] w-full mt-4`}>{para}</p>
+                        {para && <p className={`text1 text-backgroundColor2 xl:w-[34%] w-full mt-4`}>{para}</p>}
                     </div>
                     {
                         home && (

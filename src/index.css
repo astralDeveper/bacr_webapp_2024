@@ -26,7 +26,7 @@
     @apply lg:text-[26px] md:text-[18px] text-[12px] font-semibold;
   }
   .heading7 {
-    @apply lg:text-[20px] md:text-[18px] text-[14px] font-semibold;
+    @apply lg:text-[20px] md:text-[18px] text-[14px];
   }
   .text1 {
     @apply lg:text-[17px] md:text-[15px] text-[12px] font-normal;

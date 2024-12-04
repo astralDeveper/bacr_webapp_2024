@@ -7,7 +7,7 @@ const Container = ({ children, mainStyle, heading, para, home, image }) => {
       <div className="w-full h-full">
         <Navbar heading={heading} para={para} mainStyle={mainStyle} home={home} image={image} />
         <div className="w-full lg:w-full">
-          <div className={` bg-BackgroundColor `}>{children}</div>
+          <div className={`bg-BackgroundColor`}>{children}</div>
         </div>
         <Footer />
       </div>

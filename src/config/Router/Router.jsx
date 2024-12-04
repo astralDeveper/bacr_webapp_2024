@@ -11,6 +11,9 @@ import ContactUs from "../../pages/ContactUs";
 import Product from "../../pages/Products";
 import AboutUs from "../../pages/About";
 import Career from "../../pages/Career";
+import FlaktGroup from "../../pages/Partner/flaktGroup";
+import GallettiProducts from "../../pages/Partner/gallettiProducts";
+import TicaProducts from "../../pages/Partner/ticaProducts";
 
 export const router = createBrowserRouter([
   {
@@ -61,5 +64,22 @@ export const router = createBrowserRouter([
     path: "/career",
     element: <Career />,
   },
+
+  // Partner Page Start 
+
+  {
+    path: "/flakt",
+    element: <FlaktGroup />,
+  },
+  {
+    path: "/galleti",
+    element: <GallettiProducts />,
+  },
+  {
+    path: "/tica",
+    element: <TicaProducts />,
+  },
+
+  //  Partner Page End
 ]);
 
