@@ -11,6 +11,8 @@ const imageNames = [
   "linkedin",
   "youtube",
   "whatsapp",
+  "manue",
+  "close",
   "cartimgone",
   "cartimgtwo",
   "cartimgthree",
@@ -20,6 +22,9 @@ const imageNames = [
   "servicerightimg",
   "energy",
   "service",
+  "icon",
+  "product1",
+  "search",
   "blog",
   "leftarrow",
   "facebookwhite",
@@ -30,6 +35,7 @@ const imageNames = [
   "blog1",
   "blog2",
   "blog3",
+  "clipboard"
 
 ];
 

@@ -17,7 +17,7 @@ import {
 
 const PrivacyPolicy = () => {
   return (
-    <Container>
+    <Container image heading={"Privacy Policy"} >
       <div className="max-w-[80%] mx-auto py-12 font-poppins">
         <p className="text1 text-text7">{para1}</p>
         <div className="py-6 ">

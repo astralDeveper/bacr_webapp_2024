@@ -54,7 +54,7 @@ const BlogDetailPage = () => {
   ];
 
   return (
-    <Container>
+    <Container image heading={"What is HVAC? HVAC Definition, Components, and How It Works?"} >
       <div className="max-w-[80%] mx-auto">
         <div className="py-8">
           <img src={IMAGES.BLOG} alt={IMAGES.BLOG} />

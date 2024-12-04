@@ -70,24 +70,31 @@ const Card = () => {
       {BlogCardData.map((item, idx) => (
         <div
           key={idx}
-          className=" flex shadow-shadow2 font-poppins items-center rounded-lg gap-4 justify-between px-4 bg-white"
+          className="flex flex-col sm:flex-row shadow-shadow2 font-poppins items-center rounded-lg gap-4 justify-between px-4 bg-backgroundColor2"
         >
-          <div className="py-4 relative">
-            <div className="bg-backgroundColor9 absolute right-2 top-6 text-white px-4 py-3 rounded-xl">
-              <h1 className="text-center leading-3 text1">{item.data}</h1>
-              <p className="text1">{item.month}</p>
+          <div className="relative sm:w-1/2 w-full py-4">
+            <div className="bg-backgroundColor1 absolute right-2 top-6 text-white px-6 py-3 rounded-xl sm:px-3 sm:py-2 xs:px-2 xs:py-1">
+              <h1 className="text-center leading-3 text1 sm:text-sm xs:text-xs">
+                {item.data}
+              </h1>
+              <p className="text1 sm:text-sm xs:text-xs">{item.month}</p>
             </div>
-            <img className="w-[430px]" src={item.img} alt={IMAGES.BLOG1} />
-            <div className="absolute left-2 bottom-6 bg-backgroundColor11 text-white rounded-full p-1 px-2">
-              <h1 className="text2">{item.maint}</h1>
+
+            <img
+              className="w-full sm:w-[430px]"
+              src={item.img}
+              alt={item.img}
+            />
+            <div className="absolute left-2 bottom-6 bg-backgroundColor10 text-white rounded-full p-1 px-2 max-w-[154px]">
+              <h1 className="text2 whitespace-nowrap text-sm">{item.maint}</h1>
             </div>
           </div>
-          <div className="py-6">
-            <h1 className="heading6 text-text9 font-bold tracking-tight">
+          <div className="py-2   sm:w-1/2 w-full">
+            <h1 className="heading7 text-text9 font-bold tracking-tight">
               {item.name}
             </h1>
-            <p className="text2 text-text10 leading-5 py-2">{item.para}</p>
-            <button className="text1 flex w-full justify-center bg-backgroundColor9 text-white rounded-md py-2 px-16">
+            <p className="text3 text-text10 leading-4 py-2  ">{item.para}</p>
+            <button className="text1 flex w-full justify-center bg-backgroundColor1 text-white rounded-md py-2 px-16 whitespace-nowrap">
               {item.button}
             </button>
           </div>
