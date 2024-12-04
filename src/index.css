@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer utilities {
   .heading1 {
     @apply font-poppins lg:text-[61px] md:text-[40px] text-[20px] font-semibold;

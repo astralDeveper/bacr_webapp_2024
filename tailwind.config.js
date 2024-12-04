@@ -62,6 +62,7 @@ export default {
         backgroundColor7: "#d9eefa",
         backgroundColor8: "#0b800f",
         backgroundColor9: "#004671",
+        backgroundColor11: "#FFA500",
         text1: "#ed8b3b",
         text2: "#0b2540",
         text3: "#333333",
@@ -72,6 +73,10 @@ export default {
         text8: "#4B4B4B",
         text9: "#343434",
         text10: "#7A7A7A",
+      },
+      boxShadow: {
+        shadow1: "0 10px 50px -10px rgba(0, 0, 0, 0.3)",
+        shadow2: "0 10px 50px -11px rgba(51, 51, 51, 0.3)",
       },
     },
   },
