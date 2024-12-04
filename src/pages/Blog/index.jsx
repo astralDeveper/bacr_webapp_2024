@@ -1,26 +1,20 @@
 import React from "react";
 import Container from "../../components/Container";
-import { Card } from "flowbite-react";
+
+import { IMAGES } from "../../utils/Images";
+import Cart from "./Components/Cart";
 
 const Blog = () => {
   return (
     <Container>
-      <div className="max-w-[80%] mx-auto py-12">
-        <div>
-          <Card
-            className="max-w-sm"
-            imgSrc="/images/blog/image-4.jpg"
-            horizontal
-          >
-            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Name of the Blog
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-              Trust us to deliver reliable solutions, exceptional service, and
-              peace of mind for all your HVAC needs.
-            </p>
-            <button>Continue reading</button>
-          </Card>
+      <div className="max-w-[80%] mx-auto py-12 font-poppins">
+        <div className="grid grid-cols-2 gap-4">
+          <Cart />
+          {/* <Cart />
+          <Cart />
+          <Cart />
+          <Cart />
+          <Cart /> */}
         </div>
       </div>
     </Container>
@@ -28,3 +22,22 @@ const Blog = () => {
 };
 
 export default Blog;
+
+{
+  /* <Card
+  className="max-w-sm rounded-2xl object-cover p-4"
+  imgSrc={IMAGES.BLOG1}
+  horizontal
+>
+  <h5 className="heading5 text-text9 font-bold tracking-tight">
+    Name of the Blog
+  </h5>
+  <p className="text1 text-text10 leading-5">
+    Trust us to deliver reliable solutions, exceptional service, and peace of
+    mind for all your HVAC needs.
+  </p>
+  <button className="heading7 bg-backgroundColor9 text-white rounded-md py-2">
+    Continue reading
+  </button>
+</Card>; */
+}

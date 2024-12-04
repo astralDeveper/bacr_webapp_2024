@@ -1,79 +1,84 @@
 import React from "react";
 import Container from "../../components/Container";
+import {
+  heading,
+  heading2,
+  heading6,
+  para1,
+  parag2,
+  parag3,
+  parag4,
+  parag5,
+  parag6,
+  subhead1,
+  subhead2,
+  subhead3,
+} from "../../utils/DummyData";
 
 const PrivacyPolicy = () => {
-  const data = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            pharetra, felis ut aliquam ultricies, arcu nibh eleifend risus, at
-            viverra justo enim non risus. Donec vel tempus nisi. Maecenas
-            vestibulum quam et turpis eleifend, vitae consectetur libero
-            elementum. Maecenas nec risus accumsan, fringilla est non, vehicula
-            odio.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Quisque pharetra, felis ut aliquam ultricies, arcu nibh eleifend
-            risus, at viverra justo enim non risus. Donec vel tempus nisi.
-            Maecenas vestibulum quam et turpis eleifend, vitae consectetur
-            libero elementum. Maecenas nec risus accumsan, fringilla est non,
-            vehicula odio.`;
-  const heading = `Lorem ipsum dolor sit amet, consectetur adipiscing elit`;
-  const heading2 = `Lorem ipsum dolor sit amet`;
-  const para = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            pharetra, felis ut aliquam ultricies, arcu nibh eleifend risus, at
-            viverra justo enim non risus. Donec vel tempus nisi. Maecenas
-            vestibulum quam et turpis eleifend, vitae consectetur libero
-            elementum. Maecenas nec risus accumsan, fringilla est non, vehicula
-            odio.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Quisque pharetra, felis ut aliquam ultricies, arcu nibh eleifend
-            risus, at viverra jus.`;
-  const para2 = `A content management system (CMS) is the foundation of every
-            website. There are numerous content management systems to choose
-            from, including open-source platforms like WordPress and
-            beginner-friendly all-in-one website builders like Shopify or
-            Squarespace. However, the final choice depends on your budget for
-            your online store, experience, and unique e-commerce requirements.`;
-
   return (
     <Container>
       <div className="max-w-[80%] mx-auto py-12 font-poppins">
-        <p className="text1 text-text7">{data}</p>
+        <p className="text1 text-text7">{para1}</p>
         <div className="py-6 ">
           <h1 className="heading5 py-2">{heading}</h1>
-          <p className="text1 text-text7">{para}</p>
+          <p className="text1 text-text7">{parag2}</p>
         </div>
         <div className="py-6 ">
           <h1 className="heading5 py-2">{heading2}</h1>
-          <p className="text1 text-text7">{para}</p>
+          <div className="text-text7">
+            <p className="text1">{parag4}</p>
+            <br />
+            <p className="text1">{subhead1}</p>
+            <br />
+            <p className="text1">{subhead2}</p>
+            <br />
+            <p className="text1">{subhead3}</p>
+            <br />
+            <p className="text1">{subhead1}</p>
+          </div>
         </div>
-        <div>
-          <h1 className="heading5 py-2">{heading2}</h1>
-          <p>{para2}</p>
+        <div className="py-6 ">
+          <h1 className="heading5 py-2">{heading}</h1>
+          <p className="text1 text-text7">{para1}</p>
+        </div>
+        <div className="py-6 ">
+          <h1 className="heading5 py-2">{heading6}</h1>
+          <p className="text1 text-text7">{parag4}</p>
+        </div>
+        <div className="py-6">
+          <h1 className="heading5 py-2">{heading6}</h1>
+          <p className="text1 text-text7">{parag4}</p>
+        </div>
+        <div className="py-6 ">
+          <h1 className="heading5 py-2">{heading}</h1>
+          <p className="text1 text-text7">{parag5}</p>
           <br />
-          <p className="text1 text-text7">
-            Donec vel tempus nisi. Maecenas vestibulum quam et turpis eleifend,
-            vitae consectetur libero.
-          </p>
-          <p className="text1 text-text7">
-            Donec vel tempus nisi. Maecenas vestibulum quam et turpis eleifend,
-            vitae consectetur libero elementum.
-          </p>
-          <p className="text1 text-text7">
-            Squarespace: This is one of the best website builders for beginners
-            who want to quickly and easi..
-          </p>
-          <p className="text1 text-text7">
-            Donec vel tempus nisi. Maecenas vestibulum quam et turpis eleifend,
-            vitae consectetur libero elementum.
-          </p>
-          <p className="text1 text-text7">
-            Donec vel tempus nisi. Maecenas vestibulum quam et turpis eleifend,
-            vitae.
-          </p>
-          <p className="text1 text-text7">
-            Donec vel tempus nisi. Maecenas vestibulum quam et turpis eleifend,
-            vitae consectetur libero elementum.
-          </p>
+          <p className="text1 text-text7">{parag6}</p>
+        </div>
+        <div className="py-6 ">
+          <h1 className="heading5 py-2">{heading2}</h1>
+          <div className="text-text7">
+            <p className="text1">{parag3}</p>
+            <br />
+            <p className="text1">{subhead1}</p>
+            <br />
+            <p className="text1">{subhead2}</p>
+            <br />
+            <p className="text1">{subhead3}</p>
+            <br />
+            <p className="text1">{subhead1}</p>
+          </div>
         </div>
         <div className="py-6 ">
           <h1 className="heading5 py-2">{heading}</h1>
-          <p className="text1 text-text7">{para}</p>
+          <p className="text1 text-text7">{parag5}</p>
+          <br />
+          <p className="text1 text-text7">{parag6}</p>
+        </div>
+        <div className="py-6 ">
+          <h1 className="heading5 py-2">{heading6}</h1>
+          <p className="text1 text-text7">{parag4}</p>
         </div>
       </div>
     </Container>

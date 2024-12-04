@@ -134,3 +134,63 @@ export const para13 = `For more detailed content on HVAC systems, including main
 
 // blog page section end here
 
+// privcy policy page content start
+export const para1 = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            pharetra, felis ut aliquam ultricies, arcu nibh eleifend risus, at
+            viverra justo enim non risus. Donec vel tempus nisi. Maecenas
+            vestibulum quam et turpis eleifend, vitae consectetur libero
+            elementum. Maecenas nec risus accumsan, fringilla est non, vehicula
+            odio.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Quisque pharetra, felis ut aliquam ultricies, arcu nibh eleifend
+            risus, at viverra justo enim non risus. Donec vel tempus nisi.
+            Maecenas vestibulum quam et turpis eleifend, vitae consectetur
+            libero elementum. Maecenas nec risus accumsan, fringilla est non,
+            vehicula odio.`;
+
+export const parag2 = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+          pharetra, felis ut aliquam ultricies, arcu nibh eleifend risus, at
+          viverra justo enim non risus. Donec vel tempus nisi. Maecenas
+          vestibulum quam et turpis eleifend, vitae consectetur libero
+          elementum. Maecenas nec risus accumsan, fringilla est non, vehicula
+          odio.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+          pharetra, felis ut aliquam ultricies, arcu nibh eleifend risus, at
+          viverra jus.`;
+
+export const parag3 = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra,
+      felis ut aliquam ultricies, arcu nibh eleifend risus, at viverra justo
+      enim non risus. Donec vel tempus nisi. Maecenas vestibulum quam et turpis
+      eleifend, vitae consectetur libero elementum. Maecenas nec risus accumsan,
+      fringilla est non, vehicula odio.`;
+
+export const parag4 = `A content management system (CMS) is the foundation of every website.
+      There are numerous content management systems to choose from, including
+      open-source platforms like WordPress and beginner-friendly all-in-one
+      website builders like Shopify or Squarespace. However, the final choice
+      depends on your budget for your online store, experience, and unique
+      e-commerce requirements.`;
+
+export const parag5 = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra,
+      felis ut aliquam ultricies, arcu nibh eleifend risus, at viverra justo
+      enim non risus. Donec vel tempus nisi. Maecenas vestibulum quam et turpis
+      eleifend, vitae consectetur libero elementum.`;
+
+export const parag6 = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra,
+      felis ut aliquam ultricies, arcu nibh eleifend risus, at viverra justo
+      enim non risus. Donec vel tempus nisi. Maecenas vestibulum quam et turpis
+      eleifend, vitae consectetur libero elementum. Maecenas nec risus accumsan,
+      fringilla est non, vehicula odio..Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit. Quisque pharetra, felis ut aliquam ultricies, arcu nibh
+      eleifend risus, at viverra justo enim non risus. Donec vel tempus nisi..`;
+
+export const heading = `Lorem ipsum dolor sit amet, consectetur adipiscing elit`;
+export const heading2 = `Lorem ipsum dolor sit amet`;
+export const heading3 = `Lorem ipsum dolor sit amet, consectetur `;
+export const heading4 = `Lorem ipsum dolor sit amet, consectetur adipiscing elit`;
+export const heading5 = `Lorem ipsum dolor sit amet, consectetur adipiscing elit`;
+export const heading6 = `Lorem ipsum dolor sit `;
+export const heading7 = `LLorem ipsum dolor sit amet, consectetu elit`;
+
+export const subhead1 = `Donec vel tempus nisi. Maecenas vestibulum quam et turpis eleifend, vitae consectetur libero.`;
+export const subhead2 = `Donec vel tempus nisi. Maecenas vestibulum quam et turpis eleifend, vitae consectetur libero elementum.`;
+export const subhead3 = `Donec vel tempus nisi. Maecenas vestibulum quam et turpis eleifend, vitae consectetur libero elementum. Maecenas nec risus accumsan, `;
+// privcy policy page content end

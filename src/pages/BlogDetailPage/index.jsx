@@ -56,7 +56,7 @@ const BlogDetailPage = () => {
   return (
     <Container>
       <div className="max-w-[80%] mx-auto">
-        <div className="py-10">
+        <div className="py-8">
           <img src={IMAGES.BLOG} alt={IMAGES.BLOG} />
         </div>
         <div className="py-6">
