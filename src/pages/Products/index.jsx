@@ -2,7 +2,7 @@ import React from 'react'
 import Container from '../../components/Container'
 import ProductCards from './components/ProductCards'
 
-const Products = () => {
+const Product = () => {
     return (
         <Container mainStyle="" image heading="Our Products" para="Providing high-quality HVACR products, services, and solutions backed by industry-leading partners." >
 
@@ -13,5 +13,4 @@ const Products = () => {
         </Container>
     )
 }
-
-export default Products
+export default Product

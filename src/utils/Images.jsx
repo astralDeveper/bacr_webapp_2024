@@ -24,7 +24,15 @@ const imageNames = [
   "service",
   "icon",
   "product1",
-  "search"
+  "search",
+  "blog",
+  "leftarrow",
+  "facebookwhite",
+  "instawhite",
+  "whatsapp",
+  "twitter",
+  "pagenotfound",
+  "blog1",
 
 ];
 

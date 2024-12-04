@@ -1,7 +1,7 @@
 import React from "react";
-import Container from "../../components/Container";
 import { IMAGES } from "../../utils/Images";
 import { servicesDetailPgeCartData } from "../../utils/DummyData";
+import Container from "../../components/Container";
 
 const ServiceDetailPage = () => {
   return (
@@ -13,7 +13,7 @@ const ServiceDetailPage = () => {
             <h1 className="heading1 py-2">
               Welcome to BAC Comfort Cooling Solutions
             </h1>
-            <p className="text1">
+            <p className="text1 text-text7">
               At BAC, we specialize in delivering cutting-edge Comfort Cooling
               solutions for HVACR chillers and equipment, ensuring optimal
               performance and enhanced comfort in diverse environments. With a
@@ -25,14 +25,14 @@ const ServiceDetailPage = () => {
           </div>
           <div className="py-6">
             <h1 className="heading1 py-2">Your Comfort, Our Mission</h1>
-            <p className="text1">
+            <p className="text1 text-text7">
               Upgrading your existing air conditioning system to more
               energy-efficient models, helping you save on energy bills and
               reduce your carbon footprint Lubrication of moving parts,
               electrical connection inspection,
             </p>
           </div>
-          <div className="w-[100%] grid md:grid-cols-2 grid-cols-1 items-center justify-center gap-4 py-4">
+          <div className="w-[100%] grid md:grid-cols-2 grid-cols-1 place-items-center items-center justify-center gap-4 py-4">
             {servicesDetailPgeCartData.map((item, index) => (
               <div>
                 <div>
@@ -42,8 +42,8 @@ const ServiceDetailPage = () => {
                     alt={item.img}
                   />
                 </div>
-                <div className="py-4 flex flex-col gap-3 bg-red-400 f w-full">
-                  <h1 className="heading5  lg:w-full md:w-[80%]">
+                <div className="py-4 flex flex-col gap-3 w-full">
+                  <h1 className="heading5 lg:w-full md:w-[80%]">
                     {item.title}
                   </h1>
                   <p className="text1 font-poppins font-bold  text-[#454545]">
@@ -55,7 +55,7 @@ const ServiceDetailPage = () => {
           </div>
           <div className="py-8">
             <h1 className="heading4">HVAC Systems</h1>
-            <p className="text1">
+            <p className="text1 text-text7">
               We prioritize customer satisfaction above all else, striving to
               exceed expectations at every step of the process. From initial
               consultation to ongoing support, our dedicated team is committed
@@ -63,7 +63,7 @@ const ServiceDetailPage = () => {
               experience for our clients.
             </p>
             <br />
-            <p className="text1">
+            <p className="text1 text-text7">
               At BAC, we are committed to sustainability and environmental
               responsibility. Our cooling solutions are designed to minimize
               environmental impact while maximizing energy efficiency. By
