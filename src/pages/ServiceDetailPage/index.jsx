@@ -43,7 +43,7 @@ const ServiceDetailPage = () => {
                   />
                 </div>
                 <div className="py-4 flex flex-col gap-3 w-full">
-                  <h1 className="heading5 lg:w-full md:w-[80%]">
+                  <h1 className="heading5 lg:w-full md:w-[80%] md:line-clamp-1 ">
                     {item.title}
                   </h1>
                   <p className="text1 font-poppins font-bold  text-text7">

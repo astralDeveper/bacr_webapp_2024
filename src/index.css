@@ -20,7 +20,7 @@
     @apply lg:text-[41px] md:text-[25px] text-[15px];
   }
   .heading5 {
-    @apply lg:text-[31px] md:text-[22px] text-[16px] font-bold;
+    @apply lg:text-[31px] md:text-[22px] text-[16px] font-bold ;
   }
   .heading6 {
     @apply lg:text-[26px] md:text-[18px] text-[12px] font-semibold;
@@ -38,3 +38,4 @@
     @apply lg:text-[12px] md:text-[10px] text-[8px] font-normal;
   }
 }
+

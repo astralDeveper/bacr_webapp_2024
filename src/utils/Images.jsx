@@ -41,8 +41,7 @@ const imageNames = [
   "servicelogoseven",
   // service images end
 
-
-  // Project images start 
+  // Project images start
   "projectone",
   "projecttwo",
   "projectthree",
@@ -68,7 +67,7 @@ const imageNames = [
   "Product1",
   "Product2",
   "Product3",
-  "Product4"
+  "Product4",
 
   // service images start
   "serviceone",
@@ -78,7 +77,7 @@ const imageNames = [
   "servicefive",
   "servicesix",
   "serviceseven",
-  
+
   // service logo
   "servicelogoone",
   "servicelogotwo",
@@ -89,6 +88,15 @@ const imageNames = [
   "servicelogoseven",
   // service images end
 
+  //brand images start
+  "auth_tick",
+  "brandone",
+  "brandtwo",
+  "brandthree",
+  "brandfour",
+  "brandfive",
+  "brandsix",
+  //brand images end
 ];
 
 const IMAGES = imageNames.reduce((acc, name) => {

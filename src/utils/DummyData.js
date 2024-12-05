@@ -91,7 +91,7 @@ export const Products = [
     image:[IMAGES.PRODUCT1,IMAGES.PRODUCT2,IMAGES.PRODUCT3,IMAGES.PRODUCT4],
     description:"",
     icon: IMAGES.ICON,
-    id: 1
+    id: 1,
   },
   {
     brands: "Galletti Products",
@@ -102,8 +102,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 2
-
+    id: 2,
   },
   {
     brands: "Tica Products",
@@ -114,9 +113,9 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 3
-
-  }, {
+    id: 3,
+  },
+  {
     brands: "Flakt Group",
     category: "Cooling Towers",
     price: "2000",
@@ -125,8 +124,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 4
-
+    id: 4,
   },
   {
     brands: "Flakt Group",
@@ -137,7 +135,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 5
+    id: 5,
   },
   {
     brands: "Flakt Group",
@@ -148,7 +146,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 6
+    id: 6,
   },
   {
     brands: "Galletti Products",
@@ -159,8 +157,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 7
-
+    id: 7,
   },
   {
     brands: "Tica Products",
@@ -171,9 +168,9 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 8
-
-  }, {
+    id: 8,
+  },
+  {
     brands: "Flakt Group",
     category: "Cooling Towers",
     price: "2000",
@@ -182,8 +179,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 9
-
+    id: 9,
   },
   {
     brands: "Flakt Group",
@@ -194,8 +190,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 10
-
+    id: 10,
   },
   {
     brands: "Flakt Group",
@@ -206,7 +201,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 11
+    id: 11,
   },
   {
     brands: "Galletti Products",
@@ -217,8 +212,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 12
-
+    id: 12,
   },
   {
     brands: "Tica Products",
@@ -229,9 +223,9 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 13
-
-  }, {
+    id: 13,
+  },
+  {
     brands: "Flakt Group",
     category: "Cooling Towers",
     price: "2000",
@@ -240,8 +234,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 14
-
+    id: 14,
   },
   {
     brands: "Flakt Group",
@@ -252,8 +245,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 15
-
+    id: 15,
   },
   {
     brands: "Flakt Group",
@@ -264,7 +256,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 16
+    id: 16,
   },
   {
     brands: "Galletti Products",
@@ -275,8 +267,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 17
-
+    id: 17,
   },
   {
     brands: "Tica Products",
@@ -287,9 +278,9 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 18
-
-  }, {
+    id: 18,
+  },
+  {
     brands: "Flakt Group",
     category: "Cooling Towers",
     price: "2000",
@@ -298,8 +289,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 19
-
+    id: 19,
   },
   {
     brands: "Flakt Group",
@@ -310,8 +300,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 20
-
+    id: 20,
   },
   {
     brands: "Flakt Group",
@@ -322,7 +311,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 21
+    id: 21,
   },
   {
     brands: "Galletti Products",
@@ -333,8 +322,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 22
-
+    id: 22,
   },
   {
     brands: "Tica Products",
@@ -345,9 +333,9 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 23
-
-  }, {
+    id: 23,
+  },
+  {
     brands: "Flakt Group",
     category: "Cooling Towers",
     price: "2000",
@@ -356,8 +344,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 24
-
+    id: 24,
   },
   {
     brands: "Flakt Group",
@@ -368,8 +355,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 25
-
+    id: 25,
   },
   {
     brands: "Flakt Group",
@@ -380,7 +366,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 26
+    id: 26,
   },
   {
     brands: "Galletti Products",
@@ -391,8 +377,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 27
-
+    id: 27,
   },
   {
     brands: "Tica Products",
@@ -403,9 +388,9 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 28
-
-  }, {
+    id: 28,
+  },
+  {
     brands: "Flakt Group",
     category: "Cooling Towers",
     price: "2000",
@@ -414,8 +399,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 29
-
+    id: 29,
   },
   {
     brands: "Flakt Group",
@@ -426,35 +410,57 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
-    id: 30
-
+    id: 30,
   },
-]
-
+];
 
 export const contactUs = [
   {
     title: "Get in Touch",
-    description: "Contact us if you have any questions about some of our HVAC services. You can also call if you need help with a heating, cooling or air quality issues. We provide free quotes for any new heating or AC equipment installation. Whether you need residential or commercial services, our experienced HVAC specialists are ready to serve you."
-
-  }
-]
+    description:
+      "Contact us if you have any questions about some of our HVAC services. You can also call if you need help with a heating, cooling or air quality issues. We provide free quotes for any new heating or AC equipment installation. Whether you need residential or commercial services, our experienced HVAC specialists are ready to serve you.",
+  },
+];
 
 export const address = [
   {
     title: "Head Office",
-    addtess: "Suite # 404, 4th Floor, Tahir Plaza, Plot No. A-20, K.C.H.S.U. Block 7/8, Karachi, Pakistan"
-  }, {
-    title: "U.A.E Office",
-    addtess: "Suite # 404, 4th Floor, Tahir Plaza, Plot No. A-20, K.C.H.S.U. Block 7/8, Karachi, Pakistan"
-  }, {
-    title: "Warehouse",
-    addtess: "Suite # 404, 4th Floor, Tahir Plaza, Plot No. A-20, K.C.H.S.U. Block 7/8, Karachi, Pakistan"
-  }, {
-    title: "Workshop",
-    addtess: "Suite # 404, 4th Floor, Tahir Plaza, Plot No. A-20, K.C.H.S.U. Block 7/8, Karachi, Pakistan"
+    addtess:
+      "Suite # 404, 4th Floor, Tahir Plaza, Plot No. A-20, K.C.H.S.U. Block 7/8, Karachi, Pakistan",
   },
-]
+  {
+    title: "U.A.E Office",
+    addtess:
+      "Suite # 404, 4th Floor, Tahir Plaza, Plot No. A-20, K.C.H.S.U. Block 7/8, Karachi, Pakistan",
+  },
+  {
+    title: "Warehouse",
+    addtess:
+      "Suite # 404, 4th Floor, Tahir Plaza, Plot No. A-20, K.C.H.S.U. Block 7/8, Karachi, Pakistan",
+  },
+  {
+    title: "Workshop",
+    addtess:
+      "Suite # 404, 4th Floor, Tahir Plaza, Plot No. A-20, K.C.H.S.U. Block 7/8, Karachi, Pakistan",
+  },
+];
+
+export const blogDetailTable = [
+  {
+    heading: "Table of Contents",
+    links: [
+      { link: "1. Introduction: Understanding HVAC Systems" },
+      { link: "2. What Does HVAC Stand For?" },
+      { link: "3. Components of an HVAC System" },
+      { link: "4. Types of HVAC Systems" },
+      { link: "5. How HVAC Systems Work" },
+      { link: "6. Why Regular HVAC Maintenance is Crucial" },
+      { link: "7. How Much Does a New HVAC System Cost?" },
+      { link: "8. Conclusion: Why HVAC is Essential" },
+    ],
+  },
+];
+
 // blog page section start here
 export const para = `The acronym HVAC stands for Heating, Ventilation, and Air
 Conditioning. It refers to the technology used for providing thermal
@@ -585,103 +591,173 @@ export const careerCardData = [
   {
     jobType: "Full Time/Part Time",
     jobTitle: "HVAC Technician",
-    jobDescription: "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification."
+    jobDescription:
+      "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification.",
   },
   {
     jobType: "Full Time/Part Time",
     jobTitle: "HVAC Technician",
-    jobDescription: "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification."
+    jobDescription:
+      "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification.",
   },
   {
     jobType: "Full Time/Part Time",
     jobTitle: "HVAC Technician",
-    jobDescription: "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification."
+    jobDescription:
+      "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification.",
   },
   {
     jobType: "Full Time/Part Time",
     jobTitle: "HVAC Technician",
-    jobDescription: "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification."
+    jobDescription:
+      "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification.",
   },
-]
-
+];
 
 export const projectCardData = [
   {
-    id:1,
-    image: IMAGES.PROJECTONE, 
-    text: 'Popular Foils & Metals Pvt. Ltd',
+    id: 1,
+    image: IMAGES.PROJECTONE,
+    text: "Popular Foils & Metals Pvt. Ltd",
     logo: IMAGES.PROJECTLOGOONE,
-    description: 'Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille'
+    description:
+      "Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille",
   },
   {
-    id:2,
-    image: IMAGES.PROJECTLOGOTWO, 
-    text: 'Qasim Banquet Hyderabad',
+    id: 2,
+    image: IMAGES.PROJECTLOGOTWO,
+    text: "Qasim Banquet Hyderabad",
     logo: IMAGES.PROJECTLOGOTWO,
-    description: 'Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille'
-  },{
-    id:3,
-    image: IMAGES.PROJECTTHREE, 
-    text: 'National Acadmey of Performing Arts',
+    description:
+      "Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille",
+  },
+  {
+    id: 3,
+    image: IMAGES.PROJECTTHREE,
+    text: "National Acadmey of Performing Arts",
     logo: IMAGES.PROJECTLOGOTHREE,
-    description: 'Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille'
-  },{
-    id:4,
-    image: IMAGES.PROJECTONE, 
-    text: 'Turnkey Projects',
+    description:
+      "Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille",
+  },
+  {
+    id: 4,
+    image: IMAGES.PROJECTONE,
+    text: "Turnkey Projects",
     logo: IMAGES.PROJECTLOGOONE,
-    description: 'Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille'
-  },{
-    id:5,
-    image: IMAGES.PROJECTLOGOTWO, 
-    text: 'Energy Optimization',
+    description:
+      "Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille",
+  },
+  {
+    id: 5,
+    image: IMAGES.PROJECTLOGOTWO,
+    text: "Energy Optimization",
     logo: IMAGES.PROJECTLOGOTWO,
-    description: 'Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille'
-  },{
-    id:6,
-    image: IMAGES.PROJECTTHREE, 
-    text: 'Operation Maintenance',
+    description:
+      "Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille",
+  },
+  {
+    id: 6,
+    image: IMAGES.PROJECTTHREE,
+    text: "Operation Maintenance",
     logo: IMAGES.PROJECTLOGOTHREE,
-    description: 'Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille'
-  }, 
-]
+    description:
+      "Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille",
+  },
+];
 
 export const serviceCardData = [
   {
-    image: IMAGES.SERVICEONE, 
-    text: 'Comfort Cooling',
+    image: IMAGES.SERVICEONE,
+    text: "Comfort Cooling",
     logo: IMAGES.SERVICELOGOONE,
-    description: 'Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.'
+    description:
+      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
   },
   {
-    image: IMAGES.SERVICETWO, 
-    text: 'Process Coolong',
+    image: IMAGES.SERVICETWO,
+    text: "Process Coolong",
     logo: IMAGES.SERVICELOGOTWO,
-    description: 'Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.'
-  },{
-    image: IMAGES.SERVICETHREE, 
-    text: 'Cold Chain Storage',
-    logo: IMAGES.SERVICELOGOTHREE,
-    description: 'Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.'
-  },{
-    image: IMAGES.SERVICEFOUR, 
-    text: 'Turnkey Projects',
-    logo: IMAGES.SERVICELOGOFOUR,
-    description: 'Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.'
-  },{
-    image: IMAGES.SERVICEFIVE, 
-    text: 'Energy Optimization',
-    logo: IMAGES.SERVICELOGOFIVE,
-    description: 'Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.'
-  },{
-    image: IMAGES.SERVICESIX, 
-    text: 'Operation Maintenance',
-    logo: IMAGES.SERVICELOGOSIX,
-    description: 'Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.'
-  },{
-    image: IMAGES.SERVICESEVEN, 
-    text: 'Troubleshooting',
-    logo: IMAGES.SERVICELOGOSEVEN,
-    description: 'Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.'
+    description:
+      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
   },
-]
+  {
+    image: IMAGES.SERVICETHREE,
+    text: "Cold Chain Storage",
+    logo: IMAGES.SERVICELOGOTHREE,
+    description:
+      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+  },
+  {
+    image: IMAGES.SERVICEFOUR,
+    text: "Turnkey Projects",
+    logo: IMAGES.SERVICELOGOFOUR,
+    description:
+      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+  },
+  {
+    image: IMAGES.SERVICEFIVE,
+    text: "Energy Optimization",
+    logo: IMAGES.SERVICELOGOFIVE,
+    description:
+      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+  },
+  {
+    image: IMAGES.SERVICESIX,
+    text: "Operation Maintenance",
+    logo: IMAGES.SERVICELOGOSIX,
+    description:
+      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+  },
+  {
+    image: IMAGES.SERVICESEVEN,
+    text: "Troubleshooting",
+    logo: IMAGES.SERVICELOGOSEVEN,
+    description:
+      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+  },
+];
+
+export const brandsCardData = [
+  {
+    name: "Galletti",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
+    image: IMAGES.BRANDONE,
+    tickImg: IMAGES.AUTH_TICK
+  },
+  {
+    name: "Flakt Group",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
+    image: IMAGES.BRANDTWO,
+    tickImg: IMAGES.AUTH_TICK
+  },
+  {
+    name: "Carrier",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
+    image: IMAGES.BRANDTHREE,
+    tickImg: IMAGES.AUTH_TICK
+  },
+  {
+    name: "York",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
+    image: IMAGES.BRANDFOUR,
+    tickImg: IMAGES.AUTH_TICK
+  },
+  {
+    name: "Echochillers",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
+    image: IMAGES.BRANDFIVE,
+    tickImg: IMAGES.AUTH_TICK
+  },
+  {
+    name: "Trane",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
+    image: IMAGES.BRANDSIX,
+    tickImg: IMAGES.AUTH_TICK
+  },
+];
