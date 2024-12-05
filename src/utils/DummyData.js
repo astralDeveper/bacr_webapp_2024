@@ -601,3 +601,85 @@ export const careerCardData = [
     jobDescription: "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification."
   },
 ]
+
+
+export const projectCardData = [
+  {
+    id:1,
+    image: IMAGES.PROJECTONE, 
+    text: 'Popular Foils & Metals Pvt. Ltd',
+    logo: IMAGES.PROJECTLOGOONE,
+    description: 'Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille'
+  },
+  {
+    id:2,
+    image: IMAGES.PROJECTLOGOTWO, 
+    text: 'Qasim Banquet Hyderabad',
+    logo: IMAGES.PROJECTLOGOTWO,
+    description: 'Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille'
+  },{
+    id:3,
+    image: IMAGES.PROJECTTHREE, 
+    text: 'National Acadmey of Performing Arts',
+    logo: IMAGES.PROJECTLOGOTHREE,
+    description: 'Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille'
+  },{
+    id:4,
+    image: IMAGES.PROJECTONE, 
+    text: 'Turnkey Projects',
+    logo: IMAGES.PROJECTLOGOONE,
+    description: 'Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille'
+  },{
+    id:5,
+    image: IMAGES.PROJECTLOGOTWO, 
+    text: 'Energy Optimization',
+    logo: IMAGES.PROJECTLOGOTWO,
+    description: 'Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille'
+  },{
+    id:6,
+    image: IMAGES.PROJECTTHREE, 
+    text: 'Operation Maintenance',
+    logo: IMAGES.PROJECTLOGOTHREE,
+    description: 'Designing, Selection,Supply, installation and Commissioning of complete System  Including 310 Tons Water Cooled Chille'
+  }, 
+]
+
+export const serviceCardData = [
+  {
+    image: IMAGES.SERVICEONE, 
+    text: 'Comfort Cooling',
+    logo: IMAGES.SERVICELOGOONE,
+    description: 'Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.'
+  },
+  {
+    image: IMAGES.SERVICETWO, 
+    text: 'Process Coolong',
+    logo: IMAGES.SERVICELOGOTWO,
+    description: 'Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.'
+  },{
+    image: IMAGES.SERVICETHREE, 
+    text: 'Cold Chain Storage',
+    logo: IMAGES.SERVICELOGOTHREE,
+    description: 'Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.'
+  },{
+    image: IMAGES.SERVICEFOUR, 
+    text: 'Turnkey Projects',
+    logo: IMAGES.SERVICELOGOFOUR,
+    description: 'Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.'
+  },{
+    image: IMAGES.SERVICEFIVE, 
+    text: 'Energy Optimization',
+    logo: IMAGES.SERVICELOGOFIVE,
+    description: 'Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.'
+  },{
+    image: IMAGES.SERVICESIX, 
+    text: 'Operation Maintenance',
+    logo: IMAGES.SERVICELOGOSIX,
+    description: 'Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.'
+  },{
+    image: IMAGES.SERVICESEVEN, 
+    text: 'Troubleshooting',
+    logo: IMAGES.SERVICELOGOSEVEN,
+    description: 'Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.'
+  },
+]

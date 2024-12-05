@@ -63,7 +63,7 @@ const ProductCards = () => {
         <div className='mt-20' >
 
 
-            <TabBar tabtext1={"New Products"} tabtext2={"Used Equipments"} tabtext3={"BAC Store"} />
+            <TabBar search tabtext1={"New Products"} tabtext2={"Used Equipments"} tabtext3={"BAC Store"} />
 
 
 

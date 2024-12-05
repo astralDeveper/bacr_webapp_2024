@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { IMAGES } from '../utils/Images'
 import Button from './Button';
 
-const TabBar = ({ sreach,tabtext1,tabtext2,tabtext3 }) => {
+const TabBar = ({ search,tabtext1,tabtext2,tabtext3 }) => {
 
     const [tab, setTab] = useState("new");
 
@@ -34,7 +34,7 @@ const TabBar = ({ sreach,tabtext1,tabtext2,tabtext3 }) => {
 
             </div>
             {
-                sreach && (
+                search && (
                     <div className='lg:w-[70%] mx-auto'>
                         <img src={IMAGES.SEARCH} alt="icon" className='translate-y-11 translate-x-3 w-[20px]  ' />
                         <input type="text" placeholder='Search what you want...' className='px-10 border-2 w-full h-[67px] rounded-xl outline-none' onChange={(e) => setBrand(e.target.value)} />

@@ -46,7 +46,7 @@ const ServiceDetailPage = () => {
                   <h1 className="heading5 lg:w-full md:w-[80%]">
                     {item.title}
                   </h1>
-                  <p className="text1 font-poppins font-bold  text-[#454545]">
+                  <p className="text1 font-poppins font-bold  text-text7">
                     {item.para}
                   </p>
                 </div>

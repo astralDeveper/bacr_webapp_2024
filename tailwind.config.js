@@ -19,7 +19,10 @@ export default {
         backgroundColor6: "#f2f6fa",
         backgroundColor7: "#d9eefa",
         backgroundColor8: "#0b800f",
+        btnColor:'#FFA500',
         backgroundColor9: "#F5F5F5",
+        backgroundColor10:"#FFA500",
+        backgroundColor11:"#F2F2F2",
         text1: "#ed8b3b",
         text2: "#0b2540",
         text3: "#333333",
@@ -29,7 +32,8 @@ export default {
         text7:"#7A7A7A",
         text8:"#004671",
         text9:"#343434",
-        text10:"#6C606C"
+        text10:"#6C606C",
+        text11:"#454545"
       },
       boxShadow: {
         'shadow1': '0 10px 50px -10px rgba(0, 0, 0, 0.3)',

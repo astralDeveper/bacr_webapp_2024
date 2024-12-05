@@ -22,6 +22,35 @@ const imageNames = [
   "servicerightimg",
   "energy",
   "service",
+  // service images start
+  "serviceone",
+  "servicetwo",
+  "servicethree",
+  "servicefour",
+  "servicefive",
+  "servicesix",
+  "serviceseven",
+
+  // service logo
+  "servicelogoone",
+  "servicelogotwo",
+  "servicelogothree",
+  "servicelogofour",
+  "servicelogofive",
+  "servicelogosix",
+  "servicelogoseven",
+  // service images end
+
+
+  // Project images start 
+  "projectone",
+  "projecttwo",
+  "projectthree",
+
+  // project logo
+  "projectlogoone",
+  "projectlogotwo",
+  "projectlogothree",
   "icon",
   "product1",
   "search",
@@ -33,7 +62,13 @@ const imageNames = [
   "twitter",
   "pagenotfound",
   "blog1",
-  "clipboard"
+  "blog2",
+  "blog3",
+  "clipboard",
+  "Product1",
+  "Product2",
+  "Product3",
+  "Product4"
 
 ];
 
