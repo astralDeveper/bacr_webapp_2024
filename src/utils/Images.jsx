@@ -68,7 +68,26 @@ const imageNames = [
   "Product1",
   "Product2",
   "Product3",
-  "Product4"
+  "Product4",
+
+  // service images start
+  "serviceone",
+  "servicetwo",
+  "servicethree",
+  "servicefour",
+  "servicefive",
+  "servicesix",
+  "serviceseven",
+  
+  // service logo
+  "servicelogoone",
+  "servicelogotwo",
+  "servicelogothree",
+  "servicelogofour",
+  "servicelogofive",
+  "servicelogosix",
+  "servicelogoseven",
+  // service images end
 
   // service images start
   "serviceone",
