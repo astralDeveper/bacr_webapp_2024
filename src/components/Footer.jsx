@@ -29,13 +29,13 @@ const Footer = () => {
   ];
 
   const links = [
-    { link: "Home" },
-    { link: "About Us" },
-    { link: "products" },
-    { link: "Services" },
-    { link: "Career" },
-    { link: "Contact Us" },
-    { link: "Blogs" },
+    { link: "Home", href: "/" },
+    { link: "About Us", href: "about" },
+    { link: "products", href: "products" },
+    { link: "Services", href: "services" },
+    { link: "Career", href: "career" },
+    { link: "Contact Us", href: "contact-us" },
+    { link: "Blogs", href: "blogs" },
   ];
 
   const meneLinks = [
@@ -52,7 +52,7 @@ const Footer = () => {
     "Providing innovative air conditioning and HVACR solutions with reliability and excellence.";
 
   return (
-    <footer class="bg-[#004671] font-poppins">
+    <footer class="bg-text8 font-poppins">
       <div class="mx-auto max-w-[80%] py-4">
         <div>
           <div class="grid xl:grid-cols-5  2xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-6 lg:py-8 ">
@@ -62,7 +62,9 @@ const Footer = () => {
                 src={IMAGES.LOGOWHITE}
                 alt={IMAGES.LOGOWHITE}
               />
-              <p className="text-sm font-poppins text-white py-6">{location}</p>
+              <p className="text-sm font-poppins text-backgroundColor2 py-6">
+                {location}
+              </p>
               <div className="flex items-center justify-start gap-2">
                 <img
                   className="w-7 cursor-pointer"
@@ -87,8 +89,9 @@ const Footer = () => {
               </div>
             </div>
 
+            {/* MenuLinks section start here  */}
             <div className="flex flex-col mt-8 lg:ml-16 ">
-              <ul className="text-white font-bold uppercase">
+              <ul className="text-backgroundColor2 font-bold uppercase">
                 {meneLinks.map((item, idx) => (
                   <li className="pb-2 font-bold uppercase hover:underline cursor-pointer">
                     {item}
@@ -96,14 +99,15 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
+            {/* MenuLinks section end here  */}
 
             {/* service and products links  */}
-            <div className="text-white mt-6">
+            <div className="text-backgroundColor2 mt-6">
               {Data.map((item, i) => {
                 return (
                   <div key={i}>
                     <h2 className="font-bold pb-3">{item.heading}</h2>
-                    <ul className="pl-4 pt-4 border-l-[1px] border-t-[1px] border-white">
+                    <ul className="pl-4 pt-4 border-l-[1px] border-t-[1px] border-backgroundColor2">
                       {item.links.map((items, ind) => {
                         return (
                           <div key={ind}>
@@ -121,12 +125,12 @@ const Footer = () => {
                 );
               })}
             </div>
-            <div className="gap-x-4 mr-6 text-white mt-6">
+            <div className="gap-x-4 mr-6 text-backgroundColor2 mt-6">
               {Data2.map((item, i) => {
                 return (
                   <div key={i}>
                     <h2 className="font-bold pb-3">{item.heading}</h2>
-                    <ul className=" border-t-[1px] border-white">
+                    <ul className=" border-t-[1px] border-backgroundColor2">
                       {item.links.map((items, ind) => {
                         return (
                           <div key={ind}>
@@ -145,75 +149,77 @@ const Footer = () => {
               })}
             </div>
 
-          <div className="">
-            <div className="text-backgroundColor2" >
-              <h2 className="font-bold pb-3">Subscribe</h2>
-              <div className="flex items-center ">
-                <div class="flex rounded-lg shadow-sm">
-                  <input
-                    type="text"
-                    placeholder="Your Email"
-                    className="py-2 px-4 text-white bg-transparent border-[1px] border-white outline-none w-full rounded-s-md text-sm"
-                  />
-                  <button
-                    type="button"
-                    class="py-2 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-white text-black focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
-                  >
-                    Subscribe
-                  </button>
+            <div className="">
+              <div className="text-backgroundColor2">
+                <h2 className="font-bold pb-3">Subscribe</h2>
+                <div className="flex items-center ">
+                  <div class="flex rounded-lg shadow-sm">
+                    <input
+                      type="text"
+                      placeholder="Your Email"
+                      className="py-2 px-4 text-backgroundColor2 bg-transparent border-[1px] border-backgroundColor2 outline-none w-full rounded-s-md text-sm"
+                    />
+                    <button
+                      type="button"
+                      class="py-2 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-backgroundColor2 text-text4 focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="mt-4">
-              <h2 className="font-semibold pb-3 text-backgroundColor2">Certficates</h2>
-              <div className="flex items-center gap-2">
-                <div className="bg-[#023B5E] p-2 rounded-md">
-                  <img
-                    className="w-16"
-                    src={IMAGES.CARTIMGONE}
-                    alt={IMAGES.CARTIMGONE}
-                  />
-                </div>
-                <div className="bg-[#023B5E] p-2 rounded-md">
-                  <img
-                    className="w-16"
-                    src={IMAGES.CARTIMGTWO}
-                    alt={IMAGES.CARTIMGTWO}
-                  />
-                </div>
-                <div className="bg-[#023B5E] p-2 rounded-md">
-                  <img
-                    className="w-16"
-                    src={IMAGES.CARTIMGTHREE}
-                    alt={IMAGES.CARTIMGTHREE}
-                  />
-                </div>
-                <div className="bg-[#023B5E] p-2 rounded-md">
-                  <img
-                    className="w-16"
-                    src={IMAGES.CARTIMGFOUR}
-                    alt={IMAGES.CARTIMGFOUR}
-                  />
+              <div className="mt-4">
+                <h2 className="font-semibold pb-3 text-backgroundColor2">
+                  Certficates
+                </h2>
+                <div className="flex items-center gap-2">
+                  <div className="bg-backgroundColor12 p-2 rounded-md">
+                    <img
+                      className="w-16"
+                      src={IMAGES.CARTIMGONE}
+                      alt={IMAGES.CARTIMGONE}
+                    />
+                  </div>
+                  <div className="bg-backgroundColor12 p-2 rounded-md">
+                    <img
+                      className="w-16"
+                      src={IMAGES.CARTIMGTWO}
+                      alt={IMAGES.CARTIMGTWO}
+                    />
+                  </div>
+                  <div className="bg-backgroundColor12 p-2 rounded-md">
+                    <img
+                      className="w-16"
+                      src={IMAGES.CARTIMGTHREE}
+                      alt={IMAGES.CARTIMGTHREE}
+                    />
+                  </div>
+                  <div className="bg-backgroundColor12 p-2 rounded-md">
+                    <img
+                      className="w-16"
+                      src={IMAGES.CARTIMGFOUR}
+                      alt={IMAGES.CARTIMGFOUR}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* line start */}
-        <div className="border-[1px] opacity-55 border-[#eeeeee] w-full my-4"></div>
-        {/* line end */}
+          {/* line start */}
+          <div className="border-[1px] opacity-55 border-[#eeeeee] w-full my-4"></div>
+          {/* line end */}
 
-        {/* underline text start */}
-        <div className="text-white flex justify-between items-center lg:flex-row flex-col gap-2 py-2 w-full  ">
-          <p className="text1 text-center">
-            &copy; 2023 Brothers Air Conditioing. All rights reserved
-          </p>
-          <p className="text1 hover:underline cursor-pointer">
-            Our Privacy Policy
-          </p>
-        </div>
-        {/* underline text end */}
+          {/* underline text start */}
+          <div className="text-backgroundColor2 flex justify-between items-center lg:flex-row flex-col gap-2 py-2 w-full  ">
+            <p className="text1 text-center">
+              &copy; 2023 Brothers Air Conditioing. All rights reserved
+            </p>
+            <p className="text1 hover:underline cursor-pointer">
+              Our Privacy Policy
+            </p>
+          </div>
+          {/* underline text end */}
         </div>
       </div>
     </footer>

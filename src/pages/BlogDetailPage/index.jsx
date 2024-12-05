@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../../components/Container";
 import { IMAGES } from "../../utils/Images";
 import {
+  blogDetailTable,
   para,
   para10,
   para11,
@@ -18,22 +19,6 @@ import {
 } from "../../utils/DummyData";
 
 const BlogDetailPage = () => {
-  const Table = [
-    {
-      heading: "Table of Contents",
-      links: [
-        { link: "1. Introduction: Understanding HVAC Systems" },
-        { link: "2. What Does HVAC Stand For?" },
-        { link: "3. Components of an HVAC System" },
-        { link: "4. Types of HVAC Systems" },
-        { link: "5. How HVAC Systems Work" },
-        { link: "6. Why Regular HVAC Maintenance is Crucial" },
-        { link: "7. How Much Does a New HVAC System Cost?" },
-        { link: "8. Conclusion: Why HVAC is Essential" },
-      ],
-    },
-  ];
-
   const SplitData = [
     {
       heading: "1. Split Systems",
@@ -54,13 +39,16 @@ const BlogDetailPage = () => {
   ];
 
   return (
-    <Container image heading={"What is HVAC? HVAC Definition, Components, and How It Works?"} >
+    <Container
+      image
+      heading={"What is HVAC? HVAC Definition, Components, and How It Works?"}
+    >
       <div className="max-w-[80%] mx-auto">
         <div className="py-8">
           <img src={IMAGES.BLOG} alt={IMAGES.BLOG} />
         </div>
         <div className="py-6">
-          {Table.map((item, idx) => (
+          {blogDetailTable.map((item, idx) => (
             <div className="font-poppins" key={idx}>
               <h1 className="heading5 py-2">{item.heading}</h1>
               {item.links.map((item, idx) => (
