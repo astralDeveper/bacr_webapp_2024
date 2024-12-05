@@ -1,18 +1,18 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-const Container = ({ children, mainStyle, heading,para,home }) => {
-    return (
-      <>
-        <div className="w-full h-full">
-          <Navbar heading={heading} para={para} mainStyle={mainStyle} home={home} />
-          <div className="w-full lg:w-full">
-            <div className={` bg-BackgroundColor `}>{children}</div>
-          </div>
-          <Footer/>
+const Container = ({ children, mainStyle, heading, para, home, image }) => {
+  return (
+    <>
+      <div className="w-full h-full">
+        <Navbar heading={heading} para={para} mainStyle={mainStyle} home={home} image={image} />
+        <div className="w-full lg:w-full">
+          <div className={`bg-BackgroundColor`}>{children}</div>
         </div>
-      </>
-    );
-  };
-  
-  export default Container;
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default Container;

@@ -4,92 +4,149 @@ import { IMAGES } from "../utils/Images";
 const Footer = () => {
   const Data = [
     {
-      heading: "About Us",
+      heading: "Services",
       links: [
-        { link: "Company Overview", href: "http://link1.com" },
-        { link: "Company Profile", href: "http://link2.com" },
-        { link: "CEO’s Message", href: "http://link3.com" },
-        { link: "Projects", href: "http://link4.com" },
-        { link: "Certficates", href: "http://link4.com" },
-        { link: "Testimonials", href: "http://link4.com" },
-      ],
-    },
-    {
-      heading: "Products & Services",
-      links: [
-        { link: "New Products", href: "http://service1.com" },
-        { link: "Used Equipment", href: "http://service2.com" },
-        { link: "BAC Store", href: "http://service3.com" },
-        { link: "Services", href: "http://service3.com" },
-        { link: "Blogs", href: "http://service3.com" },
-      ],
-    },
-    {
-      heading: "Resources",
-      links: [
-        { link: "Privacy Policy", href: "mailto:contact@example.com" },
-        { link: "Careers", href: "tel:+1234567890" },
-        { link: "Blogs", href: "tel:+1234567890" },
+        { link: "Comfort Cooling", href: "http://service1.com" },
+        { link: "Process Cooling", href: "http://service2.com" },
+        { link: "Cold Chain Storage", href: "http://service3.com" },
+        { link: "Turnkey Solution", href: "http://service3.com" },
+        { link: "Eenergy Optimization", href: "http://service3.com" },
+        { link: "Operation maintenance", href: "http://service3.com" },
+        { link: "Troubleshooting", href: "http://service3.com" },
       ],
     },
   ];
 
+  const Data2 = [
+    {
+      heading: "Products",
+      links: [
+        { link: "New Products", href: "mailto:contact@example.com" },
+        { link: "Used Equipments", href: "tel:+1234567890" },
+        { link: "BAC Store", href: "tel:+1234567890" },
+      ],
+    },
+  ];
+
+  const links = [
+    { link: "Home" },
+    { link: "About Us" },
+    { link: "products" },
+    { link: "Services" },
+    { link: "Career" },
+    { link: "Contact Us" },
+    { link: "Blogs" },
+  ];
+
+  const meneLinks = [
+    "Home",
+    "About Us",
+    "Products",
+    "Services",
+    "Career",
+    "Contact Us",
+    "blogs",
+  ];
+
   const location =
-    "Suite # 404, 4th Floor, Tahir Plaza, Plot No. A-20, K.C.H.S.U. Block 7/8, Karachi, Pakistan.";
+    "Providing innovative air conditioning and HVACR solutions with reliability and excellence.";
 
   return (
-    <div className="bg-[#004671] text-white w-full">
-      <div className="max-w-[80%] mx-auto py-10">
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-center gap-x-6 gap-y-6">
-          <div className="flex justify-startq flex-col gap-y-4 py-0">
-            <img
-              className="w-28"
-              src={IMAGES.LOGOWHITE}
-              alt={IMAGES.LOGOWHITE}
-            />
-            <p className="text-sm">{location}</p>
-            <div className="flex items-center justify-start gap-2">
+    <footer class="bg-[#004671] font-poppins">
+      <div class="mx-auto max-w-[80%] py-4">
+        <div>
+          <div class="grid xl:grid-cols-5  2xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-6 lg:py-8 ">
+            <div className="mb-8">
               <img
-                className="w-5"
-                src={IMAGES.FACEBOOK}
-                alt={IMAGES.FACEBOOK}
+                className="w-28"
+                src={IMAGES.LOGOWHITE}
+                alt={IMAGES.LOGOWHITE}
               />
-              <img className="w-5" src={IMAGES.INSTA} alt={IMAGES.INSTA} />
-              <img
-                className="w-5"
-                src={IMAGES.WHATSAPP}
-                alt={IMAGES.WHATSAPP}
-              />
-              <img className="w-5" src={IMAGES.YOUTUBE} alt={IMAGES.YOUTUBE} />
+              <p className="text-sm font-poppins text-white py-6">{location}</p>
+              <div className="flex items-center justify-start gap-2">
+                <img
+                  className="w-7 cursor-pointer"
+                  src={IMAGES.FACEBOOKWHITE}
+                  alt={IMAGES.FACEBOOKWHITE}
+                />
+                <img
+                  className="w-7 cursor-pointer"
+                  src={IMAGES.INSTAWHITE}
+                  alt={IMAGES.INSTAWHITE}
+                />
+                <img
+                  className="w-7 cursor-pointer"
+                  src={IMAGES.TWITTER}
+                  alt={IMAGES.TWITTER}
+                />
+                <img
+                  className="w-7 cursor-pointer"
+                  src={IMAGES.WHATSAPP}
+                  alt={IMAGES.WHATSAPP}
+                />
+              </div>
             </div>
-          </div>
 
-          <div className=" grid grid-cols-3 gap-x-4">
-            {Data.map((item, i) => {
-              return (
-                <div className="" key={i}>
-                  <h2 className="font-bold pb-3">{item.heading}</h2>
-                  <ul>
-                    {item.links.map((items, ind) => {
-                      return (
-                        <div key={ind}>
-                          <li
-                            className="md:text-[0.8rem] text-sm py-1 cursor-pointer hover:underline"
-                            href={items.href}
-                          >
-                            {items.link}
-                          </li>
-                        </div>
-                      );
-                    })}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
+            <div className="flex flex-col mt-8 lg:ml-16 ">
+              <ul className="text-white font-bold uppercase">
+                {meneLinks.map((item, idx) => (
+                  <li className="pb-2 font-bold uppercase hover:underline cursor-pointer">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* service and products links  */}
+            <div className="text-white mt-6">
+              {Data.map((item, i) => {
+                return (
+                  <div key={i}>
+                    <h2 className="font-bold pb-3">{item.heading}</h2>
+                    <ul className="pl-4 pt-4 border-l-[1px] border-t-[1px] border-white">
+                      {item.links.map((items, ind) => {
+                        return (
+                          <div key={ind}>
+                            <li
+                              className="text1 py-1 cursor-pointer hover:underline"
+                              href={items.href}
+                            >
+                              {items.link}
+                            </li>
+                          </div>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="gap-x-4 mr-6 text-white mt-6">
+              {Data2.map((item, i) => {
+                return (
+                  <div key={i}>
+                    <h2 className="font-bold pb-3">{item.heading}</h2>
+                    <ul className=" border-t-[1px] border-white">
+                      {item.links.map((items, ind) => {
+                        return (
+                          <div key={ind}>
+                            <li
+                              className="text1 py-1 cursor-pointer hover:underline"
+                              href={items.href}
+                            >
+                              {items.link}
+                            </li>
+                          </div>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
 
           <div className="">
-            <div>
+            <div className="text-backgroundColor2" >
               <h2 className="font-bold pb-3">Subscribe</h2>
               <div className="flex items-center ">
                 <div class="flex rounded-lg shadow-sm">
@@ -108,7 +165,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="mt-4">
-              <h2 className="font-semibold pb-3">Certficates</h2>
+              <h2 className="font-semibold pb-3 text-backgroundColor2">Certficates</h2>
               <div className="flex items-center gap-2">
                 <div className="bg-[#023B5E] p-2 rounded-md">
                   <img
@@ -144,30 +201,22 @@ const Footer = () => {
         </div>
 
         {/* line start */}
-        <div className="border-[1px] border-[#eeeeee] w-full my-4"></div>
+        <div className="border-[1px] opacity-55 border-[#eeeeee] w-full my-4"></div>
         {/* line end */}
 
         {/* underline text start */}
-        <div className="text-center gap-2 py-2">
-          <p>&copy; 2023 Brothers Air Conditioing. All rights reserved </p>
+        <div className="text-white flex justify-between items-center lg:flex-row flex-col gap-2 py-2 w-full  ">
+          <p className="text1 text-center">
+            &copy; 2023 Brothers Air Conditioing. All rights reserved
+          </p>
+          <p className="text1 hover:underline cursor-pointer">
+            Our Privacy Policy
+          </p>
         </div>
         {/* underline text end */}
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
-
 export default Footer;
-
-// const generateImagePath = (name) => `src/assets/images/${name}.png`;
-
-// const imageNames = [
-//   "logo"
-// ];
-
-// const IMAGES = imageNames.reduce((acc, name) => {
-//   acc[name.toUpperCase()] = generateImagePath(name);
-//   return acc;
-// }, {});
-
-// export { IMAGES };
