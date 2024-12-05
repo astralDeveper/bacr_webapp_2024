@@ -5,7 +5,7 @@ import { IMAGES } from "../../../utils/Images";
 const JoinOurTeamForm = () => {
     return (
 
-        <div className="bg-gradient-to-tr from-backgroundColor3 to-backgroundColor4 rounded-lg shadow-lg p-6 lg:w-[537px]  w-[100%] h-full ">
+        <div className="bg-gradient-to-tr from-backgroundColor3 to-backgroundColor4 rounded-lg shadow-lg p-6 2xl:w-[500px] w-full ">
             <h2 className="heading4 text-backgroundColor2 text-center font-semibold">
                 Join Our Team
             </h2>

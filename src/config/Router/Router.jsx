@@ -3,8 +3,7 @@ import ServiceDetailPage from "../../pages/ServiceDetailPage";
 import BlogDetailPage from "../../pages/BlogDetailPage";
 import PrivacyPolicy from "../../pages/PrivacyPolicy";
 import Blog from "../../pages/Blog";
-import ErrorPage from "../../pages/404Page";
-import ProductDetails from "../../pages/Products/ProductDetails";
+import ErrorPage from "../../pages/404Page"; 
 import ContactUs from "../../pages/ContactUs";
 import Product from "../../pages/Products";
 import AboutUs from "../../pages/About";
@@ -14,8 +13,8 @@ import GallettiProducts from "../../pages/Partner/gallettiProducts";
 import TicaProducts from "../../pages/Partner/ticaProducts";
 import Home from "../../pages/Home";
 import Projects from "../../pages/Projects";
-import Services from "../../pages/Services";
-import ProjectDetailPage from "../../pages/ProjectDetail";
+import Services from "../../pages/Services"; 
+import ProjectDetailPage from "../../pages/ProjectDetailPage"; 
 
 export const router = createBrowserRouter([
   {
@@ -55,11 +54,7 @@ export const router = createBrowserRouter([
     element: <Projects />,
   },
   {
-    path: "/productsDetail",
-    element: <ProductDetails />,
-  },
-  {
-    path: "/project_detail/:id",
+    path: "/detail/:id",
     element: <ProjectDetailPage />,
   },
   {

@@ -88,6 +88,8 @@ export const Products = [
     productName: "Product name",
     modelno: "5647",
     images: IMAGES.PRODUCT1,
+    image:[IMAGES.PRODUCT1,IMAGES.PRODUCT2,IMAGES.PRODUCT3,IMAGES.PRODUCT4],
+    description:"",
     icon: IMAGES.ICON,
     id: 1
   },

@@ -48,7 +48,7 @@ const ProjectsCardComponent = () => {
                       <div className=" w-full">
                         <Link
                           to={{
-                            pathname: `/project_detail/${item.id}`,   
+                            pathname: `/detail/${item?.id}`,   
                           }}
                         >
                           <Button

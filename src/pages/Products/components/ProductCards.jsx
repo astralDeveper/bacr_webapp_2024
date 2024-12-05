@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IMAGES } from '../../../utils/Images';
 import { Products } from '../../../utils/DummyData';
 import Button from '../../../components/Button';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import TabBar from '../../../components/TabBar';
 
 const ProductCards = () => {
@@ -11,17 +11,14 @@ const ProductCards = () => {
     const [capacityOpen, setCapacityOpen] = useState(false);
     const [priceRangeOpen, setPriceRangeOpen] = useState(false);
     const navigate = useNavigate();
+    const [clickedIndex, setClickedIndex] = useState(null); // To store the index of the clicked card
 
-
-    const [brand, setBrand] = useState('');
-
-    const [tab, setTab] = useState("new");
-
-    const handleTabChange = (selectedTab) => {
-        setTab(selectedTab);
+    const handleClick = (index) => {
+        setClickedIndex(index); // Set the clicked card index
     };
 
 
+    const [brand, setBrand] = useState('');
 
     const toggleSection = (section) => {
         switch (section) {
@@ -49,7 +46,7 @@ const ProductCards = () => {
 
     const productDetail = (item) => {
         console.log(item);
-        navigate(`/productsDetail`)
+        navigate(`/project_detail/${item.id}`)
 
     }
 
@@ -63,14 +60,14 @@ const ProductCards = () => {
         <div className='mt-20' >
 
 
-            <TabBar search tabtext1={"New Products"} tabtext2={"Used Equipments"} tabtext3={"BAC Store"} />
+            <TabBar search tabtext1={"New Products"} tabtext2={"Used Equipments"} tabtext3={"BAC Store"} setBrand={setBrand} />
 
 
 
-            <div className="flex xl:flex-row flex-col gap-2 ">
+            <div className="flex xl:flex-row flex-col gap-2 md:mt-4 mt-2 ">
                 {/* Filter Sidebar */}
                 <div className="w-full xl:w-1/4 h-fit bg-backgroundColor2 p-4 border rounded-2xl shadow-md">
-                    <h2 className="text-lg font-bold mb-4">Search by Filters</h2>
+                    <h2 className="heading7 font-bold mb-4">Search by Filters</h2>
 
                     {/* Brands Section */}
                     <div>
@@ -86,7 +83,7 @@ const ProductCards = () => {
                                 {['All', 'Flakt Group', 'Galletti Products', 'Tica Product'].map((brand, index) => (
                                     <label key={index} className="flex items-center space-x-2">
                                         <input type="checkbox" className="accent-backgroundColor8 cursor-pointer " />
-                                        <span>{brand}</span>
+                                        <span className='text1 font-semibold '>{brand}</span>
                                     </label>
                                 ))}
                             </div>
@@ -107,7 +104,7 @@ const ProductCards = () => {
                                 {['AHU', 'Coils', 'Chillers', 'Cooling Towers', 'Heat Exchangers'].map((category, index) => (
                                     <label key={index} className="flex items-center space-x-2">
                                         <input type="checkbox" className="accent-backgroundColor8" />
-                                        <span>{category}</span>
+                                        <span className='text1 font-semibold '>{category}</span>
                                     </label>
                                 ))}
                             </div>
@@ -128,7 +125,7 @@ const ProductCards = () => {
                                 {['5 to 10 Tons', '10 to 20 Tons', 'Above 20 Tons'].map((capacity, index) => (
                                     <label key={index} className="flex items-center space-x-2">
                                         <input type="checkbox" className="accent-backgroundColor8 cursor-pointer " />
-                                        <span>{capacity}</span>
+                                        <span className='text1 font-semibold '>{capacity}</span>
                                     </label>
                                 ))}
                             </div>
@@ -164,30 +161,50 @@ const ProductCards = () => {
                             filteredProducts.map((item, ind) => (
                                 <div
                                     key={ind}
-                                    className="bg-backgroundColor9 mt-4 lg:max-w-[370px] lg:max-h-[471px] p-6 rounded-xl shadow-md hover:bg-backgroundColor1 hover:text-backgroundColor2 group hover:transition-colors hover:duration-500 hover:ease-in-out cursor-pointer"
+                                    className={`mt-4 lg:max-w-[370px] lg:max-h-[471px] p-6 rounded-xl shadow-md ${clickedIndex === ind
+                                        ? "bg-backgroundColor1 text-backgroundColor2 transition-colors duration-500 ease-in-out"
+                                        : "bg-backgroundColor9"
+                                        } cursor-pointer`}
+                                    onClick={() => handleClick(ind)}
                                 >
-                                    <img src={item.images} alt={item.productName} className="lg:w-[289px] md:w-[200px] w-[150px] h-auto mb-4 mx-auto" />
+                                    <img
+                                        src={item.images}
+                                        alt={item.productName}
+                                        className="lg:w-[289px] md:w-[200px] w-[150px] h-auto mb-4 mx-auto"
+                                    />
                                     <div className="flex items-center justify-between">
                                         <p className="heading5">{item.productName}</p>
-                                        <div className="flex items-center gap-2">
+                                        <div className="flex items-center gap-2 text1">
                                             <span>12</span>
-                                            <img src={item.icon} alt="icon" className="w-6" />
+                                            <img src={item.icon} alt="icon" className="md:w-6 w-4" />
                                         </div>
                                     </div>
                                     <div className="mt-2">
-                                        <p className="text-1">
-                                            Model No: <span className="font-bold">{item.modelno}</span>
+                                        <p className="text1">
+                                            Model No: <span className="font-bold text1">{item.modelno}</span>
                                         </p>
-                                        <p className="text-1">
-                                            Brands Name: <span className="font-bold">{item.brands}</span>
+                                        <p className="text1">
+                                            Brands Name: <span className="font-bold text1">{item.brands}</span>
                                         </p>
                                     </div>
-                                    <div className="mt-6 flex items-center justify-center">
-                                        <Button
-                                            btnStyle="bg-backgroundColor1 w-full text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold"
-                                            title="Product Inquiry"
-                                            onclick={() => { productDetail(item) }}
-                                        />
+                                    <div className="md:mt-6 mt-4 flex items-center justify-center">
+                                        <Link
+                                            to={{
+                                                pathname: `/detail/${item?.id}`,
+                                            }}
+                                        >
+
+                                            <Button
+                                                btnStyle={`rounded-md w-full text1 ${clickedIndex === ind
+                                                    ? "bg-backgroundColor2 text-backgroundColor1"
+                                                    : "text-backgroundColor6 bg-backgroundColor1"
+                                                    } font-semibold`}
+                                                title="Product Inquiry"
+                                            // onclick={() => {
+                                            //     productDetail(item);
+                                            // }}
+                                            />
+                                        </Link>
                                     </div>
                                 </div>
                             ))
@@ -195,30 +212,51 @@ const ProductCards = () => {
                             Products.map((item, ind) => (
                                 <div
                                     key={ind}
-                                    className="bg-backgroundColor9 max-w-[370px] h-[471px] p-6 rounded-xl shadow-md hover:bg-backgroundColor1 hover:text-backgroundColor2 group hover:transition-colors hover:duration-500 hover:ease-in-out cursor-pointer"
+                                    className={`mt-4 lg:max-w-[370px] lg:max-h-[471px] p-6 rounded-xl shadow-md ${clickedIndex === ind
+                                        ? "bg-backgroundColor1 text-backgroundColor2 transition-colors duration-500 ease-in-out"
+                                        : "bg-backgroundColor9"
+                                        } cursor-pointer`}
+                                    onClick={() => handleClick(ind)}
                                 >
-                                    <img src={item.images} alt={item.productName} className="w-[289px] h-auto mb-4 mx-auto" />
+                                    <img
+                                        src={item.images}
+                                        alt={item.productName}
+                                        className="lg:w-[289px] md:w-[200px] w-[150px] h-auto mb-4 mx-auto"
+                                    />
                                     <div className="flex items-center justify-between">
                                         <p className="heading5">{item.productName}</p>
-                                        <div className="flex items-center gap-2">
+                                        <div className="flex items-center gap-2 text1">
                                             <span>12</span>
-                                            <img src={item.icon} alt="icon" className="w-6" />
+                                            <img src={item.icon} alt="icon" className="md:w-6 w-4" />
                                         </div>
                                     </div>
                                     <div className="mt-2">
-                                        <p className="text-1">
-                                            Model No: <span className="font-bold">{item.modelno}</span>
+                                        <p className="text1">
+                                            Model No: <span className="font-bold text1">{item.modelno}</span>
                                         </p>
-                                        <p className="text-1">
-                                            Brands Name: <span className="font-bold">{item.brands}</span>
+                                        <p className="text1">
+                                            Brands Name: <span className="font-bold text1">{item.brands}</span>
                                         </p>
                                     </div>
-                                    <div className="mt-6 flex items-center justify-center">
-                                        <Button
-                                            btnStyle="bg-backgroundColor1 w-full text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold"
-                                            title="Product Inquiry"
-                                            onclick={() => { productDetail(item) }}
-                                        />
+                                    <div className="md:mt-6 mt-4 flex items-center justify-center">
+
+                                        <Link
+                                            to={{
+                                                pathname: `/detail/${item?.id}`,
+                                            }}
+                                        >
+
+                                            <Button
+                                                btnStyle={`rounded-md w-full text1 ${clickedIndex === ind
+                                                    ? "bg-backgroundColor2 text-backgroundColor1"
+                                                    : "text-backgroundColor6 bg-backgroundColor1"
+                                                    } font-semibold`}
+                                                title="Product Inquiry"
+                                            // onclick={() => {
+                                            //     productDetail(item);
+                                            // }}
+                                            />
+                                        </Link>
                                     </div>
                                 </div>
                             ))
