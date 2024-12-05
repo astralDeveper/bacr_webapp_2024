@@ -16,12 +16,16 @@ import Projects from "../../pages/Projects";
 import Services from "../../pages/Services"; 
 import ProjectDetailPage from "../../pages/ProjectDetailPage"; 
 
+import Service from "../../pages/Service";
+import Services from "../../pages/Services";
+
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
   },
   {
+
     path: "/about",
     element: <AboutUs />,
   },
@@ -84,7 +88,5 @@ export const router = createBrowserRouter([
     path: "/tica",
     element: <TicaProducts />,
   },
-
-  //  Partner Page End
 ]);
 

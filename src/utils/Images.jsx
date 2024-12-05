@@ -70,6 +70,25 @@ const imageNames = [
   "Product3",
   "Product4"
 
+  // service images start
+  "serviceone",
+  "servicetwo",
+  "servicethree",
+  "servicefour",
+  "servicefive",
+  "servicesix",
+  "serviceseven",
+  
+  // service logo
+  "servicelogoone",
+  "servicelogotwo",
+  "servicelogothree",
+  "servicelogofour",
+  "servicelogofive",
+  "servicelogosix",
+  "servicelogoseven",
+  // service images end
+
 ];
 
 const IMAGES = imageNames.reduce((acc, name) => {
@@ -77,6 +96,4 @@ const IMAGES = imageNames.reduce((acc, name) => {
   return acc;
 }, {});
 
-
 export { IMAGES };
-
