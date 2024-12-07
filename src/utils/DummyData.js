@@ -460,6 +460,7 @@ export const blogDetailTable = [
 ];
 
 // blog page section start here
+
 export const para = `The acronym HVAC stands for Heating, Ventilation, and Air
 Conditioning. It refers to the technology used for providing thermal
 comfort and indoor air quality in buildings, ranging from
@@ -470,7 +471,7 @@ a homeowner looking to install a new system or a business seeking
 reliable climate control, understanding the basics of HVAC is
 essential.
 `;
-export const para2 = ` In this blog, we will explore what HVAC is, break down its core
+export const para2 = `In this blog, we will explore what HVAC is, break down its core
 components, discuss several types of systems, and explain the cost
 factors associated with HVAC systems. Let us get started!`;
 
@@ -721,41 +722,243 @@ export const brandsCardData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
     image: IMAGES.BRANDONE,
-    tickImg: IMAGES.AUTH_TICK
+    tickImg: IMAGES.AUTH_TICK,
   },
   {
     name: "Flakt Group",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
     image: IMAGES.BRANDTWO,
-    tickImg: IMAGES.AUTH_TICK
+    tickImg: IMAGES.AUTH_TICK,
   },
   {
     name: "Carrier",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
     image: IMAGES.BRANDTHREE,
-    tickImg: IMAGES.AUTH_TICK
+    tickImg: IMAGES.AUTH_TICK,
   },
   {
     name: "York",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
     image: IMAGES.BRANDFOUR,
-    tickImg: IMAGES.AUTH_TICK
+    tickImg: IMAGES.AUTH_TICK,
   },
   {
     name: "Echochillers",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
     image: IMAGES.BRANDFIVE,
-    tickImg: IMAGES.AUTH_TICK
+    tickImg: IMAGES.AUTH_TICK,
   },
   {
     name: "Trane",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
     image: IMAGES.BRANDSIX,
-    tickImg: IMAGES.AUTH_TICK
+    tickImg: IMAGES.AUTH_TICK,
   },
 ];
+
+// Footer Data Start Here
+
+export const ServicesLinks = [
+  {
+    heading: "SERVICES",
+    links: [
+      {
+        link: "Comfort Cooling",
+        href: "/services-detail",
+      },
+      {
+        link: "Process Cooling",
+        href: "",
+      },
+      {
+        link: "Cold Chain Storage",
+        href: "",
+      },
+      {
+        link: "Turnkey Solution",
+        href: "",
+      },
+      {
+        link: "Eenergy Optimization",
+        href: "",
+      },
+      {
+        link: "Operation maintenance",
+        href: "",
+      },
+      {
+        link: "Troubleshooting",
+        href: "",
+      },
+    ],
+  },
+];
+
+export const ProductsLinks = [
+  {
+    heading: "PRODUCTS",
+    links: [
+      {
+        link: "New Products",
+        href: "",
+      },
+      {
+        link: "Used Equipments",
+        href: "",
+      },
+      {
+        link: "BAC Store",
+        link: "",
+      },
+    ],
+  },
+  {
+    heading: "Resources",
+    links: [
+      {
+        link: "Career",
+        href: "/career",
+      },
+      {
+        link: "Blogs",
+        href: "/blogs",
+      },
+    ],
+  },
+];
+
+export const ProjectsLinks = [
+  {
+    heading: "PROJECTS",
+    links: [
+      {
+        link: "Turnkey Projects",
+        href: "",
+      },
+      {
+        link: "Supply and Comissioning",
+        href: "",
+      },
+      {
+        link: "Operations and Services",
+        href: "",
+      },
+      {
+        link: "Clients",
+        href: "",
+      },
+    ],
+  },
+];
+
+export const meneLinks = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "About Us",
+    href: "/about",
+  },
+  {
+    title: "Products",
+    href: "/products",
+  },
+  {
+    title: "Services",
+    href: "/services",
+  },
+  {
+    title: "Projects",
+    href: "/projects",
+  },
+  {
+    title: "Brands",
+    href: "/Brands",
+  },
+  {
+    title: "Contact Us",
+    href: "/contact_us",
+  },
+  {
+    title: "Privacy Policy",
+    href: "/privacy-policy",
+  },
+  ,
+];
+
+// Footer Data end Here
+
+// about card content start here
+export const AboutCardData = [
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER1,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER2,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER3,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER4,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER3,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER1,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER4,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER2,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+];
+// about card content end here

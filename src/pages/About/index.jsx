@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Container from "../../components/Container";
+import AboutCard from "./Components/AboutCard";
 
 const AboutUs = () => {
   return (
-    <div>index</div>
-  )
-}
+    <Container>
+      <AboutCard />
+    </Container>
+  );
+};
 
-export default AboutUs
+export default AboutUs;
