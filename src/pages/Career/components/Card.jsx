@@ -2,7 +2,7 @@ import React from 'react'
 import Button from '../../../components/Button'
 import { careerCardData } from '../../../utils/DummyData'
 
-const Card = () => {
+const CareerCard = () => {
     return (
 
         <div className='grid lg:grid-cols-2 md:grid-cols-1 gap-4' >
@@ -27,4 +27,4 @@ const Card = () => {
     )
 }
 
-export default Card
+export default CareerCard
