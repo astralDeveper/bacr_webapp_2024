@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from '../../components/Container'
-import Card from './components/card'
 import JoinOurTeamForm from './components/JoinOurTeamForm '
+import Card from './components/card'
 
 const Career = () => {
     return (
