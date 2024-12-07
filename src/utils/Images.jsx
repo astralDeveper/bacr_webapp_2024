@@ -1,4 +1,5 @@
-const generateImagePath = (name) => `/src/assets/images/${name}.png`;
+const generateImagePath = (name) => `../../src/assets/images/${name}.png`;
+
 
 const imageNames = [
   "logo",
