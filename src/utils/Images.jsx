@@ -1,4 +1,4 @@
-const generateImagePath = (name) => `src/assets/images/${name}.png`;
+const generateImagePath = (name) => `/src/assets/images/${name}.png`;
 
 const imageNames = [
   "logo",
@@ -97,6 +97,45 @@ const imageNames = [
   "brandfive",
   "brandsix",
   //brand images end
+
+  // Our Team start
+  "worker1",
+  "worker2",
+  "worker3",
+  "worker4",
+  // Our Team end
+  // certificate Start
+  "certificate1",
+  "certificate2",
+  "certificate3",
+  "certificate4",
+  "certificate5",
+  // certificate end
+  "Background",
+  "bulb",
+  "bgshape",
+  "ceo",
+  "flaktgroup",
+  "galletti",
+  "carrier",
+  "york",
+  "mcquay",
+  "skm",
+  "zamil",
+  "tica",
+  "trane",
+  "aircondition",
+  "coolingicon",
+  "pso",
+  "mia",
+  "scheduleicon",
+  "dineshsingh",
+  "circleshape",
+  "paraarrow",
+  "twit"
+
+
+
 ];
 
 const IMAGES = imageNames.reduce((acc, name) => {

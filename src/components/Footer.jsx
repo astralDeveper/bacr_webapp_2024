@@ -1,157 +1,128 @@
 import React from "react";
 import { IMAGES } from "../utils/Images";
+import {
+  meneLinks,
+  ProductsLinks,
+  ProjectsLinks,
+  ServicesLinks,
+} from "../utils/DummyData";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const Data = [
-    {
-      heading: "Services",
-      links: [
-        { link: "Comfort Cooling", href: "http://service1.com" },
-        { link: "Process Cooling", href: "http://service2.com" },
-        { link: "Cold Chain Storage", href: "http://service3.com" },
-        { link: "Turnkey Solution", href: "http://service3.com" },
-        { link: "Eenergy Optimization", href: "http://service3.com" },
-        { link: "Operation maintenance", href: "http://service3.com" },
-        { link: "Troubleshooting", href: "http://service3.com" },
-      ],
-    },
-  ];
-
-  const Data2 = [
-    {
-      heading: "Products",
-      links: [
-        { link: "New Products", href: "mailto:contact@example.com" },
-        { link: "Used Equipments", href: "tel:+1234567890" },
-        { link: "BAC Store", href: "tel:+1234567890" },
-      ],
-    },
-  ];
-
-  const links = [
-    { link: "Home", href: "/" },
-    { link: "About Us", href: "about" },
-    { link: "products", href: "products" },
-    { link: "Services", href: "services" },
-    { link: "Career", href: "career" },
-    { link: "Contact Us", href: "contact-us" },
-    { link: "Blogs", href: "blogs" },
-  ];
-
-  const meneLinks = [
-    "Home",
-    "About Us",
-    "Products",
-    "Services",
-    "Career",
-    "Contact Us",
-    "blogs",
-  ];
-
-  const location =
-    "Providing innovative air conditioning and HVACR solutions with reliability and excellence.";
-
   return (
     <footer class="bg-text8 font-poppins">
       <div class="mx-auto max-w-[80%] py-4">
         <div>
-          <div class="grid xl:grid-cols-5  2xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-6 lg:py-8 ">
-            <div className="mb-8">
-              <img
-                className="w-28"
-                src={IMAGES.LOGOWHITE}
-                alt={IMAGES.LOGOWHITE}
-              />
-              <p className="text-sm font-poppins text-backgroundColor2 py-6">
-                {location}
-              </p>
-              <div className="flex items-center justify-start gap-2">
-                <img
-                  className="w-7 cursor-pointer"
-                  src={IMAGES.FACEBOOKWHITE}
-                  alt={IMAGES.FACEBOOKWHITE}
-                />
-                <img
-                  className="w-7 cursor-pointer"
-                  src={IMAGES.INSTAWHITE}
-                  alt={IMAGES.INSTAWHITE}
-                />
-                <img
-                  className="w-7 cursor-pointer"
-                  src={IMAGES.TWITTER}
-                  alt={IMAGES.TWITTER}
-                />
-                <img
-                  className="w-7 cursor-pointer"
-                  src={IMAGES.WHATSAPP}
-                  alt={IMAGES.WHATSAPP}
-                />
-              </div>
-            </div>
+          {/* logo section start here  */}
+          <div className="text-backgroundColor2 flex justify-between items-center lg:flex-row flex-col gap-2 py-2 w-full  ">
+            <img
+              className="w-28"
+              src={IMAGES.LOGOWHITE}
+              alt={IMAGES.LOGOWHITE}
+            />
 
             {/* MenuLinks section start here  */}
             <div className="flex flex-col mt-8 lg:ml-16 ">
-              <ul className="text-backgroundColor2 font-bold uppercase">
+              <ul className="text-backgroundColor2 flex flex-wrap justify-center gap-x-4 gap-y-2 ">
                 {meneLinks.map((item, idx) => (
-                  <li className="pb-2 font-bold uppercase hover:underline cursor-pointer">
-                    {item}
-                  </li>
+                  <Link to={`${item.href}`}>
+                    <li key={idx} className="text1 cursor-pointer">
+                      {item.title}
+                    </li>
+                  </Link>
                 ))}
               </ul>
             </div>
             {/* MenuLinks section end here  */}
+          </div>
+          {/* logo section end here  */}
 
-            {/* service and products links  */}
-            <div className="text-backgroundColor2 mt-6">
-              {Data.map((item, i) => {
-                return (
-                  <div key={i}>
-                    <h2 className="font-bold pb-3">{item.heading}</h2>
-                    <ul className="pl-4 pt-4 border-l-[1px] border-t-[1px] border-backgroundColor2">
-                      {item.links.map((items, ind) => {
-                        return (
-                          <div key={ind}>
-                            <li
-                              className="text1 py-1 cursor-pointer hover:underline"
-                              href={items.href}
-                            >
-                              {items.link}
-                            </li>
-                          </div>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="gap-x-4 mr-6 text-backgroundColor2 mt-6">
-              {Data2.map((item, i) => {
-                return (
-                  <div key={i}>
-                    <h2 className="font-bold pb-3">{item.heading}</h2>
-                    <ul className=" border-t-[1px] border-backgroundColor2">
-                      {item.links.map((items, ind) => {
-                        return (
-                          <div key={ind}>
-                            <li
-                              className="text1 py-1 cursor-pointer hover:underline"
-                              href={items.href}
-                            >
-                              {items.link}
-                            </li>
-                          </div>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                );
-              })}
-            </div>
+          {/* line start */}
+          <div className="border-[1px] opacity-55 border-[#eeeeee] w-full my-4"></div>
+          {/* line end */}
 
-            <div className="">
+          {/* center section start here  */}
+          <div class="grid xl:grid-cols-4  2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-6 lg:py-8 ">
+            <div className="mb-8">
+              {/* service links start here  */}
               <div className="text-backgroundColor2">
-                <h2 className="font-bold pb-3">Subscribe</h2>
+                {ServicesLinks.map((item, i) => {
+                  return (
+                    <div key={i}>
+                      <h2 className="font-bold pb-3">{item.heading}</h2>
+                      <ul className="border-backgroundColor2">
+                        {item.links.map((items, ind) => {
+                          return (
+                            <div key={ind}>
+                              <Link to={items.href}>
+                                <li className="text1 py-1 cursor-pointer hover:underline">
+                                  {items.link}
+                                </li>
+                              </Link>
+                            </div>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  );
+                })}
+              </div>
+              {/* service links end here  */}
+            </div>
+
+            {/* products links start here */}
+            <div className="gap-x-4 mr-6 text-backgroundColor2">
+              {ProductsLinks.map((item, i) => {
+                return (
+                  <div key={i}>
+                    <h2 className="font-bold pt-3">{item.heading}</h2>
+                    <ul className=" border-backgroundColor2">
+                      {item.links.map((items, ind) => {
+                        return (
+                          <div key={ind}>
+                            <Link to={items.href}>
+                              <li className="text1 py-1 cursor-pointer hover:underline">
+                                {items.link}
+                              </li>
+                            </Link>
+                          </div>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+            {/* products links end here */}
+
+            {/* Projects links start here */}
+            <div className="gap-x-4 mr-6 text-backgroundColor2 mb-4">
+              {ProjectsLinks.map((item, i) => {
+                return (
+                  <div key={i}>
+                    <h2 className="font-bold py-3">{item.heading}</h2>
+                    <ul className=" border-backgroundColor2">
+                      {item.links.map((items, ind) => {
+                        return (
+                          <div key={ind}>
+                            <li
+                              className="text1 py-1 cursor-pointer hover:underline"
+                              href={items.href}
+                            >
+                              {items.link}
+                            </li>
+                          </div>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+            {/* Projects links end here */}
+
+            <div>
+              <div className="text-backgroundColor2">
                 <div className="flex items-center ">
                   <div class="flex rounded-lg shadow-sm">
                     <input
@@ -170,7 +141,7 @@ const Footer = () => {
               </div>
               <div className="mt-4">
                 <h2 className="font-semibold pb-3 text-backgroundColor2">
-                  Certficates
+                  CERTIFICATES
                 </h2>
                 <div className="flex items-center gap-2">
                   <div className="bg-backgroundColor12 p-2 rounded-md">
@@ -203,20 +174,47 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
+              {/* social media links start here  */}
+              <div>
+                <h2 className="font-semibold py-3 text-backgroundColor2">
+                  Join US
+                </h2>
+                <div className="flex items-center justify-start gap-2">
+                  <img
+                    className="w-7 cursor-pointer"
+                    src={IMAGES.FACEBOOKWHITE}
+                    alt={IMAGES.FACEBOOKWHITE}
+                  />
+                  <img
+                    className="w-7 cursor-pointer"
+                    src={IMAGES.INSTAWHITE}
+                    alt={IMAGES.INSTAWHITE}
+                  />
+                  <img
+                    className="w-7 cursor-pointer"
+                    src={IMAGES.TWITTER}
+                    alt={IMAGES.TWITTER}
+                  />
+                  <img
+                    className="w-7 cursor-pointer"
+                    src={IMAGES.WHATSAPP}
+                    alt={IMAGES.WHATSAPP}
+                  />
+                </div>
+              </div>
+              {/* social media links start here  */}
             </div>
           </div>
+          {/* center section end here  */}
 
           {/* line start */}
           <div className="border-[1px] opacity-55 border-[#eeeeee] w-full my-4"></div>
           {/* line end */}
 
           {/* underline text start */}
-          <div className="text-backgroundColor2 flex justify-between items-center lg:flex-row flex-col gap-2 py-2 w-full  ">
-            <p className="text1 text-center">
-              &copy; 2023 Brothers Air Conditioing. All rights reserved
-            </p>
+          <div className="text-backgroundColor2 flex justify-center items-center lg:flex-row flex-col gap-2 py-2 w-full  ">
             <p className="text1 hover:underline cursor-pointer">
-              Our Privacy Policy
+              BAC @ 2024. All rights reserved.
             </p>
           </div>
           {/* underline text end */}

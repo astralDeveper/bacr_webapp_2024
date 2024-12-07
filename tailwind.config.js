@@ -36,6 +36,7 @@ export default {
         text9:"#343434",
         text10:"#6C606C",
         text11:"#454545",
+        text12:"#0A2540"
       },
       boxShadow: {
         'shadow1': '0 10px 50px -10px rgba(0, 0, 0, 0.3)',
@@ -46,7 +47,15 @@ export default {
         semiBold: "600", // Semi-bold weight
         bold: "700", // Bold weight
       },
+      animation: {
+        "infinite-scroll": "infinite-scroll 55s linear infinite"},
+        keyframes: {
+        "infinite-scroll": {
+        from:{transform: "translatex(0)"} , to: {transform: "translateX(-100%)"}, },
     },
+    
+    },
+
     screens: {
       'xs': '300px',
 

@@ -252,9 +252,6 @@ const ProductCards = () => {
                                                     : "text-backgroundColor6 bg-backgroundColor1"
                                                     } font-semibold`}
                                                 title="Product Inquiry"
-                                            // onclick={() => {
-                                            //     productDetail(item);
-                                            // }}
                                             />
                                         </Link>
                                     </div>

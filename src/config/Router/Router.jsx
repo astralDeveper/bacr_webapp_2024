@@ -14,8 +14,8 @@ import TicaProducts from "../../pages/Partner/ticaProducts";
 import Home from "../../pages/Home";
 import Projects from "../../pages/Projects";
 import Services from "../../pages/Services";
-import ProjectDetailPage from "../../pages/ProjectDetail";
 import Brands from "../../pages/Brands";
+import ProjectDetailPage from "../../pages/ProjectDetailPage";
 
 export const router = createBrowserRouter([
   {
@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
     element: <AboutUs />,
   },
   {
-    path: "services-detail",
+    path: "/services-detail/:id",
     element: <ServiceDetailPage />,
   },
   {

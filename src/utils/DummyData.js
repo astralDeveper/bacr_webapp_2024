@@ -88,8 +88,8 @@ export const Products = [
     productName: "Product name",
     modelno: "5647",
     images: IMAGES.PRODUCT1,
-    image:[IMAGES.PRODUCT1,IMAGES.PRODUCT2,IMAGES.PRODUCT3,IMAGES.PRODUCT4],
-    description:"",
+    image: [IMAGES.PRODUCT1, IMAGES.PRODUCT2, IMAGES.PRODUCT3, IMAGES.PRODUCT4],
+    description: "",
     icon: IMAGES.ICON,
     id: 1,
   },
@@ -670,8 +670,8 @@ export const serviceCardData = [
     image: IMAGES.SERVICEONE,
     text: "Comfort Cooling",
     logo: IMAGES.SERVICELOGOONE,
-    description:
-      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+    description: "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+    id: 1
   },
   {
     image: IMAGES.SERVICETWO,
@@ -679,6 +679,7 @@ export const serviceCardData = [
     logo: IMAGES.SERVICELOGOTWO,
     description:
       "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+    id: 2
   },
   {
     image: IMAGES.SERVICETHREE,
@@ -686,6 +687,7 @@ export const serviceCardData = [
     logo: IMAGES.SERVICELOGOTHREE,
     description:
       "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+    id: 3
   },
   {
     image: IMAGES.SERVICEFOUR,
@@ -693,6 +695,7 @@ export const serviceCardData = [
     logo: IMAGES.SERVICELOGOFOUR,
     description:
       "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+    id: 4
   },
   {
     image: IMAGES.SERVICEFIVE,
@@ -700,6 +703,7 @@ export const serviceCardData = [
     logo: IMAGES.SERVICELOGOFIVE,
     description:
       "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+    id: 5
   },
   {
     image: IMAGES.SERVICESIX,
@@ -707,6 +711,7 @@ export const serviceCardData = [
     logo: IMAGES.SERVICELOGOSIX,
     description:
       "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+    id: 6
   },
   {
     image: IMAGES.SERVICESEVEN,
@@ -714,6 +719,7 @@ export const serviceCardData = [
     logo: IMAGES.SERVICELOGOSEVEN,
     description:
       "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+    id: 7
   },
 ];
 
@@ -761,3 +767,451 @@ export const brandsCardData = [
     tickImg: IMAGES.AUTH_TICK
   },
 ];
+
+export const ourTeamCardData = [
+  {
+    name: "Jake Anderson",
+    designation: "Service Manager",
+    image: IMAGES.WORKER1
+  },
+  {
+    name: "Jake Anderson",
+    designation: "Service Manager",
+    image: IMAGES.WORKER2
+  },
+  {
+    name: "Jake Anderson",
+    designation: "Service Manager",
+    image: IMAGES.WORKER3
+  },
+  {
+    name: "Jake Anderson",
+    designation: "Service Manager",
+    image: IMAGES.WORKER4
+  },
+  {
+    name: "Jake Anderson",
+    designation: "Service Manager",
+    image: IMAGES.WORKER1
+  },
+  {
+    name: "Jake Anderson",
+    designation: "Service Manager",
+    image: IMAGES.WORKER2
+  },
+  {
+    name: "Jake Anderson",
+    designation: "Service Manager",
+    image: IMAGES.WORKER3
+  },
+  {
+    name: "Jake Anderson",
+    designation: "Service Manager",
+    image: IMAGES.WORKER4
+  },
+]
+
+// AboutUs Page Start
+export const WhatWeDoData = [
+  {
+    image: IMAGES.AIRCONDITION,
+    text: "Comfort Cooling",
+    logo: IMAGES.COOLINGICON,
+    description:
+      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+  },
+  {
+    image: IMAGES.AIRCONDITION,
+    text: "Process Coolong",
+    logo: IMAGES.COOLINGICON,
+    description:
+      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+  },
+  {
+    image: IMAGES.AIRCONDITION,
+    text: "Cold Chain Storage",
+    logo: IMAGES.COOLINGICON,
+    description:
+      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+  },
+];
+
+export const OurPartnerImagesData = [
+  IMAGES.FLAKTGROUP,
+  IMAGES.GALLETTI,
+  IMAGES.TICA,
+];
+export const OurBrandsImagesData = [
+  IMAGES.FLAKTGROUP,
+  IMAGES.GALLETTI,
+  IMAGES.TICA,
+  IMAGES.CARRIER,
+  IMAGES.TRANE,
+  IMAGES.YORK,
+  IMAGES.MCQUAY,
+  IMAGES.SKM,
+  IMAGES.ZAMIL,
+];
+
+export const OurClientImagesData = [
+  IMAGES.PSO,
+  IMAGES.MIA,
+  IMAGES.PSO,
+  IMAGES.MIA,
+  IMAGES.PSO,
+  IMAGES.MIA,
+  IMAGES.MIA,
+  IMAGES.PSO,
+  IMAGES.MIA,
+  IMAGES.PSO,
+  IMAGES.MIA,
+];
+
+export const TrustUsCardData = [
+  {
+    img: IMAGES.SCHEDULEICON,
+    name: "Flexible Scheduling",
+    para: `Trust us to deliver reliable solutions
+and exceptional service, and peace
+of mind for your HVAC needs.`,
+  },
+  {
+    img: IMAGES.SCHEDULEICON,
+    name: "Flexible Scheduling",
+    para: `Trust us to deliver reliable solutions
+and exceptional service, and peace
+of mind for your HVAC needs.`,
+  },
+  {
+    img: IMAGES.SCHEDULEICON,
+    name: "Flexible Scheduling",
+    para: `Trust us to deliver reliable solutions
+and exceptional service, and peace
+of mind for your HVAC needs.`,
+  },
+  {
+    img: IMAGES.SCHEDULEICON,
+    name: "Flexible Scheduling",
+    para: `Trust us to deliver reliable solutions
+and exceptional service, and peace
+of mind for your HVAC needs.`,
+  },
+];
+
+export const TrustUsCarouselCardData = [
+  {
+    img: `${IMAGES.DINESHSINGH}`
+  },
+  {
+    img: "https://dummyimage.com/600x400/000/red",
+  },
+  {
+    img: "https://dummyimage.com/600x400/000/blue",
+  },
+  {
+    img: "https://dummyimage.com/600x400/000/yellow",
+  },
+];
+
+export const OurBlogCardData = [
+  {
+    img: IMAGES.BLOG1,
+    name: "Flexible Scheduling",
+    para: `Trust us to deliver reliable solutions
+and exceptional service, and peace
+of mind for your HVAC needs.`,
+  },
+  {
+    img: IMAGES.BLOG1,
+    name: "Flexible Scheduling",
+    para: `Trust us to deliver reliable solutions
+and exceptional service, and peace
+of mind for your HVAC needs.`,
+  },
+  {
+    img: IMAGES.BLOG1,
+    name: "Flexible Scheduling",
+    para: `Trust us to deliver reliable solutions
+and exceptional service, and peace
+of mind for your HVAC needs.`,
+  },
+];
+export const OverviewData = [
+  {
+    img: IMAGES.BULB,
+    name: "Our Vision",
+    para: ` At Brothers Air Conditioning, we  aim to be the preferred 
+    for reliable and cost-effective  HVACR solutions, addressing 
+    every need and challenge with  excellence.`,
+  },
+  {
+    img: IMAGES.BULB,
+    name: "Our Mission",
+    para: ` Our mission is to create comfortable, efficient, and healthy  
+    environments by consistently  delivering high-quality services 
+    that enhance the well-being and  productivity of our clients, 
+    regardless of climate or conditions.`,
+  },
+];
+export const CompanyProfileData = [
+  "Established in 2004, Brothers Air Conditioning has emerged as a  leading brand in the HVACR industry, known for its dedication to  delivering top-quality chillers that are customized to meet diverse  environmental and client-specific needs. The company has built a  strong reputation for excellence, supported by its expansive  inventory of OEM spare parts for various leading brands, ensuring  swift and reliable service for clients. ",
+  "Brothers Air Conditioning’s extensive stock of components allows for  prompt and efficient maintenance and repair solutions, reinforcing its  status as a trusted partner in the industry. Moreover, the company has  cultivated a broad network of partnerships with esteemed European  suppliers, enabling the import of advanced, high-performance chillers that  meet the highest international standards. ",
+  "The company’s technical support team is composed of skilled professionals  who provide expert assistance and responsive service, contributing to enhanced  client satisfaction and operational success. Brothers Air Conditioning’s  commitment to quality, reliability, and customer-focused service has solidified  its position as a benchmark of excellence in the HVACR industry, earning the  trust and loyalty of clients worldwide.",
+];
+
+export const OurBrandsData = [
+  IMAGES.FLAKTGROUP,
+  IMAGES.GALLETTI,
+  IMAGES.TICA,
+  IMAGES.FLAKTGROUP,
+  IMAGES.GALLETTI,
+  IMAGES.TICA,
+  IMAGES.FLAKTGROUP,
+  IMAGES.GALLETTI,
+  IMAGES.TICA,
+];
+
+export const MeetParaData = [
+  " I am proud to share that, in a relatively short  span, Brothers Air Conditioning has achieved  remarkable success and sustained growth.  Today, we stand as one of the leading HVACR  service providers in the region, known for our  expertise, commitment, and customer-focused  approach. Our profile reflects the achievements  and project milestones we’ve reached over 20  years of experience, delivering HVAC solutions  across Pakistan and internationally.",
+  // "Brothers Air Conditioning was built on a foundation of integrity,transparency, and  respect for every client. As an independent company, we focus on meeting the  unique needs of each project with a deep commitment to quality and customer  satisfaction. Our team is our greatest asset – a dedicated group of skilled technicians and professionals who bring passion, technical knowledge, and a  relentless drive to exceed expectations. Every project we undertake is guided by  their expertise and our collective commitment to high standards.",
+  // " We understand that each client has unique concerns and requirements, and  we’re here to address them with the utmost care and precision. At Brothers Air  Conditioning, we are not just building systems but building relationships founded  on trust and excellence. As we move forward, our commitment remains steadfast:  to bring the best HVACR solutions to our clients in Pakistan and beyond, ensuring  comfort, energy efficiency, and reliability in every environment we serve.",
+];
+
+export const OurProductsData = [
+  {
+    brands: "Flakt Group",
+    category: "AHU",
+    price: "1000",
+    capacity: "5Tons",
+    productName: "Product name",
+    modelno: "5647",
+    images: IMAGES.PRODUCT1,
+    icon: IMAGES.ICON,
+    id: 1,
+  },
+  {
+    brands: "Galletti Products",
+    category: "Coils",
+    price: "5000",
+    capacity: "10Tons",
+    productName: "Product name",
+    modelno: "5647",
+    images: IMAGES.PRODUCT1,
+    icon: IMAGES.ICON,
+    id: 2,
+  },
+  {
+    brands: "Tica Products",
+    category: "Chillers",
+    price: "10000",
+    capacity: "20Tons",
+    productName: "Product name",
+    modelno: "5647",
+    images: IMAGES.PRODUCT1,
+    icon: IMAGES.ICON,
+    id: 3,
+  },
+];
+// AboutUs Page end
+
+// Footer Data Start Here
+
+export const ServicesLinks = [
+  {
+    heading: "SERVICES",
+    links: [
+      {
+        link: "Comfort Cooling",
+        href: "/services-detail",
+      },
+      {
+        link: "Process Cooling",
+        href: "",
+      },
+      {
+        link: "Cold Chain Storage",
+        href: "",
+      },
+      {
+        link: "Turnkey Solution",
+        href: "",
+      },
+      {
+        link: "Eenergy Optimization",
+        href: "",
+      },
+      {
+        link: "Operation maintenance",
+        href: "",
+      },
+      {
+        link: "Troubleshooting",
+        href: "",
+      },
+    ],
+  },
+];
+
+export const ProductsLinks = [
+  {
+    heading: "PRODUCTS",
+    links: [
+      {
+        link: "New Products",
+        href: "",
+      },
+      {
+        link: "Used Equipments",
+        href: "",
+      },
+      {
+        link: "BAC Store",
+        link: "",
+      },
+    ],
+  },
+  {
+    heading: "Resources",
+    links: [
+      {
+        link: "Career",
+        href: "/career",
+      },
+      {
+        link: "Blogs",
+        href: "/blogs",
+      },
+    ],
+  },
+];
+
+export const ProjectsLinks = [
+  {
+    heading: "PROJECTS",
+    links: [
+      {
+        link: "Turnkey Projects",
+        href: "",
+      },
+      {
+        link: "Supply and Comissioning",
+        href: "",
+      },
+      {
+        link: "Operations and Services",
+        href: "",
+      },
+      {
+        link: "Clients",
+        href: "",
+      },
+    ],
+  },
+];
+
+export const meneLinks = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "About Us",
+    href: "/about",
+  },
+  {
+    title: "Products",
+    href: "/products",
+  },
+  {
+    title: "Services",
+    href: "/services",
+  },
+  {
+    title: "Projects",
+    href: "/projects",
+  },
+  {
+    title: "Brands",
+    href: "/Brands",
+  },
+  {
+    title: "Contact Us",
+    href: "/contact_us",
+  },
+  {
+    title: "Privacy Policy",
+    href: "/privacy-policy",
+  },
+  ,
+];
+
+// Footer Data end Here
+
+// about card content start here
+export const AboutCardData = [
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER1,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER2,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER3,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER4,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER3,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER1,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER4,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+  {
+    name: "Jake Anderson",
+    destination: "Service Manager",
+    img: IMAGES.WORKER2,
+    socialIcon: IMAGES.FACEBOOK,
+    socialIcon2: IMAGES.INSTA,
+    socialIcon3: IMAGES.TWIT,
+  },
+];
+// about card content end here
