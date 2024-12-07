@@ -13,9 +13,9 @@ import GallettiProducts from "../../pages/Partner/gallettiProducts";
 import TicaProducts from "../../pages/Partner/ticaProducts";
 import Home from "../../pages/Home";
 import Projects from "../../pages/Projects";
-import Services from "../../pages/Services";
 import Brands from "../../pages/Brands";
 import ProjectDetailPage from "../../pages/ProjectDetailPage";
+import Services from "../../pages/Services";
 
 export const router = createBrowserRouter([
   {

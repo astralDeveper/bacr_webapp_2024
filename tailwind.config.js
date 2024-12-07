@@ -8,7 +8,7 @@ export default {
     },
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('../public/images/herosec.png')",
+        'hero-pattern': "url('../src/assets/images/herosec.png')",
       },
       colors: {
         backgroundColor1: "#064670",
