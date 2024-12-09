@@ -1,4 +1,5 @@
-const generateImagePath = (name) => `/public/images/${name}.png`;
+// const generateImagePath = (name) => `/public/images/${name}.png`;
+const generateImagePath = (name) => `/images/${name}.png`;
 
 
 const imageNames = [
