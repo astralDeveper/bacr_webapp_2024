@@ -36,7 +36,7 @@ const TabBar = ({ search,tabtext1,tabtext2,tabtext3,setBrand }) => {
             {
                 search && (
                     <div className='md:w-[70%] w-full mx-auto'>
-                        <img src={IMAGES.SEARCH} alt="icon" className='md:translate-y-9 translate-y-7 translate-x-3 md:w-[20px] w-[15px]  ' />
+                        <img src={IMAGES.SEARCH} alt="icon" className='md:translate-y-9 translate-y-5 translate-x-3 md:w-[20px] w-[10px]  ' />
                         <input type="text" placeholder='Search what you want...' className='px-10 border-2 w-full md:h-[50px] placeholder:text1 rounded-xl outline-none' onChange={(e) => setBrand(e.target.value)} />
                     </div>
 

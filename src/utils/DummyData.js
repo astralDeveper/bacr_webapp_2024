@@ -1,5 +1,8 @@
 import { IMAGES } from "./Images";
 
+console.log(IMAGES?.CEO);
+
+
 export const navManue = [
   {
     title: "Home",
@@ -1215,3 +1218,11 @@ export const AboutCardData = [
   },
 ];
 // about card content end here
+
+// OurServices Data start
+export const OurServicesData=[
+  {
+    
+  }
+]
+// OurServices Data end

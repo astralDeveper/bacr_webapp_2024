@@ -155,13 +155,13 @@ const ProductCards = () => {
                 </div>
 
                 {/* Product Cards */}
-                <div className="grid md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-6 w-full">
+                <div className="grid md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-y-4 w-full">
                     {
                         filteredProducts.length > 0 ?
                             filteredProducts.map((item, ind) => (
                                 <div
                                     key={ind}
-                                    className={`mt-4 lg:max-w-[370px] lg:max-h-[471px] p-6 rounded-xl shadow-md ${clickedIndex === ind
+                                    className={`lg:max-w-[370px] lg:max-h-[471px] p-6 rounded-xl shadow-md ${clickedIndex === ind
                                         ? "bg-backgroundColor1 text-backgroundColor2 transition-colors duration-500 ease-in-out"
                                         : "bg-backgroundColor9"
                                         } cursor-pointer`}
@@ -173,7 +173,7 @@ const ProductCards = () => {
                                         className="lg:w-[289px] md:w-[200px] w-[150px] h-auto mb-4 mx-auto"
                                     />
                                     <div className="flex items-center justify-between">
-                                        <p className="heading5">{item.productName}</p>
+                                        <p className="heading7 font-semibold">{item.productName}</p>
                                         <div className="flex items-center gap-2 text1">
                                             <span>12</span>
                                             <img src={item.icon} alt="icon" className="md:w-6 w-4" />
@@ -192,6 +192,7 @@ const ProductCards = () => {
                                             to={{
                                                 pathname: `/detail/${item?.id}`,
                                             }}
+                                            className='w-full'
                                         >
 
                                             <Button
@@ -200,9 +201,6 @@ const ProductCards = () => {
                                                     : "text-backgroundColor6 bg-backgroundColor1"
                                                     } font-semibold`}
                                                 title="Product Inquiry"
-                                            // onclick={() => {
-                                            //     productDetail(item);
-                                            // }}
                                             />
                                         </Link>
                                     </div>
@@ -212,7 +210,7 @@ const ProductCards = () => {
                             Products.map((item, ind) => (
                                 <div
                                     key={ind}
-                                    className={`mt-4 lg:max-w-[370px] lg:max-h-[471px] p-6 rounded-xl shadow-md ${clickedIndex === ind
+                                    className={`lg:max-w-[370px] lg:max-h-[471px] p-6 rounded-xl shadow-md ${clickedIndex === ind
                                         ? "bg-backgroundColor1 text-backgroundColor2 transition-colors duration-500 ease-in-out"
                                         : "bg-backgroundColor9"
                                         } cursor-pointer`}
@@ -224,7 +222,7 @@ const ProductCards = () => {
                                         className="lg:w-[289px] md:w-[200px] w-[150px] h-auto mb-4 mx-auto"
                                     />
                                     <div className="flex items-center justify-between">
-                                        <p className="heading5">{item.productName}</p>
+                                        <p className="heading7 font-semibold">{item.productName}</p>
                                         <div className="flex items-center gap-2 text1">
                                             <span>12</span>
                                             <img src={item.icon} alt="icon" className="md:w-6 w-4" />
@@ -238,12 +236,13 @@ const ProductCards = () => {
                                             Brands Name: <span className="font-bold text1">{item.brands}</span>
                                         </p>
                                     </div>
-                                    <div className="md:mt-6 mt-4 flex items-center justify-center">
+                                    <div className="md:mt-6 mt-4 flex items-center justify-center w-full">
 
                                         <Link
                                             to={{
                                                 pathname: `/detail/${item?.id}`,
                                             }}
+                                            className='w-full'
                                         >
 
                                             <Button

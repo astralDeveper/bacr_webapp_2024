@@ -26,10 +26,10 @@
     @apply lg:text-[26px] md:text-[18px] text-[12px] font-semibold;
   }
   .heading7 {
-    @apply lg:text-[20px] md:text-[18px] text-[14px];
+    @apply lg:text-[20px] md:text-[16px] text-[12px];
   }
   .text1 {
-    @apply lg:text-[17px] md:text-[15px] text-[12px] font-normal;
+    @apply lg:text-[17px] md:text-[14px] text-[10px] font-normal;
   }
   .text2 {
     @apply lg:text-[14px] md:text-[13px] text-[11px] font-normal;

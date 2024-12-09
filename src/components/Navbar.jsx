@@ -29,17 +29,17 @@ const Navbar = ({ mainStyle, heading, para, home, image }) => {
         <div className={`${image ? 'bg-hero-pattern bg-no-repeat bg-cover w-full' : ''}`}>
             <div className='max-w-[80%] mx-auto rounded-b-[30px] bg-white shadow-shadow2  p-6 ' >
                 <div className='flex items-center justify-between'>
-                    <Link to={"/"}>
-                        <img src={IMAGES.LOGO} alt="logo" className='lg:w-[114px] w-[60px] object-contain' />
+                    <Link to={"/"} className='shrink-0'>
+                        <img src={IMAGES.LOGO} alt="logo" className='xl:w-[114px] w-[60px] object-contain' />
                     </Link>
                     {/*   */}
                     {/* Dekstop */}
-                    <div className='2xl:flex lg:hidden hidden' >
-                        <nav className='lg:flex md:flex sm:flex items-center justify-center xl:gap-[30px] lg:gap-[16px] md:gap-[15px] sm:gap-[6px] xs:hidden' >
+                    <div className='md:block hidden' >
+                        <nav className='flex items-center justify-center xl:gap-6 gap-2' >
                             {
                                 navManue.map((item, ind) => {
                                     return (
-                                        <Link key={ind} to={item.href} className={`flex items-center lg:gap-2 md:gap-2 sm:gap-1 justify-center lg:text1 md:tet-[10px]  ${active === item.href ? "text-backgroundColor4" : ""} `} >
+                                        <Link key={ind} to={item.href} className={`xl:text1 text3  ${active === item.href ? "text-backgroundColor4" : ""} `} >
                                             {item.title}
                                         </Link>
                                     )
@@ -51,19 +51,17 @@ const Navbar = ({ mainStyle, heading, para, home, image }) => {
                     </div>
                     {/* Dekstop end */}
 
-
-                    <div className='2xl:flex flex-col items-start justify-start lg:gap-4 md:gap-2 sm:1 hidden '>
-                        <div className='flex items-center gap-2'>
-                            <img src={IMAGES.PHONE} alt="phone Icon" className='lg:w-[28px] md:w-[10px] sm:w-[15px] lg:h-[28px]' />
-                            <a href="tel:+92 345 3456563" className='text1 ' >+92 345 3456563</a>
+                    <div className='md:block hidden '>
+                        <div className='flex items-center xl:gap-2 gap-1'>
+                            <img src={IMAGES.PHONE} alt="phone Icon" className='lg:w-[18px] sm:w-[8px]' />
+                            <a href="tel:+92 345 3456563" className='lg:text1 text3' >+92 345 3456563</a>
                         </div>
-                        <div className='flex items-center gap-2'>
-                            <img src={IMAGES.MAIL} alt="mail Icon" className='lg:w-[28px]  md:w-[10px] sm:w-[15px] lg:h-[28px]' />
-                            <a href="mailto:bacremail@gmail.com" className='text1 ' >bacremail@gmail.com</a>
+                        <div className='flex items-center xl:gap-2 gap-1'>
+                            <img src={IMAGES.MAIL} alt="mail Icon" className='lg:w-[18px] sm:w-[8px]' />
+                            <a href="mailto:bacremail@gmail.com" className='lg:text1 text3' >bacremail@gmail.com</a>
                         </div>
                     </div>
-
-                    <div className='2xl:hidden  w-fit cursor-pointer' onClick={() => { SetMenueOpen(!menueOpen) }} >
+                    <div className='md:hidden ' onClick={() => { SetMenueOpen(!menueOpen) }} >
                         <img src={IMAGES.MANUE} alt={IMAGES.MANUE} className='w-[20px]' />
                     </div>
                 </div>

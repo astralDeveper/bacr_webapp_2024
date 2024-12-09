@@ -7,7 +7,7 @@ export default {
     },
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('../src/assets/images/herosec.png')",
+        'hero-pattern': "url('../public/images/herosec.png')",
       },
       colors: {
         backgroundColor1: "#064670",
@@ -65,6 +65,8 @@ export default {
       'lg': '1024px',
 
       'xl': '1280px',
+
+      'xl1': '1050px',
 
       '2xl': '1536px',
     }
