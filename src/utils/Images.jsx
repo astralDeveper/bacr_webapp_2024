@@ -53,7 +53,6 @@ const imageNames = [
   "projectlogotwo",
   "projectlogothree",
   "icon",
-  "product1",
   "search",
   "blog",
   "leftarrow",
@@ -66,10 +65,10 @@ const imageNames = [
   "blog2",
   "blog3",
   "clipboard",
-  "Product1",
-  "Product2",
-  "Product3",
-  "Product4",
+  "product1",
+  "product2",
+  "product3",
+  "product4",
 
   // service images start
   "serviceone",
