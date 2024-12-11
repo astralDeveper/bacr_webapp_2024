@@ -3,8 +3,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import { EffectCoverflow } from 'swiper/modules';
+import "swiper/css/autoplay";
+import "swiper/css/navigation";
+import { Autoplay, EffectCoverflow, Navigation } from 'swiper/modules';
 import { IMAGES } from '../../../utils/Images';
+
+
 
 const CertifiedAchievements = () => {
   const images = [
@@ -19,10 +23,35 @@ const CertifiedAchievements = () => {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="relative">
+
+            {/* Custom Navigation Buttons with Images */}
+            <button
+              className="swiper-custom-prev absolute left-0 top-1/2 transform -translate-y-12 z-10 bg-backgroundColor1 p-2 rounded-full "
+            >
+              <img
+                src={IMAGES.PREV}
+                alt="Previous"
+                className="w-6 h-6 object-contain"
+              />
+            </button>
+            <button
+              className="swiper-custom-next absolute right-0 top-1/2 transform -translate-y-12 z-10 bg-backgroundColor1 p-2 rounded-full"
+            >
+              <img
+                src={IMAGES.NEXT}
+                alt="Next"
+                className="w-6 h-6 object-contain"
+              />
+            </button>
+         
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
             loop={true}
             spaceBetween={30}
             breakpoints={{
@@ -41,10 +70,14 @@ const CertifiedAchievements = () => {
               rotate: 0,
               stretch: 30,
               depth: 500,
-              modifier: 1,
+              // modifier: 1,
               slideShadows: false,
             }}
-            modules={[EffectCoverflow]}
+            modules={[EffectCoverflow, Autoplay, Navigation]}
+            navigation={{
+              nextEl: ".swiper-custom-next",
+              prevEl: ".swiper-custom-prev",
+            }}
             className="mySwiper"
           >
             {images.map((image, index) => (

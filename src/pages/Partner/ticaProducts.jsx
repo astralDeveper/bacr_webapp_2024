@@ -17,11 +17,11 @@ const Carrier = () => {
 
   return (
     <InfoPage
-      heading='Carrier'
+      heading='Tica Products'
       children={
         <div className='md:w-[80%] w-[90%] mx-auto my-16 p-2'>
           <p className=' text-text9 heading7' >
-            <span className='font-semibold pr-1'>Carrier</span>
+            <span className='font-semibold pr-1'>TICA</span>
             is a leading Italian brand, renowned for its high-performance HVAC
             solutions. Specializing in fan coil units, chillers, and heat pumps.
             Galletti combines Italian innovation with cutting-edge technology to
@@ -34,7 +34,7 @@ const Carrier = () => {
             including
           </p>
           <div className=' py-10 '>
-            <p>{KeyName.toUpperCase()}</p>
+            <p className='text-text9 font-semibold'>{KeyName.toUpperCase()}</p>
             <ul className='list-disc grid 2xl:grid-cols-2 grid-cols-1 px-6 heading7 text-backgroundColor1 font-semibold'>
               {KeyArray.map(item => (
                 <li>{item}</li>
@@ -43,8 +43,8 @@ const Carrier = () => {
           </div>
 
           <div className=' py-10 '>
-            <p>{ModelName.toUpperCase()}</p>
-            <ul className='list-disc grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 px-6 '>
+            <p className='text-text9 font-semibold'>{ModelName.toUpperCase()}</p>
+            <ul className='list-disc grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 px-6 heading7 text-backgroundColor1 font-semibold'>
               {ModelArray.map(item => (
                 <li>{item}</li>
               ))}

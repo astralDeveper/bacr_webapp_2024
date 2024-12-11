@@ -13,7 +13,7 @@ export default function OurProducts(props) {
   const [clickedIndex, setClickedIndex] = useState(null); // To store the index of the clicked card
 
   const handleClick = (index) => {
-      setClickedIndex(index); // Set the clicked card index
+    setClickedIndex(index); // Set the clicked card index
   };
 
 
@@ -27,10 +27,10 @@ export default function OurProducts(props) {
         {slides.map((item, ind) => (
           <div
             key={ind}
-            className={`mt-4 lg:max-w-[489px] lg:max-h-[567px] p-6 rounded-xl shadow-md ${clickedIndex === ind
+            className={`lg:max-w-[370px] lg:max-h-[471px] p-6 rounded-xl shadow-md ${clickedIndex === ind
               ? "bg-backgroundColor1 text-backgroundColor2 transition-colors duration-500 ease-in-out"
               : "bg-backgroundColor9"
-              } cursor-pointer w-full`}
+              } cursor-pointer`}
             onClick={() => handleClick(ind)}
           >
             <img
@@ -39,7 +39,7 @@ export default function OurProducts(props) {
               className="lg:w-[289px] md:w-[200px] w-[150px] h-auto mb-4 mx-auto"
             />
             <div className="flex items-center justify-between">
-              <p className="heading5">{item.productName}</p>
+              <p className="heading7 font-semibold">{item.productName}</p>
               <div className="flex items-center gap-2 text1">
                 <span>12</span>
                 <img src={item.icon} alt="icon" className="md:w-6 w-4" />
@@ -53,20 +53,19 @@ export default function OurProducts(props) {
                 Brands Name: <span className="font-bold text1">{item.brands}</span>
               </p>
             </div>
-            <div className="md:mt-6 mt-4 flex items-center justify-center w-full">
-
+            <div className="md:mt-6 mt-4 flex items-center justify-center">
               <Link
                 to={{
                   pathname: `/detail/${item?.id}`,
                 }}
-                className="w-full"
+                className='w-full'
               >
 
                 <Button
-                  btnStyle={`rounded-md  text1 ${clickedIndex === ind
+                  btnStyle={`rounded-md w-full text1 ${clickedIndex === ind
                     ? "bg-backgroundColor2 text-backgroundColor1"
                     : "text-backgroundColor6 bg-backgroundColor1"
-                    } font-semibold w-full`}
+                    } font-semibold`}
                   title="Product Inquiry"
                 />
               </Link>
@@ -75,13 +74,12 @@ export default function OurProducts(props) {
         ))}
       </div>
 
-      {/* <div className="flex justify-center py-8">
+      <Link to={"/products"} className="flex justify-center py-8">
         <Button
-          // onclick={() => { handleTabChange("new") }}
           btnStyle="bg-backgroundColor1 w-[250px] text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold"
           title={"See All Products"}
         />
-      </div> */}
+      </Link>
     </section>
   );
 }

@@ -43,7 +43,7 @@ const CardComponent = () => {
                     {item.description}
                   </p>
                   <div className="mt-10 flex items-center justify-center  rounded-md">
-                    <Link to={`/services-detail/${item.id}`}>
+                    <Link to={`/services-detail`}>
                       <Button
                         btnStyle="bg-backgroundColor1 w-full rounded-md text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 lg:font-semibold "
                         title={"Learn More"}

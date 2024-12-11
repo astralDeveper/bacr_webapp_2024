@@ -15,6 +15,7 @@ const imageNames = [
   "whatsapp",
   "manue",
   "close",
+  "crossicon",
   "cartimgone",
   "cartimgtwo",
   "cartimgthree",
@@ -133,7 +134,9 @@ const imageNames = [
   "dineshsingh",
   "circleshape",
   "paraarrow",
-  "twit"
+  "twit",
+  "next",
+  "prev"
 
 
 

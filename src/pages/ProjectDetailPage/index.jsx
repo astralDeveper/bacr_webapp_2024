@@ -66,7 +66,7 @@ const ProjectDetailPage = () => {
   return (
     <Container>
       <div className=" w-[80%] mx-auto px-4 py-8">
-        <div className="flex 2xl:flex-row flex-col 2xl:items-start items-center justify-center gap-4  w-full">
+        <div className="flex md:flex-row flex-col md:items-start items-center  justify-center gap-4  w-full">
           {/* Main Image Section */}
           <div className="2xl:w-[40%] w-full px-4 lg:mb-4">
             <img
@@ -126,7 +126,7 @@ const ProjectDetailPage = () => {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex 2xl:flex-col items-center justify-center flex-row gap-6 w-full sm:w-[5%] mb-2">
+          <div className="flex items-center justify-center flex-row  md:flex-col gap-6 w-full sm:w-[5%] mb-2">
             <Button
               btnStyle="flex items-center justify-center text1 text-black rounded-md bg-backgroundColor11 rounded-2xl lg:font-semibold"
               title="<"

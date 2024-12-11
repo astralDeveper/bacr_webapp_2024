@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "../../../components/Button";
 import { projectCardData } from "../../../utils/DummyData";
 
-const ProjectsCardComponent = () => {
+const ProjectsCardComponent = ({setIsModalOpen,isModalOpen}) => {
   const navigation = useNavigate();
 
   return (
@@ -46,16 +46,18 @@ const ProjectsCardComponent = () => {
                     </p>
                     <div className="mt-10 flex items-center justify-center  rounded-md">
                       <div className=" w-full">
-                        <Link
+                        {/* <Link
                           to={{
                             pathname: `/detail/${item?.id}`,   
                           }}
                         >
-                          <Button
+                          
+                        </Link> */}
+                        <Button
                             btnStyle="bg-backgroundColor1 w-full  text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 lg:font-semibold "
                             title="Learn More"
+                            onclick={()=>{setIsModalOpen(!isModalOpen)}}
                           />
-                        </Link>
                       </div>
                     </div>
                   </div>

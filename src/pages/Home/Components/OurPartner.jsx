@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function OurPartner(props) {
   const { title, images } = props;
@@ -11,11 +12,13 @@ export default function OurPartner(props) {
       <div className="py-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6">
         {images.map((item) => (
           <div className="border rounded-lg py-4 text-center flex justify-center">
-            <img
-              src={item}
+           <Link to={item.href}>
+           <img
+              src={item.img}
               alt="phone Icon"
               className="object-contain max-h-8"
             />
+           </Link>
           </div>
         ))}
       </div>

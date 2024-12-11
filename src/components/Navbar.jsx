@@ -35,7 +35,7 @@ const Navbar = ({ mainStyle, heading, para, home, image }) => {
                     {/*   */}
                     {/* Dekstop */}
                     <div className='md:block hidden' >
-                        <nav className='flex items-center justify-center xl:gap-6 gap-2' >
+                        <nav className='flex items-center justify-center xl:gap-4 gap-2' >
                             {
                                 navManue.map((item, ind) => {
                                     return (

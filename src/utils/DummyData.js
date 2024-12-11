@@ -840,9 +840,18 @@ export const WhatWeDoData = [
 ];
 
 export const OurPartnerImagesData = [
-  IMAGES.FLAKTGROUP,
-  IMAGES.GALLETTI,
-  IMAGES.TICA,
+  {
+    img: IMAGES.FLAKTGROUP,
+    href: "/flakt"
+  },
+  {
+    img: IMAGES.GALLETTI,
+    href: "/galleti"
+  },
+  {
+    img: IMAGES.TICA,
+    href: "/tica"
+  },
 ];
 export const OurBrandsImagesData = [
   IMAGES.FLAKTGROUP,
@@ -1029,27 +1038,27 @@ export const ServicesLinks = [
       },
       {
         link: "Process Cooling",
-        href: "",
+        href: "/services-detail",
       },
       {
         link: "Cold Chain Storage",
-        href: "",
+        href: "/services-detail",
       },
       {
         link: "Turnkey Solution",
-        href: "",
+        href: "/services-detail",
       },
       {
         link: "Eenergy Optimization",
-        href: "",
+        href: "/services-detail",
       },
       {
         link: "Operation maintenance",
-        href: "",
+        href: "/services-detail",
       },
       {
         link: "Troubleshooting",
-        href: "",
+        href: "/services-detail",
       },
     ],
   },
@@ -1084,6 +1093,10 @@ export const ProductsLinks = [
         link: "Blogs",
         href: "/blogs",
       },
+      {
+        link: "Privacy Policy",
+        href: "/privacy-policy",
+      },
     ],
   },
 ];
@@ -1094,19 +1107,19 @@ export const ProjectsLinks = [
     links: [
       {
         link: "Turnkey Projects",
-        href: "",
+        href: "/projects",
       },
       {
         link: "Supply and Comissioning",
-        href: "",
+        href: "/projects",
       },
       {
         link: "Operations and Services",
-        href: "",
+        href: "/projects",
       },
       {
         link: "Clients",
-        href: "",
+        href: "/projects",
       },
     ],
   },
@@ -1141,10 +1154,7 @@ export const meneLinks = [
     title: "Contact Us",
     href: "/contact_us",
   },
-  {
-    title: "Privacy Policy",
-    href: "/privacy-policy",
-  },
+
   ,
 ];
 
@@ -1220,9 +1230,9 @@ export const AboutCardData = [
 // about card content end here
 
 // OurServices Data start
-export const OurServicesData=[
+export const OurServicesData = [
   {
-    
+
   }
 ]
 // OurServices Data end

@@ -6,16 +6,16 @@ export default function OurBlog(props) {
   const { title, subTitle, para, card, carouselCard } = props;
 
   return (
-    <section className="sm:max-w-[80%] sm:mx-auto p-6 my-6 ">
+    <section className="md:w-[80%] w-full mx-auto md:p-6 p-2 my-6 ">
       <div className="grid xl:grid-cols-2 gap-x-4 gap-y-8">
         <div className="flex flex-col items-start">
-          <div className="text-sm text-[#ee8c33] font-light">{subTitle}</div>
+          <div className="text-4 text-[#ee8c33] font-light">{subTitle}</div>
 
-          <h2 className="outfit-font text-[18px] sm:text-[26px] lg:text-[34px] font-semibold text-[#000] leading-0">
+          <h2 className="outfit-font text1 sm:text-[26px] lg:text-[34px] font-semibold text-[#000] leading-0">
             {title}
           </h2>
 
-          <p className="text-[15px] text-[#000] font-light mx-auto ">{para}</p>
+          <p className="text1 text-[#000] font-light mx-auto ">{para}</p>
           <Button
             btnStyle="bg-backgroundColor1 w-[250px] text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold mt-2"
             title="See All Blogs"
@@ -24,7 +24,7 @@ export default function OurBlog(props) {
         {card.map((item) => (
           <div className="flex flex-col sm:flex-row bg-white rounded-md shadow-lg sm:p-5">
             <div
-              className="sm:me-4 h-[190px] mb-2 sm:mb-auto sm:w-[380px] rounded-md  relative bg-cover bg-center bg-no-repeat"
+              className="sm:me-4 h-[190px] mb-2 sm:mb-auto w-full rounded-md  relative bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage: `url(${item.img})`,
               }}
@@ -45,16 +45,16 @@ export default function OurBlog(props) {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col justify-center p-3 sm:p-auto">
-              <h4 className="text-[18px] text-[#000] font-medium leading-none ">
+            <div className="flex flex-col justify-center p-3 ">
+              <h4 className="text1 text-[#000] font-medium leading-none ">
                 {item.name}
               </h4>
-              <p className="text-[13px] text-[#7a7a7a] font-light py-2">
+              <p className="text1 text-[#7a7a7a] font-light py-2">
                 {item.para}
               </p>
               <Button
                 btnStyle="bg-backgroundColor1 w-[250px] text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold"
-                title="Product Inquiry"
+                title="Continue reading"
               />
             </div>
           </div>
