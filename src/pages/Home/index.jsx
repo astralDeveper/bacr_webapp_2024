@@ -30,6 +30,7 @@ const Home = () => {
       home
       image
       mainStyle={"flex flex-col items-end justify-end text-start "}
+      id="book"
     >
       <main className="">
         <WhatWeDo
@@ -43,8 +44,10 @@ const Home = () => {
           options={OPTIONS}
         />
         <OurPartner title="Our Partner" images={OurPartnerImagesData} />
+
         <OurClient title="Our Client" images={OurClientImagesData} />
-        <OurClient images={OurClientImagesData} />
+        {/* <OurClient images={OurClientImagesData} /> */}
+
         <TrustUs
           title="Why Trust Us"
           subTitle="Top 4 Reasons"

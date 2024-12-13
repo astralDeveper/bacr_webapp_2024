@@ -15,7 +15,12 @@ export const navManue = [
     icon: false,
   },
   {
-    title: "Products",
+    title: "Brands",
+    href: "/Brands",
+    icon: false,
+  },
+  {
+    title: "Store",
     href: "/products",
     icon: false,
   },
@@ -29,11 +34,11 @@ export const navManue = [
     href: "/projects",
     icon: false,
   },
-  {
-    title: "Brands",
-    href: "/Brands",
-    icon: false,
-  },
+  // {
+  //   title: "Brands",
+  //   href: "/Brands",
+  //   icon: false,
+  // },
   {
     title: "Contact Us",
     href: "/contact_us",
@@ -59,28 +64,59 @@ export const socialIcons = [
   },
 ];
 
-export const servicesDetailPgeCartData = [
+export const comfortCooling = [
   {
-    img: IMAGES.TECHNOLOGY,
+    img: IMAGES.COMFORT2,
     title: "Advanced Technology Integration",
     para: "Our team harnesses the power of advanced technologies to design and implement cooling solutions that maximize efficiency and minimize energy consumption. From state-of-the-art chillers to innovative control systems, we leverage the latest advancements to deliver superior performance and cost savings.",
   },
   {
-    img: IMAGES.SERVICERIGHTIMG,
+    img: IMAGES.COMFORT3,
     title: "Customized Design and Engineering",
     para: "Understanding that every project is unique, we offer customized design and engineering services to meet specific requirements and challenges. Whether it's a large-scale commercial facility or a smaller residential space, our experts work closely with clients to develop tailored solutions that optimize comfort and functionality",
   },
   {
-    img: IMAGES.ENERGY,
+    img: IMAGES.COMFORT4,
     title: "Energy Efficiency and Sustainability",
     para: "Our team harnesses the power of advanced technologies to design and implement cooling solutions that maximize efficiency and minimize energy consumption. From state-of-the-art chillers to innovative control systems, we leverage the latest advancements to deliver superior performance and cost savings.",
   },
   {
-    img: IMAGES.SERVICE,
+    img: IMAGES.COMFORT5,
     title: "Exceptional Customer Service",
     para: "Understanding that every project is unique, we offer customized design and engineering services to meet specific requirements and challenges. Whether it's a large-scale commercial facility or a smaller residential space, our experts work closely with clients to develop tailored solutions that optimize comfort and functionality",
   },
 ];
+export const processCooling = [
+  {
+    img: IMAGES.PROCESS1,
+    title: "Customized Chillers",
+    para: "We excel in designing and manufacturing customized chillers tailored to meet the specific requirements of diverse industries. Whether you operate in pharmaceuticals, food and beverage, petrochemicals, or any other sector, we have the expertise to develop chillers that ensure optimal performance and efficiency.",
+  },
+  {
+    img: IMAGES.PROCESS2,
+    title: "Energy Efficiency",
+    para: "BAC is at the forefront of energy-efficient cooling solutions. Our team utilizes advanced technologies and engineering practices to design chillers that minimize energy consumption without compromising on performance. By investing in our solutions, clients can significantly reduce operational costs and contribute to sustainability efforts.",
+  },
+  {
+    img: IMAGES.PROCESS3,
+    title: "Reliability and Durability",
+    para: "We understand the importance of reliability in industrial cooling applications. Our chillers are built to withstand the rigors of continuous operation in demanding environments. With robust construction and high-quality components, our solutions offer unmatched durability, ensuring uninterrupted cooling for your critical processes.",
+  },
+  {
+    img: IMAGES.PROCESS1,
+    title: "Smart Controls and Monitoring",
+    para: "BAC integrates smart controls and monitoring systems into our chillers, allowing for precise temperature regulation and remote management. Through real-time data analytics and predictive maintenance capabilities, clients can optimize performance, prevent downtime, and extend the lifespan of their equipment.",
+  },
+];
+
+
+
+
+
+
+
+
+
 
 export const Products = [
   {
@@ -94,6 +130,7 @@ export const Products = [
     image: [IMAGES.PRODUCT1, IMAGES.PRODUCT2, IMAGES.PRODUCT3, IMAGES.PRODUCT4],
     description: "",
     icon: IMAGES.ICON,
+    iconwhite: IMAGES.ICONWHITE,
     id: 1,
   },
   {
@@ -105,6 +142,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
+    iconwhite: IMAGES.ICONWHITE,
     id: 2,
   },
   {
@@ -116,6 +154,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
+    iconwhite: IMAGES.ICONWHITE,
     id: 3,
   },
   {
@@ -127,6 +166,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
+    iconwhite: IMAGES.ICONWHITE,
     id: 4,
   },
   {
@@ -138,6 +178,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
+    iconwhite: IMAGES.ICONWHITE,
     id: 5,
   },
   {
@@ -149,6 +190,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
+    iconwhite: IMAGES.ICONWHITE,
     id: 6,
   },
   {
@@ -160,6 +202,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
+    iconwhite: IMAGES.ICONWHITE,
     id: 7,
   },
   {
@@ -171,6 +214,7 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
+    iconwhite: IMAGES.ICONWHITE,
     id: 8,
   },
   {
@@ -182,239 +226,10 @@ export const Products = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
+    iconwhite: IMAGES.ICONWHITE,
     id: 9,
   },
-  {
-    brands: "Flakt Group",
-    category: "Heat Exchanger",
-    price: "1000",
-    capacity: "50Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 10,
-  },
-  {
-    brands: "Flakt Group",
-    category: "AHU",
-    price: "1000",
-    capacity: "5Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 11,
-  },
-  {
-    brands: "Galletti Products",
-    category: "Coils",
-    price: "5000",
-    capacity: "10Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 12,
-  },
-  {
-    brands: "Tica Products",
-    category: "Chillers",
-    price: "10000",
-    capacity: "20Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 13,
-  },
-  {
-    brands: "Flakt Group",
-    category: "Cooling Towers",
-    price: "2000",
-    capacity: "30",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 14,
-  },
-  {
-    brands: "Flakt Group",
-    category: "Heat Exchanger",
-    price: "1000",
-    capacity: "50Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 15,
-  },
-  {
-    brands: "Flakt Group",
-    category: "AHU",
-    price: "1000",
-    capacity: "5Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 16,
-  },
-  {
-    brands: "Galletti Products",
-    category: "Coils",
-    price: "5000",
-    capacity: "10Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 17,
-  },
-  {
-    brands: "Tica Products",
-    category: "Chillers",
-    price: "10000",
-    capacity: "20Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 18,
-  },
-  {
-    brands: "Flakt Group",
-    category: "Cooling Towers",
-    price: "2000",
-    capacity: "30",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 19,
-  },
-  {
-    brands: "Flakt Group",
-    category: "Heat Exchanger",
-    price: "1000",
-    capacity: "50Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 20,
-  },
-  {
-    brands: "Flakt Group",
-    category: "AHU",
-    price: "1000",
-    capacity: "5Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 21,
-  },
-  {
-    brands: "Galletti Products",
-    category: "Coils",
-    price: "5000",
-    capacity: "10Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 22,
-  },
-  {
-    brands: "Tica Products",
-    category: "Chillers",
-    price: "10000",
-    capacity: "20Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 23,
-  },
-  {
-    brands: "Flakt Group",
-    category: "Cooling Towers",
-    price: "2000",
-    capacity: "30",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 24,
-  },
-  {
-    brands: "Flakt Group",
-    category: "Heat Exchanger",
-    price: "1000",
-    capacity: "50Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 25,
-  },
-  {
-    brands: "Flakt Group",
-    category: "AHU",
-    price: "1000",
-    capacity: "5Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 26,
-  },
-  {
-    brands: "Galletti Products",
-    category: "Coils",
-    price: "5000",
-    capacity: "10Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 27,
-  },
-  {
-    brands: "Tica Products",
-    category: "Chillers",
-    price: "10000",
-    capacity: "20Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 28,
-  },
-  {
-    brands: "Flakt Group",
-    category: "Cooling Towers",
-    price: "2000",
-    capacity: "30",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 29,
-  },
-  {
-    brands: "Flakt Group",
-    category: "Heat Exchanger",
-    price: "1000",
-    capacity: "50Tons",
-    productName: "Product name",
-    modelno: "5647",
-    images: IMAGES.PRODUCT1,
-    icon: IMAGES.ICON,
-    id: 30,
-  },
+
 ];
 
 export const contactUs = [
@@ -428,23 +243,22 @@ export const contactUs = [
 export const address = [
   {
     title: "Head Office",
-    addtess:
-      "Suite # 404, 4th Floor, Tahir Plaza, Plot No. A-20, K.C.H.S.U. Block 7/8, Karachi, Pakistan",
+    addtess: "Suite # 404, 4th Floor, Tahir Plaza Plot No. A-20 K, C.H.S.U Block 7/8 Karachi, Pakistan",
+    Location: "https://maps.app.goo.gl/yeykrWDyro7mf6dD7"
   },
   {
     title: "U.A.E Office",
-    addtess:
-      "Suite # 404, 4th Floor, Tahir Plaza, Plot No. A-20, K.C.H.S.U. Block 7/8, Karachi, Pakistan",
+    addtess:"Office # 110, Al Sheikha Mahara Ahmed, Al Ghurair Building, Al Nadha Road, Al Qusais 2, Dubai, UAE",
+    Location: "https://maps.app.goo.gl/ULnFdAwMAY4WHwrG9"
   },
   {
     title: "Warehouse",
-    addtess:
-      "Suite # 404, 4th Floor, Tahir Plaza, Plot No. A-20, K.C.H.S.U. Block 7/8, Karachi, Pakistan",
+    addtess:"Plot # CI-64, Sector 6-B, North Karachi, Karachi, Pakistan",
   },
   {
     title: "Workshop",
-    addtess:
-      "Suite # 404, 4th Floor, Tahir Plaza, Plot No. A-20, K.C.H.S.U. Block 7/8, Karachi, Pakistan",
+    addtess:"Plot # R-1165, Block 15, Federal B Area, Karachi, Pakistan",
+    Location: "https://maps.app.goo.gl/pftwceZCzqP2tYxj6"
   },
 ];
 
@@ -673,15 +487,15 @@ export const serviceCardData = [
     image: IMAGES.SERVICEONE,
     text: "Comfort Cooling",
     logo: IMAGES.SERVICELOGOONE,
-    description: "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+    description: "Our comprehensive comfort cooling solutions designed for residential, commercial, and institutional applications ensure.",
     id: 1
   },
   {
     image: IMAGES.SERVICETWO,
-    text: "Process Coolong",
+    text: "Process Cooling",
     logo: IMAGES.SERVICELOGOTWO,
     description:
-      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+      "Maintain optimal conditions for your industrial processes and equipment with our specialized process cooling systems.",
     id: 2
   },
   {
@@ -689,7 +503,7 @@ export const serviceCardData = [
     text: "Cold Chain Storage",
     logo: IMAGES.SERVICELOGOTHREE,
     description:
-      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+      "We offer a wide range of high-quality new and used chillers to meet your specific cooling needs, ensuring both cost-effi...",
     id: 3
   },
   {
@@ -697,7 +511,7 @@ export const serviceCardData = [
     text: "Turnkey Projects",
     logo: IMAGES.SERVICELOGOFOUR,
     description:
-      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+      "Experience seamless turnkey solutions from design to commissioning, ensuring optimal performance and timely completion.",
     id: 4
   },
   {
@@ -705,7 +519,7 @@ export const serviceCardData = [
     text: "Energy Optimization",
     logo: IMAGES.SERVICELOGOFIVE,
     description:
-      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+      "Maximize efficiency with our energy optimization services, designed to reduce costs and enhance performance.",
     id: 5
   },
   {
@@ -713,7 +527,7 @@ export const serviceCardData = [
     text: "Operation Maintenance",
     logo: IMAGES.SERVICELOGOSIX,
     description:
-      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+      "Ensure peak performance with our comprehensive operation and maintenance services, designed to keep your systems running smoothly and efficiently.",
     id: 6
   },
   {
@@ -721,7 +535,7 @@ export const serviceCardData = [
     text: "Troubleshooting",
     logo: IMAGES.SERVICELOGOSEVEN,
     description:
-      "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
+      "Get expert troubleshooting, programming, and configuration services to ensure your systems run flawlessly and efficiently.",
     id: 7
   },
 ];
@@ -825,7 +639,7 @@ export const WhatWeDoData = [
   },
   {
     image: IMAGES.AIRCONDITION,
-    text: "Process Coolong",
+    text: "Process Cooling",
     logo: IMAGES.COOLINGICON,
     description:
       "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
@@ -842,15 +656,15 @@ export const WhatWeDoData = [
 export const OurPartnerImagesData = [
   {
     img: IMAGES.FLAKTGROUP,
-    href: "/flakt"
+    href: "https://www.flaktgroup.com/en/"
   },
   {
     img: IMAGES.GALLETTI,
-    href: "/galleti"
+    href: "https://www.galletti.com/en"
   },
   {
     img: IMAGES.TICA,
-    href: "/tica"
+    href: "https://global.tica.com/"
   },
 ];
 export const OurBrandsImagesData = [
@@ -912,20 +726,41 @@ of mind for your HVAC needs.`,
 
 export const TrustUsCarouselCardData = [
   {
-    img: `${IMAGES.DINESHSINGH}`
+    avatar: IMAGES.AVATAR1,
+    title: "Tim W.",
+    des: "Their technicians are always prompt, professional, and knowledgeable. From regular maintenance to emergency repairs, they've got us covered.Highly recommend!"
   },
   {
-    img: "https://dummyimage.com/600x400/000/red",
+    avatar: IMAGES.AVATAR2,
+    title: "Tim W.",
+    des: "Their technicians are always prompt, professional, and knowledgeable. From regular maintenance to emergency repairs, they've got us covered.Highly recommend!"
   },
   {
-    img: "https://dummyimage.com/600x400/000/blue",
+    avatar: IMAGES.AVATAR3,
+    title: "Tim W.",
+    des: "Their technicians are always prompt, professional, and knowledgeable. From regular maintenance to emergency repairs, they've got us covered.Highly recommend!"
   },
-  {
-    img: "https://dummyimage.com/600x400/000/yellow",
-  },
+  // {
+  //   avatar:IMAGES.AVATAR3,
+  //   title:"Tim W.",
+  //   des:"Their technicians are always prompt, professional, and knowledgeable. From regular maintenance to emergency repairs, they've got us covered.Highly recommend!"
+  // },
+  // {
+  //   avatar:IMAGES.AVATAR3,
+  //   title:"Tim W.",
+  //   des:"Their technicians are always prompt, professional, and knowledgeable. From regular maintenance to emergency repairs, they've got us covered.Highly recommend!"
+  // },
+
 ];
 
 export const OurBlogCardData = [
+  {
+    img: IMAGES.BLOG1,
+    name: "Flexible Scheduling",
+    para: `Trust us to deliver reliable solutions
+and exceptional service, and peace
+of mind for your HVAC needs.`,
+  },
   {
     img: IMAGES.BLOG1,
     name: "Flexible Scheduling",
@@ -952,24 +787,34 @@ export const OverviewData = [
   {
     img: IMAGES.BULB,
     name: "Our Vision",
-    para: ` At Brothers Air Conditioning, we  aim to be the preferred 
-    for reliable and cost-effective  HVACR solutions, addressing 
-    every need and challenge with  excellence.`,
+    para: `At Brothers Air Conditioning, we aim to be the preferred choice for reliable and cost effective HVACR solutions, addressing every need and challenge with excellence.`,
   },
   {
     img: IMAGES.BULB,
     name: "Our Mission",
-    para: ` Our mission is to create comfortable, efficient, and healthy  
-    environments by consistently  delivering high-quality services 
-    that enhance the well-being and  productivity of our clients, 
-    regardless of climate or conditions.`,
+    para: `Our mission is to create a comfortable, efficient and healthy environment by consistently delivering high quality services that enhance the well being and productivity of our clients regardless of climate or conditions.
+`,
   },
 ];
-export const CompanyProfileData = [
+export const CompanyProfileData2 = [
   "Established in 2004, Brothers Air Conditioning has emerged as a  leading brand in the HVACR industry, known for its dedication to  delivering top-quality chillers that are customized to meet diverse  environmental and client-specific needs. The company has built a  strong reputation for excellence, supported by its expansive  inventory of OEM spare parts for various leading brands, ensuring  swift and reliable service for clients. ",
   "Brothers Air Conditioning’s extensive stock of components allows for  prompt and efficient maintenance and repair solutions, reinforcing its  status as a trusted partner in the industry. Moreover, the company has  cultivated a broad network of partnerships with esteemed European  suppliers, enabling the import of advanced, high-performance chillers that  meet the highest international standards. ",
   "The company’s technical support team is composed of skilled professionals  who provide expert assistance and responsive service, contributing to enhanced  client satisfaction and operational success. Brothers Air Conditioning’s  commitment to quality, reliability, and customer-focused service has solidified  its position as a benchmark of excellence in the HVACR industry, earning the  trust and loyalty of clients worldwide.",
 ];
+export const CompanyProfileData = [
+  {
+    ProfileDes: "Explore Brothers Air Conditioning’s journey, achievements, and offerings in detail by downloading our comprehensive company profile.",
+    head: "Our profile includes:",
+    bullets: ["A detailed look into our history, vision, and mission.", "An overview of our innovative product range, including new and refurbished equipment.", "Insights into our partnerships with global leaders like Flakt Group, Gelleti and TICA.", "Information about our services, including maintenance parts and consultant-focused solutions.", "Key milestones and success stories that highlight our industry expertise."]
+  }
+];
+
+
+
+
+
+
+
 
 export const OurBrandsData = [
   IMAGES.FLAKTGROUP,
@@ -984,9 +829,10 @@ export const OurBrandsData = [
 ];
 
 export const MeetParaData = [
-  " I am proud to share that, in a relatively short  span, Brothers Air Conditioning has achieved  remarkable success and sustained growth.  Today, we stand as one of the leading HVACR  service providers in the region, known for our  expertise, commitment, and customer-focused  approach. Our profile reflects the achievements  and project milestones we’ve reached over 20  years of experience, delivering HVAC solutions  across Pakistan and internationally.",
-  // "Brothers Air Conditioning was built on a foundation of integrity,transparency, and  respect for every client. As an independent company, we focus on meeting the  unique needs of each project with a deep commitment to quality and customer  satisfaction. Our team is our greatest asset – a dedicated group of skilled technicians and professionals who bring passion, technical knowledge, and a  relentless drive to exceed expectations. Every project we undertake is guided by  their expertise and our collective commitment to high standards.",
-  // " We understand that each client has unique concerns and requirements, and  we’re here to address them with the utmost care and precision. At Brothers Air  Conditioning, we are not just building systems but building relationships founded  on trust and excellence. As we move forward, our commitment remains steadfast:  to bring the best HVACR solutions to our clients in Pakistan and beyond, ensuring  comfort, energy efficiency, and reliability in every environment we serve.",
+  ` I am proud to share that, in a relatively short span, Brothers Air Conditioning has achieved remarkable success and sustained growth. Today, we stand as one of the leading HVACR service providers in the region, known for our expertise, commitment, and customer-focused approach. Our profile reflects the achievements and project milestones we've reached over 20 years of experience, delivering HVACR solutions across Pakistan and internationally.
+Brothers Air Conditioning was built on a foundation of integrity, transparency, and respect for every client. As an independent company, we focus on meeting the unique needs of each project with a deep commitment to quality and customer satisfaction. Our team is our greatest asset - a dedicated group of skilled technicians and professionals who bring passion, technical knowledge, and a relentless drive to exceed expectations. Every project we undertake is guided by their expertise and our collective commitment to high standards.
+We understand that each client has unique concerns and requirements, and we're here to address them with the utmost care and precision. At Brothers Air Conditioning, we are not just building systems but building relationships founded on trust and excellence. As we move forward, our commitment remains steadfast: to bring the best HVACR solutions to our clients in Pakistan and beyond, ensuring comfort, energy efficiency, and reliability in every environment we serve.
+`,
 ];
 
 export const OurProductsData = [
@@ -999,6 +845,7 @@ export const OurProductsData = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
+    iconwhite: IMAGES.ICONWHITE,
     id: 1,
   },
   {
@@ -1010,6 +857,7 @@ export const OurProductsData = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
+    iconwhite: IMAGES.ICONWHITE,
     id: 2,
   },
   {
@@ -1021,6 +869,7 @@ export const OurProductsData = [
     modelno: "5647",
     images: IMAGES.PRODUCT1,
     icon: IMAGES.ICON,
+    iconwhite: IMAGES.ICONWHITE,
     id: 3,
   },
 ];
@@ -1070,20 +919,23 @@ export const ProductsLinks = [
     links: [
       {
         link: "New Products",
-        href: "",
+        href: "/products",
+        type: "new"
       },
       {
         link: "Used Equipments",
-        href: "",
+        href: "/products",
+        type: "used"
       },
       {
-        link: "BAC Store",
-        link: "",
+        link: "Spare Parts",
+        href: "/products",
+        type: "spareParts"
       },
     ],
   },
   {
-    heading: "Resources",
+    heading: "RESOURCES",
     links: [
       {
         link: "Career",
@@ -1097,6 +949,10 @@ export const ProductsLinks = [
         link: "Privacy Policy",
         href: "/privacy-policy",
       },
+      {
+        link: "Clients",
+        href: "/projects",
+      },
     ],
   },
 ];
@@ -1106,20 +962,24 @@ export const ProjectsLinks = [
     heading: "PROJECTS",
     links: [
       {
+        link: "Overseas Project",
+        href: "/projects",
+        type: "overseas"
+      },
+      {
         link: "Turnkey Projects",
         href: "/projects",
+        type: "turnkey"
       },
       {
         link: "Supply and Comissioning",
         href: "/projects",
+        type: "supply"
       },
       {
         link: "Operations and Services",
         href: "/projects",
-      },
-      {
-        link: "Clients",
-        href: "/projects",
+        type: "operations"
       },
     ],
   },
@@ -1129,30 +989,42 @@ export const meneLinks = [
   {
     title: "Home",
     href: "/",
+    icon: false,
   },
   {
     title: "About Us",
     href: "/about",
-  },
-  {
-    title: "Products",
-    href: "/products",
-  },
-  {
-    title: "Services",
-    href: "/services",
-  },
-  {
-    title: "Projects",
-    href: "/projects",
+    icon: false,
   },
   {
     title: "Brands",
     href: "/Brands",
+    icon: false,
   },
+  {
+    title: "Store",
+    href: "/products",
+    icon: false,
+  },
+  {
+    title: "Services",
+    href: "/services",
+    icon: false,
+  },
+  {
+    title: "Projects",
+    href: "/projects",
+    icon: false,
+  },
+  // {
+  //   title: "Brands",
+  //   href: "/Brands",
+  //   icon: false,
+  // },
   {
     title: "Contact Us",
     href: "/contact_us",
+    icon: false,
   },
 
   ,
@@ -1236,3 +1108,66 @@ export const OurServicesData = [
   }
 ]
 // OurServices Data end
+// Blog Data start
+export const BlogCardData = [
+  {
+    name: "Name of the Blog",
+    para: `Trust us to deliver reliable solutions, exceptional service, and peace of
+    mind for all your HVAC needs.`,
+    button: "Continue reading",
+    img: IMAGES.BLOG1,
+    data: "26",
+    month: "Nov",
+    maint: "HVACR Maintenance",
+  },
+  {
+    name: "Second of the Blog",
+    para: `Trust us to deliver reliable solutions, exceptional service, and peace of
+    mind for all your HVAC needs.`,
+    button: "Continue reading",
+    img: IMAGES.BLOG3,
+    data: "26",
+    month: "Nov",
+    maint: "HVACR Maintenance",
+  },
+  {
+    name: "Third of the Blog",
+    para: `Trust us to deliver reliable solutions, exceptional service, and peace of
+    mind for all your HVAC needs.`,
+    button: "Continue reading",
+    img: IMAGES.BLOG2,
+    data: "26",
+    month: "Nov",
+    maint: "HVACR Maintenance",
+  },
+  {
+    name: "Fourth of the Blog",
+    para: `Trust us to deliver reliable solutions, exceptional service, and peace of
+    mind for all your HVAC needs.`,
+    button: "Continue reading",
+    img: IMAGES.BLOG1,
+    data: "26",
+    month: "Nov",
+    maint: "HVACR Maintenance",
+  },
+  {
+    name: "Fiveth of the Blog",
+    para: `Trust us to deliver reliable solutions, exceptional service, and peace of
+    mind for all your HVAC needs.`,
+    button: "Continue reading",
+    img: IMAGES.BLOG2,
+    data: "26",
+    month: "Nov",
+    maint: "HVACR Maintenance",
+  },
+  {
+    name: "Sixth of the Blog",
+    para: `Trust us to deliver reliable solutions, exceptional service, and peace of
+    mind for all your HVAC needs.`,
+    button: "Continue reading",
+    img: IMAGES.BLOG3,
+    data: "26",
+    month: "Nov",
+    maint: "HVACR Maintenance",
+  },
+];

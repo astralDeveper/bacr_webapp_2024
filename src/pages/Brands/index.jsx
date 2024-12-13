@@ -27,15 +27,10 @@ backed by industry-leading partners.">
                                             alt={item.tickImg}
                                         />
                                     </div>
-                                    <p className="text-text6 text-sm">{item.description}</p>
-                                    <Button
-                                        btnStyle="bg-backgroundColor1 rounded-md mt-4 text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 lg:font-semibold "
-                                        title={"Learn More"}
-                                    />
                                 </div>
                                 {/* button content start here */}
 
-                                <div className="bg-BackgroundColor1 py-4 px-4">
+                                <div className="bg-BackgroundColor1 px-4">
                                     <div className=" bg-backgroundColor13 mt-2 flex items-center justify-center px-4 py-16 rounded-3xl">
                                         <img
                                             className=" h-[60px] object-contain"
@@ -44,7 +39,15 @@ backed by industry-leading partners.">
                                             draggable={false}
                                         />
                                     </div>
+                                    <p className="text-text6 text-sm mt-4">{item.description}</p>
+                                    <div className="flex items-center justify-center w-full mb-4">
+                                        <Button
+                                            btnStyle="bg-backgroundColor1 rounded-md mt-4 w-full text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 lg:font-semibold "
+                                            title={"Learn More"}
+                                        />
+                                    </div>
                                 </div>
+
                             </div>
                         );
                     })}

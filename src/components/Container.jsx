@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-const Container = ({ children, mainStyle, heading, para, home, image }) => {
+const Container = ({ children, mainStyle, heading, para, home, image, }) => {
   return (
     <>
       <div className="w-full h-full">

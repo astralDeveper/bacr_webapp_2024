@@ -1,18 +1,14 @@
 import React from "react";
 import Button from "../../../components/Button";
+import { Link } from "react-router-dom";
 
 export default function OurProducts(props) {
   const { title, card, subTitle } = props;
 
-  const productDetail = (item) => {
-    console.log(item);
-    navigate(`/productsDetail`);
-  };
-
   return (
-    <section className="sm:max-w-[80%] sm:mx-auto px-6 py-12">
+    <section className="sm:max-w-[70%] sm:mx-auto px-6 py-12">
       <div className="flex flex-col justify-center items-center text-center mb-6">
-        <div className="text-sm text-[#ee8c33] font-light">{subTitle}</div>
+        {/* <div className="text-sm text-[#ee8c33] font-light">{subTitle}</div> */}
         <h2 className="my-4 outfit-font text-[18px] sm:text-[26px] lg:text-[34px] font-semibold text-[#000] leading-0">
           {title}
         </h2>
@@ -54,24 +50,24 @@ export default function OurProducts(props) {
                   {item.description}
                 </p>
                 <div className="mt-10 flex items-center justify-center  rounded-md">
-                  <Button
-                    btnStyle="bg-backgroundColor1 w-full rounded-md text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 lg:font-semibold "
-                    title={"Learn More"}
-                    onclick={productDetail}
-                  />
+                  <Link to={"/services-detail"} className="w-full" >
+                    <Button
+                      btnStyle="bg-backgroundColor1 w-full rounded-md text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 lg:font-semibold "
+                      title={"Learn More"}
+                    />
+                  </Link>
                 </div>
               </div>
             </div>
           );
         })}
       </div>
-      <div className="flex justify-center py-8">
+      <Link to={"/services"} className="flex justify-center py-8" >
         <Button
-          onclick={productDetail}
           btnStyle="bg-backgroundColor1 w-[250px] text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold"
           title={"See All Services"}
         />
-      </div>
+      </Link>
     </section>
   );
 }

@@ -18,9 +18,9 @@ import AboutCard from "./components/AboutCard";
 const About = () => {
   return (
     <Container
-      heading={"About Us."}
-      para={`Providing high-quality HVACR products, services, and solutions 
-backed by industry-leading partners.`}
+      heading={"About Us"}
+      //       para={`Providing high-quality HVACR products, services, and solutions 
+      // backed by industry-leading partners.`}
       about
       image
       mainStyle={"flex flex-col items-end justify-end text-start "}
@@ -29,15 +29,15 @@ backed by industry-leading partners.`}
         <Overview
           subTitle="About Us"
           title="The Company Overview"
-          para="Established in 2004, Brothers Air Conditioning has emerged 
-          as a  leading brand in the HVACR industry, known for its dedication to  
-          delivering top-quality chillers that are customized to meet diverse  environmental and client-specific needs. The company has built a  strong reputation for excellence, supported by its expansive  inventory of OEM spare parts for various leading brands, ensuring  swift and reliable service for clients"
+          para="At Brothers Air Conditioning, we pride ourselves on being a trusted leader in the HVACR industry. With decades of experience, we specialize in delivering cutting-edge heating, ventilation, air conditioning, and refrigeration solutions tailored to meet the diverse needs of our clients.
+Our mission is to provide high-quality products and services that prioritize energy efficiency, sustainability, and customer satisfaction. By combining technical expertise with a customer-centric approach, we ensure every project is completed with precision, reliability, and a commitment to excellence.
+"
           card={OverviewData}
         />
         <CompanyProfile
           subTitle="About Us"
           title="Our Company Profile"
-          para={CompanyProfileData}
+          CompanyProfileData={CompanyProfileData}
         />
         <Meet
           profile={IMAGES.CEOMEET}

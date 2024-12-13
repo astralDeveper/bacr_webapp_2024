@@ -136,7 +136,25 @@ const imageNames = [
   "paraarrow",
   "twit",
   "next",
-  "prev"
+  "prev",
+  "iconwhite",
+  "avatar1",
+  "avatar2",
+  "avatar3",
+  "star",
+  "ceobgimg",
+  // serveces images
+  "comfort1",
+  "comfort2",
+  "comfort3",
+  "comfort4",
+  "comfort5",
+  "comfort6",
+  // process cooling
+  "process1",
+  "process2",
+  "process3",
+  "process4",
 
 
 

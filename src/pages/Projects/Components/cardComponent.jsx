@@ -25,9 +25,9 @@ const ProjectsCardComponent = ({setIsModalOpen,isModalOpen}) => {
                     />
 
                     {/* centered Text */}
-                    <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-[100%] mx-auto rounded-xl text-white heading4">
+                    {/* <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-[100%] mx-auto rounded-xl text-white heading4">
                       {item.text}
-                    </p>
+                    </p> */}
 
                     {/* Logo positioned half on the image and half below it */}
                     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex items-center justify-center bg-white rounded-xl shadow-black shadow-xs">
@@ -41,7 +41,11 @@ const ProjectsCardComponent = ({setIsModalOpen,isModalOpen}) => {
                   </div>
 
                   <div className="p-3 bg-BackgroundColor1 pt-14">
-                    <p className="text-text6 text-sm text-center">
+                  <p className=" w-[100%] mx-auto rounded-xl  text-black heading7">
+                      {item.text}
+                    </p>
+
+                    <p className="text-text6 text-sm ">
                       {item.description}
                     </p>
                     <div className="mt-10 flex items-center justify-center  rounded-md">

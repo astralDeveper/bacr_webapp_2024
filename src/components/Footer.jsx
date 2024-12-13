@@ -32,12 +32,14 @@ const Footer = () => {
       <div class="mx-auto max-w-[80%] py-4">
         <div>
           {/* logo section start here  */}
-          <div className="text-backgroundColor2 flex justify-between items-center lg:flex-row flex-col gap-2 py-2 w-full  ">
-            <img
-              className="md:w-40 w-20"
-              src={IMAGES.LOGOWHITE}
-              alt={IMAGES.LOGOWHITE}
-            />
+          <div className="text-backgroundColor2 flex justify-between xl:items-end lg:items-end items-center lg:flex-row flex-col md:gap-2  w-full  ">
+            <Link to={"/"}>
+              <img
+                className="md:w-40 w-20"
+                src={IMAGES.LOGOWHITE}
+                alt={IMAGES.LOGOWHITE}
+              />
+            </Link>
 
             {/* MenuLinks section start here  */}
             <div className="flex flex-col mt-8 lg:ml-16 ">
@@ -59,12 +61,12 @@ const Footer = () => {
           {/* logo section end here  */}
 
           {/* line start */}
-          <div className="border-[1px] opacity-55 border-[#eeeeee] w-full my-4"></div>
+          <div className="border-[1px] opacity-55 border-[#eeeeee] w-full my-2"></div>
           {/* line end */}
 
           {/* center section start here  */}
-          <div class="grid xl:grid-cols-4  2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-6 lg:py-8 ">
-            <div className="mb-8">
+          <div class="grid xl:grid-cols-4  2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-3 lg:py-4">
+            <div className="lg:mb-2 md:mb-1">
               {/* service links start here  */}
               <div className="text-backgroundColor2">
                 {ServicesLinks.map((item, i) => {
@@ -73,7 +75,7 @@ const Footer = () => {
                       <motion.h2 initial="initial"
                         whileInView="inView"
                         viewport={{ once: false }}
-                        variants={myAnimationLeft} className="font-bold pb-3 underline">{item.heading}</motion.h2>
+                        variants={myAnimationLeft} className="font-bold py-2 underline">{item.heading}</motion.h2>
                       <ul className="border-backgroundColor2">
                         {item.links.map((items, ind) => {
                           return (
@@ -105,7 +107,7 @@ const Footer = () => {
                     <motion.h2 initial="initial"
                       whileInView="inView"
                       viewport={{ once: false }}
-                      variants={myAnimationLeft} className="font-bold pt-3 underline">{item.heading}</motion.h2>
+                      variants={myAnimationLeft} className="font-bold py-2 underline">{item.heading}</motion.h2>
                     <ul className=" border-backgroundColor2">
                       {item.links.map((items, ind) => {
                         return (
@@ -113,7 +115,7 @@ const Footer = () => {
                             whileInView="inView"
                             viewport={{ once: false }}
                             variants={myAnimationLeft} key={ind}>
-                            <Link to={items.href}>
+                            <Link to={`${items.href}?type=${items.type}`}>
                               <li className="text1 py-1 cursor-pointer hover:underline">
                                 {items.link}
                               </li>
@@ -129,14 +131,14 @@ const Footer = () => {
             {/* products links end here */}
 
             {/* Projects links start here */}
-            <div className="gap-x-4 mr-6 text-backgroundColor2 mb-4">
+            <div className="gap-x-4 mr-6 text-backgroundColor2">
               {ProjectsLinks.map((item, i) => {
                 return (
                   <div key={i}>
                     <motion.h2 initial="initial"
                       whileInView="inView"
                       viewport={{ once: false }}
-                      variants={myAnimationLeft} className="font-bold py-3 underline">{item.heading}</motion.h2>
+                      variants={myAnimationLeft} className="font-bold py-2 underline">{item.heading}</motion.h2>
                     <ul className=" border-backgroundColor2">
                       {item.links.map((items, ind) => {
                         return (
@@ -146,7 +148,7 @@ const Footer = () => {
                             variants={myAnimationLeft} key={ind}>
                             <Link
                               className="text1 py-1 cursor-pointer hover:underline"
-                              to={items.href}
+                              to={`${items.href}?type=${items.type}`}
                             >
                               {items.link}
                             </Link>
@@ -265,7 +267,7 @@ const Footer = () => {
             initial="initial"
             whileInView="inView"
             viewport={{ once: false }}
-            variants={myAnimationLeft1} className="text-backgroundColor2 overflow-y-hidden flex justify-start items-start lg:flex-row flex-col gap-2 py-2 w-full  ">
+            variants={myAnimationLeft1} className="text-backgroundColor2 overflow-y-hidden flex justify-center items-center lg:flex-row flex-col gap-2 py-2 w-full  ">
             <p className="text1 hover:underline cursor-pointer">
               All rights reserved.Brothers Air Conditioning
             </p>

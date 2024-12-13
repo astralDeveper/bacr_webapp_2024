@@ -1,14 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { IMAGES } from "../../../utils/Images";
 
 export default function Overview(props) {
   const { title, subTitle, para, card, carouselCard } = props;
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false); // Track play/pause state
+
+  const handleVideoClick = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause(); // Pause the video
+      } else {
+        videoRef.current.play(); // Play the video
+      }
+      setIsPlaying(!isPlaying); // Toggle play/pause state
+    }
+  };
 
   return (
     <section className="sm:max-w-[80%] sm:mx-auto p-6 my-6 ">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 mb-8">
         <div className="py-0">
-          <div className="text-sm text-[#ee8c33] font-light">{subTitle}</div>
+          {/* <div className="text-sm text-[#ee8c33] font-light">{subTitle}</div> */}
 
           <h2 className="mt-2 outfit-font text-[18px] sm:text-[26px] lg:text-[34px] font-semibold text-[#000] leading-0">
             {title}
@@ -19,14 +32,22 @@ export default function Overview(props) {
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-2 gap-y-4 lg:gap-x-4 lg:gap-y-8">
-        <div className=" border relative">
+        <div className="relative w-full h-[276px]">
+          <video
+            ref={videoRef}
+            src="https://www.shutterstock.com/shutterstock/videos/1083881155/preview/stock-footage-a-blonde-haired-business-man-is-talking-on-the-phone-while-sitting-on-a-teal-colored-bean-bag-and.webm"
+            className="slider w-full h-full object-cover rounded-lg"
+            controls
+            poster={IMAGES.BACKGROUND}
+            onPlay={() => setIsPlaying(true)} // Ensure state updates on manual play
+            onPause={() => setIsPlaying(false)} // Ensure state updates on manual pause
+          ></video>
           <div
-            className="bg-cover bg-center bg-no-repeat w-full h-[350px] lg:h-full top-0 left-0 right-0 bottom-0 rounded-md"
-            style={{
-              backgroundImage: `url('${IMAGES.BACKGROUND}')`,
-            }}
+            className="absolute inset-0 bg-transparent cursor-pointer"
+            onClick={handleVideoClick}
           ></div>
         </div>
+
         <div className="flex gap-4 flex-col ">
           {card.map((item) => (
             <div className="flex flex-col sm:flex-row shadow-xl min-h-[130px] gap-8 2xl:gap-6 bg-[#004671] rounded-md p-5">

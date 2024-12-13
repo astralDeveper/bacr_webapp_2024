@@ -6,7 +6,6 @@ const AboutCard = () => {
     <>
       <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
             <div className="mb-20 flex items-center justify-center flex-col gap-6 ">
-                <p className="text2 text-text1" >Our Team</p>
                 <p className="heading2 w-[80%] text-center text-text12 " >Meet the Experts Behind Your Fresh 
                 Air Solutions.</p>
             </div>
@@ -29,7 +28,7 @@ const AboutCard = () => {
                 {/* workers images start */}
 
                 {/* Social media icons start  */}
-                <div className="absolute -right-5 top-8 bg-white shadow-shadow2 rounded-3xl px-2 py-3 flex flex-col gap-2 ">
+                {/* <div className="absolute -right-5 top-8 bg-white shadow-shadow2 rounded-3xl px-2 py-3 flex flex-col gap-2 ">
                   <img
                     className="w-8 object-contain"
                     src={item.socialIcon}
@@ -45,7 +44,7 @@ const AboutCard = () => {
                     src={item.socialIcon3}
                     alt={item.socialIcon3}
                   />
-                </div>
+                </div> */}
                 {/* Social media icons end  */}
 
                 {/* content start here */}

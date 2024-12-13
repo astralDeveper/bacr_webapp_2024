@@ -1,26 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { IMAGES } from "../../../utils/Images";
 import Button from "../../../components/Button";
+import { Link } from "react-router-dom";
 
 export default function OurBlog(props) {
   const { title, subTitle, para, card, carouselCard } = props;
 
   return (
-    <section className="md:w-[80%] w-full mx-auto md:p-6 p-2 my-6 ">
-      <div className="grid xl:grid-cols-2 gap-x-4 gap-y-8">
-        <div className="flex flex-col items-start">
-          <div className="text-4 text-[#ee8c33] font-light">{subTitle}</div>
-
-          <h2 className="outfit-font text1 sm:text-[26px] lg:text-[34px] font-semibold text-[#000] leading-0">
-            {title}
-          </h2>
-
-          <p className="text1 text-[#000] font-light mx-auto ">{para}</p>
-          <Button
-            btnStyle="bg-backgroundColor1 w-[250px] text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold mt-2"
-            title="See All Blogs"
-          />
-        </div>
+    <section className="md:w-[70%] w-full mx-auto md:p-6 p-2 my-6 ">
+      <div className="flex flex-col items-center justify-center">
+        <h2 className="outfit-font text1 sm:text-[26px] lg:text-[34px] font-semibold text-[#000] leading-0">
+          {title}
+        </h2>
+        <p className="text1 text-[#000] font-light mx-auto md:w-[50%] text-center">{para}</p>
+      </div>
+      <div className="grid xl:grid-cols-2 md:gap-x-4 md:gap-y-8 gap-4 mt-4">
         {card.map((item) => (
           <div className="flex flex-col sm:flex-row bg-white rounded-md shadow-lg sm:p-5">
             <div
@@ -52,14 +46,22 @@ export default function OurBlog(props) {
               <p className="text1 text-[#7a7a7a] font-light py-2">
                 {item.para}
               </p>
-              <Button
-                btnStyle="bg-backgroundColor1 w-[250px] text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold"
-                title="Continue reading"
-              />
+              <Link to={"/blog-detail"} className="w-full">
+                <Button
+                  btnStyle="bg-backgroundColor1 w-[250px] rounded-md text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold"
+                  title="Continue reading"
+                />
+              </Link>
             </div>
           </div>
         ))}
       </div>
+      <Link to={"/blogs"} className="w-full flex items-center justify-center md:mt-4 mt-1" >
+        <Button
+          btnStyle="bg-backgroundColor1 w-[250px] rounded-md text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold mt-2"
+          title="See All Blogs"
+        />
+      </Link>
     </section>
   );
 }

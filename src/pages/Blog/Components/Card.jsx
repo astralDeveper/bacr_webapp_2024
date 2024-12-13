@@ -1,70 +1,11 @@
 import React from "react";
 import { IMAGES } from "../../../utils/Images";
 import Button from "../../../components/Button";
+import { Link } from "react-router-dom";
+import { BlogCardData } from "../../../utils/DummyData";
 
 const Card = () => {
-  const BlogCardData = [
-    {
-      name: "Name of the Blog",
-      para: `Trust us to deliver reliable solutions, exceptional service, and peace of
-      mind for all your HVAC needs.`,
-      button: "Continue reading",
-      img: IMAGES.BLOG1,
-      data: "26",
-      month: "Nov",
-      maint: "HVACR Maintenance",
-    },
-    {
-      name: "Second of the Blog",
-      para: `Trust us to deliver reliable solutions, exceptional service, and peace of
-      mind for all your HVAC needs.`,
-      button: "Continue reading",
-      img: IMAGES.BLOG3,
-      data: "26",
-      month: "Nov",
-      maint: "HVACR Maintenance",
-    },
-    {
-      name: "Third of the Blog",
-      para: `Trust us to deliver reliable solutions, exceptional service, and peace of
-      mind for all your HVAC needs.`,
-      button: "Continue reading",
-      img: IMAGES.BLOG2,
-      data: "26",
-      month: "Nov",
-      maint: "HVACR Maintenance",
-    },
-    {
-      name: "Fourth of the Blog",
-      para: `Trust us to deliver reliable solutions, exceptional service, and peace of
-      mind for all your HVAC needs.`,
-      button: "Continue reading",
-      img: IMAGES.BLOG1,
-      data: "26",
-      month: "Nov",
-      maint: "HVACR Maintenance",
-    },
-    {
-      name: "Fiveth of the Blog",
-      para: `Trust us to deliver reliable solutions, exceptional service, and peace of
-      mind for all your HVAC needs.`,
-      button: "Continue reading",
-      img: IMAGES.BLOG2,
-      data: "26",
-      month: "Nov",
-      maint: "HVACR Maintenance",
-    },
-    {
-      name: "Sixth of the Blog",
-      para: `Trust us to deliver reliable solutions, exceptional service, and peace of
-      mind for all your HVAC needs.`,
-      button: "Continue reading",
-      img: IMAGES.BLOG3,
-      data: "26",
-      month: "Nov",
-      maint: "HVACR Maintenance",
-    },
-  ];
+ 
 
   return (
     <>
@@ -99,12 +40,14 @@ const Card = () => {
             <p className="text3 text-text10 py-1">
               {item.para}
             </p>
-            <Button
-              title={item.button}
-              btnStyle={
-                "text1 flex w-full justify-center bg-backgroundColor1 text-white rounded-md whitespace-nowrap"
-              }
-            />
+            <Link to={"/blog-detail"}>
+              <Button
+                title={item.button}
+                btnStyle={
+                  "text1 flex w-full justify-center bg-backgroundColor1 text-white rounded-md whitespace-nowrap"
+                }
+              />
+            </Link>
           </div>
         </div>
       ))}

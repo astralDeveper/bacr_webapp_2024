@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { IMAGES } from "../../../utils/Images";
+import TrustCarousel from "./TrustCarousel";
 
 export default function TrustUs(props) {
   const { title, subTitle, para, card, carouselCard } = props;
@@ -17,10 +18,10 @@ export default function TrustUs(props) {
   }, []);
 
   return (
-    <section className="sm:max-w-[80%] sm:mx-auto p-6 my-6 bg-[#004671] xl:mb-[250px]">
-      <div className="w-[150px] px-2 py-2 mx-auto text-center rounded-full bg-white text-[#0A2540] mt-6">
+    <section className="sm:max-w-[70%] sm:mx-auto p-6 my-6 bg-[#004671] xl:mb-[250px]">
+      {/* <div className="w-[150px] px-2 py-2 mx-auto text-center rounded-full bg-white text-[#0A2540] mt-6">
         {subTitle}
-      </div>
+      </div> */}
 
       <h2 className="outfit-font text-[18px] sm:text-[20px] lg:text-[38px] font-bold text-center text-[#fff] my-3">
         {title}
@@ -44,12 +45,12 @@ export default function TrustUs(props) {
         ))}
       </div>
 
-      <div className="py-2 w-full xl:mb-[-150px]">
+      <div className="py-2 md:w-[90%] mx-auto xl:mb-[-150px]">
         <div
-          id="animation-carousel"
-          className="relative w-full overflow-hidden"
+          id=""
+          className=""
         >
-          <div
+          {/* <div
             className="flex transition-all duration-500 ease-in-out "
             style={{
               transform: `translateX(-${activeIndex * 100}%)`,
@@ -124,7 +125,11 @@ export default function TrustUs(props) {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+
+          <TrustCarousel/>
+
+
         </div>
       </div>
     </section>

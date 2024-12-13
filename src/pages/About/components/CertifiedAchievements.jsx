@@ -48,10 +48,10 @@ const CertifiedAchievements = () => {
             effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 5000,
+            //   disableOnInteraction: false,
+            // }}
             loop={true}
             spaceBetween={30}
             breakpoints={{
@@ -69,7 +69,7 @@ const CertifiedAchievements = () => {
             coverflowEffect={{
               rotate: 0,
               stretch: 30,
-              depth: 500,
+              depth: 400,
               // modifier: 1,
               slideShadows: false,
             }}

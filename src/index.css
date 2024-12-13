@@ -29,13 +29,13 @@
     @apply lg:text-[20px] md:text-[16px] text-[12px];
   }
   .text1 {
-    @apply lg:text-[17px] md:text-[14px] text-[10px] font-normal;
+    @apply lg:text-[17px] md:text-[14px] text-[10px] ;
   }
   .text2 {
     @apply lg:text-[14px] md:text-[13px] text-[11px] font-normal;
   }
   .text3 {
-    @apply lg:text-[12px] md:text-[10px] text-[8px] font-normal;
+    @apply lg:text-[12px] md:text-[10px] text-[8px] ;
   }
 }
 

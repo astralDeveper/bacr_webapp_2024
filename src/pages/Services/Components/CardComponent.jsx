@@ -3,10 +3,14 @@ import Button from "../../../components/Button";
 import { serviceCardData } from "../../../utils/DummyData";
 
 const CardComponent = () => {
+  const setTitle = (text) => {
+    localStorage.setItem('title', text)
+
+  }
   return (
     <>
 
-      <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
+      <div className="w-[80%] mx-auto p-5 sm:p-10 md:p-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {serviceCardData.map((item, ind) => {
             return (
@@ -23,9 +27,9 @@ const CardComponent = () => {
                   />
 
                   {/* centered Text */}
-                  <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-[100%] mx-auto rounded-xl text-white heading3">
+                  {/* <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-[100%] mx-auto rounded-xl text-white heading3">
                     {item.text}
-                  </p>
+                  </p> */}
 
                   {/* Logo positioned half on the image and half below it */}
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex items-center justify-center bg-white rounded-xl shadow-black shadow-xs">
@@ -38,8 +42,13 @@ const CardComponent = () => {
                   </div>
                 </div>
 
+
+
                 <div className="p-3 bg-BackgroundColor1 pt-14">
-                  <p className="text-text6 text-sm text-center">
+                  <p className=" mx-auto rounded-xl text-black heading7">
+                    {item.text}
+                  </p>
+                  <p className="text-text6 text-sm text-start">
                     {item.description}
                   </p>
                   <div className="mt-10 flex items-center justify-center  rounded-md">
@@ -47,6 +56,7 @@ const CardComponent = () => {
                       <Button
                         btnStyle="bg-backgroundColor1 w-full rounded-md text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 lg:font-semibold "
                         title={"Learn More"}
+                        onclick={() => { setTitle(item.text) }}
                       />
                     </Link>
                   </div>
