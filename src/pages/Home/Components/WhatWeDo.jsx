@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 
 export default function OurProducts(props) {
   const { title, card, subTitle } = props;
+  const setTitle = (text) => {
+    localStorage.setItem('title', text)
 
+  }
   return (
     <section className="sm:max-w-[70%] sm:mx-auto px-6 py-12">
       <div className="flex flex-col justify-center items-center text-center mb-6">
@@ -54,6 +57,7 @@ export default function OurProducts(props) {
                     <Button
                       btnStyle="bg-backgroundColor1 w-full rounded-md text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 lg:font-semibold "
                       title={"Learn More"}
+                      onclick={() => { setTitle(item.text) }}
                     />
                   </Link>
                 </div>
