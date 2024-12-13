@@ -1,6 +1,6 @@
 import React from 'react'
 import { IMAGES } from '../../../utils/Images'
-import { comfortCooling } from '../../../utils/DummyData'
+import { comfortCooling, operationMaintenance } from '../../../utils/DummyData'
 
 const OperationMaintenance = () => {
     return (
@@ -9,16 +9,10 @@ const OperationMaintenance = () => {
                 <img src={IMAGES.COMFORT1} alt={IMAGES.COMFORT1} />
                 <div className="py-8">
                     <h1 className="heading1 py-2">
-                        Welcome to BAC Comfort Cooling Solutions
+                    Welcome to BAC - Your HVACR Chiller Operation and Maintenance Experts
                     </h1>
                     <p className="text1 text-text7">
-                        At BAC, we specialize in delivering cutting-edge Comfort Cooling
-                        solutions for HVACR chillers and equipment, ensuring optimal
-                        performance and enhanced comfort in diverse environments. With a
-                        legacy of excellence and innovation spanning decades, we are
-                        committed to providing reliable, efficient, and sustainable
-                        cooling solutions tailored to meet the unique needs of our
-                        clients.
+                    At BAC, we specialize in providing top-notch operation and maintenance services for HVACR chillers and associated equipment. With years of experience and a team of highly skilled technicians, we ensure the optimal performance and longevity of your HVACR systems, keeping your indoor environment comfortable and efficient.
                     </p>
                 </div>
                 <div className="py-6">
@@ -31,8 +25,8 @@ const OperationMaintenance = () => {
                     </p>
                 </div>
                 <div className="w-[100%] grid md:grid-cols-2 grid-cols-1 place-items-center items-center justify-center gap-4 py-4">
-                    {comfortCooling.map((item, index) => (
-                        <div className=''>
+                    {operationMaintenance.map((item, index) => (
+                        <div className='p-4'>
                             <div>
                                 <img
                                     className="rounded-xl font-semibold object-contain md:w-[748px] w-[500px] h-[463px]"

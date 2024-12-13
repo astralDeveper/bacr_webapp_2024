@@ -16,6 +16,10 @@ import Projects from "../../pages/Projects";
 import Brands from "../../pages/Brands";
 import ProjectDetailPage from "../../pages/ProjectDetailPage";
 import Services from "../../pages/Services";
+import Carrier from "../../pages/Partner/carrier";
+import York from "../../pages/Partner/york";
+import Echochillers from "../../pages/Partner/echochillers";
+import Trane from "../../pages/Partner/trane";
 
 export const router = createBrowserRouter([
   {
@@ -85,6 +89,22 @@ export const router = createBrowserRouter([
   {
     path: "/tica",
     element: <TicaProducts />,
+  },
+  {
+    path: "/carrier",
+    element: <Carrier />,
+  },
+  {
+    path: "/york",
+    element: <York />,
+  },
+  {
+    path: "/echochillers",
+    element: <Echochillers />,
+  },
+  {
+    path: "/trane",
+    element: <Trane />,
   },
   {
     path: "/brands",

@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../../components/Container";
 import { brandsCardData } from "../../utils/DummyData";
 import Button from "../../components/Button";
+import { Link } from "react-router-dom";
 
 const Brands = () => {
     return (
@@ -40,12 +41,12 @@ backed by industry-leading partners.">
                                         />
                                     </div>
                                     <p className="text-text6 text-sm mt-4">{item.description}</p>
-                                    <div className="flex items-center justify-center w-full mb-4">
+                                    <Link to={item.link} className="flex items-center justify-center w-full mb-4">
                                         <Button
                                             btnStyle="bg-backgroundColor1 rounded-md mt-4 w-full text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 lg:font-semibold "
                                             title={"Learn More"}
                                         />
-                                    </div>
+                                    </Link>
                                 </div>
 
                             </div>

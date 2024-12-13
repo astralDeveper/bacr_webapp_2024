@@ -10,7 +10,7 @@ const GallettiProducts = () => {
       children={
         <div className='md:w-[80%] w-[90%] mx-auto my-16 p-2'>
           <p className='text-text9 heading7'>
-            <span className='font-semibold  '>Galletti</span>
+            <span className='font-semibold  '>Galletti </span>
             is a leading Italian brand, renowned for its high-performance HVAC
             solutions. Specializing in fan coil units, chillers, and heat pumps.
             Galletti combines Italian innovation with cutting-edge technology to

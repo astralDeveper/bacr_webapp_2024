@@ -26,7 +26,7 @@ const ProcessCoolong = () => {
                 </div>
                 <div className="w-[100%] grid md:grid-cols-2 grid-cols-1 place-items-center items-center justify-center gap-4 py-4">
                     {processCooling.map((item, index) => (
-                        <div className=''>
+                        <div className='p-4'>
                             <div>
                                 <img
                                     className="rounded-xl font-semibold object-contain md:w-[748px] w-[500px] h-[463px]"

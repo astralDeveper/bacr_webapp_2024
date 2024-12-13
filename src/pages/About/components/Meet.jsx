@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { IMAGES } from "../../../utils/Images";
+import Button from "../../../components/Button";
+import profile from "../../../../public/profile/BacrProfile.pdf"
 
 export default function Meet(props) {
   const { name, des, title, para, profile } = props;
-
+  const onButtonClick = () => {
+    const pdfUrl = "/profile/BacrProfile.pdf"; // Correct path from public folder
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Company_Profile.pdf"; // Specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section className="sm:bg-[#F6F5F5] md:p-6 ">
       <div className="lg:w-[80%] md:w-[99%] w-[80%] mx-auto md:p-6 my-6 ">
@@ -38,6 +48,10 @@ export default function Meet(props) {
                 {item}
               </p>
             ))}
+            <div className="bg-backgroundColor1 flex items-center  w-fit  md:pr-8 pr-2  rounded-lg "  >
+              <Button onclick={onButtonClick} title={"Download Company Profile PDF"} btnStyle="text-backgroundColor2 text1 font-semibold" onClick={onButtonClick} />
+              <img src={IMAGES.DOWNLOADPDF} alt="load" className="md:w-[30px] w-[18px]" />
+            </div>
           </div>
         </div>
       </div>

@@ -155,6 +155,20 @@ const imageNames = [
   "process2",
   "process3",
   "process4",
+  "downloadpdf",
+  // Trunky project start
+  "trunky1",
+  "trunky2",
+  "trunky3",
+  "trunky4",
+  // Trunky project end
+
+  // troubleshooting start
+  "troubleshooting1",
+  "troubleshooting2",
+  "troubleshooting3",
+  "troubleshooting4",
+  // troubleshooting end
 
 
 

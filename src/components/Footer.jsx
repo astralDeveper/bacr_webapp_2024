@@ -27,6 +27,12 @@ const Footer = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [active])
+  const setTitle = (text) => {
+    localStorage.setItem('title', text)
+    console.log("call footer");
+    
+
+  }
   return (
     <footer class="bg-text8 font-poppins">
       <div class="mx-auto max-w-[80%] py-4">
@@ -83,7 +89,7 @@ const Footer = () => {
                               whileInView="inView"
                               viewport={{ once: false }}
                               variants={myAnimationLeft} key={ind}>
-                              <Link to={items.href}>
+                              <Link to={`${items.href}?type=${items.link}`}>
                                 <li className="text1 py-1 cursor-pointer hover:underline">
                                   {items.link}
                                 </li>

@@ -108,6 +108,94 @@ export const processCooling = [
     para: "BAC integrates smart controls and monitoring systems into our chillers, allowing for precise temperature regulation and remote management. Through real-time data analytics and predictive maintenance capabilities, clients can optimize performance, prevent downtime, and extend the lifespan of their equipment.",
   },
 ];
+export const turnkeyProjects = [
+  {
+    img: IMAGES.TRUNKY1,
+    title: "Tailored Design",
+    para: "Our process begins with a comprehensive understanding of your needs and objectives. Our team collaborates closely with you to develop a customized design that aligns with your goals and budget.",
+  },
+  {
+    img: IMAGES.TRUNKY2,
+    title: "Meticulous Execution",
+    para: "Once the design is finalized, our skilled technicians, engineers, and project managers take charge of the implementation phase. With meticulous attention to detail, we coordinate all aspects of construction, procurement, and installation to ensure seamless execution.",
+  },
+  {
+    img: IMAGES.TRUNKY3,
+    title: "Quality Assurance",
+    para: "We leverage the latest technology and industry best practices to create a comprehensive plan that ensures optimal performance and efficiency. Our commitment to quality means that your project is completed on time and within budget.",
+  },
+  {
+    img: IMAGES.TRUNKY4,
+    title: "Thorough Commissioning",
+    para: "Our service doesn't end with installation. We provide comprehensive commissioning services to ensure that your systems are operating at peak performance. Our technicians conduct thorough testing and verification to identify and resolve any issues, ensuring your project meets or exceeds expectations.",
+  },
+];
+export const energyOptimization = [
+  {
+    img: IMAGES.TRUNKY1,
+    title: "Efficiency Enhancement",
+    para: "Maximize your energy efficiency with our tailored optimization solutions. We analyze your systems and processes to identify areas for improvement, helping you reduce energy consumption and lower costs.",
+  },
+  {
+    img: IMAGES.TRUNKY2,
+    title: "Customized Strategies",
+    para: "Our team develops customized strategies to optimize energy usage based on your unique needs and objectives. Whether it's upgrading equipment, implementing controls, or improving workflows, we design solutions that deliver tangible results.",
+  },
+  {
+    img: IMAGES.TRUNKY3,
+    title: "Sustainable Practices",
+    para: "We're committed to promoting sustainability and environmental responsibility. Our energy optimization solutions prioritize the use of renewable resources, energy-efficient technologies, and eco-friendly practices to minimize your carbon footprint.",
+  },
+  {
+    img: IMAGES.TRUNKY4,
+    title: "Cost Savings",
+    para: "By optimizing energy usage, you'll not only reduce your environmental impact but also enjoy significant cost savings. Our solutions are designed to maximize your return on investment, helping you achieve long-term financial benefits.",
+  },
+];
+export const operationMaintenance = [
+  {
+    img: IMAGES.TRUNKY1,
+    title: "Peak Performance Assurance",
+    para: "Ensure your systems run smoothly and efficiently with our comprehensive operation and maintenance services. We're committed to maximizing uptime and performance, allowing you to focus on your core business activities.",
+  },
+  {
+    img: IMAGES.TRUNKY2,
+    title: "Proactive Maintenance",
+    para: "Our proactive approach to maintenance helps prevent costly downtime and extends the lifespan of your equipment. From routine inspections to predictive analytics, we identify and address potential issues before they escalate, keeping your systems operating at peak efficiency.",
+  },
+  {
+    img: IMAGES.TRUNKY3,
+    title: "Annual Operation and Maintenance Plans",
+    para: "Opt for our annual operation and maintenance plans tailored to suit your specific needs and budget. These plans offer regular inspections, preventive maintenance, and priority service to ensure the continuous operation of your systems throughout the year.",
+  },
+  {
+    img: IMAGES.TRUNKY4,
+    title: "Skilled Technicians",
+    para: "Our team of skilled technicians is trained to handle a wide range of maintenance tasks, from routine servicing to complex repairs. With years of experience and industry expertise, you can trust us to keep your systems running smoothly year-round.",
+  },
+];
+export const troubleshooting = [
+  {
+    img: IMAGES.TROUBLESHOOTING1,
+    title: "Rapid Issue Resolution",
+    para: "Count on our team for swift and effective troubleshooting services. We leverage our expertise to identify and resolve issues quickly, minimizing downtime and disruptions to your operations.",
+  },
+  {
+    img: IMAGES.TROUBLESHOOTING2,
+    title: "Programming Services",
+    para: "Unlock the full potential of your systems with our programming solutions. We specialize in programming chillers and optimizing control algorithms to meet your specific requirements.",
+  },
+  {
+    img: IMAGES.TROUBLESHOOTING3,
+    title: "Configuration Optimization",
+    para: "Ensure optimal performance with our configuration optimization services. We fine-tune your systems to maximize efficiency and functionality, allowing you to achieve peak performance and reliability.",
+  },
+  {
+    img: IMAGES.TROUBLESHOOTING4,
+    title: "Skilled Technicians",
+    para: "Our team of experienced technicians is equipped with the knowledge and skills to handle complex troubleshooting, programming, and configuration tasks. You can trust us to deliver results that exceed your expectations.",
+  },
+];
 
 
 
@@ -544,44 +632,58 @@ export const brandsCardData = [
   {
     name: "Galletti",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
+      "With a rich legacy spanning a century, Galletti brings unparalleled expertise to the HVAC industry. ...",
     image: IMAGES.BRANDONE,
-    tickImg: IMAGES.AUTH_TICK
+    tickImg: IMAGES.AUTH_TICK,
+    link:"/galleti"
   },
   {
     name: "Flakt Group",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
+      "FläktGroup is a leading global provider of energy-efficient indoor air technology solutions, special...",
     image: IMAGES.BRANDTWO,
-    tickImg: IMAGES.AUTH_TICK
+    tickImg: IMAGES.AUTH_TICK,
+    link:"/flakt"
   },
   {
     name: "Carrier",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
+      "Discover an extensive range of services tailored to suit the diverse needs of our valued clients at ...",
     image: IMAGES.BRANDTHREE,
-    tickImg: IMAGES.AUTH_TICK
+    tickImg: IMAGES.AUTH_TICK,
+    link:"/carrier"
   },
   {
     name: "York",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
+      "Brothers Air Conditioning offers an extensive array of services tailored to meet the diverse needs o...",
     image: IMAGES.BRANDFOUR,
-    tickImg: IMAGES.AUTH_TICK
+    tickImg: IMAGES.AUTH_TICK,
+    link:"/york"
   },
   {
     name: "Echochillers",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
+      "Based in the USA, Eco Chillers Inc sets the standard for excellence in HVAC solutions. Compliant wit...",
     image: IMAGES.BRANDFIVE,
-    tickImg: IMAGES.AUTH_TICK
+    tickImg: IMAGES.AUTH_TICK,
+    link:"/echochillers"
   },
   {
     name: "Trane",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dui eu dolor posuere malesuada. Maecenas congue eget tellus ac faucibus.",
+      "Brothers Air Conditioning offers a comprehensive range of services featuring Trane products to meet ...",
     image: IMAGES.BRANDSIX,
-    tickImg: IMAGES.AUTH_TICK
+    tickImg: IMAGES.AUTH_TICK,
+    link:"/trane"
+  },
+  {
+    name: "Tica",
+    description:
+      "Brothers Air Conditioning offers a comprehensive range of services featuring Trane products to meet ...",
+    image: IMAGES.TICA,
+    tickImg: IMAGES.AUTH_TICK,
+    link:"/tica"
   },
 ];
 
@@ -894,15 +996,15 @@ export const ServicesLinks = [
         href: "/services-detail",
       },
       {
-        link: "Turnkey Solution",
+        link: "Turnkey Projects",
         href: "/services-detail",
       },
       {
-        link: "Eenergy Optimization",
+        link: "Energy Optimization",
         href: "/services-detail",
       },
       {
-        link: "Operation maintenance",
+        link: "Operation Maintenance",
         href: "/services-detail",
       },
       {
@@ -951,7 +1053,7 @@ export const ProductsLinks = [
       },
       {
         link: "Clients",
-        href: "/projects",
+        href: "/",
       },
     ],
   },
