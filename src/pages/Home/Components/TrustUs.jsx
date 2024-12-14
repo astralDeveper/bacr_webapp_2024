@@ -18,16 +18,16 @@ export default function TrustUs(props) {
   }, []);
 
   return (
-    <section className="sm:max-w-[70%] sm:mx-auto p-6 my-6 bg-[#004671] xl:mb-[250px]">
+    <section className="sm:max-w-[80%] sm:mx-auto my-6 bg-[#004671] xl:mb-[250px]">
       {/* <div className="w-[150px] px-2 py-2 mx-auto text-center rounded-full bg-white text-[#0A2540] mt-6">
         {subTitle}
       </div> */}
 
-      <h2 className="outfit-font text-[18px] sm:text-[20px] lg:text-[38px] font-bold text-center text-[#fff] my-3">
+      <h2 className="outfit-font heading5 font-bold text-center text-[#fff] py-6">
         {title}
       </h2>
 
-      <p className="text-center text-[15px] text-[#fff] font-light w-8/12 mx-auto">
+      <p className="text-center text2 text-[#fff] font-light w-8/12 mx-auto">
         {para}
       </p>
 
@@ -35,17 +35,17 @@ export default function TrustUs(props) {
         {card.map((item) => (
           <div className="flex flex-col" key={item.name}>
             <div className="">
-              <img src={item.img} alt="phone Icon" className="h-[60px]" />
+              <img src={item.img} alt="phone Icon" className="md:h-[50px] h-[40px]" />
             </div>
-            <h4 className="text-[18px] text-[#fff] font-semibold py-2">
+            <h4 className="text2 text-[#fff] font-semibold py-2">
               {item.name}
             </h4>
-            <p className="text-[13px] text-[#fff] font-light ">{item.para}</p>
+            <p className="text3 text-[#fff] font-light ">{item.para}</p>
           </div>
         ))}
       </div>
 
-      <div className="py-2 md:w-[90%] mx-auto xl:mb-[-150px]">
+      <div className="py-2 md:w-[%] md:p-8 p-2 mx-auto xl:mb-[-150px]">
         <div
           id=""
           className=""

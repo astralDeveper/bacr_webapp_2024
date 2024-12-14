@@ -13,7 +13,7 @@ const Card = () => {
         <div
           key={idx}
           className="flex flex-col sm:flex-row shadow-shadow2 font-poppins items-center rounded-lg sm:gap-2 lg:gap-4 justify-between px-4 bg-backgroundColor2"
-        >
+          >
           <div className="relative sm:w-1/2 w-full py-4">
             <div className="bg-backgroundColor1 absolute right-3 top-7 text-white px-6 py-3 rounded-xl sm:px-3 sm:py-1 xs:px-2 xs:py-1">
               <h1 className="text-center leading-8 text1 sm:text-sm xs:text-xs lg:text-[11px]">

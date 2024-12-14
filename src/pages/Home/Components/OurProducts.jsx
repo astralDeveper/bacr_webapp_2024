@@ -18,7 +18,7 @@ export default function OurProducts(props) {
 
 
   return (
-    <section className="sm:max-w-[70%] sm:mx-auto p-6 ">
+    <section className="sm:max-w-[80%] sm:mx-auto p-6 ">
       <h2 className="outfit-font text-[18px] sm:text-[26px] lg:text-[34px] font-bold text-center text-[#031019]">
         {title}
       </h2>
@@ -27,7 +27,7 @@ export default function OurProducts(props) {
         {slides.map((item, ind) => (
            <div
            key={ind}
-           className={`w-full lg:max-h-[471px] p-6 rounded-xl shadow-md ${clickedIndex === ind
+           className={`w-full  p-6 rounded-xl shadow-md ${clickedIndex === ind
                ? "bg-backgroundColor1 text-backgroundColor2 transition-colors duration-500 ease-in-out"
                : "bg-backgroundColor9"
                } cursor-pointer`}
@@ -36,21 +36,21 @@ export default function OurProducts(props) {
            <img
                src={item.images}
                alt={item.productName}
-               className="lg:w-[289px] md:w-[200px] w-[150px] h-auto mb-4 mx-auto"
+               className="w-[150px] h-auto mb-4 mx-auto"
            />
-           <div className="flex items-center justify-between">
-               <p className="heading7 font-semibold">{item.productName}</p>
-               <div className="flex items-center gap-2 text1">
+           <div className="flex items-center justify-between mt-8">
+               <p className="text1 font-semibold">{item.productName}</p>
+               <div className="flex items-center gap-2 text2">
                    <span>12</span>
-                   <img src={clickedIndex === ind ? item.iconwhite : item.icon} alt="icon" className="md:w-6 w-4" />
+                   <img src={clickedIndex === ind ? item.iconwhite : item.icon} alt="icon" className="w-4" />
                </div>
            </div>
-           <div className="mt-2">
-               <p className="text1">
-                   Model No: <span className="font-bold text1">{item.modelno}</span>
+           <div className="mt-4">
+               <p className="text2">
+                   Model No: <span className="font-bold text2">{item.modelno}</span>
                </p>
-               <p className="text1">
-                   Brands Name: <span className="font-bold text1">{item.brands}</span>
+               <p className="text2">
+                   Brands Name: <span className="font-bold text2">{item.brands}</span>
                </p>
            </div>
            <div className="md:mt-6 mt-4 flex items-center justify-center">
@@ -62,7 +62,7 @@ export default function OurProducts(props) {
                >
 
                    <Button
-                       btnStyle={`rounded-md w-full text1 ${clickedIndex === ind
+                       btnStyle={`rounded-md w-full text2 ${clickedIndex === ind
                            ? "bg-backgroundColor2 text-backgroundColor1"
                            : "text-backgroundColor6 bg-backgroundColor1"
                            } font-semibold`}
@@ -74,9 +74,9 @@ export default function OurProducts(props) {
         ))}
       </div>
 
-      <Link to={"/products"} className="flex justify-center py-8">
+      <Link to={"/products"} className="flex justify-center py-4">
         <Button
-          btnStyle="bg-backgroundColor1 w-[250px] text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold"
+          btnStyle="bg-backgroundColor1 rounded-md w-[250px] text2 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold"
           title={"See All Products"}
         />
       </Link>

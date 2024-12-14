@@ -30,10 +30,10 @@ const Navbar = ({ mainStyle, heading, para, home, image, id }) => {
 
     return (
         <div className={`${image ? 'bg-hero-pattern bg-no-repeat bg-cover w-full' : ''}`}>
-            <div className='max-w-[90%] mx-auto md:rounded-b-[30px] rounded-b-[20px] bg-white shadow-shadow2  py-1 px-6 ' >
+            <div className='max-w-[80%] mx-auto md:rounded-b-[30px] rounded-b-[20px] bg-white shadow-shadow2  py-1 px-6 ' >
                 <div className='flex items-center justify-between'>
                     <Link to={"/"} className='shrink-0'>
-                        <img src={IMAGES.LOGO} alt="logo" className='xl:w-[114px] w-[60px] object-contain' />
+                        <img src={IMAGES.LOGO} alt="logo" className='md:w-[80px] w-[60px] object-contain' />
                     </Link>
                     {/*   */}
                     {/* Dekstop */}
@@ -42,11 +42,11 @@ const Navbar = ({ mainStyle, heading, para, home, image, id }) => {
                             initial={{ y: 100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ ease: "easeIn", duration: 1, delay: 0.5 }}
-                            className='flex items-center justify-center xl:gap-6 gap-2' >
+                            className='flex items-center justify-center xl:gap-4 gap-2' >
                             {
                                 navManue.map((item, ind) => {
                                     return (
-                                        <Link key={ind} to={item.href} className={`xl:text1 text3  ${active === item.href ? "text-backgroundColor4 font-bold cursor-default" : ""} `} >
+                                        <Link key={ind} to={item.href} className={`xl:text2 text3  ${active === item.href ? "text-backgroundColor4 font-bold cursor-default" : "font-medium"} `} >
                                             {item.title}
                                         </Link>
                                     )
@@ -64,12 +64,12 @@ const Navbar = ({ mainStyle, heading, para, home, image, id }) => {
                         transition={{ ease: "easeIn", duration: 1, delay: 0.1 }}
                         className='md:block hidden '>
                         <div className='flex items-center xl:gap-2 gap-1'>
-                            <img src={IMAGES.PHONE} alt="phone Icon" className='xl:w-[18px] sm:w-[8px]' />
-                            <a href="tel:+92 345 3456563" className='xl:text1 text3' >+92 345 3456563</a>
+                            <img src={IMAGES.PHONE} alt="phone Icon" className='md:w-[15px] w-[8px]' />
+                            <a href="tel:+92 345 3456563" className='xl:text2 text3' >+92 345 3456563</a>
                         </div>
                         <div className='flex items-center xl:gap-2 gap-1'>
-                            <img src={IMAGES.MAIL} alt="mail Icon" className='xl:w-[18px] sm:w-[8px]' />
-                            <a href="mailto:bacremail@gmail.com" className='xl:text1 text3' >bacremail@gmail.com</a>
+                            <img src={IMAGES.MAIL} alt="mail Icon" className='md:w-[15px] w-[8px]' />
+                            <a href="mailto:bacremail@gmail.com" className='xl:text2 text3' >bacremail@gmail.com</a>
                         </div>
                     </motion.div>
                     <div className='md:hidden ' onClick={() => { SetMenueOpen(!menueOpen) }} >
@@ -129,18 +129,18 @@ const Navbar = ({ mainStyle, heading, para, home, image, id }) => {
             </div>
             {/*   gap-6 flex items-center justify-center flex-col */}
             {image &&
-                <div className={`w-[80%] mx-auto ${para ? 'py-20' : 'py-6 pb-28 mt-'} `}>
-                    <div className={`lg:mt-12 md:mt-7 mt-4 ${active === "/" ? "" : "flex flex-col items-center justify-center  text-center"}  `} >
-                        <p className={`heading2 lg:leading-[70px] md:leading-[40px] text-backgroundColor2 xl:w-[82%] w-full`} >{heading}</p>
-                        {para && <p className={`text1 text-backgroundColor2 xl:w-[34%] w-full`}>{para}</p>}
+                <div className={`w-[80%] mx-auto ${para ? 'md:py-16 py-8' : 'py-6 pb-28'} `}>
+                    <div className={` ${active === "/" ? "" : "flex flex-col items-center justify-center  text-center"}  `} >
+                        <p className={`heading4  text-backgroundColor2 xl:w-[82%] w-full`} >{heading}</p>
+                        {para && <p className={`text2 text-backgroundColor2 xl:w-[34%] w-full`}>{para}</p>}
                     </div>
                     {
                         home && (
                             <div className='flex  lg:gap-10 md:gap-6 gap-4 lg:flex-row md:flex-row flex-col lg:mt-10 md:mt-4 mt-4  ' >
                                 <Link to={"/products"} className='' >
-                                    <Button className="text1" btnStyle="bg-backgroundColor2 w-full rounded-md text-text2" title={"Explore Our Products"} />
+                                    <Button className="" btnStyle="bg-backgroundColor2 w-full rounded-md text2" title={"Explore Our Products"} />
                                 </Link>
-                                <Button className="text1" btnStyle="rounded-md border text-backgroundColor2" title={"Request a Consultation"} />
+                                <Button className="" btnStyle="rounded-md border text-backgroundColor2 text2" title={"Request a Consultation"} />
                             </div>
                         )
                     }

@@ -23,11 +23,11 @@ export default function Overview(props) {
         <div className="py-0">
           {/* <div className="text-sm text-[#ee8c33] font-light">{subTitle}</div> */}
 
-          <h2 className="mt-2 outfit-font text-[18px] sm:text-[26px] lg:text-[34px] font-semibold text-[#000] leading-0">
+          <h2 className="mt-2 outfit-font heading5 font-semibold text-[#000] leading-0">
             {title}
           </h2>
         </div>
-        <p className="text-[13px] lg:text-[14px] text-[#000] font-light mx-auto ">
+        <p className="text3 text-[#000] font-light mx-auto ">
           {para}
         </p>
       </div>
@@ -53,7 +53,7 @@ export default function Overview(props) {
             <div className="flex flex-col sm:flex-row shadow-xl min-h-[130px] gap-8 2xl:gap-6 bg-[#004671] rounded-md p-5">
               <div className="min-w-[80px]">
                 <div className=" w-[75px] h-[75px] p-4 rounded-full border flex justify-center items-center bg-[#fff] transition-all duration-500  relative bg-cover bg-center bg-no-repeat">
-                  <img src={item.img} className="object-fill" />
+                  <img src={item.img} className="object-fill w-[24px] " />
                 </div>
               </div>
               <div className="col-span-10 flex flex-col justify-center ">

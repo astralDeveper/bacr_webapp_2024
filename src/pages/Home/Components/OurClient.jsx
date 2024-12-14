@@ -29,11 +29,11 @@ export default function OurClient(props) {
             >
               {images.map((item,index) => (
                 <li key={`ltr-${index}`} >
-                  <div className="p-4 rounded-md w-[200px]">
+                  <div className="p-4 rounded-md md:w-[200px]">
                     <img
                       src={item}
                       alt="Facebook"
-                      className="h-[110px] w-[110px] mx-auto object-contain"
+                      className="md:h-[100px] md:w-[100px] h-[80px] w-[80px] mx-auto object-contain"
                     />
                   </div>
                 </li>
@@ -41,11 +41,11 @@ export default function OurClient(props) {
               {/* Duplicate content */}
               {images.map((item, index) => (
                 <li key={`ltr-duplicate-${index}`} className="mx-2">
-                  <div className="p-4 rounded-md w-[200px]">
+                  <div className="p-4 rounded-md md:w-[200px]">
                     <img
                       src={item}
                       alt="Image"
-                      className="h-[110px] w-[110px] mx-auto object-contain"
+                      className="md:h-[100px] md:w-[100px] h-[80px] w-[80px] mx-auto object-contain"
                     />
                   </div>
                 </li>
@@ -59,11 +59,11 @@ export default function OurClient(props) {
             >
               {images.map((item,index) => (
                 <li key={`rtl-${index}`}>
-                  <div className="   p-4 rounded-md w-[200px]">
+                  <div className="   p-4 rounded-md md:w-[200px]">
                     <img
                       src={item}
                       alt="Facebook"
-                      className="h-[110px] w-[110px] mx-auto object-contain"
+                      className="md:h-[100px] md:w-[100px] h-[80px] w-[80px] mx-auto object-contain"
                     />
                   </div>
                 </li>
@@ -71,11 +71,11 @@ export default function OurClient(props) {
               {/* Duplicate content */}
               {images.map((item, index) => (
                 <li key={`rtl-duplicate-${index}`} className="mx-2">
-                  <div className="p-4 rounded-md w-[200px]">
+                  <div className="p-4 rounded-md md:w-[200px]">
                     <img
                       src={item}
                       alt="Image"
-                      className="h-[110px] w-[110px] object-contain mx-auto"
+                      className="md:h-[100px] md:w-[100px] h-[80px] w-[80px] object-contain mx-auto"
                     />
                   </div>
                 </li>

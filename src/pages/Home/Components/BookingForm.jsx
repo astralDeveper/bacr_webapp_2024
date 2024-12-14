@@ -32,12 +32,12 @@ export default function BookingForm(props) {
 
 
   return (
-    <section className="w-[80%] mx-auto p-6 my-6 ">
+    <section className="md:w-[80%] mx-auto p-6 ">
       <div className="border rounded-md bg-[#D8EEFB] md:px-6 px-2 md:py-8 py-4">
         <h4 className="text-[18px] text-[#000] font-medium leading-none ">
           {title}
         </h4>
-        <form onSubmit={handleSubmit} className="mt-4 grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-1  md:gap-x-2 gap-x-1 md:gap-y-8 gap-y-4">
+        <form onSubmit={handleSubmit} className="mt-4 grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-4 gap-2 ">
           <input
             type="text"
             name="name"
@@ -45,7 +45,7 @@ export default function BookingForm(props) {
             placeholder="Name"
             value={formData.name}
             onChange={handleChange}
-            className="lg:h-[70px] md:h-[40px] h-[30px] w-full rounded-md border border-gray-400 bg-transparent py-1 md:px-6 px-2 md:text-base font-medium text-1 text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            className="md:py-3 md:px-3 py-1 px-2 rounded-md border border-gray-400 bg-transparent text2  text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
           />
           <input
             type="text"
@@ -54,7 +54,7 @@ export default function BookingForm(props) {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
-            className="lg:h-[70px] md:h-[40px] h-[30px] w-full rounded-md border border-gray-400 bg-transparent py-1 md:px-6 px-2 md:text-base font-medium text-1 text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            className="md:py-3 md:px-3 py-1 px-2 rounded-md border border-gray-400 bg-transparent text2  text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
           />
           <input
             type="text"
@@ -63,7 +63,7 @@ export default function BookingForm(props) {
             placeholder="Phone"
             value={formData.phone}
             onChange={handleChange}
-            className="lg:h-[70px] md:h-[40px] h-[30px] w-full rounded-md border border-gray-400 bg-transparent py-1 md:px-6 px-2 md:text-base font-medium text-1 text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            className="md:py-3 md:px-3 py-1 px-2 rounded-md border border-gray-400 bg-transparent text2  text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
           />
 
           <input
@@ -72,11 +72,11 @@ export default function BookingForm(props) {
             id="date"
             value={formData.date}
             onChange={handleChange}
-            className="lg:h-[70px] md:h-[40px] h-[30px] w-full rounded-md border border-gray-400 bg-transparent py-1 md:px-6 px-2 md:text-base font-medium text-1 text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            className="md:py-3 md:px-3 py-1 px-2 rounded-md border border-gray-400 bg-transparent text2  text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
           />
 
           <Button
-            btnStyle="h-[70px] bg-backgroundColor1 text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold h-full"
+            btnStyle=" bg-backgroundColor1 text3 rounded-md text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold h-full"
             title="Book Appointment"
           />
         </form>

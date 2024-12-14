@@ -5,10 +5,10 @@ const AboutCard = () => {
   return (
     <>
       <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
-            <div className="mb-20 flex items-center justify-center flex-col gap-6 ">
-                <p className="heading2 w-[80%] text-center text-text12 " >Meet the Experts Behind Your Fresh 
-                Air Solutions.</p>
-            </div>
+        <div className="mb-20 flex items-center justify-center flex-col gap-6 ">
+          <p className="heading2 w-[80%] text-center text-text12 " >Meet the Experts Behind Your Fresh
+            Air Solutions.</p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {AboutCardData.map((item, ind) => {
             return (
