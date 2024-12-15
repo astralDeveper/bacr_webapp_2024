@@ -14,11 +14,6 @@ import Meet from "./components/Meet";
 import { IMAGES } from "../../utils/Images";
 import CertifiedAchievements from "./components/CertifiedAchievements";
 import AboutCard from "./components/AboutCard";
-import CertifiedAchieveSlider from "./components/certifiedAchieveSlider/certifiedAchieveSlider";
-
-const OPTIONS = { loop: true, align: "center" };
-// const SLIDE_COUNT = 5;
-// const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const About = () => {
   return (
@@ -63,8 +58,6 @@ Our mission is to provide high-quality products and services that prioritize ene
             </p>
           </div>
           <CertifiedAchievements />
-          {/* <EmblaCarousel slides={SLIDES} options={OPTIONS} /> */}
-          {/* <CertifiedAchieveSlider options={OPTIONS} /> */}
         </div>
       </main>
     </Container>
