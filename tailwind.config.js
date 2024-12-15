@@ -3,12 +3,13 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      'poppins': "Poppins"
+      poppins: "Poppins",
     },
+
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('../public/images/herosec.png')",
-        'ceo-pattern': "url('../public/images/ceobgimg.png')",
+        "hero-pattern": "url('../public/images/herosec.png')",
+        "ceo-pattern": "url('../public/images/ceobgimg.png')",
       },
       colors: {
         backgroundColor1: "#064670",
@@ -19,13 +20,13 @@ export default {
         backgroundColor6: "#f2f6fa",
         backgroundColor7: "#d9eefa",
         backgroundColor8: "#0b800f",
-        btnColor: '#FFA500',
+        btnColor: "#FFA500",
         backgroundColor9: "#F5F5F5",
         backgroundColor10: "#FFA500",
         backgroundColor11: "#F2F2F2",
         backgroundColor12: "#023B5E",
         backgroundColor13: "#F1F1F1",
-        backgroundColor14:"#F4F7FB",
+        backgroundColor14: "#F4F7FB",
         text1: "#ed8b3b",
         text2: "#0b2540",
         text3: "#333333",
@@ -37,11 +38,11 @@ export default {
         text9: "#343434",
         text10: "#6C606C",
         text11: "#454545",
-        text12: "#0A2540"
+        text12: "#0A2540",
       },
       boxShadow: {
-        'shadow1': '0 10px 50px -10px rgba(0, 0, 0, 0.3)',
-        'shadow2': '0 10px 50px -11px rgba(51, 51, 51, 0.3)',
+        shadow1: "0 10px 50px -10px rgba(0, 0, 0, 0.3)",
+        shadow2: "0 10px 50px -11px rgba(51, 51, 51, 0.3)",
       },
       fontWeight: {
         normal: "400", // Normal weight
@@ -65,26 +66,23 @@ export default {
           to: { transform: "translateX(0)" },
         },
       },
-
-
-
     },
 
     screens: {
-      'xs': '300px',
+      xs: "300px",
 
-      'sm': '640px',
+      sm: "640px",
 
-      'md': '768px',
+      md: "768px",
 
-      'lg': '1024px',
+      lg: "1024px",
 
-      'xl': '1280px',
+      xl: "1280px",
 
-      'xl1': '1050px',
+      xl1: "1050px",
 
-      '2xl': '1536px',
-    }
+      "2xl": "1536px",
+    },
   },
   plugins: [],
 };

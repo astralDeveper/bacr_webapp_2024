@@ -5,10 +5,10 @@ export default function BookingForm(props) {
   const { title } = props;
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    date: '',
+    name: "",
+    email: "",
+    phone: "",
+    date: "",
   });
 
   const handleChange = (e) => {
@@ -18,26 +18,27 @@ export default function BookingForm(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
+    console.log("Form Data:", formData);
     // reset Form data start
     setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      date: '',
-    })
+      name: "",
+      email: "",
+      phone: "",
+      date: "",
+    });
     // reset Form data end
   };
 
-
-
   return (
-    <section className="md:w-[80%] mx-auto p-6 ">
+    <section className="md:w-[80%] mx-auto py-6 ">
       <div className="border rounded-md bg-[#D8EEFB] md:px-6 px-2 md:py-8 py-4">
         <h4 className="text-[18px] text-[#000] font-medium leading-none ">
           {title}
         </h4>
-        <form onSubmit={handleSubmit} className="mt-4 grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-4 gap-2 ">
+        <form
+          onSubmit={handleSubmit}
+          className="mt-4 grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-4 gap-2 "
+        >
           <input
             type="text"
             name="name"

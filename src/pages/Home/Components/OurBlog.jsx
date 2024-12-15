@@ -12,7 +12,9 @@ export default function OurBlog(props) {
         <h2 className="outfit-font heading6 font-semibold mb-4 text-[#000]">
           {title}
         </h2>
-        <p className="text1 text-[#000] font-light mx-auto md:w-[60%] mb-3 text-center">{para}</p>
+        <p className="textFont2 text-text7 font-light mx-auto md:w-[70%] mb-12 text-center ">
+          {para}
+        </p>
       </div>
       <div className="grid lg:grid-cols-2 lg:gap-16 gap-2 md:grid-cols-2 sm:grid-cols-2 shrink-0 ">
         {card.map((item) => (
@@ -27,9 +29,7 @@ export default function OurBlog(props) {
                 className={`absolute inset-0 bg-[#004671] transition-all duration-500 px-2 py-1 text-center rounded-md bottom-auto right-[8px] top-[8px] left-auto `}
               >
                 <h6 className="text1 text-white leading-none">26</h6>
-                <p className="text2 font-light text-white leading-none">
-                  Nov
-                </p>
+                <p className="text2 font-light text-white leading-none">Nov</p>
               </div>
               <div
                 className={`absolute inset-0 bg-[#ffa500] transition-all duration-500 px-2 py-1 rounded-full bottom-[8px] right-auto top-auto left-[8px] `}
@@ -56,7 +56,10 @@ export default function OurBlog(props) {
           </div>
         ))}
       </div>
-      <Link to={"/blogs"} className="w-full flex items-center justify-center md:mt-6 mt-2  " >
+      <Link
+        to={"/blogs"}
+        className="w-full flex items-center justify-center md:mt-6 mt-2  "
+      >
         <Button
           btnStyle="bg-backgroundColor1 w-[250px] rounded-md text2 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold mt-2"
           title="See All Blogs"

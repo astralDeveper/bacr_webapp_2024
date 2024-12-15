@@ -50,9 +50,9 @@ const BlogDetailPage = () => {
         <div className="py-6">
           {blogDetailTable.map((item, idx) => (
             <div className="font-poppins" key={idx}>
-              <h1 className="heading5 py-2">{item.heading}</h1>
+              <h2 className="headingFont5 font-bold py-2">{item.heading}</h2>
               {item.links.map((item, idx) => (
-                <p className="text1 py-1 text-text7" key={idx}>
+                <p className="textFont2 py-1 text-text7" key={idx}>
                   {item.link}
                 </p>
               ))}
@@ -62,20 +62,22 @@ const BlogDetailPage = () => {
 
         {/* Introduction section start here  */}
         <div className="mt-10 font-poppins">
-          <h1 className="heading5 py-2">
+          <h3 className="headingFont5 font-bold py-2">
             Introduction: Understanding HVAC Systems
-          </h1>
-          <p className="text1 text-text7">{para}</p>
+          </h3>
+          <p className="textFont2 text-text7">{para}</p>
           <br />
-          <p className="text1 text-text7">{para2}</p>
+          <p className="textFont2 text-text7">{para2}</p>
         </div>
 
         {/* Introduction section start here  */}
         <div className="font-poppins py-8">
-          <h1 className="heading5 py-2">What Does HVAC Stand For?</h1>
-          <p className="text1 text-text7">{para3}</p>
+          <h3 className="headingFont5 font-bold py-2">
+            What Does HVAC Stand For?
+          </h3>
+          <p className="textFont2 text-text7">{para3}</p>
           <br />
-          <div className="text1">
+          <div className="textFont2">
             <li className="text-text7">
               <span className="font-bold">Heating:</span> Typically provided by
               furnaces or heat pumps, heating raises indoor temperatures during
@@ -92,15 +94,17 @@ const BlogDetailPage = () => {
             </li>
           </div>
           <br />
-          <p className="text1 text-text7">{para4}</p>
+          <p className="textFont2 text-text7">{para4}</p>
         </div>
 
         {/* HVAC system section start here  */}
         <div className="font-poppins py-8">
-          <h1 className="heading5 py-2">Components of an HVAC System</h1>
-          <p className="text1 text-text7">{para5}</p>
+          <h3 className="headingFont5 font-bold py-2">
+            Components of an HVAC System
+          </h3>
+          <p className="textFont2 text-text7">{para5}</p>
           <br />
-          <div className="text1 text-text7">
+          <div className="textFont2 text-text7">
             <p>
               <span className="font-bold">1. Air Conditioner:</span> Used to
               cool the air by removing heat and humidity, especially during the
@@ -131,18 +135,18 @@ const BlogDetailPage = () => {
             </p>
           </div>
           <br />
-          <p className="text1 text-text7">{para6}</p>
+          <p className="textFont2 text-text7">{para6}</p>
         </div>
         {/* HVAC system section end here  */}
 
         {/* type of HVAC system section start here  */}
         <div className="font-poppins py-8">
-          <h1 className="heading5 py-2">Types of HVAC Systems</h1>
+          <h3 className="headingFont5 font-bold py-2">Types of HVAC Systems</h3>
           <div>
             {SplitData.map((item, idx) => (
               <div className="mt-4 text-text7" key={idx}>
-                <h1 className="font-bold">{item.heading}</h1>
-                <p className="text1 pb-3">{item.para}</p>
+                <h3 className="font-bold">{item.heading}</h3>
+                <p className="textFont2 pb-3">{item.para}</p>
               </div>
             ))}
           </div>
@@ -151,10 +155,10 @@ const BlogDetailPage = () => {
 
         {/* HVAC system work section start here  */}
         <div className="font-poppins py-8">
-          <h1 className="heading5 py-2">How HVAC Systems Work</h1>
-          <p className="text1 text-text7">{para7}</p>
+          <h3 className="headingFont5 font-bold py-2">How HVAC Systems Work</h3>
+          <p className="textFont2 text-text7">{para7}</p>
           <br />
-          <div className="text1 text-text7">
+          <div className="textFont2 text-text7">
             <p>
               <span className="font-bold">1. Heating Mode:</span> The furnace or
               heat pump heats the air, which is then distributed through
@@ -172,27 +176,27 @@ const BlogDetailPage = () => {
             </p>
           </div>
           <br />
-          <p className="text1 text-text7">{para8}</p>
+          <p className="textFont2 text-text7">{para8}</p>
         </div>
         {/* HVAC system work section end here  */}
 
         {/* HVAC Maintenance section start here  */}
         <div className="font-poppins py-8">
-          <h1 className="heading5 py-2">
+          <h3 className="headingFont5 font-bold py-2">
             Why Regular HVAC Maintenance is Crucial
-          </h1>
-          <p className="text1 text-text7">{para9}</p>
+          </h3>
+          <p className="textFont2 text-text7">{para9}</p>
         </div>
         {/* HVAC Maintenance section end here  */}
 
         {/* HVAC system cost section start here  */}
         <div className="font-poppins py-8">
-          <h1 className="heading5 py-2">
+          <h3 className="headingFont5 font-bold py-2">
             How Much Does a New HVAC System Cost?
-          </h1>
-          <p className="text1 text-text7">{para10}</p>
+          </h3>
+          <p className="textFont2 text-text7">{para10}</p>
           <br />
-          <div className="text1 text-text7">
+          <div className="textFont2 text-text7">
             <li>
               <span className="font-bold">A new HVAC system costs</span> for a
               small residential system might range from $5,000 to $7,000.
@@ -204,16 +208,18 @@ const BlogDetailPage = () => {
             </li>
           </div>
           <br />
-          <p className="text1 text-text7">{para11}</p>
+          <p className="textFont2 text-text7">{para11}</p>
         </div>
         {/* HVAC system cost section end here  */}
 
         {/* HVAC Essential section start here  */}
         <div className="font-poppins py-8">
-          <h1 className="heading5 py-2">Conclusion: Why HVAC is Essential</h1>
-          <p className="text1 text-text7">{para12}</p>
+          <h3 className="headingFont5 font-bold py-2">
+            Conclusion: Why HVAC is Essential
+          </h3>
+          <p className="textFont2 text-text7">{para12}</p>
           <br />
-          <p className="text1 text-text7 pb-6">{para13}</p>
+          <p className="textFont2 text-text7 pb-6">{para13}</p>
         </div>
         {/* HVAC Essential section end here  */}
       </div>

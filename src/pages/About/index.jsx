@@ -14,12 +14,17 @@ import Meet from "./components/Meet";
 import { IMAGES } from "../../utils/Images";
 import CertifiedAchievements from "./components/CertifiedAchievements";
 import AboutCard from "./components/AboutCard";
+import CertifiedAchieveSlider from "./components/certifiedAchieveSlider/certifiedAchieveSlider";
+
+const OPTIONS = { loop: true, align: "center" };
+// const SLIDE_COUNT = 5;
+// const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const About = () => {
   return (
     <Container
       heading={"About Us"}
-      //       para={`Providing high-quality HVACR products, services, and solutions 
+      //       para={`Providing high-quality HVACR products, services, and solutions
       // backed by industry-leading partners.`}
       about
       image
@@ -52,10 +57,14 @@ Our mission is to provide high-quality products and services that prioritize ene
           images={OurBrandsImagesData}
         />
         <div>
-          <div className='flex items-center justify-center'>
-            <p className='heading2 md:w-[68%] w-full text-center text-text12'>Discover a Legacy of Excellence with Our Certified Achievements</p>
+          <div className="flex items-center justify-center">
+            <p className="heading2 md:w-[68%] w-full text-center text-text12">
+              Discover a Legacy of Excellence with Our Certified Achievements
+            </p>
           </div>
           <CertifiedAchievements />
+          {/* <EmblaCarousel slides={SLIDES} options={OPTIONS} /> */}
+          {/* <CertifiedAchieveSlider options={OPTIONS} /> */}
         </div>
       </main>
     </Container>

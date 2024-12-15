@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  font-family:"poppins";
+* {
+  font-family: "poppins";
 }
 
 @layer utilities {
   .heading1 {
     @apply lg:text-[61px] md:text-[40px] text-[20px] font-semibold;
   }
+
   .heading2 {
     @apply lg:text-[52px] md:text-[35px] text-[20px] font-semibold;
   }
@@ -20,7 +21,7 @@
     @apply lg:text-[41px] md:text-[25px] text-[15px];
   }
   .heading5 {
-    @apply lg:text-[31px] md:text-[22px] text-[16px] font-bold ;
+    @apply lg:text-[31px] md:text-[22px] text-[16px] font-bold;
   }
   .heading6 {
     @apply lg:text-[26px] md:text-[18px] text-[12px] font-semibold;
@@ -29,13 +30,35 @@
     @apply lg:text-[20px] md:text-[16px] text-[12px];
   }
   .text1 {
-    @apply lg:text-[17px] md:text-[14px] text-[10px] ;
+    @apply lg:text-[17px] md:text-[14px] text-[10px];
   }
   .text2 {
     @apply lg:text-[14px] md:text-[13px] text-[11px];
   }
   .text3 {
-    @apply lg:text-[12px] md:text-[10px] text-[8px] ;
+    @apply lg:text-[12px] md:text-[10px] text-[8px];
   }
-}
 
+  /* rabia start */
+  .headingFont1 {
+    @apply lg:text-[40px] md:text-[30px] text-[20px] lg:leading-[50px] md:leading-[40px] leading-[30px]  font-poppins;
+  }
+
+  .headingFont5 {
+    @apply font-poppins lg:text-[26px] md:text-[22px] text-[20px];
+  }
+  .headingFont6 {
+    @apply font-poppins lg:text-[18px] md:text-[16px] text-[14px];
+  }
+
+  .textFont1 {
+    @apply font-poppins lg:text-[18px] text-[16px] lg:leading-[28px] leading-[26px] font-normal;
+  }
+  .textFont2 {
+    @apply font-poppins lg:text-[16px] text-[14px] lg:leading-[26px] leading-[24px] font-normal;
+  }
+  .textFont3 {
+    @apply font-poppins lg:text-[14px] text-[12px] lg:leading-[22px] leading-[20px] font-normal;
+  }
+  /* rabia end */
+}
