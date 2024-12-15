@@ -19,8 +19,6 @@ const About = () => {
   return (
     <Container
       heading={"About Us"}
-      //       para={`Providing high-quality HVACR products, services, and solutions
-      // backed by industry-leading partners.`}
       about
       image
       mainStyle={"flex flex-col items-end justify-end text-start "}
