@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { IMAGES } from '../utils/Images'
 import Button from './Button';
 
-const TabBar = ({ search, tabtext1, tabtext2, tabtext3, setBrand, tabtext4, handleTabChange, tab, product }) => {
+const TabBar = ({ search, tabtext1, tabtext2, tabtext3, setBrand, tabtext4, handleTabChange, tab, product, topbarStyle }) => {
 
 
 
@@ -16,19 +16,19 @@ const TabBar = ({ search, tabtext1, tabtext2, tabtext3, setBrand, tabtext4, hand
                 <Button
                     onclick={() => { handleTabChange(product ? "new" : "overseas") }}
                     btnStyle={`${tab === "new" || tab == "overseas" ? "bg-gradient-to-tl to-backgroundColor3 cursor-default from-backgroundColor4 text-backgroundColor2 transition-all duration-500 ease-linear " : "text-text4"
-                        } w-full rounded-md  lg:text-[18px] md:text-[14px] text-[10px] flex-1 w-full `}
+                        } w-full rounded-md  text2 flex-1 `}
                     title={tabtext1}
                 />
                 <Button
                     onclick={() => { handleTabChange(product ? "used" : "turnkey") }}
                     btnStyle={`${tab === "used" || tab == "turnkey" ? "bg-gradient-to-tl to-backgroundColor3 cursor-default from-backgroundColor4 text-backgroundColor2 transition-all duration-500 ease-linear" : "text-text4"
-                        } w-full rounded-md lg:text-[18px] md:text-[14px] text-[10px] flex-1 w-full `}
+                        } w-full rounded-md text2 flex-1`}
                     title={tabtext2}
                 />
                 <Button
                     onclick={() => { handleTabChange(product ? "spareParts" : "supply") }}
                     btnStyle={`${tab === "spareParts" || tab === "supply" ? "bg-gradient-to-tl to-backgroundColor3 cursor-default from-backgroundColor4 text-backgroundColor2 transition-all duration-500 ease-linear" : "text-text4"
-                        } w-full rounded-md lg:text-[18px] md:text-[14px] text-[10px] flex-1 w-full `}
+                        } w-full rounded-md text2 flex-1`}
                     title={tabtext3}
                 />
                 {
@@ -36,7 +36,7 @@ const TabBar = ({ search, tabtext1, tabtext2, tabtext3, setBrand, tabtext4, hand
                         <Button
                             onclick={() => { handleTabChange("operations") }}
                             btnStyle={`${tab === "operations" ? "bg-gradient-to-tl to-backgroundColor3 cursor-default from-backgroundColor4 text-backgroundColor2 transition-all duration-500 ease-linear" : "text-text4"
-                                } w-full rounded-md lg:text-[18px] md:text-[14px] text-[10px] flex-1 w-full `}
+                                } w-full rounded-md text2 flex-1 w-full `}
                             title={tabtext4}
                         />
                     )
@@ -46,8 +46,8 @@ const TabBar = ({ search, tabtext1, tabtext2, tabtext3, setBrand, tabtext4, hand
             {
                 search && (
                     <div className='md:w-[70%] w-full mx-auto'>
-                        <img src={IMAGES.SEARCH} alt="icon" className='md:translate-y-10 translate-y-8 translate-x-3 md:w-[20px] w-[16px]  ' />
-                        <input type="text" placeholder='Search what you want...' className='px-10 border-2 w-full md:py-4 py-3 placeholder:text1 rounded-xl text1 outline-none' onChange={(e) => setBrand(e.target.value)} />
+                        <img src={IMAGES.SEARCH} alt="icon" className='md:translate-y-8 translate-y-7 translate-x-3 md:w-[16px] w-[12px]  ' />
+                        <input type="text" placeholder='Search what you want...' className='px-10 border-2 w-full md:py-3 py-3 placeholder:text2 rounded-xl text2 outline-none' onChange={(e) => setBrand(e.target.value)} />
                     </div>
 
                 )

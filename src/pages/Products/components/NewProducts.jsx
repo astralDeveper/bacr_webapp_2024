@@ -1,54 +1,81 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Products } from '../../../utils/DummyData'
 import { Link } from 'react-router-dom'
 import Button from '../../../components/Button'
 
 const NewProducts = ({ clickedIndex }) => {
+
+    const [visibleCards, setVisibleCards] = useState([]);
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setVisibleCards((prev) => [...prev, entry.target.id]); 
+                    }
+                });
+            },
+            {
+                threshold: 0.2,
+            }
+        );
+
+        // Observe each card element
+        const cards = document.querySelectorAll(".pcard");
+        cards.forEach((card) => observer.observe(card));
+
+        return () => {
+            cards.forEach((card) => observer.unobserve(card));
+        };
+    }, []);
+
+
+
     return (
         <div className=''>
 
-            <div className='grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-4 gap-y-4 w-full mt-1'>
-
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
                 {Products.map((item, ind) => (
                     <div
+                        id={`pcard-${ind}`}
                         key={ind}
-                        className={`lg:max-w-[370px] lg:max-h-[471px] p-6 rounded-xl shadow-md ${clickedIndex === ind
+                        className={`w-full pcard  p-6 rounded-xl shadow-md ${clickedIndex === ind
                             ? "bg-backgroundColor1 text-backgroundColor2 transition-colors duration-500 ease-in-out"
                             : "bg-backgroundColor9"
-                            } cursor-pointer`}
+                            } cursor-pointer ${visibleCards.includes(`pcard-${ind}`) ? "visible" : ""
+                            } `}
                         onClick={() => handleClick(ind)}
                     >
                         <img
                             src={item.images}
                             alt={item.productName}
-                            className="lg:w-[289px] md:w-[200px] w-[150px] h-auto mb-4 mx-auto"
+                            className="w-[150px] h-auto mb-4 mx-auto"
                         />
-                        <div className="flex items-center justify-between">
-                            <p className="heading7 font-semibold">{item.productName}</p>
-                            <div className="flex items-center gap-2 text1">
+                        <div className="flex items-center justify-between mt-8">
+                            <p className="text1 font-semibold">{item.productName}</p>
+                            <div className="flex items-center gap-2 text2">
                                 <span>12</span>
-                                <img src={clickedIndex === ind ? item.iconwhite : item.icon} alt="icon" className="md:w-6 w-4" />
+                                <img src={clickedIndex === ind ? item.iconwhite : item.icon} alt="icon" className="w-4" />
                             </div>
                         </div>
-                        <div className="mt-2">
-                            <p className="text1">
-                                Model No: <span className="font-bold text1">{item.modelno}</span>
+                        <div className="mt-4">
+                            <p className="text2">
+                                Model No: <span className="font-bold text2">{item.modelno}</span>
                             </p>
-                            <p className="text1">
-                                Brands Name: <span className="font-bold text1">{item.brands}</span>
+                            <p className="text2">
+                                Brands Name: <span className="font-bold text2">{item.brands}</span>
                             </p>
                         </div>
                         <div className="md:mt-6 mt-4 flex items-center justify-center">
                             <Link
                                 to={{
-                                    pathname: `/detail/${item?.id}`,
+                                    pathname: `/detail/${item.id}`,
                                 }}
-                                className='w-full bg-red-700'
+                                className='w-full'
                             >
 
                                 <Button
-
-                                    btnStyle={`rounded-md w-full text1 ${clickedIndex === ind
+                                    btnStyle={`rounded-md w-full text2 ${clickedIndex === ind
                                         ? "bg-backgroundColor2 text-backgroundColor1"
                                         : "text-backgroundColor6 bg-backgroundColor1"
                                         } font-semibold`}
@@ -57,8 +84,8 @@ const NewProducts = ({ clickedIndex }) => {
                             </Link>
                         </div>
                     </div>
-                ))
-                }</div>
+                ))}
+            </div>
         </div>
     )
 }

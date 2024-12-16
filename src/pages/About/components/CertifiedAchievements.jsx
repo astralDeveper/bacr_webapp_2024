@@ -20,27 +20,27 @@ const CertifiedAchievements = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section className=" py-6 w-[80%] mx-auto ">
       <div className="container mx-auto px-4">
         <div className="relative">
 
             {/* Custom Navigation Buttons with Images */}
             <button
-              className="swiper-custom-prev absolute left-0 top-1/2 transform -translate-y-12 z-10 bg-backgroundColor1 p-2 rounded-full "
+              className="swiper-custom-prev absolute left-0 top-1/2 transform -translate-y-12 z-10 bg-backgroundColor1 md:p-2 p-1 rounded-full "
             >
               <img
                 src={IMAGES.PREV}
                 alt="Previous"
-                className="w-6 h-6 object-contain"
+                className="md:w-6 w-4 md:h-6 h-4 object-contain"
               />
             </button>
             <button
-              className="swiper-custom-next absolute right-0 top-1/2 transform -translate-y-12 z-10 bg-backgroundColor1 p-2 rounded-full"
+              className="swiper-custom-next absolute right-0 top-1/2 transform -translate-y-12 z-10 bg-backgroundColor1 md:p-2 p-1 rounded-full"
             >
               <img
                 src={IMAGES.NEXT}
                 alt="Next"
-                className="w-6 h-6 object-contain"
+                className="md:w-6 w-4 md:h-6 h-4 object-contain"
               />
             </button>
          
@@ -85,7 +85,7 @@ const CertifiedAchievements = () => {
                 <img
                   src={image}
                   alt={`Certificate ${index + 1}`}
-                  className="w-[352px] md:h-[429px] h-full mx-auto rounded-3xl object-contain shadow-shadow2 md:py-6 py-4 bg-backgroundColor2"
+                  className="w-[300px] md:h-[400px] h-full mx-auto rounded-3xl object-contain shadow-shadow2 md:py-6 py-4 bg-backgroundColor2"
                 />
               </SwiperSlide>
             ))}

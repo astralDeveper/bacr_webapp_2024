@@ -5,17 +5,50 @@ import TrustCarousel from "./TrustCarousel";
 export default function TrustUs(props) {
   const { title, subTitle, para, card, carouselCard } = props;
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  // const [activeIndex, setActiveIndex] = useState(0);
+
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setActiveIndex((prevIndex) =>
+  //       prevIndex === carouselCard.length - 1 ? 0 : prevIndex + 1
+  //     );
+  //   }, 3000);
+
+  //   return () => clearInterval(intervalId);
+  // }, []);
+
+  const [visibleCards, setVisibleCards] = useState([]);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setActiveIndex((prevIndex) =>
-        prevIndex === carouselCard.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleCards((prev) => [...prev, entry.target.id]); // Mark card as visible
+          }
+        });
+      },
+      {
+        threshold: 0.2, // Trigger when 50% of the card is visible
+      }
+    );
 
-    return () => clearInterval(intervalId);
+    // Observe each card element
+    const cards = document.querySelectorAll(".trustCard");
+    cards.forEach((card) => observer.observe(card));
+
+    return () => {
+      cards.forEach((card) => observer.unobserve(card));
+    };
   }, []);
+
+
+
+
+
+
+
+
 
   return (
     <section className="sm:max-w-[80%] sm:mx-auto my-6 bg-[#004671] xl:mb-[250px]">
@@ -32,8 +65,8 @@ export default function TrustUs(props) {
       </p>
 
       <div className="p-12 grid sm:grid-cols-2 xl:grid-cols-4 gap-4 ">
-        {card.map((item) => (
-          <div className="flex flex-col" key={item.name}>
+        {card.map((item, ind) => (
+          <div id={`trustCard-${ind}`} className={`trustCard flex flex-col ${visibleCards.includes(`trustCard-${ind}`) ? "visible" : ""}`} key={item.name}>
             <div className="">
               <img src={item.img} alt="phone Icon" className="md:h-[50px] h-[40px]" />
             </div>
@@ -127,7 +160,7 @@ export default function TrustUs(props) {
             ))}
           </div> */}
 
-          <TrustCarousel/>
+          <TrustCarousel />
 
 
         </div>

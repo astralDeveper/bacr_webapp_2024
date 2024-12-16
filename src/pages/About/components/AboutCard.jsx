@@ -1,25 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AboutCardData } from "../../../utils/DummyData";
 
 const AboutCard = () => {
+
+  const [visibleCards, setVisibleCards] = useState([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleCards((prev) => [...prev, entry.target.id]); // Mark card as visible
+          }
+        });
+      },
+      {
+        threshold: 0.2, // Trigger when 50% of the card is visible
+      }
+    );
+
+    // Observe each card element
+    const cards = document.querySelectorAll(".pcard");
+    cards.forEach((card) => observer.observe(card));
+
+    return () => {
+      cards.forEach((card) => observer.unobserve(card));
+    };
+  }, []);
+
+
+
+
   return (
     <>
-      <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
-        <div className="mb-20 flex items-center justify-center flex-col gap-6 ">
-          <p className="heading2 w-[80%] text-center text-text12 " >Meet the Experts Behind Your Fresh
+      <div className="w-[80%] mx-auto p-5 sm:p-10 md:p-16">
+        <div className="mb-10 flex items-center justify-center flex-col gap-6 ">
+          <p className="heading3 md:w-[80%] text-center text-text12 " >Meet the Experts Behind Your Fresh
             Air Solutions.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-3 grid-cols-1 gap-8">
           {AboutCardData.map((item, ind) => {
             return (
               <div
                 key={ind}
-                className="relative   flex flex-col "
+                id={`pcard-${ind}`}
+                className={`relative pcard flex flex-col ${visibleCards.includes(`pcard-${ind}`) ? "visible" : ""
+                            }  `}
               >
                 {/* workers images start */}
                 <div className=" flex items-center justify-center ">
                   <img
-                    className="w-[100%] object-contain"
+                    className=" object-contain"
                     src={item.img}
                     alt={item.img}
                     draggable={false}
@@ -48,8 +79,8 @@ const AboutCard = () => {
                 {/* Social media icons end  */}
 
                 {/* content start here */}
-                <div className=" bg-backgroundColor14 py-6 text-center">
-                  <p className="lg:text-[26px] md:text-[21px] text-[15px] font-semibold w-[100%] mx-auto text-text9">
+                <div className=" bg-backgroundColor14 md:py-6 py-4 text-center">
+                  <p className="text1 font-semibold mx-auto text-text9">
                     {item.name}
                   </p>
                   <p className="text2 text-text12">{item.destination}</p>

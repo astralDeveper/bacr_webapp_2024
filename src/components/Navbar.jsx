@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { IMAGES } from '../utils/Images'
 import { navManue, socialIcons } from '../utils/DummyData'
 import { Link, useLocation } from 'react-router'
 import Button from './Button'
 import { motion } from "framer-motion";
+import { Typewriter } from 'react-simple-typewriter'
 
 const Navbar = ({ mainStyle, heading, para, home, image, id }) => {
     const active = useLocation().pathname
@@ -13,6 +14,20 @@ const Navbar = ({ mainStyle, heading, para, home, image, id }) => {
     // };
 
     const [menueOpen, SetMenueOpen] = useState(false)
+    const [isAnimated, setIsAnimated] = useState(false);
+
+
+    useEffect(() => {
+        // Handle animation logic
+        setIsAnimated(true);
+        const timer = setTimeout(() => {
+            setIsAnimated(false);
+        }, 6000);
+
+        return () => clearTimeout(timer); // Cleanup timer when component unmounts
+    }, []);
+
+
 
     useEffect(() => {
         if (menueOpen) {
@@ -27,53 +42,68 @@ const Navbar = ({ mainStyle, heading, para, home, image, id }) => {
         };
     }, [menueOpen]);
 
+    const [hasLoaded, setHasLoaded] = useState(false);
+
+    useEffect(() => {
+        // Trigger the loaded class after the page loads
+        setHasLoaded(true);
+    }, []);
+
+
+
 
     return (
         <div className={`${image ? 'bg-hero-pattern bg-no-repeat bg-cover w-full' : ''}`}>
             <div className='max-w-[80%] mx-auto md:rounded-b-[30px] rounded-b-[20px] bg-white shadow-shadow2  py-1 px-6 ' >
-                <div className='flex items-center justify-between'>
+                <div
+                    className={`flex items-center justify-between`}
+                >
                     <Link to={"/"} className='shrink-0'>
                         <img src={IMAGES.LOGO} alt="logo" className='md:w-[80px] w-[60px] object-contain' />
                     </Link>
-                    {/*   */}
-                    {/* Dekstop */}
-                    <div className='md:block hidden' >
-                        <motion.nav
-                            initial={{ y: 100, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ ease: "easeIn", duration: 1, delay: 0.5 }}
-                            className='flex items-center justify-center xl:gap-4 gap-2' >
-                            {
-                                navManue.map((item, ind) => {
-                                    return (
-                                        <Link key={ind} to={item.href} className={`xl:text2 text3  ${active === item.href ? "text-backgroundColor4 font-bold cursor-default" : "font-medium"} `} >
-                                            {item.title}
-                                        </Link>
-                                    )
-                                }
+                    {/* Desktop Navigation */}
+                    <div className='md:block hidden'>
+                        <nav className='flex items-center justify-center xl:gap-4 gap-2'>
+                            {navManue.map((item, ind) => (
+                                <Link
+                                    key={ind}
+                                    to={item.href}
+                                    className={`xl:text2 text3 menu overflow-y-hidden transition-transform duration-1000 ${isAnimated ? 'animate-slide-up' : ''} ${active === item.href ? 'text-backgroundColor4 font-bold cursor-default' : 'font-medium'}`}
+                                    style={{
+                                        animation: `slideUp 1s ease-out forwards`,
+                                        animationDelay: `${ind * 0.2}s`,  // Delay based on index
+                                        opacity: 0,  // Initially invisible
+                                        transform: 'translateY(20px)',  // Initially positioned below
+                                    }}
+                                >
+                                    {item.title}
+                                </Link>
 
-                                )
-                            }
-                        </motion.nav>
+                            ))}
+                        </nav>
                     </div>
-                    {/* Dekstop end */}
-
-                    <motion.div
-                        initial={{ y: 100, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ ease: "easeIn", duration: 1, delay: 0.1 }}
-                        className='md:block hidden '>
-                        <div className='flex items-center xl:gap-2 gap-1'>
+                    {/* Desktop Contact Info */}
+                    <div className={`md:block hidden overflow-hidden `}>
+                        <div className={`flex items-center xl:gap-2 gap-1 transition-transform duration-1000 ${isAnimated ? 'animate-slide-rtl' : ''} `}>
                             <img src={IMAGES.PHONE} alt="phone Icon" className='md:w-[15px] w-[8px]' />
-                            <a href="tel:+92 345 3456563" className='xl:text2 text3' >+92 345 3456563</a>
+                            <a href="tel:+92 345 3456563" className='xl:text2 text3'>
+                                +92 345 3456563
+                            </a>
                         </div>
-                        <div className='flex items-center xl:gap-2 gap-1'>
+                        <div className={`flex items-center xl:gap-2 gap-1 transition-transform duration-1000 ${isAnimated ? 'animate-slide-rtl' : ''} `}>
                             <img src={IMAGES.MAIL} alt="mail Icon" className='md:w-[15px] w-[8px]' />
-                            <a href="mailto:bacremail@gmail.com" className='xl:text2 text3' >bacremail@gmail.com</a>
+                            <a href="mailto:bacremail@gmail.com" className='xl:text2 text3'>
+                                bacremail@gmail.com
+                            </a>
                         </div>
-                    </motion.div>
-                    <div className='md:hidden ' onClick={() => { SetMenueOpen(!menueOpen) }} >
-                        <img src={IMAGES.MANUE} alt={IMAGES.MANUE} className='w-[40px] object-contain bg-gradient-to-tr from-[#3a5b70] to-[#717e8a] p-2 rounded-full' />
+                    </div>
+                    {/* Mobile Menu */}
+                    <div className='md:hidden' onClick={() => { SetMenueOpen(!menueOpen); }}>
+                        <img
+                            src={IMAGES.MANUE}
+                            alt={IMAGES.MANUE}
+                            className='w-[40px] object-contain bg-gradient-to-tr from-[#3a5b70] to-[#717e8a] p-2 rounded-full'
+                        />
                     </div>
                 </div>
 
@@ -131,8 +161,18 @@ const Navbar = ({ mainStyle, heading, para, home, image, id }) => {
             {image &&
                 <div className={`w-[80%] mx-auto ${para ? 'md:py-16 py-8' : 'py-6 pb-28'} `}>
                     <div className={` ${active === "/" ? "" : "flex flex-col items-center justify-center  text-center"}  `} >
-                        <p className={`heading4  text-backgroundColor2 xl:w-[82%] w-full`} >{heading}</p>
-                        {para && <p className={`text2 text-backgroundColor2 xl:w-[34%] w-full`}>{para}</p>}
+                        <p className={`heading4  text-backgroundColor2 md:w-[82%] w-full`} >
+                            <Typewriter
+                                words={[heading]} // Make sure heading is an array of strings
+                                loop={1} // Use the length of the array for the loop
+                                cursor
+                                cursorStyle="|"
+                                typeSpeed={100}
+                                deleteSpeed={50}
+                                delaySpeed={1000} />
+                        </p>
+
+                        {para && <p className={`text2 ${para ? "mt-4" : ""} text-backgroundColor2 xl:w-[34%] w-full`}>{para}</p>}
                     </div>
                     {
                         home && (
@@ -140,7 +180,14 @@ const Navbar = ({ mainStyle, heading, para, home, image, id }) => {
                                 <Link to={"/products"} className='' >
                                     <Button className="" btnStyle="bg-backgroundColor2 w-full rounded-md text2" title={"Explore Our Products"} />
                                 </Link>
-                                <Button className="" btnStyle="rounded-md border text-backgroundColor2 text2" title={"Request a Consultation"} />
+                                {/* <Link to={"#bookingForm"} className='' >hgshadfhgfsagdhfsdag */}
+                                {/* <Button   className=""
+                                btnStyle="rounded-md border text-backgroundColor2 text2" 
+                                title={"Request a Consultation"} /> */}
+{/* <Link to="#bookingForm" smooth>asdasds
+                                </Link> */}
+                                <a href="#bookingForm" >asdasdsadasdasd
+                                </a>
                             </div>
                         )
                     }

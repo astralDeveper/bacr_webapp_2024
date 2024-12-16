@@ -66,7 +66,7 @@ const TrustCarousel = () => {
       }}
       modules={[Pagination, Autoplay]}
       breakpoints={{
-        280: { slidesPerView: 1 },
+        100: { slidesPerView: 1 },
         768: { slidesPerView: 2 },
         1024: { slidesPerView: 3 },
         1440: { slidesPerView: 3 },

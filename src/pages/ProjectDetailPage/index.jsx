@@ -45,8 +45,8 @@ const ProjectDetailPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToNextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    setMainImage(images[(currentIndex + 1) % images.length]);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images?.length);
+    setMainImage(images[(currentIndex + 1) % images?.length]);
   };
 
   const goToPreviousImage = () => {
@@ -82,7 +82,7 @@ const ProjectDetailPage = () => {
                 draggable={false}
                 src="https://images.unsplash.com/photo-1505751171710-1f6d0ace5a85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMnx8aGVhZHBob25lfGVufDB8MHx8fDE3MjEzMDM2OTB8MA&ixlib=rb-4.0.3&q=80&w=1080"
                 alt="Thumbnail 1"
-                className="lg:w-[136px] md:w-[100px] w-[80px] lg:h-[136px]  rounded-md cursor-pointer"
+                className="md:w-[100px] md:h-[80px]  w-[50px]  rounded-md cursor-pointer"
                 onClick={() =>
                   changeMainImage(
                     "https://images.unsplash.com/photo-1505751171710-1f6d0ace5a85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMnx8aGVhZHBob25lfGVufDB8MHx8fDE3MjEzMDM2OTB8MA&ixlib=rb-4.0.3&q=80&w=1080"
@@ -93,7 +93,7 @@ const ProjectDetailPage = () => {
                 draggable={false}
                 src="https://images.unsplash.com/photo-1484704849700-f032a568e944?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw0fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
                 alt="Thumbnail 2"
-                className="lg:w-[136px] md:w-[100px] w-[80px] lg:h-[136px]  rounded-md cursor-pointer"
+                className="md:w-[100px] md:h-[80px]  w-[50px]  rounded-md cursor-pointer"
                 onClick={() =>
                   changeMainImage(
                     "https://images.unsplash.com/photo-1484704849700-f032a568e944?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw0fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
@@ -104,7 +104,7 @@ const ProjectDetailPage = () => {
                 draggable={false}
                 src="https://images.unsplash.com/photo-1496957961599-e35b69ef5d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw4fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
                 alt="Thumbnail 3"
-                className="lg:w-[136px] md:w-[100px] w-[80px] lg:h-[136px]  rounded-md cursor-pointer"
+                className="md:w-[100px] md:h-[80px]  w-[50px]  rounded-md cursor-pointer"
                 onClick={() =>
                   changeMainImage(
                     "https://images.unsplash.com/photo-1496957961599-e35b69ef5d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw4fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
@@ -115,7 +115,7 @@ const ProjectDetailPage = () => {
                 draggable={false}
                 src="https://images.unsplash.com/photo-1528148343865-51218c4a13e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwzfHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
                 alt="Thumbnail 4"
-                className="lg:w-[136px] md:w-[100px] w-[80px] lg:h-[136px]  rounded-md cursor-pointer"
+                className="md:w-[100px] md:h-[80px]  w-[50px]  rounded-md cursor-pointer"
                 onClick={() =>
                   changeMainImage(
                     "https://images.unsplash.com/photo-1528148343865-51218c4a13e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwzfHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
@@ -144,8 +144,8 @@ const ProjectDetailPage = () => {
 
           <div className="2xl:w-[40%] w-full  px-4">
             <div className="flex justify-between items-center">
-              <h2 className="heading3 mb-2">Product Name</h2>
-              <p className="heading3 text-backgroundColor1" >$28.00</p>
+              <h2 className="heading5 mb-2">Product Name</h2>
+              <p className="heading5 text-backgroundColor1" >$28.00</p>
             </div>
             <div className="my-5">
               <p className="heading7" >Model No: <span className="font-semibold">5647</span></p>

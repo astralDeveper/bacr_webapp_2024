@@ -31,41 +31,48 @@ const Home = () => {
       image
       mainStyle={"flex flex-col items-end justify-end text-start "}
       id="book"
+
+
+
     >
-      <main className="">
-        <WhatWeDo
-          card={WhatWeDoData}
-          title="What We Do"
-          subTitle="What we do"
-        />
-        <OurProducts
-          title="Our Products"
-          slides={OurProductsData}
-          options={OPTIONS}
-        />
-        <OurPartner title="Our Partner" images={OurPartnerImagesData} />
+      {/* <main className=""> */}
+      <a href="#bookingForm" >asdasdsadasdasd
+      </a>
+      <WhatWeDo
+        card={WhatWeDoData}
+        title="What We Do"
+        subTitle="What we do"
+      />
+      <OurProducts
+        title="Our Products"
+        slides={OurProductsData}
+        options={OPTIONS}
+      />
+      <OurPartner title="Our Partner" images={OurPartnerImagesData} />
 
-        <OurClient title="Our Client" images={OurClientImagesData} />
-        {/* <OurClient images={OurClientImagesData} /> */}
+      <OurClient title="Our Client" images={OurClientImagesData} />
+      {/* <OurClient images={OurClientImagesData} /> */}
 
-        <TrustUs
-          title="Why Trust Us"
-          subTitle="Top 4 Reasons"
-          para="Qui culpa qui consequat officia cillum quis irure aliquip ut dolore sit eu
+      <TrustUs
+        title="Why Trust Us"
+        subTitle="Top 4 Reasons"
+        para="Qui culpa qui consequat officia cillum quis irure aliquip ut dolore sit eu
           culpa ut irure nisi occaecat dolore adipisicing do pariatur."
-          card={TrustUsCardData}
-          carouselCard={TrustUsCarouselCardData}
-        />
-        <OurBlog
-          title="Our Blogs"
-          subTitle="Blogs"
-          para="We specialize in providing top-quality HVACR solutions, offering everything 
+        card={TrustUsCardData}
+        carouselCard={TrustUsCarouselCardData}
+      />
+      <OurBlog
+        title="Our Blogs"
+        subTitle="Blogs"
+        para="We specialize in providing top-quality HVACR solutions, offering everything 
           from installation to maintenance, and even consulting services for businesses in need of expert guidance."
-          card={OurBlogCardData}
-          // carouselCard={TrustUsCarouselCard}
-        />
+        card={OurBlogCardData}
+      />
+      <div id="bookingForm">
+
         <BookingForm title="Book an Appointment" />
-      </main>
+      </div>
+      {/* </main> */}
     </Container>
   );
 };

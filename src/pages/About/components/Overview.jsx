@@ -18,21 +18,21 @@ export default function Overview(props) {
   };
 
   return (
-    <section className="sm:max-w-[80%] sm:mx-auto p-6 my-6 ">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 mb-8">
-        <div className="py-0">
+    <section className="w-[80%] mx-auto p-6 my-6 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 mb-8 overflow-hidden">
+        <div className="py-0 overflow-hidden">
           {/* <div className="text-sm text-[#ee8c33] font-light">{subTitle}</div> */}
 
-          <h2 className="mt-2 outfit-font heading5 font-semibold text-[#000] leading-0">
+          <h2 className="mt-2 outfit-font heading5 font-semibold text-[#000] leading-0 overflow-hidden animate-slide-ltr w-fit  ">
             {title}
           </h2>
         </div>
-        <p className="text3 text-[#000] font-light mx-auto ">
+        <p className="text3 text-[#000] font-light mx-auto animate-slide-rtl overflow-hidden ">
           {para}
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-2 gap-y-4 lg:gap-x-4 lg:gap-y-8">
-        <div className="relative w-full h-[276px]">
+      <div className="grid md:grid-cols-2 md:gap-6 gap-4 overflow-hidden">
+        <div className="relative w-full h-[100%] animate-slide-ltr delay-500 ">
           <video
             ref={videoRef}
             src="https://www.shutterstock.com/shutterstock/videos/1083881155/preview/stock-footage-a-blonde-haired-business-man-is-talking-on-the-phone-while-sitting-on-a-teal-colored-bean-bag-and.webm"
@@ -49,18 +49,25 @@ export default function Overview(props) {
         </div>
 
         <div className="flex gap-4 flex-col ">
-          {card.map((item) => (
-            <div className="flex flex-col sm:flex-row shadow-xl min-h-[130px] gap-8 2xl:gap-6 bg-[#004671] rounded-md p-5">
+          {card.map((item,ind) => (
+            <div
+            style={{
+              animation: `slideRtl 2s ease-out forwards`,
+              animationDelay: `${ind * 0.2}s`,  // Delay based on index
+              opacity: 0,  // Initially invisible
+              transform: 'translateY(20px)',  // Initially positioned below
+          }}
+             className="flex flex-col sm:flex-row shadow-xl min-h-[130px] md:gap-4 gap-2 bg-[#004671] rounded-md p-5">
               <div className="min-w-[80px]">
-                <div className=" w-[75px] h-[75px] p-4 rounded-full border flex justify-center items-center bg-[#fff] transition-all duration-500  relative bg-cover bg-center bg-no-repeat">
-                  <img src={item.img} className="object-fill w-[24px] " />
+                <div className=" w-[50px] h-[50px] p-4 rounded-full border flex justify-center items-center bg-[#fff] transition-all duration-500  relative bg-cover bg-center bg-no-repeat">
+                  <img src={item.img} className="object-fill w-[20px] " />
                 </div>
               </div>
               <div className="col-span-10 flex flex-col justify-center ">
-                <h4 className="text-[18px] text-[#fff] font-medium leading-none ">
+                <h4 className="text2 text-[#fff] font-medium leading-none ">
                   {item.name}
                 </h4>
-                <p className="text-[13px] text-[#fff] font-light pt-2">
+                <p className="text3 text-[#fff] font-light pt-2">
                   {item.para}
                 </p>
               </div>

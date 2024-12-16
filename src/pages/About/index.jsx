@@ -53,7 +53,7 @@ Our mission is to provide high-quality products and services that prioritize ene
         />
         <div>
           <div className='flex items-center justify-center'>
-            <p className='heading2 md:w-[68%] w-full text-center text-text12'>Discover a Legacy of Excellence with Our Certified Achievements</p>
+            <p className='heading5 md:w-[68%] w-full text-center text-text12'>Discover a Legacy of Excellence with Our Certified Achievements</p>
           </div>
           <CertifiedAchievements />
         </div>

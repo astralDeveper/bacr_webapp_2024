@@ -7,32 +7,34 @@ import {
   ServicesLinks,
 } from "../utils/DummyData";
 import { Link, useParams } from "react-router-dom";
-import { motion } from "framer-motion";
 
 const Footer = () => {
-  const myAnimationLeft = {
-    initial: { opacity: 0, y: 30 },
-    inView: { opacity: 1, y: 0, transition: { delay: 0.1, ease: "linear", duration: 1 } },
-  };
-  const myAnimationLeft1 = {
-    initial: { opacity: 0, y: 15 },
-    inView: { opacity: 1, y: 0, transition: { delay: 0.1, ease: "linear", duration: 1 } },
-  };
-  const myAnimationRight = {
-    initial: { opacity: 0, x: 600 },
-    inView: { opacity: 1, x: 0, transition: { delay: 0.1, ease: "linear", duration: 2 } },
-  };
 
   const active = useParams()
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [active])
-  const setTitle = (text) => {
-    localStorage.setItem('title', text)
-    console.log("call footer");
-    
 
-  }
+    // Scroll animation setup
+    const footerItems = document.querySelectorAll(".footer-item");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    footerItems.forEach((item) => observer.observe(item));
+
+    return () => {
+      footerItems.forEach((item) => observer.unobserve(item));
+    };
+  }, [active]);
+
   return (
     <footer class="bg-text8 font-poppins">
       <div class="mx-auto max-w-[80%] py-4">
@@ -48,19 +50,16 @@ const Footer = () => {
             </Link>
 
             {/* MenuLinks section start here  */}
-            <div className="flex flex-col mt-8 lg:ml-16 ">
-              <motion.ul initial="initial"
-                whileInView="inView"
-                viewport={{ once: false }}
-                variants={myAnimationLeft} className="text-backgroundColor2 flex flex-wrap justify-center gap-x-4 gap-y-2 ">
+            <div className="">
+              <ul className="text-backgroundColor2 flex flex-wrap justify-center gap-x-4 gap-y-2 ">
                 {meneLinks.map((item, idx) => (
                   <Link to={`${item.href}`}>
-                    <li key={idx} className="text1 cursor-pointer">
+                    <li key={idx} className="text2 cursor-pointer footer-item">
                       {item.title}
                     </li>
                   </Link>
                 ))}
-              </motion.ul>
+              </ul>
             </div>
             {/* MenuLinks section end here  */}
           </div>
@@ -71,30 +70,24 @@ const Footer = () => {
           {/* line end */}
 
           {/* center section start here  */}
-          <div class="grid xl:grid-cols-4  2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-3 lg:py-4">
+          <div class="grid xl:grid-cols-4  2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 ">
             <div className="lg:mb-2 md:mb-1">
               {/* service links start here  */}
               <div className="text-backgroundColor2">
                 {ServicesLinks.map((item, i) => {
                   return (
                     <div key={i}>
-                      <motion.h2 initial="initial"
-                        whileInView="inView"
-                        viewport={{ once: false }}
-                        variants={myAnimationLeft} className="font-bold py-2 underline">{item.heading}</motion.h2>
+                      <h2 className="font-bold text2 py-2 underline footer-item">{item.heading}</h2>
                       <ul className="border-backgroundColor2">
                         {item.links.map((items, ind) => {
                           return (
-                            <motion.div initial="initial"
-                              whileInView="inView"
-                              viewport={{ once: false }}
-                              variants={myAnimationLeft} key={ind}>
+                            <div key={ind}>
                               <Link to={`${items.href}?type=${items.link}`}>
-                                <li className="text1 py-1 cursor-pointer hover:underline">
+                                <li className="text2 py-1 cursor-pointer hover:underline footer-item">
                                   {items.link}
                                 </li>
                               </Link>
-                            </motion.div>
+                            </div>
                           );
                         })}
                       </ul>
@@ -106,27 +99,21 @@ const Footer = () => {
             </div>
 
             {/* products links start here */}
-            <div className="gap-x-4 mr-6 text-backgroundColor2">
+            <div className="gap-x-4 mr-6 text-backgroundColor2 ">
               {ProductsLinks.map((item, i) => {
                 return (
                   <div key={i}>
-                    <motion.h2 initial="initial"
-                      whileInView="inView"
-                      viewport={{ once: false }}
-                      variants={myAnimationLeft} className="font-bold py-2 underline">{item.heading}</motion.h2>
+                    <h2 className="font-bold py-2 underline text2 footer-item">{item.heading}</h2>
                     <ul className=" border-backgroundColor2">
                       {item.links.map((items, ind) => {
                         return (
-                          <motion.div initial="initial"
-                            whileInView="inView"
-                            viewport={{ once: false }}
-                            variants={myAnimationLeft} key={ind}>
+                          <div key={ind}>
                             <Link to={`${items.href}?type=${items.type}`}>
-                              <li className="text1 py-1 cursor-pointer hover:underline">
+                              <li className="text2  cursor-pointer hover:underline footer-item">
                                 {items.link}
                               </li>
                             </Link>
-                          </motion.div>
+                          </div>
                         );
                       })}
                     </ul>
@@ -137,28 +124,21 @@ const Footer = () => {
             {/* products links end here */}
 
             {/* Projects links start here */}
-            <div className="gap-x-4 mr-6 text-backgroundColor2">
+            <div className="gap-x-4 mr-6 text-backgroundColor2 ">
               {ProjectsLinks.map((item, i) => {
                 return (
                   <div key={i}>
-                    <motion.h2 initial="initial"
-                      whileInView="inView"
-                      viewport={{ once: false }}
-                      variants={myAnimationLeft} className="font-bold py-2 underline">{item.heading}</motion.h2>
+                    <h2 className="font-bold py-2 underline text2 footer-item">{item.heading}</h2>
                     <ul className=" border-backgroundColor2">
                       {item.links.map((items, ind) => {
                         return (
-                          <motion.div initial="initial"
-                            whileInView="inView"
-                            viewport={{ once: false }}
-                            variants={myAnimationLeft} key={ind}>
-                            <Link
-                              className="text1 py-1 cursor-pointer hover:underline"
-                              to={`${items.href}?type=${items.type}`}
-                            >
-                              {items.link}
+                          <div key={ind}>
+                            <Link to={`${items.href}?type=${items.type}`}>
+                              <li className="text2 py-1 cursor-pointer hover:underline footer-item">
+                                {items.link}
+                              </li>
                             </Link>
-                          </motion.div>
+                          </div>
                         );
                       })}
                     </ul>
@@ -168,32 +148,26 @@ const Footer = () => {
             </div>
             {/* Projects links end here */}
 
-            <motion.div initial="initial"
-              whileInView="inView"
-              viewport={{ once: false }}
-              variants={myAnimationLeft}>
-              <div className="text-backgroundColor2">
+            <div>
+              <div className="text-backgroundColor2 footer-item">
                 <div className="flex items-center ">
                   <div class="flex rounded-lg shadow-sm">
                     <input
                       type="text"
                       placeholder="Your Email"
-                      className="py-2 px-4 text-backgroundColor2 bg-transparent border-[1px] border-backgroundColor2 outline-none w-full rounded-s-md text-sm"
+                      className="py-2 px-4 text-backgroundColor2 bg-transparent border-[1px] border-backgroundColor2 outline-none w-full rounded-s-md text2"
                     />
                     <button
                       type="button"
-                      class="py-2 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-backgroundColor2 text-text4 focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
+                      class="py-2 px-4 inline-flex justify-center items-center gap-x-2 text2 font-semibold rounded-e-md border border-transparent bg-backgroundColor2 text-text4 focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
                     >
                       Subscribe
                     </button>
                   </div>
                 </div>
               </div>
-              <motion.div initial="initial"
-                whileInView="inView"
-                viewport={{ once: false }}
-                variants={myAnimationLeft} className="mt-4 overflow-y-hidden">
-                <h2 className="font-semibold pb-3 text-backgroundColor2">
+              <div className="mt-4 overflow-y-hidden footer-item">
+                <h2 className="font-semibold pb-3 text2 text-backgroundColor2">
                   CERTIFICATES
                 </h2>
                 <div className="flex items-center gap-2">
@@ -226,16 +200,13 @@ const Footer = () => {
                     />
                   </div>
                 </div>
-              </motion.div>
+              </div>
               {/* social media links start here  */}
               <div>
-                <h2 className="font-semibold py-3 text-backgroundColor2">
+                <h2 className="font-semibold py-3 text2 text-backgroundColor2 footer-item">
                   Join US
                 </h2>
-                <motion.div initial="initial"
-                  whileInView="inView"
-                  viewport={{ once: false }}
-                  variants={myAnimationLeft} className="flex items-center justify-start gap-2">
+                <div className="flex items-center justify-start gap-2 footer-item">
                   <img
                     className="w-7 cursor-pointer"
                     src={IMAGES.FACEBOOKWHITE}
@@ -256,10 +227,10 @@ const Footer = () => {
                     src={IMAGES.WHATSAPP}
                     alt={IMAGES.WHATSAPP}
                   />
-                </motion.div>
+                </div>
               </div>
               {/* social media links start here  */}
-            </motion.div>
+            </div>
           </div>
           {/* center section end here  */}
 
@@ -269,15 +240,14 @@ const Footer = () => {
 
           {/* underline text start */}
 
-          <motion.div
-            initial="initial"
-            whileInView="inView"
-            viewport={{ once: false }}
-            variants={myAnimationLeft1} className="text-backgroundColor2 overflow-y-hidden flex justify-center items-center lg:flex-row flex-col gap-2 py-2 w-full  ">
-            <p className="text1 hover:underline cursor-pointer">
+          <div className="text-backgroundColor2 overflow-y-hidden flex justify-between items-center lg:flex-row flex-col gap-2 w-full footer-item ">
+            <p className="text2 hover:underline cursor-pointer">
               All rights reserved.Brothers Air Conditioning
             </p>
-          </motion.div>
+            <Link to={"/privacy-policy"} className="text2 py-1 cursor-pointer hover:underline footer-item" >
+              Privacy Policy
+            </Link>
+          </div>
           {/* underline text end */}
         </div>
       </div>
@@ -285,8 +255,3 @@ const Footer = () => {
   );
 };
 export default Footer;
-
-// initial="initial"
-//       whileInView="inView"
-//       viewport={{ once: false }}
-//       variants={myAnimationLeft}

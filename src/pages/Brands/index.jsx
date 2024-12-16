@@ -1,10 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Container from "../../components/Container";
 import { brandsCardData } from "../../utils/DummyData";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 
 const Brands = () => {
+
+    const [visibleCards, setVisibleCards] = useState([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setVisibleCards((prev) => [...prev, entry.target.id]); // Mark card as visible
+                    }
+                });
+            },
+            {
+                threshold: 0.2, // Trigger when 50% of the card is visible
+            }
+        );
+
+        // Observe each card element
+        const cards = document.querySelectorAll(".trustCard");
+        cards.forEach((card) => observer.observe(card));
+
+        return () => {
+            cards.forEach((card) => observer.unobserve(card));
+        };
+    }, []);
+
+
+
     return (
         <Container image heading="Our Valuable Brands" para="Providing high-quality HVACR products, services, and solutions 
 backed by industry-leading partners.">
@@ -12,9 +40,9 @@ backed by industry-leading partners.">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  gap-y-8">
                     {brandsCardData.map((item, ind) => {
                         return (
-                            <div
+                            <div id={`trustCard-${ind}`}
                                 key={ind}
-                                className="rounded-3xl overflow-hidden shadow-shadow1 flex flex-col"
+                                className={`trustCard rounded-3xl overflow-hidden shadow-shadow1 flex flex-col ${visibleCards.includes(`trustCard-${ind}`) ? "visible" : ""}`}
                             >
                                 {/* button content start here */}
                                 <div className="relative p-4">

@@ -222,7 +222,7 @@ export const Products = [
     id: 1,
   },
   {
-    brands: "Galletti Products",
+    brands: "Galletti",
     category: "Coils",
     price: "5000",
     capacity: "10Tons",
@@ -234,7 +234,7 @@ export const Products = [
     id: 2,
   },
   {
-    brands: "Tica Products",
+    brands: "Tica",
     category: "Chillers",
     price: "10000",
     capacity: "20Tons",
@@ -282,7 +282,7 @@ export const Products = [
     id: 6,
   },
   {
-    brands: "Galletti Products",
+    brands: "Galletti ",
     category: "Coils",
     price: "5000",
     capacity: "10Tons",
@@ -294,7 +294,7 @@ export const Products = [
     id: 7,
   },
   {
-    brands: "Tica Products",
+    brands: "Tica ",
     category: "Chillers",
     price: "10000",
     capacity: "20Tons",
@@ -981,7 +981,7 @@ export const OurProductsData = [
 
 export const ServicesLinks = [
   {
-    heading: "SERVICES",
+    heading: "Our SERVICES",
     links: [
       {
         link: "Comfort Cooling",
@@ -1017,7 +1017,7 @@ export const ServicesLinks = [
 
 export const ProductsLinks = [
   {
-    heading: "PRODUCTS",
+    heading: "Our PRODUCTS",
     links: [
       {
         link: "New Products",
@@ -1047,10 +1047,10 @@ export const ProductsLinks = [
         link: "Blogs",
         href: "/blogs",
       },
-      {
-        link: "Privacy Policy",
-        href: "/privacy-policy",
-      },
+      // {
+      //   link: "Privacy Policy",
+      //   href: "/privacy-policy",
+      // },
       {
         link: "Clients",
         href: "/",
@@ -1061,7 +1061,7 @@ export const ProductsLinks = [
 
 export const ProjectsLinks = [
   {
-    heading: "PROJECTS",
+    heading: "Our PROJECTS",
     links: [
       {
         link: "Overseas Project",

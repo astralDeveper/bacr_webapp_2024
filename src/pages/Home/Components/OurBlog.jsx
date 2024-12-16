@@ -6,6 +6,34 @@ import { Link } from "react-router-dom";
 export default function OurBlog(props) {
   const { title, subTitle, para, card, carouselCard } = props;
 
+  const [visibleCards, setVisibleCards] = useState([]);
+      
+        useEffect(() => {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  setVisibleCards((prev) => [...prev, entry.target.id]); // Mark card as visible
+                }
+              });
+            },
+            {
+              threshold: 0.2, // Trigger when 50% of the card is visible
+            }
+          );
+      
+          // Observe each card element
+          const cards = document.querySelectorAll(".blogCard");
+          cards.forEach((card) => observer.observe(card));
+      
+          return () => {
+            cards.forEach((card) => observer.unobserve(card));
+          };
+        }, []);
+
+
+
+
   return (
     <section className="md:w-[80%] w-[98%] mx-auto ">
       <div className="flex flex-col items-center justify-center">
@@ -15,8 +43,9 @@ export default function OurBlog(props) {
         <p className="text1 text-[#000] font-light mx-auto md:w-[60%] mb-3 text-center">{para}</p>
       </div>
       <div className="grid lg:grid-cols-2 lg:gap-16 gap-2 md:grid-cols-2 sm:grid-cols-2 shrink-0 ">
-        {card.map((item) => (
-          <div className="grid md:grid-cols-2 ">
+        {card.map((item,ind) => (
+          <div id={`blogCard-${ind}`} className={`grid md:grid-cols-2 blogCard ${
+            visibleCards.includes(`blogCard-${ind}`) ? "visible" : "" } `}>
             <div
               className="sm:me-4 h-[190px]  mb-2 sm:mb-auto w-full rounded-md  relative bg-cover bg-center bg-no-repeat"
               style={{

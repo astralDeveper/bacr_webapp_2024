@@ -108,17 +108,14 @@ const ProductCards = () => {
 
     return (
 
-        <div className='mt-20' >
-
-
-            <TabBar handleTabChange={handleTabChange} product tab={tab} search tabtext1={"New Products"} tabtext2={"Used Equipments"} tabtext3={"Spare Parts"} setBrand={setBrand} />
-
-
-
-            <div className="flex md:flex-row flex-col gap-2 md:mt-4 mt-2 ">
+        <div className='' >
+            <div className='mt-8' >
+                <TabBar handleTabChange={handleTabChange} product tab={tab} search tabtext1={"New Products"} tabtext2={"Used Equipments"} tabtext3={"Spare Parts"} setBrand={setBrand} />
+            </div>
+            <div className="flex md:flex-row flex-col mt-4 gap-4  ">
                 {/* Filter Sidebar */}
                 <div className="xl:w-1/6 md:w-1/6 h-fit bg-backgroundColor2 p-4 border rounded-2xl shadow-md">
-                    <h2 className="xl:heading7 text1 font-bold mb-4">Search by Filters</h2>
+                    <h2 className="text2 font-bold mb-4">Filters</h2>
 
                     {/* Brands Section */}
                     <div>
@@ -126,7 +123,7 @@ const ProductCards = () => {
                             onClick={() => toggleSection('brands')}
                             className="w-full text-left flex justify-between items-center mb-2"
                         >
-                            <span className="text1 lg:font-bold">Brands</span>
+                            <span className="text2 font-bold">Brands</span>
                             <span>{brandsOpen ? '-' : '+'}</span>
                         </button>
                         {brandsOpen && (
@@ -134,7 +131,7 @@ const ProductCards = () => {
                                 {['All', 'Flakt Group', 'Galletti Products', 'Tica Product'].map((brand, index) => (
                                     <label key={index} className="flex items-center space-x-2">
                                         <input type="checkbox" className="accent-backgroundColor8 cursor-pointer " />
-                                        <span className='text1'>{brand}</span>
+                                        <span className='text3'>{brand}</span>
                                     </label>
                                 ))}
                             </div>
@@ -147,7 +144,7 @@ const ProductCards = () => {
                             onClick={() => toggleSection('category')}
                             className="w-full text-left flex justify-between items-center mb-2"
                         >
-                            <span className="text1 lg:font-bold">Category</span>
+                            <span className="text2 font-bold">Category</span>
                             <span>{categoryOpen ? '-' : '+'}</span>
                         </button>
                         {categoryOpen && (
@@ -155,7 +152,7 @@ const ProductCards = () => {
                                 {['AHU', 'Coils', 'Chillers', 'Cooling Towers', 'Heat Exchangers'].map((category, index) => (
                                     <label key={index} className="flex items-center space-x-2">
                                         <input type="checkbox" className="accent-backgroundColor8" />
-                                        <span className='text1 '>{category}</span>
+                                        <span className='text3 '>{category}</span>
                                     </label>
                                 ))}
                             </div>
@@ -168,7 +165,7 @@ const ProductCards = () => {
                             onClick={() => toggleSection('capacity')}
                             className="w-full text-left flex justify-between items-center mb-2"
                         >
-                            <span className="text1 lg:font-bold">Capacity</span>
+                            <span className="text2 font-bold">Capacity</span>
                             <span>{capacityOpen ? '-' : '+'}</span>
                         </button>
                         {capacityOpen && (
@@ -176,7 +173,7 @@ const ProductCards = () => {
                                 {['5 to 10 Tons', '10 to 20 Tons', 'Above 20 Tons'].map((capacity, index) => (
                                     <label key={index} className="flex items-center space-x-2">
                                         <input type="checkbox" className="accent-backgroundColor8 cursor-pointer " />
-                                        <span className='text1 '>{capacity}</span>
+                                        <span className='text3 '>{capacity}</span>
                                     </label>
                                 ))}
                             </div>
@@ -189,7 +186,7 @@ const ProductCards = () => {
                             onClick={() => toggleSections('priceRange')}
                             className="w-full text-left flex justify-between items-center mb-2"
                         >
-                            <span className="text1 lg:font-bold">Price Range</span>
+                            <span className="text2 font-bold">Price Range</span>
                             <span>{priceRangeOpen ? '-' : '+'}</span>
                         </button>
                         {priceRangeOpen && (
@@ -206,7 +203,7 @@ const ProductCards = () => {
                                 </select> */}
 
                                 {/* Range slider */}
-                                <div className="range-slider flex items-center xl:flex-row flex-col gap-4 ">
+                                <div className="range-slider flex items-center flex-col gap-4 ">
                                     <input
                                         type="range"
                                         id="minRange"
@@ -228,16 +225,14 @@ const ProductCards = () => {
                                 </div>
 
                                 {/* Display min and max values */}
-                                <div className="flex justify-between xl:flex-row flex-col text-sm">
-                                    <span className='border p-2 rounded-lg'>{`RS.${range.minValue?.toLocaleString()}`}</span>
-                                    <span className='border p-2 rounded-lg'>{`RS.${range.maxValue?.toLocaleString()}`}</span>
+                                <div className="flex gap-2 flex-col">
+                                    <span className='border p-2 text2 rounded-lg'>{`RS.${range.minValue?.toLocaleString()}`}</span>
+                                    <span className='border p-2 text2 rounded-lg'>{`RS.${range.maxValue?.toLocaleString()}`}</span>
                                 </div>
                             </div>
                         )}
                     </div>
-
                 </div>
-
                 {/* Product Cards */}
                 <div className="">
                     {
@@ -255,111 +250,6 @@ const ProductCards = () => {
                             <SpareParts clickedIndex={clickedIndex} />
                         )
                     }
-
-
-
-
-                    {/* {
-                        filteredProducts.length > 0 ?
-                            filteredProducts.map((item, ind) => (
-                                <div
-                                    key={ind}
-                                    className={`lg:max-w-[370px] lg:max-h-[471px] p-6 rounded-xl shadow-md ${clickedIndex === ind
-                                        ? "bg-backgroundColor1 text-backgroundColor2 transition-colors duration-500 ease-in-out"
-                                        : "bg-backgroundColor9"
-                                        } cursor-pointer`}
-                                    onClick={() => handleClick(ind)}
-                                >
-                                    <img
-                                        src={item.images}
-                                        alt={item.productName}
-                                        className="lg:w-[289px] md:w-[200px] w-[150px] h-auto mb-4 mx-auto"
-                                    />
-                                    <div className="flex items-center justify-between">
-                                        <p className="heading7 font-semibold">{item.productName}</p>
-                                        <div className="flex items-center gap-2 text1">
-                                            <span>12</span>
-                                            <img src={clickedIndex === ind ? item.iconwhite : item.icon} alt="icon" className="md:w-6 w-4" />
-                                        </div>
-                                    </div>
-                                    <div className="mt-2">
-                                        <p className="text1">
-                                            Model No: <span className="font-bold text1">{item.modelno}</span>
-                                        </p>
-                                        <p className="text1">
-                                            Brands Name: <span className="font-bold text1">{item.brands}</span>
-                                        </p>
-                                    </div>
-                                    <div className="md:mt-6 mt-4 flex items-center justify-center">
-                                        <Link
-                                            to={{
-                                                pathname: `/detail/${item?.id}`,
-                                            }}
-                                            className='w-full'
-                                        >
-
-                                            <Button
-                                                btnStyle={`rounded-md w-full text1 ${clickedIndex === ind
-                                                    ? "bg-backgroundColor2 text-backgroundColor1"
-                                                    : "text-backgroundColor6 bg-backgroundColor1"
-                                                    } font-semibold`}
-                                                title="Product Inquiry"
-                                            />
-                                        </Link>
-                                    </div>
-                                </div>
-                            ))
-                            :
-                            Products.map((item, ind) => (
-                                <div
-                                key={ind}
-                                className={`lg:max-w-[370px] lg:max-h-[471px] p-6 rounded-xl shadow-md ${clickedIndex === ind
-                                    ? "bg-backgroundColor1 text-backgroundColor2 transition-colors duration-500 ease-in-out"
-                                    : "bg-backgroundColor9"
-                                    } cursor-pointer`}
-                                onClick={() => handleClick(ind)}
-                            >
-                                <img
-                                    src={item.images}
-                                    alt={item.productName}
-                                    className="lg:w-[289px] md:w-[200px] w-[150px] h-auto mb-4 mx-auto"
-                                />
-                                <div className="flex items-center justify-between">
-                                    <p className="heading7 font-semibold">{item.productName}</p>
-                                    <div className="flex items-center gap-2 text1">
-                                        <span>12</span>
-                                        <img src={clickedIndex === ind ? item.iconwhite : item.icon} alt="icon" className="md:w-6 w-4" />
-                                    </div>
-                                </div>
-                                <div className="mt-2">
-                                    <p className="text1">
-                                        Model No: <span className="font-bold text1">{item.modelno}</span>
-                                    </p>
-                                    <p className="text1">
-                                        Brands Name: <span className="font-bold text1">{item.brands}</span>
-                                    </p>
-                                </div>
-                                <div className="md:mt-6 mt-4 flex items-center justify-center">
-                                    <Link
-                                        to={{
-                                            pathname: `/detail/${item?.id}`,
-                                        }}
-                                        className='w-full'
-                                    >
-
-                                        <Button
-        
-                                            btnStyle={`rounded-md w-full text1 ${clickedIndex === ind
-                                                ? "bg-backgroundColor2 text-backgroundColor1"
-                                                : "text-backgroundColor6 bg-backgroundColor1"
-                                                } font-semibold`}
-                                            title="Product Inquiry"
-                                        />
-                                    </Link>
-                                </div>
-                            </div>
-                            ))
-                    } */}
                 </div>
 
             </div>

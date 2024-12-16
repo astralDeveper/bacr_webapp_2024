@@ -2,40 +2,377 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  font-family:"poppins";
+* {
+  font-family: "poppins";
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
   .heading1 {
     @apply lg:text-[61px] md:text-[40px] text-[20px] font-semibold;
   }
+
   .heading2 {
     @apply lg:text-[52px] md:text-[35px] text-[20px] font-semibold;
   }
+
   .heading3 {
     @apply lg:text-[44px] md:text-[35px] text-[20px] font-semibold;
   }
+
   .heading4 {
     @apply lg:text-[41px] md:text-[25px] text-[15px];
   }
+
   .heading5 {
-    @apply lg:text-[31px] md:text-[22px] text-[16px] font-bold ;
+    @apply lg:text-[31px] md:text-[22px] text-[16px] font-bold;
   }
+
   .heading6 {
     @apply lg:text-[26px] md:text-[18px] text-[12px] font-semibold;
   }
+
   .heading7 {
     @apply lg:text-[20px] md:text-[16px] text-[12px];
   }
+
   .text1 {
-    @apply lg:text-[17px] md:text-[14px] text-[10px] ;
+    @apply lg:text-[17px] md:text-[14px] text-[10px];
   }
+
   .text2 {
     @apply lg:text-[14px] md:text-[13px] text-[11px];
   }
+
   .text3 {
-    @apply lg:text-[12px] md:text-[10px] text-[8px] ;
+    @apply lg:text-[12px] md:text-[10px] text-[8px];
   }
 }
+
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@keyframes slideRtl {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-rtl {
+  animation: slideRtl 2s ease-in-out;
+}
+
+
+@keyframes slideLtr {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-ltr {
+  animation: slideLtr 2s ease-in-out;
+}
+
+
+
+
+.footer-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Final state: Fully visible and in place */
+.footer-item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation for sliding from bottom to top */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+/* Default state of the card */
+.card {
+  opacity: 0; /* Initially invisible */
+  transition: transform 0.5s ease, opacity 2s ease; /* Smooth transition */
+}
+
+/* State when card becomes visible */
+.card.visible {
+  animation: fadeUp 1s ease-out forwards;
+}
+
+/* Stagger the animation */
+.card:nth-child(1) {
+  animation-delay: 0.2s; /* 1st card starts after 0.2s */
+}
+.card:nth-child(2) {
+  animation-delay: 0.3s; /* 2nd card starts after 0.4s */
+}
+.card:nth-child(3) {
+  animation-delay: 0.4s; /* 3rd card starts after 0.6s */
+}
+/* Add more rules for additional cards as needed */
+
+
+/* Default state of the card */
+.pcard {
+  opacity: 0; /* Initially invisible */
+  transition: transform 0.5s ease, opacity 2s ease; /* Smooth transition */
+}
+
+/* State when card becomes visible */
+.pcard.visible {
+  animation: fadeUp 1s ease-out forwards;
+}
+
+/* Stagger the animation */
+.pcard:nth-child(1) {
+  animation-delay: 0.2s; /* 1st card starts after 0.2s */
+}
+.pcard:nth-child(2) {
+  animation-delay: 0.3s; /* 2nd card starts after 0.4s */
+}
+.pcard:nth-child(3) {
+  animation-delay: 0.4s; /* 3rd card starts after 0.6s */
+}
+.pcard:nth-child(4) {
+  animation-delay: 0.5s; /* 3rd card starts after 0.6s */
+}
+.pcard:nth-child(5) {
+  animation-delay: 0.6s; /* 3rd card starts after 0.6s */
+}
+.pcard:nth-child(7) {
+  animation-delay: 0.7s; /* 3rd card starts after 0.6s */
+}
+.pcard:nth-child(8) {
+  animation-delay: 0.8s; /* 3rd card starts after 0.6s */
+}
+.pcard:nth-child(9) {
+  animation-delay: 0.9s; /* 3rd card starts after 0.6s */
+}
+/* Add more rules for additional cards as needed */
+
+/* Animation for sliding from bottom to top */
+
+
+/* Default state of the card */
+.pimage {
+  opacity: 0; /* Initially invisible */
+  transition: transform 0.5s ease, opacity 2s ease; /* Smooth transition */
+}
+
+/* State when card becomes visible */
+.pimage.visible {
+  animation: fadeUp 1s ease-out forwards;
+}
+
+/* Stagger the animation */
+.pimage:nth-child(1) {
+  animation-delay: 0.2s; /* 1st card starts after 0.2s */
+}
+.pimage:nth-child(2) {
+  animation-delay: 0.3s; /* 2nd card starts after 0.4s */
+}
+.pimage:nth-child(3) {
+  animation-delay: 0.4s; /* 3rd card starts after 0.6s */
+}
+/* Add more rules for additional cards as needed */
+
+
+
+.trustCard {
+  opacity: 0; /* Initially invisible */
+  transition: transform 0.5s ease, opacity 2s ease; /* Smooth transition */
+}
+
+/* State when card becomes visible */
+.trustCard.visible {
+  animation: fadeUp 1s ease-out forwards;
+}
+/* Stagger the animation */
+.trustCard:nth-child(1) {
+  animation-delay: 0.2s; /* 1st card starts after 0.2s */
+}
+.trustCard:nth-child(2) {
+  animation-delay: 0.3s; /* 2nd card starts after 0.4s */
+}
+.trustCard:nth-child(3) {
+  animation-delay: 0.4s; /* 3rd card starts after 0.6s */
+}
+.trustCard:nth-child(4) {
+  animation-delay: 0.5s; /* 3rd card starts after 0.6s */
+}
+/* Add more rules for additional cards as needed */
+
+
+
+
+.blogCard {
+  opacity: 0; /* Initially invisible */
+  transition: transform 0.5s ease, opacity 2s ease; /* Smooth transition */
+}
+
+/* State when card becomes visible */
+.blogCard.visible {
+  animation: fadeUp 1s ease-out forwards;
+}
+/* Stagger the animation */
+.blogCard:nth-child(1) {
+  animation-delay: 0.2s; /* 1st card starts after 0.2s */
+}
+.blogCard:nth-child(2) {
+  animation-delay: 0.3s; /* 2nd card starts after 0.4s */
+}
+.blogCard:nth-child(3) {
+  animation-delay: 0.4s; /* 3rd card starts after 0.6s */
+}
+.blogCard:nth-child(4) {
+  animation-delay: 0.5s; /* 3rd card starts after 0.6s */
+}
+
+
+
+.profile {
+  opacity: 0; /* Initially invisible */
+  transition: transform 0.5s ease, opacity 2s ease; /* Smooth transition */
+}
+
+/* State when card becomes visible */
+.profile.visible {
+  animation: fadeUp 1s ease-out forwards;
+}
+/* Stagger the animation */
+.profile:nth-child(1) {
+  animation-delay: 0.2s; /* 1st card starts after 0.2s */
+}
+.profile:nth-child(2) {
+  animation-delay: 0.3s; /* 2nd card starts after 0.4s */
+}
+.profile:nth-child(3) {
+  animation-delay: 0.4s; /* 3rd card starts after 0.6s */
+}
+.profile:nth-child(4) {
+  animation-delay: 0.5s; 
+}
+.profile:nth-child(5) {
+  animation-delay: 0.6s; 
+}
+.profile:nth-child(6) {
+  animation-delay: 0.7s; 
+}
+.profile:nth-child(7) {
+  animation-delay: 0.8s; 
+}
+/* Add more rules for additional cards as needed */
+
+
+@keyframes ceo {
+  0% {
+    opacity: 0;
+    transform: translatex(-80%); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+.ceoImg {
+  opacity: 0; /* Initially invisible */
+  transition: transform 0.5s ease, opacity 2s ease; /* Smooth transition */
+}
+.ceoImg.visible {
+  animation: ceo 1s ease-in-out;
+  opacity: 1;
+}
+
+@keyframes rtl {
+  0% {
+    opacity: 0;
+    transform: translateX(200px); /* Start from 200px to the right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at normal position */
+  }
+}
+
+.rtl {
+  opacity: 0; /* Initially invisible */
+  transition: transform 0.5s ease, opacity 2s ease; /* Smooth transition */
+}
+
+.rtl.visible {
+  animation: rtl 1s ease-in-out;
+  opacity: 1;
+}
+
+
+@keyframes ltr {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px); /* Start from left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at normal position */
+  }
+}
+
+.ltr {
+  opacity: 0; /* Initially invisible */
+  transition: transform 0.5s ease, opacity 2s ease; /* Smooth transition */
+}
+
+.ltr.visible {
+  animation: ltr 1s ease-in-out;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
 

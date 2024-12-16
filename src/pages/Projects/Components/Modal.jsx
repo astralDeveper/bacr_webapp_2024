@@ -45,9 +45,9 @@ const Modal = ({isModalOpen,setIsModalOpen}) => {
       {/* Modal Structure */}
      
         <div className="fixed inset-0 bg-gray-500 bg-opacity-55 overflow-auto flex justify-center items-center z-50">
-          <div className="bg-white w-full md:w-[90%]  md:p-6 p-2 rounded-lg shadow-lg md:mt-0 sm:mt-48">
+          <div className="bg-white w-full md:w-[90%]  md:p-6 p-2 rounded-lg shadow-lg lg:mt-0 mt-24 ">
             {/* Close Modal Button */}
-            <div className="flex justify-end">
+            <div className="flex justify-end mt-4">
               <button
                 onClick={() => setIsModalOpen(false)}
                 className="bg-text6 p-2 rounded-full"
