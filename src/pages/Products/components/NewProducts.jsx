@@ -79,7 +79,7 @@ const NewProducts = ({ clickedIndex }) => {
                                         ? "bg-backgroundColor2 text-backgroundColor1"
                                         : "text-backgroundColor6 bg-backgroundColor1"
                                         } font-semibold`}
-                                    title="Product Inquiry"
+                                    title="Visit Store"
                                 />
                             </Link>
                         </div>

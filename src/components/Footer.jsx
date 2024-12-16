@@ -77,7 +77,7 @@ const Footer = () => {
                 {ServicesLinks.map((item, i) => {
                   return (
                     <div key={i}>
-                      <h2 className="font-bold text2 py-2 underline footer-item">{item.heading}</h2>
+                      <h2 className="font-bold text2 py-1 underline footer-item">{item.heading}</h2>
                       <ul className="border-backgroundColor2">
                         {item.links.map((items, ind) => {
                           return (
@@ -103,16 +103,18 @@ const Footer = () => {
               {ProductsLinks.map((item, i) => {
                 return (
                   <div key={i}>
-                    <h2 className="font-bold py-2 underline text2 footer-item">{item.heading}</h2>
+                    <h2 className="font-bold py-1 underline text2 footer-item">{item.heading}</h2>
                     <ul className=" border-backgroundColor2">
                       {item.links.map((items, ind) => {
                         return (
                           <div key={ind}>
-                            <Link to={`${items.href}?type=${items.type}`}>
-                              <li className="text2  cursor-pointer hover:underline footer-item">
-                                {items.link}
-                              </li>
-                            </Link>
+                            <div key={ind}>
+                              <Link to={`${items.href}?type=${items.type}`}>
+                                <li className="text2 py-1 cursor-pointer hover:underline footer-item">
+                                  {items.link}
+                                </li>
+                              </Link>
+                            </div>
                           </div>
                         );
                       })}
@@ -133,11 +135,13 @@ const Footer = () => {
                       {item.links.map((items, ind) => {
                         return (
                           <div key={ind}>
-                            <Link to={`${items.href}?type=${items.type}`}>
-                              <li className="text2 py-1 cursor-pointer hover:underline footer-item">
-                                {items.link}
-                              </li>
-                            </Link>
+                            <div key={ind}>
+                              <Link to={`${items.href}?type=${items.type}`}>
+                                <li className="text2 py-1 cursor-pointer hover:underline footer-item">
+                                  {items.link}
+                                </li>
+                              </Link>
+                            </div>
                           </div>
                         );
                       })}

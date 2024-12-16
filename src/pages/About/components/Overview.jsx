@@ -18,20 +18,20 @@ export default function Overview(props) {
   };
 
   return (
-    <section className="w-[80%] mx-auto p-6 my-6 ">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 mb-8 overflow-hidden">
-        <div className="py-0 overflow-hidden">
+    <section className="w-[80%] mx-auto p-4 ">
+      <div className="flex items-center justify-center flex-col overflow-hidden">
+        <div className="py-0 overflow-hidden w-full">
           {/* <div className="text-sm text-[#ee8c33] font-light">{subTitle}</div> */}
 
-          <h2 className="mt-2 outfit-font heading5 font-semibold text-[#000] leading-0 overflow-hidden animate-slide-ltr w-fit  ">
+          <h2 className="mt-2 outfit-font heading5 font-semibold text-start text-[#000] leading-0 overflow-hidden animate-slide-ltr w-fit  ">
             {title}
           </h2>
         </div>
-        <p className="text3 text-[#000] font-light mx-auto animate-slide-rtl overflow-hidden ">
+        <p className="text3 text-[#000] font-light mx-auto animate-slide-rtl overflow-hidden mt-3 ">
           {para}
         </p>
       </div>
-      <div className="grid md:grid-cols-2 md:gap-6 gap-4 overflow-hidden">
+      <div className="grid md:grid-cols-2 md:gap-6 gap-4 overflow-hidden mt-6">
         <div className="relative w-full h-[100%] animate-slide-ltr delay-500 ">
           <video
             ref={videoRef}
@@ -58,7 +58,7 @@ export default function Overview(props) {
               transform: 'translateY(20px)',  // Initially positioned below
           }}
              className="flex flex-col sm:flex-row shadow-xl min-h-[130px] md:gap-4 gap-2 bg-[#004671] rounded-md p-5">
-              <div className="min-w-[80px]">
+              <div className="">
                 <div className=" w-[50px] h-[50px] p-4 rounded-full border flex justify-center items-center bg-[#fff] transition-all duration-500  relative bg-cover bg-center bg-no-repeat">
                   <img src={item.img} className="object-fill w-[20px] " />
                 </div>

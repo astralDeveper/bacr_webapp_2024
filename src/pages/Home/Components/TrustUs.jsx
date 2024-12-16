@@ -51,7 +51,7 @@ export default function TrustUs(props) {
 
 
   return (
-    <section className="sm:max-w-[80%] sm:mx-auto my-6 bg-[#004671] xl:mb-[250px]">
+    <section className="sm:max-w-[80%] sm:mx-auto my-6 bg-[#004671] xl:mb-[200px]">
       {/* <div className="w-[150px] px-2 py-2 mx-auto text-center rounded-full bg-white text-[#0A2540] mt-6">
         {subTitle}
       </div> */}
@@ -64,7 +64,7 @@ export default function TrustUs(props) {
         {para}
       </p>
 
-      <div className="p-12 grid sm:grid-cols-2 xl:grid-cols-4 gap-4 ">
+      <div className="p-12 grid sm:grid-cols-2 xl:grid-cols-4 gap-4  ">
         {card.map((item, ind) => (
           <div id={`trustCard-${ind}`} className={`trustCard flex flex-col ${visibleCards.includes(`trustCard-${ind}`) ? "visible" : ""}`} key={item.name}>
             <div className="">

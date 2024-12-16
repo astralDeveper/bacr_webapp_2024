@@ -1,7 +1,3 @@
-
-
-
-
 import React, { useEffect, useRef, useState } from "react";
 import { IMAGES } from "../utils/Images";
 import { navManue, socialIcons } from "../utils/DummyData";
@@ -231,7 +227,7 @@ const Navbar = ({ mainStyle, heading, para, home, image, id }) => {
               <p
                 className={`text2 ${
                   para ? "mt-4" : ""
-                } text-backgroundColor2 xl:w-[34%] w-full`}
+                } text-backgroundColor2 md:w-[40%] w-full`}
               >
                 {para}
               </p>
@@ -243,5 +239,5 @@ const Navbar = ({ mainStyle, heading, para, home, image, id }) => {
     </div>
   );
 };
-
 export default Navbar;
+

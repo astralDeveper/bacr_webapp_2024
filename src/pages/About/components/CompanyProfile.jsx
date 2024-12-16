@@ -40,7 +40,7 @@ export default function CompanyProfile(props) {
 
 
   return (
-    <section className="max-w-[80%] mx-auto p-6 my-6 ">
+    <section className="max-w-[80%] mx-auto ">
       <div className="flex flex-col justify-center items-center text- mb-6">
         {/* <div className="text-sm text-[#ee8c33] font-light">{subTitle}</div> */}
 

@@ -10,13 +10,16 @@ const Projects = () => {
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [searchParams] = useSearchParams();
 
+    
+    
     const [tab, setTab] = useState("overseas");
-
-
+    
+    
     const handleTabChange = (selectedTab) => {
         setTab(selectedTab);
     };
-
+    console.log(tab);
+    
     useEffect(() => {
         // URL se `type` parameter ko read karein
         const type = searchParams.get("type");

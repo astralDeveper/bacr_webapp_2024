@@ -100,8 +100,8 @@ const ContactUs = () => {
                 </div>
 
                 <div className='lg:mt-20 md-mt-10 mt-6 grid lg:grid-cols-2 md:grid-cols-1 lg:gap-20 md:gap-10 gap-4 items-center'>
-                    <div id='ltr' className={` w-full ltr ${visibleCards.includes(`ltr`) ? "visible" : ""}`}>
-                        <img src="https://www.thestatesman.com/wp-content/uploads/2020/04/googl_ED.jpg" alt="MAp" className='h-full border rounded-md shadow-shadow1 border-backgroundColor5' />
+                    <div id='ltr' className={` w-full h-full ltr ${visibleCards.includes(`ltr`) ? "visible" : ""}`}>
+                        <img src="https://www.thestatesman.com/wp-content/uploads/2020/04/googl_ED.jpg" alt="MAp" className='h-full object-cover border w-full rounded-md shadow-shadow1 border-backgroundColor5' />
                     </div>
 
                     <div className='lg:w-[80%] flex flex-col justify-center'>

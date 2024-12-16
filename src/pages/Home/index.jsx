@@ -50,8 +50,8 @@ const Home = () => {
           <div className="flex  lg:gap-10 md:gap-6 gap-4 lg:flex-row md:flex-row flex-col lg:mt-10 md:mt-4 mt-4  ">
             <Button
               className=""
-               btnStyle="rounded-md border text-backgroundColor2 text2"
-               title={"Request a Consultation"} 
+              btnStyle="text-backgroundColor2 w-full border rounded-md text2"
+              title={"Book an Appointment"}
               onclick={scrollToElement}
             />
           </div>
