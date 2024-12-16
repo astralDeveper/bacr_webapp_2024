@@ -52,6 +52,29 @@ html{
   }
 }
 
+.headingFont1 {
+  @apply lg:text-[40px] md:text-[30px] text-[20px] lg:leading-[50px] md:leading-[40px] leading-[30px]  font-poppins;
+}
+
+.headingFont5 {
+  @apply font-poppins lg:text-[26px] md:text-[22px] text-[20px];
+}
+.headingFont6 {
+  @apply font-poppins lg:text-[18px] md:text-[16px] text-[14px];
+}
+
+.textFont1 {
+  @apply font-poppins lg:text-[18px] text-[16px] lg:leading-[28px] leading-[26px] font-normal;
+}
+.textFont2 {
+  @apply font-poppins lg:text-[16px] text-[14px] lg:leading-[26px] leading-[24px] font-normal;
+}
+.textFont3 {
+  @apply font-poppins lg:text-[14px] text-[12px] lg:leading-[22px] leading-[20px] font-normal;
+}
+/* rabia end */
+
+
 
 @keyframes slideUp {
   0% {
@@ -365,6 +388,16 @@ html{
   opacity: 1;
 }
 
+.line {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.line.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 

@@ -332,12 +332,12 @@ export const address = [
   {
     title: "Head Office",
     addtess: "Suite # 404, 4th Floor, Tahir Plaza Plot No. A-20 K, C.H.S.U Block 7/8 Karachi, Pakistan",
-    Location: "https://maps.app.goo.gl/yeykrWDyro7mf6dD7"
+    // Location: "https://maps.app.goo.gl/yeykrWDyro7mf6dD7"
   },
   {
     title: "U.A.E Office",
     addtess:"Office # 110, Al Sheikha Mahara Ahmed, Al Ghurair Building, Al Nadha Road, Al Qusais 2, Dubai, UAE",
-    Location: "https://maps.app.goo.gl/ULnFdAwMAY4WHwrG9"
+    // Location: "https://maps.app.goo.gl/ULnFdAwMAY4WHwrG9"
   },
   {
     title: "Warehouse",
@@ -346,7 +346,7 @@ export const address = [
   {
     title: "Workshop",
     addtess:"Plot # R-1165, Block 15, Federal B Area, Karachi, Pakistan",
-    Location: "https://maps.app.goo.gl/pftwceZCzqP2tYxj6"
+    // Location: "https://maps.app.goo.gl/pftwceZCzqP2tYxj6"
   },
 ];
 

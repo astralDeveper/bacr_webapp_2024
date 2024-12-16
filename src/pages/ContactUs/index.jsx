@@ -112,9 +112,9 @@ const ContactUs = () => {
                                 <div key={ind} id={`rtl-${ind}`} className={`rtl ${visibleText.includes(`rtl-${ind}`) ? "visible" : ""}`}>
                                     <p className='heading7 font-bold text-text8'>{item.title}</p>
                                     <p className='text2 text-text9 cursor-pointer '>{item.addtess}</p>
-                                    <Link to={item.Location}>
+                                    {/* <Link to={item.Location}>
                                         <p className='text1 text-text8 cursor-pointer '>{item.Location}</p>
-                                    </Link>
+                                    </Link> */}
                                 </div>
                             ))
                         }

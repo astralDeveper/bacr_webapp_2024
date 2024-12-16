@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Button from "../../../components/Button";
 
 export default function BookingForm(props) {
-  const { id, title,ref } = props;
+  const { title } = props;
 
   const [formData, setFormData] = useState({
     name: '',
@@ -32,7 +32,7 @@ export default function BookingForm(props) {
 
 
   return (
-    <section id={id} className="md:w-[80%] mx-auto p-6 ">
+    <section className="md:w-[80%] mx-auto p-6 ">
       <div className="border rounded-md bg-[#D8EEFB] md:px-6 px-2 md:py-8 py-4">
         <h4 className="text-[18px] text-[#000] font-medium leading-none ">
           {title}

@@ -40,7 +40,7 @@ export default function OurBlog(props) {
         <h2 className="outfit-font heading6 font-semibold mb-4 text-[#000]">
           {title}
         </h2>
-        <p className="text1 text-[#000] font-light mx-auto md:w-[60%] mb-3 text-center">{para}</p>
+        <p className="text1 text-[#000] font-light mx-auto md:w-[70%] mb-3 text-center">{para}</p>
       </div>
       <div className="grid lg:grid-cols-2 lg:gap-16 gap-2 md:grid-cols-2 sm:grid-cols-2 shrink-0 ">
         {card.map((item,ind) => (
