@@ -16,10 +16,19 @@ import {
   OurProductsData,
 } from "../../utils/DummyData";
 import BookingForm from "./Components/BookingForm";
+import { Link } from "react-router-dom";
+import Button from "../../components/Button";
 
 const Home = () => {
   // carousel props
   const OPTIONS = {};
+
+  const scrollToElement = () => {
+    const element = document.getElementById("bookingForm");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <Container
@@ -27,22 +36,33 @@ const Home = () => {
       para={
         "Providing high-quality HVACR products, services, and solutions backed by industry-leading partners."
       }
-      home
+      home={
+        <div className="flex gap-4">
+          <div className="flex  lg:gap-10 md:gap-6 gap-4 lg:flex-row md:flex-row flex-col lg:mt-10 md:mt-4 mt-4  ">
+            <Link to={"/products"} className="">
+              <Button
+                className=""
+                btnStyle="bg-backgroundColor2 w-full rounded-md text2"
+                title={"Explore Our Products"}
+              />
+            </Link>
+          </div>
+          <div className="flex  lg:gap-10 md:gap-6 gap-4 lg:flex-row md:flex-row flex-col lg:mt-10 md:mt-4 mt-4  ">
+            <Button
+              className=""
+              btnStyle="bg-backgroundColor2 w-full rounded-md text2"
+              title={"Book Now"}
+              onclick={scrollToElement}
+            />
+          </div>
+        </div>
+      }
       image
       mainStyle={"flex flex-col items-end justify-end text-start "}
       id="book"
-
-
-
     >
       {/* <main className=""> */}
-      <a href="#bookingForm" >asdasdsadasdasd
-      </a>
-      <WhatWeDo
-        card={WhatWeDoData}
-        title="What We Do"
-        subTitle="What we do"
-      />
+      <WhatWeDo card={WhatWeDoData} title="What We Do" subTitle="What we do" />
       <OurProducts
         title="Our Products"
         slides={OurProductsData}
@@ -69,8 +89,7 @@ const Home = () => {
         card={OurBlogCardData}
       />
       <div id="bookingForm">
-
-        <BookingForm title="Book an Appointment" />
+        <BookingForm title="Book an Appointment" id="bookingForm" />
       </div>
       {/* </main> */}
     </Container>

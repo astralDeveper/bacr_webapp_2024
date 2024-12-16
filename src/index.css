@@ -6,8 +6,8 @@
   font-family: "poppins";
 }
 
-html{
-  scroll-behavior: smooth;
+body {
+  scroll-behavior: smooth !important;
 }
 
 @layer utilities {
@@ -52,7 +52,6 @@ html{
   }
 }
 
-
 @keyframes slideUp {
   0% {
     opacity: 0;
@@ -63,8 +62,6 @@ html{
     transform: translateY(0);
   }
 }
-
-
 
 @keyframes slideRtl {
   from {
@@ -82,7 +79,6 @@ html{
   animation: slideRtl 2s ease-in-out;
 }
 
-
 @keyframes slideLtr {
   from {
     transform: translateX(-100px);
@@ -98,9 +94,6 @@ html{
 .animate-slide-ltr {
   animation: slideLtr 2s ease-in-out;
 }
-
-
-
 
 .footer-item {
   opacity: 0;
@@ -149,7 +142,6 @@ html{
 }
 /* Add more rules for additional cards as needed */
 
-
 /* Default state of the card */
 .pcard {
   opacity: 0; /* Initially invisible */
@@ -190,7 +182,6 @@ html{
 
 /* Animation for sliding from bottom to top */
 
-
 /* Default state of the card */
 .pimage {
   opacity: 0; /* Initially invisible */
@@ -213,8 +204,6 @@ html{
   animation-delay: 0.4s; /* 3rd card starts after 0.6s */
 }
 /* Add more rules for additional cards as needed */
-
-
 
 .trustCard {
   opacity: 0; /* Initially invisible */
@@ -240,9 +229,6 @@ html{
 }
 /* Add more rules for additional cards as needed */
 
-
-
-
 .blogCard {
   opacity: 0; /* Initially invisible */
   transition: transform 0.5s ease, opacity 2s ease; /* Smooth transition */
@@ -266,8 +252,6 @@ html{
   animation-delay: 0.5s; /* 3rd card starts after 0.6s */
 }
 
-
-
 .profile {
   opacity: 0; /* Initially invisible */
   transition: transform 0.5s ease, opacity 2s ease; /* Smooth transition */
@@ -288,19 +272,18 @@ html{
   animation-delay: 0.4s; /* 3rd card starts after 0.6s */
 }
 .profile:nth-child(4) {
-  animation-delay: 0.5s; 
+  animation-delay: 0.5s;
 }
 .profile:nth-child(5) {
-  animation-delay: 0.6s; 
+  animation-delay: 0.6s;
 }
 .profile:nth-child(6) {
-  animation-delay: 0.7s; 
+  animation-delay: 0.7s;
 }
 .profile:nth-child(7) {
-  animation-delay: 0.8s; 
+  animation-delay: 0.8s;
 }
 /* Add more rules for additional cards as needed */
-
 
 @keyframes ceo {
   0% {
@@ -343,7 +326,6 @@ html{
   opacity: 1;
 }
 
-
 @keyframes ltr {
   0% {
     opacity: 0;
@@ -364,15 +346,3 @@ html{
   animation: ltr 1s ease-in-out;
   opacity: 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
