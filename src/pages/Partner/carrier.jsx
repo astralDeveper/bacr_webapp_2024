@@ -13,6 +13,7 @@ const Carrier = () => {
       return (
         <InfoPage
           heading='Carrier'
+          brandsLink="https://www.carrier.com"
           children={
             <div className='md:w-[80%] w-[90%] mx-auto my-16 p-2'>
               <p className='text-text9 heading7'>

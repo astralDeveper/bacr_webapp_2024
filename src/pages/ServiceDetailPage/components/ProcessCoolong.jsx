@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IMAGES } from "../../../utils/Images";
 import { comfortCooling, energyOptimization, operationMaintenance, processCooling } from "../../../utils/DummyData";
+import BookingForm from "../../Home/Components/BookingForm";
 
 const ProcessCooling = () => {
   const [visibleLines, setVisibleLines] = useState([]);
@@ -35,7 +36,7 @@ const ProcessCooling = () => {
         <div
           className="lg:h-[450px] md:h-[450px] h-[250px] md:my-8 my-4 w-full bg-no-repeat bg-cover shadow-2xl bg-center "
           style={{
-            backgroundImage: `url(${IMAGES.COMFORT1})`,
+            backgroundImage: `url(${IMAGES.SERVICETWO})`,
           }}
         ></div>
         <div className="md:py-8 py-4">
@@ -43,18 +44,15 @@ const ProcessCooling = () => {
             id="line-1"
             className={`headingFont1 font-semibold line ${visibleLines.includes("line-1") ? "visible" : ""}`}
           >
-            Welcome to BAC Comfort Cooling Solutions
+            We provide Efficient Operation and Maintenance Solutions for Seamless HVACR Performance.
+
           </h1>
           <p
             id="line-2"
             className={`textFont1 text-text7 pt-2 pcard line ${visibleLines.includes("line-2") ? "visible" : ""}`}
           >
-            At BAC, we specialize in delivering cutting-edge Comfort Cooling
-            solutions for HVACR chillers and equipment, ensuring optimal
-            performance and enhanced comfort in diverse environments. With a
-            legacy of excellence and innovation spanning decades, we are
-            committed to providing reliable, efficient, and sustainable cooling
-            solutions tailored to meet the unique needs of our clients.
+            At BAC, we understand the critical role that efficient process cooling plays in the HVACR (Heating, Ventilation, Air Conditioning, and Refrigeration) industry. With decades of experience and a commitment to innovation, we specialize in delivering top-notch solutions for process cooling needs, particularly in the realm of chillers and associated equipment.
+
           </p>
         </div>
         <div className="md:py-8 py-4">
@@ -62,13 +60,15 @@ const ProcessCooling = () => {
             id="line-3"
             className={`headingFont1 font-semibold line ${visibleLines.includes("line-3") ? "visible" : ""}`}
           >
-            Your Comfort, Our Mission
+            Our Expertise
           </h2>
           <p
             id="line-4"
             className={`textFont1 text-text7 pt-2 line ${visibleLines.includes("line-4") ? "visible" : ""}`}
           >
-            Upgrading your existing air conditioning system to more energy-efficient models, helping you save on energy bills and reduce your carbon footprint Lubrication of moving parts, electrical connection inspection.
+            Customized Chillers
+            We excel in designing and manufacturing customized chillers tailored to meet the specific requirements of diverse industries. Whether you operate in pharmaceuticals, food and beverage, petrochemicals, or any other sector, we have the expertise to develop chillers that ensure optimal performance and efficiency.
+
           </p>
         </div>
 
@@ -120,6 +120,7 @@ const ProcessCooling = () => {
           </p>
         </div>
       </div>
+      <BookingForm/>
     </div>
   );
 };

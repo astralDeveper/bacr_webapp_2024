@@ -170,6 +170,16 @@ const imageNames = [
   "troubleshooting4",
   // troubleshooting end
 
+"energy1",
+"energy2",
+"energy3",
+"energy4",
+"energy5",
+"trouble4",
+"trouble6",
+"playbutton",
+"whatsapplogo"
+
 
 
 ];

@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <Container
-      heading={"Innovative HVACR Solutions for a Comfortable Tomorrow."}
+      heading={"Innovative HVACR Solutions for a Comfortable Tomorrow"}
       para={
         "Providing high-quality HVACR products, services, and solutions backed by industry-leading partners."
       }
@@ -64,7 +64,7 @@ const Home = () => {
       {/* <main className=""> */}
       <WhatWeDo card={WhatWeDoData} title="What We Do" subTitle="What we do" />
       <OurProducts
-        title="Our Products"
+        title="Our Store"
         slides={OurProductsData}
         options={OPTIONS}
       />
@@ -81,13 +81,15 @@ const Home = () => {
         card={TrustUsCardData}
         carouselCard={TrustUsCarouselCardData}
       />
-      <OurBlog
-        title="Our Blogs"
-        subTitle="Blogs"
-        para="We specialize in providing top-quality HVACR solutions, offering everything 
+      <div className="-translate-y-20">
+        <OurBlog
+          title="Our Blogs"
+          subTitle="Blogs"
+          para="We specialize in providing top-quality HVACR solutions, offering everything 
           from installation to maintenance, and even consulting services for businesses in need of expert guidance."
-        card={OurBlogCardData}
-      />
+          card={OurBlogCardData}
+        />
+      </div>
       <div id="bookingForm">
         <BookingForm title="Book an Appointment" id="bookingForm" />
       </div>

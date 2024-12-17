@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IMAGES } from "../../../utils/Images";
 import { comfortCooling } from "../../../utils/DummyData";
+import BookingForm from "../../Home/Components/BookingForm";
 
 const ComfortCooling = () => {
   const [visibleLines, setVisibleLines] = useState([]);
@@ -43,18 +44,16 @@ const ComfortCooling = () => {
             id="line-1"
             className={`headingFont1 font-semibold line ${visibleLines.includes("line-1") ? "visible" : ""}`}
           >
-            Welcome to BAC Comfort Cooling Solutions
+           We provide professional Industrial process cooling solutions as per specific requirement of the process machinery.
+
           </h1>
           <p
             id="line-2"
             className={`textFont1 text-text7 pt-2 pcard line ${visibleLines.includes("line-2") ? "visible" : ""}`}
           >
-            At BAC, we specialize in delivering cutting-edge Comfort Cooling
-            solutions for HVACR chillers and equipment, ensuring optimal
-            performance and enhanced comfort in diverse environments. With a
-            legacy of excellence and innovation spanning decades, we are
-            committed to providing reliable, efficient, and sustainable cooling
-            solutions tailored to meet the unique needs of our clients.
+            At BAC, we specialize in delivering cutting-edge Comfort Cooling solutions for HVACR chillers and equipment, ensuring optimal performance and enhanced comfort in diverse environments. With a legacy of excellence and innovation spanning decades, we are committed to providing reliable, efficient, and sustainable cooling solutions tailored to meet the unique needs of our clients.
+
+
           </p>
         </div>
         <div className="md:py-8 py-4">
@@ -62,13 +61,14 @@ const ComfortCooling = () => {
             id="line-3"
             className={`headingFont1 font-semibold line ${visibleLines.includes("line-3") ? "visible" : ""}`}
           >
-            Your Comfort, Our Mission
+            Our Expertise
           </h2>
           <p
             id="line-4"
             className={`textFont1 text-text7 pt-2 line ${visibleLines.includes("line-4") ? "visible" : ""}`}
           >
-            Upgrading your existing air conditioning system to more energy-efficient models, helping you save on energy bills and reduce your carbon footprint Lubrication of moving parts, electrical connection inspection.
+            <span className="text1 font-semibold text-text4">Advanced Technology Integration</span> <br />
+            Our team harnesses the power of advanced technologies to design and implement cooling solutions that maximize efficiency and minimize energy consumption. From state-of-the-art chillers to innovative control systems, we leverage the latest advancements to deliver superior performance and cost savings.
           </p>
         </div>
 
@@ -120,6 +120,7 @@ const ComfortCooling = () => {
           </p>
         </div>
       </div>
+      <BookingForm/>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IMAGES } from "../../../utils/Images";
 import { comfortCooling, energyOptimization } from "../../../utils/DummyData";
+import BookingForm from "../../Home/Components/BookingForm";
 
 const EnergyOptimization = () => {
   const [visibleLines, setVisibleLines] = useState([]);
@@ -35,7 +36,7 @@ const EnergyOptimization = () => {
         <div
           className="lg:h-[450px] md:h-[450px] h-[250px] md:my-8 my-4 w-full bg-no-repeat bg-cover shadow-2xl bg-center "
           style={{
-            backgroundImage: `url(${IMAGES.COMFORT1})`,
+            backgroundImage: `url(${IMAGES.SERVICEFIVE})`,
           }}
         ></div>
         <div className="md:py-8 py-4">
@@ -43,18 +44,15 @@ const EnergyOptimization = () => {
             id="line-1"
             className={`headingFont1 font-semibold line ${visibleLines.includes("line-1") ? "visible" : ""}`}
           >
-            Welcome to BAC Comfort Cooling Solutions
+            We provide professional Industrial process Annual Maintenance as per specific requirement of the process machinery.
+
           </h1>
           <p
             id="line-2"
             className={`textFont1 text-text7 pt-2 pcard line ${visibleLines.includes("line-2") ? "visible" : ""}`}
           >
-            At BAC, we specialize in delivering cutting-edge Comfort Cooling
-            solutions for HVACR chillers and equipment, ensuring optimal
-            performance and enhanced comfort in diverse environments. With a
-            legacy of excellence and innovation spanning decades, we are
-            committed to providing reliable, efficient, and sustainable cooling
-            solutions tailored to meet the unique needs of our clients.
+           At BAC, we understand the critical role HVACR chillers and equipment play in maintaining optimal comfort and productivity within your facility. Our comprehensive annual maintenance services are tailored to ensure the peak performance and longevity of your HVACR systems, safeguarding your investment and providing peace of mind.
+
           </p>
         </div>
         <div className="md:py-8 py-4">
@@ -62,7 +60,8 @@ const EnergyOptimization = () => {
             id="line-3"
             className={`headingFont1 font-semibold line ${visibleLines.includes("line-3") ? "visible" : ""}`}
           >
-            Your Comfort, Our Mission
+            Our Expertise
+
           </h2>
           <p
             id="line-4"
@@ -120,6 +119,7 @@ const EnergyOptimization = () => {
           </p>
         </div>
       </div>
+      <BookingForm/>
     </div>
   );
 };

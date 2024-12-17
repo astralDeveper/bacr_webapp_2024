@@ -7,6 +7,7 @@ const GallettiProducts = () => {
   return (
     <InfoPage
       heading='Galletti Products'
+      brandsLink="https://www.galletti.com/en"
       children={
         <div className='md:w-[80%] w-[90%] mx-auto my-16 p-2'>
           <p className='text-text9 heading7'>

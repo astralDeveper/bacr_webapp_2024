@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IMAGES } from "../../../utils/Images";
 import { comfortCooling, energyOptimization, operationMaintenance } from "../../../utils/DummyData";
+import BookingForm from "../../Home/Components/BookingForm";
 
 const OperationMaintenance = () => {
   const [visibleLines, setVisibleLines] = useState([]);
@@ -35,7 +36,7 @@ const OperationMaintenance = () => {
         <div
           className="lg:h-[450px] md:h-[450px] h-[250px] md:my-8 my-4 w-full bg-no-repeat bg-cover shadow-2xl bg-center "
           style={{
-            backgroundImage: `url(${IMAGES.COMFORT1})`,
+            backgroundImage: `url(${IMAGES.SERVICESIX})`,
           }}
         ></div>
         <div className="md:py-8 py-4">
@@ -43,18 +44,15 @@ const OperationMaintenance = () => {
             id="line-1"
             className={`headingFont1 font-semibold line ${visibleLines.includes("line-1") ? "visible" : ""}`}
           >
-            Welcome to BAC Comfort Cooling Solutions
+            Operation and Maintenance Excellence
+
           </h1>
           <p
             id="line-2"
             className={`textFont1 text-text7 pt-2 pcard line ${visibleLines.includes("line-2") ? "visible" : ""}`}
           >
-            At BAC, we specialize in delivering cutting-edge Comfort Cooling
-            solutions for HVACR chillers and equipment, ensuring optimal
-            performance and enhanced comfort in diverse environments. With a
-            legacy of excellence and innovation spanning decades, we are
-            committed to providing reliable, efficient, and sustainable cooling
-            solutions tailored to meet the unique needs of our clients.
+            At BAC, we specialize in providing top-notch operation and maintenance services for HVACR chillers and associated equipment. With years of experience and a team of highly skilled technicians, we ensure the optimal performance and longevity of your HVACR systems, keeping your indoor environment comfortable and efficient.
+
           </p>
         </div>
         <div className="md:py-8 py-4">
@@ -120,6 +118,7 @@ const OperationMaintenance = () => {
           </p>
         </div>
       </div>
+      <BookingForm/>
     </div>
   );
 };

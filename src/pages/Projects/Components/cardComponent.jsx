@@ -39,13 +39,13 @@ const [visibleCards, setVisibleCards] = useState([]);
                 <div
                   key={ind}
                   id={`card-${ind}`}
-                  className={`rounded-lg card  shadow-md flex flex-col ${
+                  className={`rounded-lg card group shadow-md flex flex-col cursor-pointer ${
                     visibleCards.includes(`card-${ind}`) ? "visible" : "" 
                   } `}
                 >
                   <div className="relative">
                     <img
-                      className="w-full h-[180px] rounded-t-2xl object-cover"
+                      className="w-full h-[180px] rounded-t-2xl object-cover group-transition group-duration-300 group-ease-in-out group-hover:scale-110 group-hover:duration-200"
                       src={item.image}
                       alt={item.image}
                       draggable={false}
@@ -85,7 +85,7 @@ const [visibleCards, setVisibleCards] = useState([]);
                           
                         </Link> */}
                         <Button
-                          btnStyle="bg-backgroundColor1 w-full  text2 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 lg:font-semibold "
+                          btnStyle="bg-backgroundColor1 w-full  text2 text-backgroundColor6 lg:font-semibold "
                           title="Learn More"
                           onclick={() => { setIsModalOpen(!isModalOpen) }}
                         />

@@ -77,35 +77,40 @@ export const comfortCooling = [
   },
   {
     img: IMAGES.COMFORT4,
-    title: "Energy Efficiency and Sustainability",
-    para: "Our team harnesses the power of advanced technologies to design and implement cooling solutions that maximize efficiency and minimize energy consumption. From state-of-the-art chillers to innovative control systems, we leverage the latest advancements to deliver superior performance and cost savings.",
+    title: "Comprehensive Maintenance and Support",
+    para: "We believe that ongoing maintenance is crucial for ensuring the longevity and performance of cooling equipment. That's why we offer comprehensive maintenance programs designed to keep systems running smoothly and efficiently. Our team of skilled technicians provides timely inspections, preventive maintenance, and responsive support to address any issues promptly.",
   },
   {
     img: IMAGES.COMFORT5,
+    title: "Energy Efficiency and Sustainability",
+    para: "At BAC, we are committed to sustainability and environmental responsibility. Our cooling solutions are designed to minimize environmental impact while maximizing energy efficiency. By utilizing innovative technologies and eco-friendly practices, we help clients reduce their carbon footprint and achieve their sustainability goals.",
+  },
+  {
+    img: IMAGES.COMFORT2,
     title: "Exceptional Customer Service",
-    para: "Understanding that every project is unique, we offer customized design and engineering services to meet specific requirements and challenges. Whether it's a large-scale commercial facility or a smaller residential space, our experts work closely with clients to develop tailored solutions that optimize comfort and functionality",
+    para: "We prioritize customer satisfaction above all else, striving to exceed expectations at every step of the process. From initial consultation to ongoing support, our dedicated team is committed to delivering exceptional service and ensuring a seamless experience for our clients.",
   },
 ];
 export const processCooling = [
   {
     img: IMAGES.PROCESS1,
-    title: "Customized Chillers",
-    para: "We excel in designing and manufacturing customized chillers tailored to meet the specific requirements of diverse industries. Whether you operate in pharmaceuticals, food and beverage, petrochemicals, or any other sector, we have the expertise to develop chillers that ensure optimal performance and efficiency.",
-  },
-  {
-    img: IMAGES.PROCESS2,
     title: "Energy Efficiency",
     para: "BAC is at the forefront of energy-efficient cooling solutions. Our team utilizes advanced technologies and engineering practices to design chillers that minimize energy consumption without compromising on performance. By investing in our solutions, clients can significantly reduce operational costs and contribute to sustainability efforts.",
   },
   {
-    img: IMAGES.PROCESS3,
+    img: IMAGES.PROCESS2,
     title: "Reliability and Durability",
     para: "We understand the importance of reliability in industrial cooling applications. Our chillers are built to withstand the rigors of continuous operation in demanding environments. With robust construction and high-quality components, our solutions offer unmatched durability, ensuring uninterrupted cooling for your critical processes.",
   },
   {
-    img: IMAGES.PROCESS1,
+    img: IMAGES.PROCESS3,
     title: "Smart Controls and Monitoring",
     para: "BAC integrates smart controls and monitoring systems into our chillers, allowing for precise temperature regulation and remote management. Through real-time data analytics and predictive maintenance capabilities, clients can optimize performance, prevent downtime, and extend the lifespan of their equipment.",
+  },
+  {
+    img: IMAGES.PROCESS1,
+    title: "Comprehensive Support",
+    para: "Our commitment to customer satisfaction extends beyond the sale of our products. BAC provides comprehensive support services, including installation, maintenance, and technical assistance. Our team of experts is dedicated to ensuring that your cooling system operates at peak efficiency throughout its lifecycle.",
   },
 ];
 export const turnkeyProjects = [
@@ -132,22 +137,27 @@ export const turnkeyProjects = [
 ];
 export const energyOptimization = [
   {
-    img: IMAGES.TRUNKY1,
+    img: IMAGES.ENERGY1,
     title: "Efficiency Enhancement",
     para: "Maximize your energy efficiency with our tailored optimization solutions. We analyze your systems and processes to identify areas for improvement, helping you reduce energy consumption and lower costs.",
   },
   {
-    img: IMAGES.TRUNKY2,
+    img: IMAGES.ENERGY2,
     title: "Customized Strategies",
     para: "Our team develops customized strategies to optimize energy usage based on your unique needs and objectives. Whether it's upgrading equipment, implementing controls, or improving workflows, we design solutions that deliver tangible results.",
   },
   {
-    img: IMAGES.TRUNKY3,
+    img: IMAGES.ENERGY3,
     title: "Sustainable Practices",
     para: "We're committed to promoting sustainability and environmental responsibility. Our energy optimization solutions prioritize the use of renewable resources, energy-efficient technologies, and eco-friendly practices to minimize your carbon footprint.",
   },
   {
-    img: IMAGES.TRUNKY4,
+    img: IMAGES.ENERGY4,
+    title: "Ongoing Support",
+    para: "Our services don't end with implementation. We provide ongoing support and monitoring to ensure that your energy optimization strategies continue to deliver results over time. We're dedicated to helping you maintain peak performance and efficiency.",
+  },
+  {
+    img: IMAGES.ENERGY5,
     title: "Cost Savings",
     para: "By optimizing energy usage, you'll not only reduce your environmental impact but also enjoy significant cost savings. Our solutions are designed to maximize your return on investment, helping you achieve long-term financial benefits.",
   },
@@ -173,6 +183,16 @@ export const operationMaintenance = [
     title: "Skilled Technicians",
     para: "Our team of skilled technicians is trained to handle a wide range of maintenance tasks, from routine servicing to complex repairs. With years of experience and industry expertise, you can trust us to keep your systems running smoothly year-round.",
   },
+  {
+    img: IMAGES.TRUNKY1,
+    title: "Customer Satisfaction",
+    para: "At Brothers Air Conditioning, customer satisfaction is our top priority. We strive to deliver exceptional service and support, ensuring that your operation runs smoothly and efficiently at all times.",
+  },
+  {
+    img: IMAGES.TRUNKY3,
+    title: "Partner with Us",
+    para: "Partner with Brothers Air Conditioning for reliable operation and maintenance services that you can count on. Experience peace of mind knowing that your systems are in good hands, allowing you to focus on what matters most—your business.",
+  },
 ];
 export const troubleshooting = [
   {
@@ -194,6 +214,11 @@ export const troubleshooting = [
     img: IMAGES.TROUBLESHOOTING4,
     title: "Skilled Technicians",
     para: "Our team of experienced technicians is equipped with the knowledge and skills to handle complex troubleshooting, programming, and configuration tasks. You can trust us to deliver results that exceed your expectations.",
+  },
+  {
+    img: IMAGES.TROUBLE4,
+    title: "Dedicated Support",
+    para: "From troubleshooting to programming and configuration, we provide dedicated support throughout the lifecycle of your systems. We're here to help you overcome challenges and optimize performance every step of the way.",
   },
 ];
 
@@ -336,16 +361,16 @@ export const address = [
   },
   {
     title: "U.A.E Office",
-    addtess:"Office # 110, Al Sheikha Mahara Ahmed, Al Ghurair Building, Al Nadha Road, Al Qusais 2, Dubai, UAE",
+    addtess: "Office # 110, Al Sheikha Mahara Ahmed, Al Ghurair Building, Al Nadha Road, Al Qusais 2, Dubai, UAE",
     // Location: "https://maps.app.goo.gl/ULnFdAwMAY4WHwrG9"
   },
   {
     title: "Warehouse",
-    addtess:"Plot # CI-64, Sector 6-B, North Karachi, Karachi, Pakistan",
+    addtess: "Plot # CI-64, Sector 6-B, North Karachi, Karachi, Pakistan",
   },
   {
     title: "Workshop",
-    addtess:"Plot # R-1165, Block 15, Federal B Area, Karachi, Pakistan",
+    addtess: "Plot # R-1165, Block 15, Federal B Area, Karachi, Pakistan",
     // Location: "https://maps.app.goo.gl/pftwceZCzqP2tYxj6"
   },
 ];
@@ -635,7 +660,7 @@ export const brandsCardData = [
       "With a rich legacy spanning a century, Galletti brings unparalleled expertise to the HVAC industry. ...",
     image: IMAGES.BRANDONE,
     tickImg: IMAGES.AUTH_TICK,
-    link:"/galleti"
+    link: "/galleti"
   },
   {
     name: "Flakt Group",
@@ -643,7 +668,7 @@ export const brandsCardData = [
       "FläktGroup is a leading global provider of energy-efficient indoor air technology solutions, special...",
     image: IMAGES.BRANDTWO,
     tickImg: IMAGES.AUTH_TICK,
-    link:"/flakt"
+    link: "/flakt"
   },
   {
     name: "Carrier",
@@ -651,7 +676,7 @@ export const brandsCardData = [
       "Discover an extensive range of services tailored to suit the diverse needs of our valued clients at ...",
     image: IMAGES.BRANDTHREE,
     tickImg: IMAGES.AUTH_TICK,
-    link:"/carrier"
+    link: "/carrier"
   },
   {
     name: "York",
@@ -659,7 +684,7 @@ export const brandsCardData = [
       "Brothers Air Conditioning offers an extensive array of services tailored to meet the diverse needs o...",
     image: IMAGES.BRANDFOUR,
     tickImg: IMAGES.AUTH_TICK,
-    link:"/york"
+    link: "/york"
   },
   {
     name: "Echochillers",
@@ -667,7 +692,7 @@ export const brandsCardData = [
       "Based in the USA, Eco Chillers Inc sets the standard for excellence in HVAC solutions. Compliant wit...",
     image: IMAGES.BRANDFIVE,
     tickImg: IMAGES.AUTH_TICK,
-    link:"/echochillers"
+    link: "/echochillers"
   },
   {
     name: "Trane",
@@ -675,7 +700,7 @@ export const brandsCardData = [
       "Brothers Air Conditioning offers a comprehensive range of services featuring Trane products to meet ...",
     image: IMAGES.BRANDSIX,
     tickImg: IMAGES.AUTH_TICK,
-    link:"/trane"
+    link: "/trane"
   },
   {
     name: "Tica",
@@ -683,7 +708,7 @@ export const brandsCardData = [
       "Brothers Air Conditioning offers a comprehensive range of services featuring Trane products to meet ...",
     image: IMAGES.TICA,
     tickImg: IMAGES.AUTH_TICK,
-    link:"/tica"
+    link: "/tica"
   },
 ];
 
@@ -740,14 +765,14 @@ export const WhatWeDoData = [
       "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
   },
   {
-    image: IMAGES.AIRCONDITION,
+    image: IMAGES.SERVICETWO,
     text: "Process Cooling",
     logo: IMAGES.COOLINGICON,
     description:
       "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
   },
   {
-    image: IMAGES.AIRCONDITION,
+    image: IMAGES.SERVICETHREE,
     text: "Cold Chain Storage",
     logo: IMAGES.COOLINGICON,
     description:
@@ -931,10 +956,9 @@ export const OurBrandsData = [
 ];
 
 export const MeetParaData = [
-  ` I am proud to share that, in a relatively short span, Brothers Air Conditioning has achieved remarkable success and sustained growth. Today, we stand as one of the leading HVACR service providers in the region, known for our expertise, commitment, and customer-focused approach. Our profile reflects the achievements and project milestones we've reached over 20 years of experience, delivering HVACR solutions across Pakistan and internationally.
-Brothers Air Conditioning was built on a foundation of integrity, transparency, and respect for every client. As an independent company, we focus on meeting the unique needs of each project with a deep commitment to quality and customer satisfaction. Our team is our greatest asset - a dedicated group of skilled technicians and professionals who bring passion, technical knowledge, and a relentless drive to exceed expectations. Every project we undertake is guided by their expertise and our collective commitment to high standards.
-We understand that each client has unique concerns and requirements, and we're here to address them with the utmost care and precision. At Brothers Air Conditioning, we are not just building systems but building relationships founded on trust and excellence. As we move forward, our commitment remains steadfast: to bring the best HVACR solutions to our clients in Pakistan and beyond, ensuring comfort, energy efficiency, and reliability in every environment we serve.
-`,
+  "I am proud to share that, in a relatively short span, Brothers Air Conditioning has achieved remarkable success and sustained growth. Today, we stand as one of the leading HVACR service providers in the region, known for our expertise, commitment, and customer-focused approach. Our profile reflects the achievements and project milestones we've reached over 20 years of experience, delivering HVACR solutions across Pakistan and internationally.",
+  "Brothers Air Conditioning was built on a foundation of integrity, transparency, and respect for every client. As an independent company, we focus on meeting the unique needs of each project with a deep commitment to quality and customer satisfaction. Our team is our greatest asset - a dedicated group of skilled technicians and professionals who bring passion, technical knowledge, and a relentless drive to exceed expectations. Every project we undertake is guided by their expertise and our collective commitment to high standards.",
+  "We understand that each client has unique concerns and requirements, and we're here to address them with the utmost care and precision. At Brothers Air Conditioning, we are not just building systems but building relationships founded on trust and excellence. As we move forward, our commitment remains steadfast: to bring the best HVACR solutions to our clients in Pakistan and beyond, ensuring comfort, energy efficiency, and reliability in every environment we serve"
 ];
 
 export const OurProductsData = [

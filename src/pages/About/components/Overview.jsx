@@ -4,17 +4,14 @@ import { IMAGES } from "../../../utils/Images";
 export default function Overview(props) {
   const { title, subTitle, para, card, carouselCard } = props;
   const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false); // Track play/pause state
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  // YouTube video URL
+  const videoId = "y34JhjD_N5w";
+  const baseUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1`;
 
   const handleVideoClick = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause(); // Pause the video
-      } else {
-        videoRef.current.play(); // Play the video
-      }
-      setIsPlaying(!isPlaying); // Toggle play/pause state
-    }
+    setIsPlaying(true);
   };
 
   return (
@@ -32,32 +29,49 @@ export default function Overview(props) {
         </p>
       </div>
       <div className="grid md:grid-cols-2 md:gap-6 gap-4 overflow-hidden mt-6">
-        <div className="relative w-full h-[100%] animate-slide-ltr delay-500 ">
-          <video
-            ref={videoRef}
-            src="https://www.shutterstock.com/shutterstock/videos/1083881155/preview/stock-footage-a-blonde-haired-business-man-is-talking-on-the-phone-while-sitting-on-a-teal-colored-bean-bag-and.webm"
-            className="slider w-full h-full object-cover rounded-lg"
-            controls
-            poster={IMAGES.BACKGROUND}
-            onPlay={() => setIsPlaying(true)} // Ensure state updates on manual play
-            onPause={() => setIsPlaying(false)} // Ensure state updates on manual pause
-          ></video>
-          <div
-            className="absolute inset-0 bg-transparent cursor-pointer"
-            onClick={handleVideoClick}
-          ></div>
-        </div>
+      <div className="relative w-full h-[100%]">
+      {/* YouTube iframe */}
+      {isPlaying ? (
+        <iframe
+          src={baseUrl}
+          className="w-full h-full object-cover rounded-lg"
+          title="YouTube video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      ) : (
+        <>
+          {/* Placeholder: Custom Play Button */}
+          <div className="w-full h-full bg-black rounded-lg">
+            <button
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                        text-white z-10"
+              onClick={handleVideoClick}
+            >
+              <img
+                src={IMAGES.PLAYBUTTON} // Replace with your play button image
+                alt="play button"
+                className="w-[90px] rounded-full shadow-lg shadow-bg-backgroudcolor1
+                          hover:shadow-2xl hover:shadow-gray-700 transition-shadow duration-300"
+              />
+            </button>
+          </div>
+        </>
+      )}
+    </div>
+
+
 
         <div className="flex gap-4 flex-col ">
-          {card.map((item,ind) => (
+          {card.map((item, ind) => (
             <div
-            style={{
-              animation: `slideRtl 2s ease-out forwards`,
-              animationDelay: `${ind * 0.2}s`,  // Delay based on index
-              opacity: 0,  // Initially invisible
-              transform: 'translateY(20px)',  // Initially positioned below
-          }}
-             className="flex flex-col sm:flex-row shadow-xl min-h-[130px] md:gap-4 gap-2 bg-[#004671] rounded-md p-5">
+              style={{
+                animation: `slideRtl 2s ease-out forwards`,
+                animationDelay: `${ind * 0.2}s`,  // Delay based on index
+                opacity: 0,  // Initially invisible
+                transform: 'translateY(20px)',  // Initially positioned below
+              }}
+              className="flex flex-col sm:flex-row shadow-xl min-h-[130px] md:gap-4 gap-2 bg-[#004671] rounded-md p-5">
               <div className="">
                 <div className=" w-[50px] h-[50px] p-4 rounded-full border flex justify-center items-center bg-[#fff] transition-all duration-500  relative bg-cover bg-center bg-no-repeat">
                   <img src={item.img} className="object-fill w-[20px] " />

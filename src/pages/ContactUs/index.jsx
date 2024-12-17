@@ -67,8 +67,8 @@ const ContactUs = () => {
                                 <p className='text2'>(+92) 21 34322502</p>
                             </div>
                             <div className='flex items-center gap-2'>
-                                <img src={IMAGES.PHONE} alt={IMAGES.PHONE} className='md:w-[16px] w-[10px]' />
-                                <p className='text2'>(+92) 21 34322502</p>
+                                <img src={IMAGES.WHATSAPPLOGO} alt={IMAGES.WHATSAPPLOGO} className='md:w-[16px] w-[10px]' />
+                                <p className='text2'>(+92) 321 923 1297</p>
                             </div>
                             <div className='flex items-center gap-2'>
                                 <img src={IMAGES.MAIL} alt={IMAGES.MAIL} className='md:w-[16px] w-[10px]' />

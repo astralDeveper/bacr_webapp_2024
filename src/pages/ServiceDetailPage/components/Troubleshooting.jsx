@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IMAGES } from "../../../utils/Images";
 import { comfortCooling, energyOptimization, operationMaintenance, processCooling, troubleshooting } from "../../../utils/DummyData";
+import BookingForm from "../../Home/Components/BookingForm";
 
 const Troubleshooting = () => {
   const [visibleLines, setVisibleLines] = useState([]);
@@ -35,7 +36,7 @@ const Troubleshooting = () => {
         <div
           className="lg:h-[450px] md:h-[450px] h-[250px] md:my-8 my-4 w-full bg-no-repeat bg-cover shadow-2xl bg-center "
           style={{
-            backgroundImage: `url(${IMAGES.COMFORT1})`,
+            backgroundImage: `url(${IMAGES.SERVICESEVEN})`,
           }}
         ></div>
         <div className="md:py-8 py-4">
@@ -43,18 +44,14 @@ const Troubleshooting = () => {
             id="line-1"
             className={`headingFont1 font-semibold line ${visibleLines.includes("line-1") ? "visible" : ""}`}
           >
-            Welcome to BAC Comfort Cooling Solutions
+            We provide professional Troubleshooting, programming and configuration as per specific requirement of the process machinery.
           </h1>
           <p
             id="line-2"
             className={`textFont1 text-text7 pt-2 pcard line ${visibleLines.includes("line-2") ? "visible" : ""}`}
           >
-            At BAC, we specialize in delivering cutting-edge Comfort Cooling
-            solutions for HVACR chillers and equipment, ensuring optimal
-            performance and enhanced comfort in diverse environments. With a
-            legacy of excellence and innovation spanning decades, we are
-            committed to providing reliable, efficient, and sustainable cooling
-            solutions tailored to meet the unique needs of our clients.
+            At BAC, we pride ourselves on being the go-to experts for troubleshooting, programming, and configuration of HVACR chillers and equipment. With years of experience and a team of highly skilled technicians, we offer comprehensive services to ensure your HVACR systems operate at peak performance.
+
           </p>
         </div>
         <div className="md:py-8 py-4">
@@ -62,13 +59,14 @@ const Troubleshooting = () => {
             id="line-3"
             className={`headingFont1 font-semibold line ${visibleLines.includes("line-3") ? "visible" : ""}`}
           >
-            Your Comfort, Our Mission
+            Rapid Issue Resolution
+
           </h2>
           <p
             id="line-4"
             className={`textFont1 text-text7 pt-2 line ${visibleLines.includes("line-4") ? "visible" : ""}`}
           >
-            Upgrading your existing air conditioning system to more energy-efficient models, helping you save on energy bills and reduce your carbon footprint Lubrication of moving parts, electrical connection inspection.
+            Count on our team for swift and effective troubleshooting services. We leverage our expertise to identify and resolve issues quickly, minimizing downtime and disruptions to your operations.
           </p>
         </div>
 
@@ -120,6 +118,7 @@ const Troubleshooting = () => {
           </p>
         </div>
       </div>
+      <BookingForm/>
     </div>
   );
 };

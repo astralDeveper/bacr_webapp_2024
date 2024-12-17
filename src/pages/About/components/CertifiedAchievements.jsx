@@ -17,6 +17,9 @@ const CertifiedAchievements = () => {
     IMAGES.CERTIFICATE3,
     IMAGES.CERTIFICATE4,
     IMAGES.CERTIFICATE5,
+    IMAGES.CERTIFICATE3,
+    IMAGES.CERTIFICATE4,
+    IMAGES.CERTIFICATE5,
   ];
 
   return (

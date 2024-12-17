@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IMAGES } from "../../../utils/Images";
 import { comfortCooling } from "../../../utils/DummyData";
+import BookingForm from "../../Home/Components/BookingForm";
 
 const ColdChainStorage = () => {
   const [visibleLines, setVisibleLines] = useState([]);
@@ -35,7 +36,7 @@ const ColdChainStorage = () => {
         <div
           className="lg:h-[450px] md:h-[450px] h-[250px] md:my-8 my-4 w-full bg-no-repeat bg-cover shadow-2xl bg-center "
           style={{
-            backgroundImage: `url(${IMAGES.COMFORT1})`,
+            backgroundImage: `url(${IMAGES.SERVICETHREE})`,
           }}
         ></div>
         <div className="md:py-8 py-4">
@@ -120,6 +121,7 @@ const ColdChainStorage = () => {
           </p>
         </div>
       </div>
+      <BookingForm/>
     </div>
   );
 };

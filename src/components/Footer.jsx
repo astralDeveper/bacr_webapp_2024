@@ -43,7 +43,7 @@ const Footer = () => {
           <div className="text-backgroundColor2 flex justify-between xl:items-end lg:items-end items-center lg:flex-row flex-col md:gap-2  w-full  ">
             <Link to={"/"}>
               <img
-                className="md:w-40 w-20"
+                className="md:w-20 w-12"
                 src={IMAGES.LOGOWHITE}
                 alt={IMAGES.LOGOWHITE}
               />
@@ -153,7 +153,7 @@ const Footer = () => {
             {/* Projects links end here */}
 
             <div>
-              <div className="text-backgroundColor2 footer-item">
+              <div className="text-backgroundColor2 footer-item py-1">
                 <div className="flex items-center ">
                   <div class="flex rounded-lg shadow-sm">
                     <input
