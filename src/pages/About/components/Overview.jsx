@@ -3,15 +3,20 @@ import { IMAGES } from "../../../utils/Images";
 
 export default function Overview(props) {
   const { title, subTitle, para, card, carouselCard } = props;
-  const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false); // Video state: playing or paused
+  const videoRef = useRef(null); // Reference to video element
 
-  // YouTube video URL
-  const videoId = "y34JhjD_N5w";
-  const baseUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1`;
-
+  // Handle Play/Pause Toggle
   const handleVideoClick = () => {
-    setIsPlaying(true);
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause(); // Pause video
+        setIsPlaying(false);
+      } else {
+        videoRef.current.play(); // Play video
+        setIsPlaying(true);
+      }
+    }
   };
 
   return (
@@ -29,36 +34,40 @@ export default function Overview(props) {
         </p>
       </div>
       <div className="grid md:grid-cols-2 md:gap-6 gap-4 overflow-hidden mt-6">
-      <div className="relative w-full h-[100%]">
-      {/* YouTube iframe */}
-      {isPlaying ? (
-        <iframe
-          src={baseUrl}
-          className="w-full h-full object-cover rounded-lg"
-          title="YouTube video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      ) : (
-        <>
-          {/* Placeholder: Custom Play Button */}
-          <div className="w-full h-full bg-black rounded-lg">
+        <div className="relative w-full h-[100%]">
+          {/* Video */}
+          <video
+            ref={videoRef}
+            poster="/images/Background.png"
+            src="/images/brothers.mp4" // Your video file
+            className="w-full h-full object-cover rounded-lg"
+            onPause={() => setIsPlaying(false)} // Pause event
+            onPlay={() => setIsPlaying(true)} // Play event
+          ></video>
+
+          {/* Play Button - Show only when video is paused */}
+          {!isPlaying && (
             <button
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                        text-white z-10"
               onClick={handleVideoClick}
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 
+                     z-10 focus:outline-none"
             >
               <img
-                src={IMAGES.PLAYBUTTON} // Replace with your play button image
-                alt="play button"
-                className="w-[90px] rounded-full shadow-lg shadow-bg-backgroudcolor1
-                          hover:shadow-2xl hover:shadow-gray-700 transition-shadow duration-300"
+                src="/images/playbutton.png" // Custom Play Button Image
+                alt="Play"
+                className="w-[90px] rounded-full shadow-xl shadow-backgroundColor1 animate-pulse hover:scale-110 transition-transform duration-300"
               />
             </button>
-          </div>
-        </>
-      )}
-    </div>
+          )}
+
+          {/* Invisible Overlay to Pause Video */}
+          {isPlaying && (
+            <div
+              className="absolute inset-0 cursor-pointer"
+              onClick={handleVideoClick} // Pause video when overlay is clicked
+            ></div>
+          )}
+        </div>
 
 
 

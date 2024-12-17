@@ -523,24 +523,28 @@ export const careerCardData = [
     jobTitle: "HVAC Technician",
     jobDescription:
       "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification.",
+      link:"/apply_now"
   },
   {
     jobType: "Full Time/Part Time",
     jobTitle: "HVAC Technician",
     jobDescription:
       "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification.",
+      link:"/apply_now"
   },
   {
     jobType: "Full Time/Part Time",
     jobTitle: "HVAC Technician",
     jobDescription:
       "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification.",
+      link:"/apply_now"
   },
   {
     jobType: "Full Time/Part Time",
     jobTitle: "HVAC Technician",
     jobDescription:
       "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification.",
+      link:"/apply_now"
   },
 ];
 
@@ -1077,7 +1081,7 @@ export const ProductsLinks = [
       // },
       {
         link: "Clients",
-        href: "/",
+        href: "/our_clients",
       },
     ],
   },
@@ -1297,3 +1301,67 @@ export const BlogCardData = [
     maint: "HVACR Maintenance",
   },
 ];
+
+
+// Apply Now Page Content start here
+export const data = `We are seeking a talented Junior UI/UX Designer - Figma to join our
+          dynamic team. The ideal candidate will have a background in designing
+          dashboards, web applications, and e-commerce platforms.`;
+
+export const ApplyNowData = [
+  {
+    heading: "Responsibilities:",
+    Description: [
+      {
+        para: "Design and prototype user interfaces for web applications, dashboards, and e-commerce platforms using Figma.",
+        img: IMAGES.ARROW,
+      },
+      {
+        para: "Conduct user research and usability testing to inform design decisions.",
+        img: IMAGES.ARROW,
+      },
+      {
+        para: "Create wireframes, user flows, and interactive prototypes to communicate design ideas effectively.",
+        img: IMAGES.ARROW,
+      },
+      {
+        para: "Ensure designs follow to responsive design principles for optimal user experience across devices.",
+        img: IMAGES.ARROW,
+      },
+      {
+        para: "Maintain design consistency and quality across all projects.",
+        img: IMAGES.ARROW,
+      },
+      {
+        para: "Stay updated with the latest design trends and tools.",
+        img: IMAGES.ARROW,
+      },
+    ],
+  },
+  {
+    heading: "Requirements:",
+    Description: [
+      {
+        para: "Minimum 1 year of experience in UI/UX design, with a focus on using Figma",
+        img: IMAGES.CIRCLE,
+      },
+      {
+        para: "Proven experience in dashboard design, web application design, and e-commerce design.",
+        img: IMAGES.CIRCLE,
+      },
+      {
+        para: "Proficiency in Figma, Framer, Adobe Illustrator.",
+        img: IMAGES.CIRCLE,
+      },
+      {
+        para: "Strong understanding of responsive design principles.- Excellent communication and collaboration skills.",
+        img: IMAGES.CIRCLE,
+      },
+      {
+        para: "Experience in agile development is a plus.",
+        img: IMAGES.CIRCLE,
+      },
+    ],
+  },
+];
+// Apply Now Page Content start here

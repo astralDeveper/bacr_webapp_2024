@@ -170,15 +170,19 @@ const imageNames = [
   "troubleshooting4",
   // troubleshooting end
 
-"energy1",
-"energy2",
-"energy3",
-"energy4",
-"energy5",
-"trouble4",
-"trouble6",
-"playbutton",
-"whatsapplogo"
+  "energy1",
+  "energy2",
+  "energy3",
+  "energy4",
+  "energy5",
+  "trouble4",
+  "trouble6",
+  "playbutton",
+  "whatsapplogo",
+  "clientlogo1", "clientlogo2", "clientlogo3", "clientlogo4", "clientlogo5",
+  "clientlogo6", "clientlogo7", "clientlogo8", "clientlogo9", "clientlogo10",
+  "clientlogo11", "clientlogo12", "clientlogo13", "clientlogo14", "clientlogo15",
+  "clientlogo16", "clientlogo17", "clientlogo18", "clientlogo19", "clientlogo20"
 
 
 
