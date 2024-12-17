@@ -47,30 +47,26 @@ const fetchProjectsb = async () => {
             </div>
             {
                 tab === "overseas" && (
-                    <ProjectsCardComponent projects={projects} category={"oversea"} setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
+                    <ProjectsCardComponent projects={projects} category={"oversea"}  />
                 )
             }
             {
                 tab === "turnkey" && (
-                    <ProjectsCardComponent projects={projects} category={"trunkyProject"} setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
+                    <ProjectsCardComponent projects={projects} category={"trunkyProject"}  />
                 )
             }
             {
                 tab === "supply" && (
-                    <ProjectsCardComponent projects={projects} category={"sup&comm"} setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
+                    <ProjectsCardComponent projects={projects} category={"sup&comm"}  />
                 )
             }
             {
                 tab === "operations" && (
-                    <ProjectsCardComponent projects={projects} category={"oprMaint"} setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
+                    <ProjectsCardComponent projects={projects} category={"oprMaint"}  />
                 )
             }
 
-            {
-                isModalOpen && (
-                    <Modal setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
-                )
-            }
+            
 
 
 

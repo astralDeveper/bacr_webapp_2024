@@ -4,10 +4,56 @@ import { IMAGES } from '../../utils/Images'
 import { address } from '../../utils/DummyData'
 import Button from '../../components/Button'
 import { Link } from 'react-router-dom'
+import { fetchContacts, fetchSocialLinks } from '../../api'
 
 const ContactUs = () => {
+    const [address1, setAddress1] = useState("");
+    const [address1url, setAddress1url] = useState("");
+    const [address1head, setAddress1head] = useState("");
+    const [address2, setAddress2] = useState("");
+    const [address2url, setAddress2url] = useState("");
+    const [address2head, setAddress2head] = useState("");
+    const [address3, setAddress3] = useState("");
+    const [address3url, setAddress3url] = useState("");
+    const [address3head, setAddress3head] = useState("");
+    const [address4, setAddress4] = useState("");
+    const [address4url, setAddress4url] = useState("");
+    const [address4head, setAddress4head] = useState("");
+    const [telephone1, setTelephone1] = useState("");
+    const [email, setEmail] = useState("");
+    const [telephone2, setTelephone2] = useState("");
+    const [whatsappno, setWhatsappno] = useState("");
     const [visibleCards, setVisibleCards] = useState([]);
     const [visibleText, setVisibleText] = useState([]);
+const fetchContactsb = async () => {
+    try {
+        const response = await fetchSocialLinks();
+        setWhatsappno(response[0].whatsappno);     
+        setTelephone1(response[0].telephone1);
+        setTelephone2(response[0].telephone2);
+        setEmail(response[0].email);
+        setAddress1(response[0].address1);
+        setAddress1url(response[0].address1url);
+        setAddress1head(response[0].address1head);
+        setAddress2(response[0].address2);
+        setAddress2url(response[0].address2url);
+        setAddress2head(response[0].address2head);
+        setAddress3(response[0].address3);
+        setAddress3url(response[0].address3url);
+        setAddress3head(response[0].address3head);
+        setAddress4(response[0].address4);
+        setAddress4url(response[0].address4url);
+        setAddress4head(response[0].address4head);
+        
+           
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
+    };
+    useEffect(() => {
+      fetchContactsb();
+  }, []);
+
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -60,19 +106,19 @@ const ContactUs = () => {
                         <div className='flex items-start md:gap-4 gap-2 flex-col'>
                             <div className='flex items-center gap-2 md:mt-4'>
                                 <img src={IMAGES.PHONE} alt={IMAGES.PHONE} className='md:w-[16px] w-[10px]' />
-                                <p className='text2'>(+92) 21 34322501</p>
+                                <p className='text2'>{telephone1}</p>
                             </div>
                             <div className='flex items-center gap-2'>
                                 <img src={IMAGES.PHONE} alt={IMAGES.PHONE} className='md:w-[16px] w-[10px]' />
-                                <p className='text2'>(+92) 21 34322502</p>
+                                <p className='text2'>{telephone2}</p>
                             </div>
                             <div className='flex items-center gap-2'>
                                 <img src={IMAGES.PHONE} alt={IMAGES.PHONE} className='md:w-[16px] w-[10px]' />
-                                <p className='text2'>(+92) 21 34322502</p>
+                                <p className='text2'>{whatsappno}</p>
                             </div>
                             <div className='flex items-center gap-2'>
                                 <img src={IMAGES.MAIL} alt={IMAGES.MAIL} className='md:w-[16px] w-[10px]' />
-                                <p className='text2'>bacremail@gmail.com</p>
+                                <p className='text2'>{email}</p>
                             </div>
                         </div>
                     </div>
@@ -107,8 +153,8 @@ const ContactUs = () => {
                     <div className='lg:w-[80%] flex flex-col justify-center'>
                         <p className='heading5' >Addresses</p>
 
-                        {
-                            address.map((item, ind) => (
+                        {/* {
+address.map((item, ind) => (
                                 <div key={ind} id={`rtl-${ind}`} className={`rtl ${visibleText.includes(`rtl-${ind}`) ? "visible" : ""}`}>
                                     <p className='heading7 font-bold text-text8'>{item.title}</p>
                                     <p className='text2 text-text9 cursor-pointer '>{item.addtess}</p>
@@ -117,8 +163,35 @@ const ContactUs = () => {
                                     </Link>
                                 </div>
                             ))
-                        }
-
+                        } */}
+<div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
+                                    <p className='heading7 font-bold text-text8'>{address1head}</p>
+                                    <p className='text2 text-text9 cursor-pointer '>{address1}</p>
+                                    <Link to={address1url}>
+                                        <p className='text1 text-text8 cursor-pointer '>{address1url}</p>
+                                    </Link>
+                                </div>
+<div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
+                                    <p className='heading7 font-bold text-text8'>{address2head}</p>
+                                    <p className='text2 text-text9 cursor-pointer '>{address2}</p>
+                                    <Link to={address2url}>
+                                        <p className='text1 text-text8 cursor-pointer '>{address2url}</p>
+                                    </Link>
+                                </div>
+<div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
+                                    <p className='heading7 font-bold text-text8'>{address3head}</p>
+                                    <p className='text2 text-text9 cursor-pointer '>{address3}</p>
+                                    <Link to={address3url}>
+                                        <p className='text1 text-text8 cursor-pointer '>{address3url}</p>
+                                    </Link>
+                                </div>
+<div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
+                                    <p className='heading7 font-bold text-text8'>{address4head}</p>
+                                    <p className='text2 text-text9 cursor-pointer '>{address4}</p>
+                                    <Link to={address4url}>
+                                        <p className='text1 text-text8 cursor-pointer '>{address4url}</p>
+                                    </Link>
+                                </div>
                     </div>
 
                 </div>

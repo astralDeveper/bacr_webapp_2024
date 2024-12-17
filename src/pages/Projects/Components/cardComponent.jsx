@@ -2,11 +2,12 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "../../../components/Button";
 import { projectCardData } from "../../../utils/DummyData";
 import { useEffect, useState } from "react";
+import Modal from '../Components/Modal'
 
-const ProjectsCardComponent = ({projects,category, setIsModalOpen, isModalOpen }) => {
+const ProjectsCardComponent = ({projects,category }) => {
   const navigation = useNavigate();
 const [visibleCards, setVisibleCards] = useState([]);
-
+const [isModalOpen, setIsModalOpen] = useState(false)
 const filteredProjects = projects?.filter(project => project.category === category);
 
 
@@ -23,7 +24,7 @@ const filteredProjects = projects?.filter(project => project.category === catego
         threshold: 0.2, // Trigger when 50% of the card is visible
       }
     );
-
+    
     // Observe each card element
     const cards = document.querySelectorAll(".card");
     cards.forEach((card) => observer.observe(card));
@@ -32,7 +33,10 @@ const filteredProjects = projects?.filter(project => project.category === catego
       cards.forEach((card) => observer.unobserve(card));
     };
   }, [projects,category]);
-
+  const handleModal=()=>{
+    console.log("Test");
+    setIsModalOpen(!isModalOpen)
+  }
   return (
     <div>
       <div className="bg-Navbar">
@@ -92,6 +96,7 @@ const filteredProjects = projects?.filter(project => project.category === catego
                           btnStyle="bg-backgroundColor1 w-full  text2 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 lg:font-semibold "
                           title="Learn More"
                           onclick={() => { setIsModalOpen(!isModalOpen) }}
+                          // onClick={() => handleModal}
                         />
                       </div>
                     </div>
@@ -102,7 +107,12 @@ const filteredProjects = projects?.filter(project => project.category === catego
           </div>
         </div>
       </div>
+      {isModalOpen && (
+                          <Modal setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
+                      )
+                  }
     </div>
+    
   );
 };
 
