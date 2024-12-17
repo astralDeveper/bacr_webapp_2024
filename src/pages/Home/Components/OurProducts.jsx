@@ -36,8 +36,7 @@ export default function OurProducts(props) {
     return () => {
       cards.forEach((card) => observer.unobserve(card));
     };
-  }, []);
-
+  }, [slides]);
 
 
   return (
@@ -59,29 +58,29 @@ export default function OurProducts(props) {
             onClick={() => handleClick(ind)}
           >
             <img
-              src={item.images}
-              alt={item.productName}
+              src={item?.imagePath}
+              alt={item?.name}
               className="w-[150px] h-auto mb-4 mx-auto"
             />
             <div className="flex items-center justify-between mt-8">
-              <p className="text1 font-semibold">{item.productName}</p>
+              <p className="text1 font-semibold">{item?.name}</p>
               <div className="flex items-center gap-2 text2">
                 <span>12</span>
-                <img src={clickedIndex === ind ? item.iconwhite : item.icon} alt="icon" className="w-4" />
+                {/* <img src={clickedIndex === ind ? item.iconwhite : item.icon} alt="icon" className="w-4" /> */}
               </div>
             </div>
             <div className="mt-4">
               <p className="text2">
-                Model No: <span className="font-bold text2">{item.modelno}</span>
+                Model No: <span className="font-bold text2">{item?.model}</span>
               </p>
               <p className="text2">
-                Brands Name: <span className="font-bold text2">{item.brands}</span>
+                Brands Name: <span className="font-bold text2">{item?.brandId.name}</span>
               </p>
             </div>
             <div className="md:mt-6 mt-4 flex items-center justify-center">
               <Link
                 to={{
-                  pathname: `/detail/${item?.id}`,
+                  pathname: `/detail/${item?._id}`,
                 }}
                 className='w-full'
               >

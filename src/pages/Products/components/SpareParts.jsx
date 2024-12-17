@@ -3,12 +3,20 @@ import { Products } from '../../../utils/DummyData'
 import { Link } from 'react-router-dom'
 import Button from '../../../components/Button'
 
-const SpareParts = ({ clickedIndex }) => {
+const SpareParts = ({ products,clickedIndex }) => {
 
 
     const [visibleCards, setVisibleCards] = useState([]);
-
+    const [spareProducts, setspareProducts] = useState([]);
+    const applyFilters = () => {
+        let filtered = products;
+              filtered = filtered.filter(product => 
+                  product.brandFlags.spare === true && product.proType === 'spare'
+              );          
+              setspareProducts(filtered);
+      };
     useEffect(() => {
+
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -21,7 +29,6 @@ const SpareParts = ({ clickedIndex }) => {
                 threshold: 0.2, // Trigger when 50% of the card is visible
             }
         );
-
         // Observe each card element
         const cards = document.querySelectorAll(".pcard");
         cards.forEach((card) => observer.observe(card));
@@ -29,16 +36,16 @@ const SpareParts = ({ clickedIndex }) => {
         return () => {
             cards.forEach((card) => observer.unobserve(card));
         };
-    }, []);
-
-
-
+    }, [spareProducts]);
+    useEffect(() => {
+        applyFilters();
+    }, [products]);
 
 
     return (
         <div className=''>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
-                {Products.map((item, ind) => (
+                {spareProducts.map((item, ind) => (
                     <div
                         id={`pcard-${ind}`}
                         key={ind}

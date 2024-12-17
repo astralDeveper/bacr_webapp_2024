@@ -4,19 +4,31 @@ import Container from '../../components/Container'
 import Modal from './Components/Modal'
 import TabBar from '../../components/TabBar'
 import { useSearchParams } from 'react-router-dom'
+import { fetchProjects } from '../../api'
 
 const Projects = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [searchParams] = useSearchParams();
-
+    const [projects, setProjects] = useState([]);
     const [tab, setTab] = useState("overseas");
 
 
     const handleTabChange = (selectedTab) => {
         setTab(selectedTab);
     };
-
+const fetchProjectsb = async () => {
+    try {
+        const response = await fetchProjects();
+        setProjects(response);     
+           
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
+    };
+    useEffect(() => {
+      fetchProjectsb();
+  }, []);
     useEffect(() => {
         // URL se `type` parameter ko read karein
         const type = searchParams.get("type");
@@ -35,22 +47,22 @@ const Projects = () => {
             </div>
             {
                 tab === "overseas" && (
-                    <ProjectsCardComponent setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
+                    <ProjectsCardComponent projects={projects} category={"oversea"} setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
                 )
             }
             {
                 tab === "turnkey" && (
-                    <ProjectsCardComponent setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
+                    <ProjectsCardComponent projects={projects} category={"trunkyProject"} setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
                 )
             }
             {
                 tab === "supply" && (
-                    <ProjectsCardComponent setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
+                    <ProjectsCardComponent projects={projects} category={"sup&comm"} setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
                 )
             }
             {
                 tab === "operations" && (
-                    <ProjectsCardComponent setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
+                    <ProjectsCardComponent projects={projects} category={"oprMaint"} setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
                 )
             }
 

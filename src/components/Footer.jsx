@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { IMAGES } from "../utils/Images";
 import {
   meneLinks,
@@ -7,11 +7,38 @@ import {
   ServicesLinks,
 } from "../utils/DummyData";
 import { Link, useParams } from "react-router-dom";
+import { fetchSocialLinks } from "../api";
 
 const Footer = () => {
-
+  const [instagram, setInstagram] = useState("");
+  const [twitter, setTwitter] = useState("");
+  const [linkedin, setLinkedin] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
+  const [certificate1, setCertificate1] = useState("");
+  const [certificate2, setCertificate2] = useState("");
+  const [certificate3, setCertificate3] = useState("");
+  const [certificate4, setCertificate4] = useState("");
   const active = useParams()
-
+const fetchSocialLinksb = async () => {
+    try {
+        const response = await fetchSocialLinks();
+        
+        setCertificate1(response[0]?.certificate1);
+        setCertificate2(response[0]?.certificate2);
+        setCertificate3(response[0]?.certificate3);
+        setCertificate4(response[0]?.certificate4);
+        setInstagram(response[0]?.instagram);
+        setTwitter(response[0]?.twitter);
+        setLinkedin(response[0]?.linkedin);
+        setWhatsapp(response[0]?.whatsapp);
+        
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
+    };
+    useEffect(() => {
+      fetchSocialLinksb();
+  }, [certificate1]);
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -174,29 +201,29 @@ const Footer = () => {
                   <div className="bg-backgroundColor12 p-2 rounded-md">
                     <img
                       className="w-16"
-                      src={IMAGES.CARTIMGONE}
-                      alt={IMAGES.CARTIMGONE}
+                      src={certificate1}
+                      alt={certificate1}
                     />
                   </div>
                   <div className="bg-backgroundColor12 p-2 rounded-md">
                     <img
                       className="w-16"
-                      src={IMAGES.CARTIMGTWO}
-                      alt={IMAGES.CARTIMGTWO}
+                      src={certificate2}
+                      alt={certificate2}
                     />
                   </div>
                   <div className="bg-backgroundColor12 p-2 rounded-md">
                     <img
                       className="w-16"
-                      src={IMAGES.CARTIMGTHREE}
-                      alt={IMAGES.CARTIMGTHREE}
+                      src={certificate3}
+                      alt={certificate3}
                     />
                   </div>
                   <div className="bg-backgroundColor12 p-2 rounded-md">
                     <img
                       className="w-16"
-                      src={IMAGES.CARTIMGFOUR}
-                      alt={IMAGES.CARTIMGFOUR}
+                      src={certificate4}
+                      alt={certificate4}
                     />
                   </div>
                 </div>
@@ -207,26 +234,34 @@ const Footer = () => {
                   Join US
                 </h2>
                 <div className="flex items-center justify-start gap-2 footer-item">
+                  <a target="_blank" href={linkedin}>
                   <img
                     className="w-7 cursor-pointer"
                     src={IMAGES.FACEBOOKWHITE}
                     alt={IMAGES.FACEBOOKWHITE}
                   />
+                  </a>
+                  <a target="_blank" href={instagram}>
                   <img
                     className="w-7 cursor-pointer"
                     src={IMAGES.INSTAWHITE}
                     alt={IMAGES.INSTAWHITE}
                   />
+                  </a>
+                  <a target="_blank" href={twitter}>
                   <img
                     className="w-7 cursor-pointer"
                     src={IMAGES.TWITTER}
                     alt={IMAGES.TWITTER}
                   />
+                  </a>
+                  <a target="_blank" href={whatsapp}>
                   <img
                     className="w-7 cursor-pointer"
                     src={IMAGES.WHATSAPP}
                     alt={IMAGES.WHATSAPP}
                   />
+                  </a>
                 </div>
               </div>
               {/* social media links start here  */}

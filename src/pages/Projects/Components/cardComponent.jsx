@@ -3,9 +3,13 @@ import Button from "../../../components/Button";
 import { projectCardData } from "../../../utils/DummyData";
 import { useEffect, useState } from "react";
 
-const ProjectsCardComponent = ({ setIsModalOpen, isModalOpen }) => {
+const ProjectsCardComponent = ({projects,category, setIsModalOpen, isModalOpen }) => {
   const navigation = useNavigate();
 const [visibleCards, setVisibleCards] = useState([]);
+
+const filteredProjects = projects?.filter(project => project.category === category);
+
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -27,14 +31,14 @@ const [visibleCards, setVisibleCards] = useState([]);
     return () => {
       cards.forEach((card) => observer.unobserve(card));
     };
-  }, []);
+  }, [projects,category]);
 
   return (
     <div>
       <div className="bg-Navbar">
         <div className="w-[80%] mx-auto mt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {projectCardData.map((item, ind) => {
+            {filteredProjects.map((item, ind) => {
               return (
                 <div
                   key={ind}
@@ -69,7 +73,7 @@ const [visibleCards, setVisibleCards] = useState([]);
 
                   <div className="p-3 bg-BackgroundColor1 ">
                     <p className=" w-[100%] mx-auto rounded-xl md:py-4 py-2  text-black text1 ">
-                      {item.text.slice(0, 26)}...
+                      {item?.description.slice(0, 26)}...
                     </p>
 
                     <p className="text-text6 text3 ">
