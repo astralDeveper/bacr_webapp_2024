@@ -40,6 +40,10 @@ export const router = createBrowserRouter([
     element: <BlogDetailPage />,
   },
   {
+    path: "/blog-detail/:id",
+    element: <BlogDetailPage />,
+  },
+  {
     path: "privacy-policy",
     element: <PrivacyPolicy />,
   },

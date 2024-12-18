@@ -56,7 +56,7 @@ const Card = () => {
             <p className="text3 text-text10 py-1">
               {item.excerpt}
             </p>
-            <Link to={"/blog-detail"}>
+            <Link to={ `/blog-detail/${item._id}`}>
               <Button
                 title={"Lear More"}
                 btnStyle={
