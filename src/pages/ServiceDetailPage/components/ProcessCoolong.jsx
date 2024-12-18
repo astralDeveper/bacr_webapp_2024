@@ -120,7 +120,7 @@ const ProcessCooling = () => {
           </p>
         </div>
       </div>
-      <BookingForm/>
+      {/* <BookingForm/> */}
     </div>
   );
 };

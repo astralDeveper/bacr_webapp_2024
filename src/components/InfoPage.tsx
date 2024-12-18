@@ -2,12 +2,12 @@ import React from 'react'
 import Container from './Container'
 
 
-const InfoPage = ({ heading, children,brandsLink }) => {
+const InfoPage = ({ coverimage,heading, children }) => {
   return (
     <Container
-      heading={heading}
-      brandsLink={brandsLink}
-      image>
+    heading={heading}
+    coverimage={coverimage}
+    image>
       <div>
          {children}
       </div>

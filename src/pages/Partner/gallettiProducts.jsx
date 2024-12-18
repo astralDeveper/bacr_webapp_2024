@@ -1,16 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import InfoPage from '../../components/InfoPage'
+import { fetchProdBrandById } from '../../api';
+import { useParams } from 'react-router-dom';
 
 const GallettiProducts = () => {
   const Array = ['CHILLERS', 'HEAT PUMPS', 'FAN COIL UNITS']
+  const { id } = useParams(); 
+  const [brand, setBrand] = useState([]);
 
+const fetchBrand = async () => {
+        
+    try {
+        const response = await fetchProdBrandById(id);
+        setBrand(response);     
+           console.log(response);
+           
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
+    };
+
+    useEffect(() => {
+        fetchBrand();
+      }, [id]);
   return (
     <InfoPage
-      heading='Galletti Products'
-      brandsLink="https://www.galletti.com/en"
+    coverimage={brand.coverimage}
+      heading={brand.name}
       children={
         <div className='md:w-[80%] w-[90%] mx-auto my-16 p-2'>
-          <p className='text-text9 heading7'>
+          {/* <p className='text-text9 heading7'>
             <span className='font-semibold  '>Galletti </span>
             is a leading Italian brand, renowned for its high-performance HVAC
             solutions. Specializing in fan coil units, chillers, and heat pumps.
@@ -34,7 +53,8 @@ const GallettiProducts = () => {
             Each product is designed to meet the highest standards of comfort
             and efficiency, offering tailored solutions for a variety of
             commercial and industrial applications.
-          </p>
+          </p> */}
+          {brand.details}
         </div>
       }
     ></InfoPage>

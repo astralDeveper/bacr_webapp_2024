@@ -98,9 +98,7 @@ const Modal = ({isModalOpen,setIsModalOpen}) => {
 
               {/* Product Info Section */}
               <div className="w-full md:w-[40%]">
-              <h2 className="text-2xl font-semibold mb-2">Project Name</h2>
-              <h2 className="text-2 text-text5 mb-2">Location</h2>
-              <h2 className="text-2xl font-semibold mb-2">client Name</h2>
+                <img src={IMAGES.PROJECTLOGOONE} alt="" className="md:w-[80px] w-[40px] border p-2 bg-backgroundColor2 rounded-full object-contain" />
                 <h2 className="text-2xl font-semibold mb-2">Product Name</h2>
                 <div className="my-5">
                   <p className="font-semibold">Description:</p>

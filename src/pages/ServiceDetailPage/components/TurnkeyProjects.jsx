@@ -119,7 +119,7 @@ const TrunkeyProjects = () => {
           </p>
         </div>
       </div>
-      <BookingForm/>
+      {/* <BookingForm/> */}
     </div>
   );
 };

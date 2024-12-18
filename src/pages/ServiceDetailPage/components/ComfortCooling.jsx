@@ -120,7 +120,7 @@ const ComfortCooling = () => {
           </p>
         </div>
       </div>
-      <BookingForm/>
+      {/* <BookingForm/> */}
     </div>
   );
 };

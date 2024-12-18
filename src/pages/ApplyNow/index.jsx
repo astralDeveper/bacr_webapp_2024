@@ -1,7 +1,8 @@
 import React from "react";
-import ApplyNowCard from "./Components/ApplyNowCard";
-import ApplyNowForm from "./Components/ApplyNowForm";
 import Container from "../../components/Container";
+import ApplyNowCard from "./ApplyNowCard";
+import ApplyNowForm from "./ApplyNowForm";
+
 
 const ApplyNow = () => {
   return (

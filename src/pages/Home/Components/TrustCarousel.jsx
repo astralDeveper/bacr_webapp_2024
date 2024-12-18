@@ -81,7 +81,7 @@ const TrustCarousel = () => {
               className="w-14 h-14 object-cover rounded-full border-2 border-gray-300 md:mb-3 mb-2"
             />
             <h3 className="text1 font-semibold md:mb-2 mb-1 text-center">{review.title}</h3>
-            <p className="text2 text-gray-500 md:mb-3 mb:1 text-center">{review.des}</p>
+            <p className="text1 text-gray-500 md:mb-3 mb:1 text-center">{review.des}</p>
             <div className="flex justify-center gap-1 py-3">
               {getStars(review.stars).map((isFilled, starIndex) => (
                 <img

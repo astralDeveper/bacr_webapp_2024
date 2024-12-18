@@ -7,7 +7,6 @@ const OurClients = ({ imageUrl, altText }) => {
   return (
     <Container image heading={"Our Client"} >
       <ClientCrad />
-
     </Container>
   )
 }

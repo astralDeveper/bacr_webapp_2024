@@ -11,14 +11,12 @@ export default function OurPartner(props) {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setVisibleCards((prev) =>
-              prev.includes(entry.target.id) ? prev : [...prev, entry.target.id]
-            ); // Mark card as visible
+            setVisibleCards((prev) => [...prev, entry.target.id]); // Mark card as visible
           }
         });
       },
       {
-        threshold: 0.2, // Trigger when 20% of the card is visible
+        threshold: 0.2, // Trigger when 50% of the card is visible
       }
     );
 
@@ -38,27 +36,29 @@ export default function OurPartner(props) {
       </h2>
       <div className="flex items-center justify-center md:flex-row flex-col md:gap-6 gap-2 py-6">
         {images.map((item, ind) => (
-          <Link target="_blank" to={item.href} key={ind}>
+          <Link
+            key={ind}
+            to={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center relative group"
+          >
             <div
               id={`pimage-${ind}`}
-              className={`pimage border h-full min-h-[50px] lg:px-16 px-8 group rounded-md hover:bg-backgroundColor1 hover:transition-colors duration-200 delay-75 ease-linear mx-auto flex items-center relative 
-              ${
-                visibleCards.includes(`pimage-${ind}`)
-                  ? "animate-fadeInUp"
-                  : "opacity-0"
+              className={`border h-full min-h-[50px] lg:px-16 px-8 mx-auto flex items-center ${
+                visibleCards.includes(`pimage-${ind}`) ? "visible" : ""
               }`}
             >
-              {/* Image */}
               <img
                 src={item.img}
-                alt="phone Icon"
+                alt={item.alt || "Image"}
                 className="object-cover w-[60%] mx-auto bg-backgroundColor2 transition-opacity duration-300 ease-in-out group-hover:opacity-0"
               />
+            </div>
 
-              {/* Hover overlay */}
-              <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 text-white opacity-0 hover:opacity-100 transition-opacity duration-300">
-                Visit our website
-              </div>
+            {/* Hover overlay */}
+            <div className="absolute inset-0 flex justify-center items-center bg-backgroundColor1  text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              Visit our website
             </div>
           </Link>
         ))}

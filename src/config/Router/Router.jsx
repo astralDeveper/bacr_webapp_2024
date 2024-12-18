@@ -20,8 +20,8 @@ import Carrier from "../../pages/Partner/carrier";
 import York from "../../pages/Partner/york";
 import Echochillers from "../../pages/Partner/echochillers";
 import Trane from "../../pages/Partner/trane";
-import OurClients from "../../pages/Cients";
 import ApplyNow from "../../pages/ApplyNow";
+import OurClients from "../../pages/Cients";
 
 export const router = createBrowserRouter([
   {
@@ -50,6 +50,10 @@ export const router = createBrowserRouter([
     element: <Blog />,
   },
   {
+    path: "/our_clients",
+    element: <OurClients />,
+  },
+  {
     path: "404-page",
     element: <ErrorPage />,
   },
@@ -68,10 +72,6 @@ export const router = createBrowserRouter([
   {
     path: "/services",
     element: <Services />,
-  },
-  {
-    path: "/our_clients",
-    element: <OurClients />,
   },
   {
     path: "/apply_now",
@@ -119,6 +119,10 @@ export const router = createBrowserRouter([
   {
     path: "/brands",
     element: <Brands />,
+  },
+  {
+    path: "/brand/:id",
+    element: <GallettiProducts />,
   },
 
   //  Partner Page End

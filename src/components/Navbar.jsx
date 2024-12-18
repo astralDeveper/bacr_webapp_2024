@@ -6,7 +6,7 @@ import Button from "./Button";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
-const Navbar = ({ mainStyle, heading, para, home, image, id, brandsLink }) => {
+const Navbar = ({ mainStyle, heading, para, home, image, id ,coverimage}) => {
   const active = useLocation().pathname;
   // const myAnimationLeft = {
   //     initial: { opacity: 0, y: 100 },
@@ -15,6 +15,7 @@ const Navbar = ({ mainStyle, heading, para, home, image, id, brandsLink }) => {
 
   const [menueOpen, SetMenueOpen] = useState(false);
   const [isAnimated, setIsAnimated] = useState(false);
+  console.log(coverimage);
 
   useEffect(() => {
     // Handle animation logic
@@ -48,8 +49,12 @@ const Navbar = ({ mainStyle, heading, para, home, image, id, brandsLink }) => {
 
   return (
     <div
-      className={`${image ? "bg-hero-pattern bg-no-repeat bg-cover w-full" : ""
-        }`}
+    style={{
+      backgroundImage: coverimage ? `url(${coverimage})` : '', // Set background image if coverimage is provided
+    }}
+      className={`${
+        image ? "bg-hero-pattern bg-no-repeat bg-cover w-full" : ""
+      }`}
     >
       <div className="max-w-[80%] mx-auto md:rounded-b-[30px] rounded-b-[20px] bg-white shadow-shadow2  py-1 px-6 ">
         <div className={`flex items-center justify-between`}>
@@ -67,11 +72,13 @@ const Navbar = ({ mainStyle, heading, para, home, image, id, brandsLink }) => {
                 <Link
                   key={ind}
                   to={item.href}
-                  className={`xl:text2 text3 menu overflow-y-hidden transition-transform duration-1000 ${isAnimated ? "animate-slide-up" : ""
-                    } ${active === item.href
+                  className={`xl:text2 text3 menu overflow-y-hidden transition-transform duration-1000 ${
+                    isAnimated ? "animate-slide-up" : ""
+                  } ${
+                    active === item.href
                       ? "text-backgroundColor4 font-bold cursor-default"
                       : "font-medium"
-                    }`}
+                  }`}
                   style={{
                     animation: `slideUp 1s ease-out forwards`,
                     animationDelay: `${ind * 0.2}s`, // Delay based on index
@@ -87,8 +94,9 @@ const Navbar = ({ mainStyle, heading, para, home, image, id, brandsLink }) => {
           {/* Desktop Contact Info */}
           <div className={`md:block hidden overflow-hidden `}>
             <div
-              className={`flex items-center xl:gap-2 gap-1 transition-transform duration-1000 ${isAnimated ? "animate-slide-rtl" : ""
-                } `}
+              className={`flex items-center xl:gap-2 gap-1 transition-transform duration-1000 ${
+                isAnimated ? "animate-slide-rtl" : ""
+              } `}
             >
               <img
                 src={IMAGES.PHONE}
@@ -100,8 +108,9 @@ const Navbar = ({ mainStyle, heading, para, home, image, id, brandsLink }) => {
               </a>
             </div>
             <div
-              className={`flex items-center xl:gap-2 gap-1 transition-transform duration-1000 ${isAnimated ? "animate-slide-rtl" : ""
-                } `}
+              className={`flex items-center xl:gap-2 gap-1 transition-transform duration-1000 ${
+                isAnimated ? "animate-slide-rtl" : ""
+              } `}
             >
               <img
                 src={IMAGES.MAIL}
@@ -154,8 +163,9 @@ const Navbar = ({ mainStyle, heading, para, home, image, id, brandsLink }) => {
                   <Link
                     key={ind}
                     to={item.href}
-                    className={`flex items-center flex-row gap-2  justify-center text1 font-semibold ${active === item.href ? "text-backgroundColor4" : ""
-                      } `}
+                    className={`flex items-center flex-row gap-2  justify-center text1 font-semibold ${
+                      active === item.href ? "text-backgroundColor4" : ""
+                    } `}
                   >
                     {item.title}
                     {/* {item.icon && <img src={IMAGES.ARROWDOWN} alt='arrow' className='w-[12px]' />} */}
@@ -194,19 +204,21 @@ const Navbar = ({ mainStyle, heading, para, home, image, id, brandsLink }) => {
       {/*   gap-6 flex items-center justify-center flex-col */}
       {image && (
         <div
-          className={`w-[80%] mx-auto ${para ? "md:py-16 py-8" : "py-6 pb-28"
-            } `}
+          className={`w-[80%] mx-auto ${
+            para ? "md:py-16 py-8" : "py-6 pb-28"
+          } `}
         >
           <div
-            className={` ${active === "/"
+            className={` ${
+              active === "/"
                 ? ""
                 : "flex flex-col items-center justify-center  text-center"
-              }  `}
+            }  `}
           >
             <p className={`heading4  text-backgroundColor2 md:w-[82%] w-full`}>
               <Typewriter
-                words={[heading]}
-                loop={1}
+                words={[heading]} // Make sure heading is an array of strings
+                loop={1} // Use the length of the array for the loop
                 cursor
                 cursorStyle="|"
                 typeSpeed={100}
@@ -217,8 +229,9 @@ const Navbar = ({ mainStyle, heading, para, home, image, id, brandsLink }) => {
 
             {para && (
               <p
-                className={`text2 ${para ? "mt-4" : ""
-                  } text-backgroundColor2 md:w-[40%] w-full`}
+                className={`text2 ${
+                  para ? "mt-4" : ""
+                } text-backgroundColor2 xl:w-[34%] w-full`}
               >
                 {para}
               </p>
@@ -227,15 +240,8 @@ const Navbar = ({ mainStyle, heading, para, home, image, id, brandsLink }) => {
           {home}
         </div>
       )}
-      {
-        brandsLink && (
-          <Link target="_blank" to={brandsLink} className="flex items-end justify-end px-4 py-2  text1 text-backgroundColor6"  >
-            <p className="border px-4 py-2 rounded-lg hover:bg-backgroundColor5 hover:transition-all hover:duration-200 " >Visit Website</p>
-          </Link>
-        )
-      }
     </div>
   );
 };
-export default Navbar;
 
+export default Navbar;

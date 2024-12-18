@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-const Container = ({ children, mainStyle, heading, para, home, image,brandsLink }) => {
+const Container = ({ children, mainStyle, heading, para, home, image,coverimage }) => {
   return (
     <>
       <div className="w-full h-full">
@@ -11,7 +11,7 @@ const Container = ({ children, mainStyle, heading, para, home, image,brandsLink 
           mainStyle={mainStyle}
           home={home}
           image={image}
-          brandsLink={brandsLink}
+          coverimage={coverimage}
         />
         <div className="w-full lg:w-full">
           <div className={`bg-BackgroundColor`}>{children}</div>

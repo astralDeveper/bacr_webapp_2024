@@ -1,5 +1,6 @@
 import React from "react";
-import { ApplyNowData, data } from "../../../utils/DummyData";
+import { ApplyNowData,data } from "../../utils/DummyData";
+
 
 const ApplyNowCard = () => {
   return (

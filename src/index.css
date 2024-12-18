@@ -6,14 +6,9 @@
   font-family: "poppins";
 }
 
-html{
-  scroll-behavior: smooth;
+body {
+  scroll-behavior: smooth !important;
 }
-.animate-ping
-{
-
-  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-}	
 
 @layer utilities {
   .heading1 {
@@ -57,30 +52,6 @@ html{
   }
 }
 
-.headingFont1 {
-  @apply lg:text-[40px] md:text-[30px] text-[20px] lg:leading-[50px] md:leading-[40px] leading-[30px]  font-poppins;
-}
-
-.headingFont5 {
-  @apply font-poppins lg:text-[26px] md:text-[22px] text-[20px];
-}
-.headingFont6 {
-  @apply font-poppins lg:text-[18px] md:text-[16px] text-[14px];
-}
-
-.textFont1 {
-  @apply font-poppins lg:text-[18px] text-[16px] lg:leading-[28px] leading-[26px] font-normal;
-}
-.textFont2 {
-  @apply font-poppins lg:text-[16px] text-[14px] lg:leading-[26px] leading-[24px] font-normal;
-}
-.textFont3 {
-  @apply font-poppins lg:text-[14px] text-[12px] lg:leading-[22px] leading-[20px] font-normal;
-}
-/* rabia end */
-
-
-
 @keyframes slideUp {
   0% {
     opacity: 0;
@@ -91,8 +62,6 @@ html{
     transform: translateY(0);
   }
 }
-
-
 
 @keyframes slideRtl {
   from {
@@ -110,7 +79,6 @@ html{
   animation: slideRtl 2s ease-in-out;
 }
 
-
 @keyframes slideLtr {
   from {
     transform: translateX(-100px);
@@ -126,9 +94,6 @@ html{
 .animate-slide-ltr {
   animation: slideLtr 2s ease-in-out;
 }
-
-
-
 
 .footer-item {
   opacity: 0;
@@ -177,7 +142,6 @@ html{
 }
 /* Add more rules for additional cards as needed */
 
-
 /* Default state of the card */
 .pcard {
   opacity: 0; /* Initially invisible */
@@ -218,7 +182,6 @@ html{
 
 /* Animation for sliding from bottom to top */
 
-
 /* Default state of the card */
 .pimage {
   opacity: 0; /* Initially invisible */
@@ -241,8 +204,6 @@ html{
   animation-delay: 0.4s; /* 3rd card starts after 0.6s */
 }
 /* Add more rules for additional cards as needed */
-
-
 
 .trustCard {
   opacity: 0; /* Initially invisible */
@@ -268,9 +229,6 @@ html{
 }
 /* Add more rules for additional cards as needed */
 
-
-
-
 .blogCard {
   opacity: 0; /* Initially invisible */
   transition: transform 0.5s ease, opacity 2s ease; /* Smooth transition */
@@ -294,8 +252,6 @@ html{
   animation-delay: 0.5s; /* 3rd card starts after 0.6s */
 }
 
-
-
 .profile {
   opacity: 0; /* Initially invisible */
   transition: transform 0.5s ease, opacity 2s ease; /* Smooth transition */
@@ -316,19 +272,18 @@ html{
   animation-delay: 0.4s; /* 3rd card starts after 0.6s */
 }
 .profile:nth-child(4) {
-  animation-delay: 0.5s; 
+  animation-delay: 0.5s;
 }
 .profile:nth-child(5) {
-  animation-delay: 0.6s; 
+  animation-delay: 0.6s;
 }
 .profile:nth-child(6) {
-  animation-delay: 0.7s; 
+  animation-delay: 0.7s;
 }
 .profile:nth-child(7) {
-  animation-delay: 0.8s; 
+  animation-delay: 0.8s;
 }
 /* Add more rules for additional cards as needed */
-
 
 @keyframes ceo {
   0% {
@@ -371,7 +326,6 @@ html{
   opacity: 1;
 }
 
-
 @keyframes ltr {
   0% {
     opacity: 0;
@@ -392,39 +346,3 @@ html{
   animation: ltr 1s ease-in-out;
   opacity: 1;
 }
-
-.line {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.line.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 0.6s ease-in-out forwards;
-}
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "../../components/Container";
 import OurProducts from "./Components/OurProducts";
 import OurPartner from "./Components/OurPartner";
@@ -18,21 +18,32 @@ import {
 import BookingForm from "./Components/BookingForm";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
+import { fetchProductsHome } from "../../api";
 
 const Home = () => {
   // carousel props
   const OPTIONS = {};
-
+  const [products, setProducts] = useState([]);
   const scrollToElement = () => {
     const element = document.getElementById("bookingForm");
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
-
+  const fetchProductsb = async () => {
+    try {
+      const response = await fetchProductsHome();
+      setProducts(response.products);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  };
+  useEffect(() => {
+    fetchProductsb();
+  }, []);
   return (
     <Container
-      heading={"Innovative HVACR Solutions for a Comfortable Tomorrow"}
+      heading={"Innovative HVACR Solutions for a Comfortable Tomorrow."}
       para={
         "Providing high-quality HVACR products, services, and solutions backed by industry-leading partners."
       }
@@ -63,11 +74,7 @@ const Home = () => {
     >
       {/* <main className=""> */}
       <WhatWeDo card={WhatWeDoData} title="What We Do" subTitle="What we do" />
-      <OurProducts
-        title="Our Store"
-        slides={OurProductsData}
-        options={OPTIONS}
-      />
+      <OurProducts title="Our Products" slides={products} options={OPTIONS} />
       <OurPartner title="Our Partner" images={OurPartnerImagesData} />
 
       <OurClient title="Our Client" images={OurClientImagesData} />

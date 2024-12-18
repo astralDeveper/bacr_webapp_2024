@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { IMAGES } from "../utils/Images";
 import {
   meneLinks,
@@ -7,11 +7,54 @@ import {
   ServicesLinks,
 } from "../utils/DummyData";
 import { Link, useParams } from "react-router-dom";
+import { createSubscriber, fetchSocialLinks } from "../api";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [instagram, setInstagram] = useState("");
+  const [twitter, setTwitter] = useState("");
+  const [linkedin, setLinkedin] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
+  const [certificate1, setCertificate1] = useState("");
+  const [certificate2, setCertificate2] = useState("");
+  const [certificate3, setCertificate3] = useState("");
+  const [certificate4, setCertificate4] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const active = useParams()
-
+  const handleSubscribe=async()=>{
+    if (email !== "") {
+      setIsLoading(true); // Start loading animation
+      try {
+          const subscribe = await createSubscriber(email);
+          console.log("Subscription successful:", subscribe);
+      } catch (error) {
+          console.error("Error subscribing:", error);
+      } finally {
+          setIsLoading(false); // Stop loading animation
+      }
+  }
+  }
+const fetchSocialLinksb = async () => {
+    try {
+        const response = await fetchSocialLinks();
+        
+        setCertificate1(response[0]?.certificate1);
+        setCertificate2(response[0]?.certificate2);
+        setCertificate3(response[0]?.certificate3);
+        setCertificate4(response[0]?.certificate4);
+        setInstagram(response[0]?.instagram);
+        setTwitter(response[0]?.twitter);
+        setLinkedin(response[0]?.linkedin);
+        setWhatsapp(response[0]?.whatsapp);
+        
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
+    };
+    useEffect(() => {
+      fetchSocialLinksb();
+  }, [certificate1]);
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -43,7 +86,7 @@ const Footer = () => {
           <div className="text-backgroundColor2 flex justify-between xl:items-end lg:items-end items-center lg:flex-row flex-col md:gap-2  w-full  ">
             <Link to={"/"}>
               <img
-                className="md:w-20 w-12"
+                className="md:w-28 w-16"
                 src={IMAGES.LOGOWHITE}
                 alt={IMAGES.LOGOWHITE}
               />
@@ -77,7 +120,7 @@ const Footer = () => {
                 {ServicesLinks.map((item, i) => {
                   return (
                     <div key={i}>
-                      <h2 className="font-bold text2 py-1 underline footer-item">{item.heading}</h2>
+                      <h2 className="font-bold text2 py-2 underline footer-item">{item.heading}</h2>
                       <ul className="border-backgroundColor2">
                         {item.links.map((items, ind) => {
                           return (
@@ -103,18 +146,16 @@ const Footer = () => {
               {ProductsLinks.map((item, i) => {
                 return (
                   <div key={i}>
-                    <h2 className="font-bold py-1 underline text2 footer-item">{item.heading}</h2>
+                    <h2 className="font-bold py-2 underline text2 footer-item">{item.heading}</h2>
                     <ul className=" border-backgroundColor2">
                       {item.links.map((items, ind) => {
                         return (
                           <div key={ind}>
-                            <div key={ind}>
-                              <Link to={`${items.href}?type=${items.type}`}>
-                                <li className="text2 py-1 cursor-pointer hover:underline footer-item">
-                                  {items.link}
-                                </li>
-                              </Link>
-                            </div>
+                            <Link to={`${items.href}?type=${items.type}`}>
+                              <li className="text2  cursor-pointer hover:underline footer-item">
+                                {items.link}
+                              </li>
+                            </Link>
                           </div>
                         );
                       })}
@@ -135,13 +176,11 @@ const Footer = () => {
                       {item.links.map((items, ind) => {
                         return (
                           <div key={ind}>
-                            <div key={ind}>
-                              <Link to={`${items.href}?type=${items.type}`}>
-                                <li className="text2 py-1 cursor-pointer hover:underline footer-item">
-                                  {items.link}
-                                </li>
-                              </Link>
-                            </div>
+                            <Link to={`${items.href}?type=${items.type}`}>
+                              <li className="text2 py-1 cursor-pointer hover:underline footer-item">
+                                {items.link}
+                              </li>
+                            </Link>
                           </div>
                         );
                       })}
@@ -153,16 +192,19 @@ const Footer = () => {
             {/* Projects links end here */}
 
             <div>
-              <div className="text-backgroundColor2 footer-item py-1">
+              <div className="text-backgroundColor2 footer-item">
                 <div className="flex items-center ">
                   <div class="flex rounded-lg shadow-sm">
                     <input
                       type="text"
+                      value={email}
+                      onChange={(e)=>setEmail(e.target.value)}
                       placeholder="Your Email"
                       className="py-2 px-4 text-backgroundColor2 bg-transparent border-[1px] border-backgroundColor2 outline-none w-full rounded-s-md text2"
                     />
                     <button
                       type="button"
+                      onClick={handleSubscribe}
                       class="py-2 px-4 inline-flex justify-center items-center gap-x-2 text2 font-semibold rounded-e-md border border-transparent bg-backgroundColor2 text-text4 focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
                     >
                       Subscribe
@@ -170,6 +212,10 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
+              {isLoading &&
+              <h2 style={{ color: "green", marginTop: "10px" }}>
+              Thanks for subscribe</h2>
+                   } 
               <div className="mt-4 overflow-y-hidden footer-item">
                 <h2 className="font-semibold pb-3 text2 text-backgroundColor2">
                   CERTIFICATES
@@ -178,29 +224,29 @@ const Footer = () => {
                   <div className="bg-backgroundColor12 p-2 rounded-md">
                     <img
                       className="w-16"
-                      src={IMAGES.CARTIMGONE}
-                      alt={IMAGES.CARTIMGONE}
+                      src={certificate1}
+                      alt={certificate1}
                     />
                   </div>
                   <div className="bg-backgroundColor12 p-2 rounded-md">
                     <img
                       className="w-16"
-                      src={IMAGES.CARTIMGTWO}
-                      alt={IMAGES.CARTIMGTWO}
+                      src={certificate2}
+                      alt={certificate2}
                     />
                   </div>
                   <div className="bg-backgroundColor12 p-2 rounded-md">
                     <img
                       className="w-16"
-                      src={IMAGES.CARTIMGTHREE}
-                      alt={IMAGES.CARTIMGTHREE}
+                      src={certificate3}
+                      alt={certificate3}
                     />
                   </div>
                   <div className="bg-backgroundColor12 p-2 rounded-md">
                     <img
                       className="w-16"
-                      src={IMAGES.CARTIMGFOUR}
-                      alt={IMAGES.CARTIMGFOUR}
+                      src={certificate4}
+                      alt={certificate4}
                     />
                   </div>
                 </div>
@@ -211,26 +257,34 @@ const Footer = () => {
                   Join US
                 </h2>
                 <div className="flex items-center justify-start gap-2 footer-item">
+                  <a target="_blank" href={linkedin}>
                   <img
                     className="w-7 cursor-pointer"
                     src={IMAGES.FACEBOOKWHITE}
                     alt={IMAGES.FACEBOOKWHITE}
                   />
+                  </a>
+                  <a target="_blank" href={instagram}>
                   <img
                     className="w-7 cursor-pointer"
                     src={IMAGES.INSTAWHITE}
                     alt={IMAGES.INSTAWHITE}
                   />
+                  </a>
+                  <a target="_blank" href={twitter}>
                   <img
                     className="w-7 cursor-pointer"
                     src={IMAGES.TWITTER}
                     alt={IMAGES.TWITTER}
                   />
+                  </a>
+                  <a target="_blank" href={whatsapp}>
                   <img
                     className="w-7 cursor-pointer"
                     src={IMAGES.WHATSAPP}
                     alt={IMAGES.WHATSAPP}
                   />
+                  </a>
                 </div>
               </div>
               {/* social media links start here  */}

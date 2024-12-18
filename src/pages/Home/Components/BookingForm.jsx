@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Button from "../../../components/Button";
+import { createAppointment } from "../../../api";
 
 export default function BookingForm(props) {
-  const { title } = props;
+  const { id, title,ref } = props;
 
   const [formData, setFormData] = useState({
     name: '',
@@ -16,9 +17,10 @@ export default function BookingForm(props) {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
+    const app=await createAppointment(formData);
+    // console.log('Form Data:', formData);
     // reset Form data start
     setFormData({
       name: '',
@@ -32,7 +34,7 @@ export default function BookingForm(props) {
 
 
   return (
-    <section className="md:w-[80%] mx-auto p-6 ">
+    <section id={id} className="md:w-[80%] mx-auto p-6 ">
       <div className="border rounded-md bg-[#D8EEFB] md:px-6 px-2 md:py-8 py-4">
         <h4 className="text-[18px] text-[#000] font-medium leading-none ">
           {title}
@@ -76,6 +78,7 @@ export default function BookingForm(props) {
           />
 
           <Button
+          type="submit"
             btnStyle=" bg-backgroundColor1 text3 rounded-md text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 font-semibold h-full"
             title="Book Appointment"
           />

@@ -121,7 +121,7 @@ const ColdChainStorage = () => {
           </p>
         </div>
       </div>
-      <BookingForm/>
+      {/* <BookingForm/> */}
     </div>
   );
 };

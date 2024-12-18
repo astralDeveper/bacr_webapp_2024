@@ -7,11 +7,15 @@ import TabBar from '../../../components/TabBar';
 import NewProducts from './NewProducts';
 import UsedEquipments from './UsedEquipments';
 import SpareParts from './SpareParts';
+import { fetchCategories, fetchProdBrands, fetchProducts } from '../../../api';
 
 const ProductCards = () => {
     const [brandsOpen, setBrandsOpen] = useState(false);
+    const [categories, setCategories] = useState([]);
     const [categoryOpen, setCategoryOpen] = useState(false);
     const [capacityOpen, setCapacityOpen] = useState(false);
+    const [products, setProducts] = useState([]);
+    const [brands, setBrands] = useState([]);
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
     const [clickedIndex, setClickedIndex] = useState(null); // To store the index of the clicked card
@@ -90,6 +94,26 @@ const ProductCards = () => {
         setTab(selectedTab);
     };
 
+    const fetchProductsb = async () => {
+    try {
+        const response = await fetchProducts();
+        setProducts(response.products);
+        const responseb = await fetchProdBrands();
+        setBrands(responseb);
+        const responsec = await fetchCategories();
+        setCategories(responsec);
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
+    };
+    useEffect(() => {
+      fetchProductsb();
+  }, []);
+  useEffect(() => {
+    console.log("Updated products:", products); // Log to see if the products state is set
+
+}, [products]);
+
     useEffect(() => {
         // URL se `type` parameter ko read karein
         const type = searchParams.get("type");
@@ -98,13 +122,7 @@ const ProductCards = () => {
         }
     }, [searchParams]);
 
-    const product = "product"
-
-
-
-
-
-
+    const product = "product";
 
     return (
 
@@ -128,10 +146,10 @@ const ProductCards = () => {
                         </button>
                         {brandsOpen && (
                             <div className="ml-4 space-y-2">
-                                {['All', 'Flakt Group', 'Galletti Products', 'Tica Product'].map((brand, index) => (
+                                {brands.map((brand, index) => (
                                     <label key={index} className="flex items-center space-x-2">
                                         <input type="checkbox" className="accent-backgroundColor8 cursor-pointer " />
-                                        <span className='text3'>{brand}</span>
+                                        <span className='text3'>{brand.name}</span>
                                     </label>
                                 ))}
                             </div>
@@ -149,10 +167,10 @@ const ProductCards = () => {
                         </button>
                         {categoryOpen && (
                             <div className="ml-4 space-y-2">
-                                {['AHU', 'Coils', 'Chillers', 'Cooling Towers', 'Heat Exchangers'].map((category, index) => (
+                                {categories.map((category, index) => (
                                     <label key={index} className="flex items-center space-x-2">
                                         <input type="checkbox" className="accent-backgroundColor8" />
-                                        <span className='text3 '>{category}</span>
+                                        <span className='text3 '>{category.name}</span>
                                     </label>
                                 ))}
                             </div>
@@ -237,17 +255,17 @@ const ProductCards = () => {
                 <div className="">
                     {
                         tab == "new" && (
-                            <NewProducts clickedIndex={clickedIndex} />
+                            <NewProducts products={products} clickedIndex={clickedIndex} />
                         )
                     }
                     {
                         tab == "used" && (
-                            <UsedEquipments clickedIndex={clickedIndex} />
+                            <UsedEquipments products={products} clickedIndex={clickedIndex} />
                         )
                     }
                     {
                         tab == "spareParts" && (
-                            <SpareParts clickedIndex={clickedIndex} />
+                            <SpareParts products={products} clickedIndex={clickedIndex} />
                         )
                     }
                 </div>

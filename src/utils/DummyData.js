@@ -357,21 +357,21 @@ export const address = [
   {
     title: "Head Office",
     addtess: "Suite # 404, 4th Floor, Tahir Plaza Plot No. A-20 K, C.H.S.U Block 7/8 Karachi, Pakistan",
-    // Location: "https://maps.app.goo.gl/yeykrWDyro7mf6dD7"
+    Location: "https://maps.app.goo.gl/yeykrWDyro7mf6dD7"
   },
   {
     title: "U.A.E Office",
-    addtess: "Office # 110, Al Sheikha Mahara Ahmed, Al Ghurair Building, Al Nadha Road, Al Qusais 2, Dubai, UAE",
-    // Location: "https://maps.app.goo.gl/ULnFdAwMAY4WHwrG9"
+    addtess:"Office # 110, Al Sheikha Mahara Ahmed, Al Ghurair Building, Al Nadha Road, Al Qusais 2, Dubai, UAE",
+    Location: "https://maps.app.goo.gl/ULnFdAwMAY4WHwrG9"
   },
   {
     title: "Warehouse",
-    addtess: "Plot # CI-64, Sector 6-B, North Karachi, Karachi, Pakistan",
+    addtess:"Plot # CI-64, Sector 6-B, North Karachi, Karachi, Pakistan",
   },
   {
     title: "Workshop",
-    addtess: "Plot # R-1165, Block 15, Federal B Area, Karachi, Pakistan",
-    // Location: "https://maps.app.goo.gl/pftwceZCzqP2tYxj6"
+    addtess:"Plot # R-1165, Block 15, Federal B Area, Karachi, Pakistan",
+    Location: "https://maps.app.goo.gl/pftwceZCzqP2tYxj6"
   },
 ];
 
@@ -664,7 +664,7 @@ export const brandsCardData = [
       "With a rich legacy spanning a century, Galletti brings unparalleled expertise to the HVAC industry. ...",
     image: IMAGES.BRANDONE,
     tickImg: IMAGES.AUTH_TICK,
-    link: "/galleti"
+    link:"/galleti"
   },
   {
     name: "Flakt Group",
@@ -672,7 +672,7 @@ export const brandsCardData = [
       "FläktGroup is a leading global provider of energy-efficient indoor air technology solutions, special...",
     image: IMAGES.BRANDTWO,
     tickImg: IMAGES.AUTH_TICK,
-    link: "/flakt"
+    link:"/flakt"
   },
   {
     name: "Carrier",
@@ -680,7 +680,7 @@ export const brandsCardData = [
       "Discover an extensive range of services tailored to suit the diverse needs of our valued clients at ...",
     image: IMAGES.BRANDTHREE,
     tickImg: IMAGES.AUTH_TICK,
-    link: "/carrier"
+    link:"/carrier"
   },
   {
     name: "York",
@@ -688,7 +688,7 @@ export const brandsCardData = [
       "Brothers Air Conditioning offers an extensive array of services tailored to meet the diverse needs o...",
     image: IMAGES.BRANDFOUR,
     tickImg: IMAGES.AUTH_TICK,
-    link: "/york"
+    link:"/york"
   },
   {
     name: "Echochillers",
@@ -696,7 +696,7 @@ export const brandsCardData = [
       "Based in the USA, Eco Chillers Inc sets the standard for excellence in HVAC solutions. Compliant wit...",
     image: IMAGES.BRANDFIVE,
     tickImg: IMAGES.AUTH_TICK,
-    link: "/echochillers"
+    link:"/echochillers"
   },
   {
     name: "Trane",
@@ -704,7 +704,7 @@ export const brandsCardData = [
       "Brothers Air Conditioning offers a comprehensive range of services featuring Trane products to meet ...",
     image: IMAGES.BRANDSIX,
     tickImg: IMAGES.AUTH_TICK,
-    link: "/trane"
+    link:"/trane"
   },
   {
     name: "Tica",
@@ -712,7 +712,7 @@ export const brandsCardData = [
       "Brothers Air Conditioning offers a comprehensive range of services featuring Trane products to meet ...",
     image: IMAGES.TICA,
     tickImg: IMAGES.AUTH_TICK,
-    link: "/tica"
+    link:"/tica"
   },
 ];
 
@@ -1302,12 +1302,6 @@ export const BlogCardData = [
   },
 ];
 
-
-// Apply Now Page Content start here
-export const data = `We are seeking a talented Junior UI/UX Designer - Figma to join our
-          dynamic team. The ideal candidate will have a background in designing
-          dashboards, web applications, and e-commerce platforms.`;
-
 export const ApplyNowData = [
   {
     heading: "Responsibilities:",
@@ -1364,4 +1358,7 @@ export const ApplyNowData = [
     ],
   },
 ];
-// Apply Now Page Content start here
+
+export const data = `We are seeking a talented Junior UI/UX Designer - Figma to join our
+          dynamic team. The ideal candidate will have a background in designing
+          dashboards, web applications, and e-commerce platforms.`;

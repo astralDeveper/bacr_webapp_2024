@@ -119,7 +119,7 @@ const EnergyOptimization = () => {
           </p>
         </div>
       </div>
-      <BookingForm/>
+      {/* <BookingForm/> */}
     </div>
   );
 };

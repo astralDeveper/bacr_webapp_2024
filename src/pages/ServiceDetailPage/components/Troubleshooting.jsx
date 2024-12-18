@@ -118,7 +118,7 @@ const Troubleshooting = () => {
           </p>
         </div>
       </div>
-      <BookingForm/>
+      {/* <BookingForm/> */}
     </div>
   );
 };

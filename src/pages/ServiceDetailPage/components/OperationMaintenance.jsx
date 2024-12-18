@@ -118,7 +118,7 @@ const OperationMaintenance = () => {
           </p>
         </div>
       </div>
-      <BookingForm/>
+      {/* <BookingForm/> */}
     </div>
   );
 };
