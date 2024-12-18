@@ -72,6 +72,7 @@ export default function BookingForm(props) {
             type="date"
             name="date"
             id="date"
+            min={new Date().toISOString().split("T")[0]} 
             value={formData.date}
             onChange={handleChange}
             className="md:py-3 md:px-3 py-1 px-2 rounded-md border border-gray-400 bg-transparent text2  text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
