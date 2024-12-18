@@ -25,7 +25,7 @@ const Card = () => {
 
   return (
     <>
-      {blogs.map((item, idx) => (
+      {BlogCardData.map((item, idx) => (
         <div
           key={idx}
           className="flex flex-col sm:flex-row shadow-shadow2 font-poppins items-center rounded-lg sm:gap-2 lg:gap-4 justify-between px-4 bg-backgroundColor2"
