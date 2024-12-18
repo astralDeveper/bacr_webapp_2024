@@ -25,7 +25,7 @@ const Card = () => {
 
   return (
     <>
-      {BlogCardData.map((item, idx) => (
+      {blogs.map((item, idx) => (
         <div
           key={idx}
           className="flex flex-col sm:flex-row shadow-shadow2 font-poppins items-center rounded-lg sm:gap-2 lg:gap-4 justify-between px-4 bg-backgroundColor2"
@@ -40,12 +40,12 @@ const Card = () => {
 
             <img
               className="sm:w-[430px] lg:w-full"
-              src={item.img}
+              src={item.imagePath}
               alt={item.img}
             />
             <div className="absolute left-2 lg:left-3 bottom-7 bg-backgroundColor10 text-white rounded-full py-2  px-4  max-w-[154px] lg:max-w-[160px]">
               <h1 className="text3 whitespace-nowrap ">
-                {item.maint}
+                {item.categoryId.name}
               </h1>
             </div>
           </div>
@@ -54,11 +54,11 @@ const Card = () => {
               {item.name}
             </h1>
             <p className="text3 text-text10 py-1">
-              {item.para}
+              {item.excerpt}
             </p>
             <Link to={"/blog-detail"}>
               <Button
-                title={item.button}
+                title={"Lear More"}
                 btnStyle={
                   "text1 flex w-full justify-center bg-backgroundColor1 text-white rounded-md whitespace-nowrap"
                 }
