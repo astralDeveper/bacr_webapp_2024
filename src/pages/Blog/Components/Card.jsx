@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IMAGES } from "../../../utils/Images";
 import Button from "../../../components/Button";
 import { Link } from "react-router-dom";
 import { BlogCardData } from "../../../utils/DummyData";
+import { fetchBlogs } from "../../../api";
+import moment from "moment";
+
 
 const Card = () => {
- 
+ const [blogs, setBlogs] = useState([]);
+     const fetchBlogsb = async () => {
+         
+     try {
+         const response = await fetchBlogs();
+         setBlogs(response);     
+            
+     } catch (error) {
+         console.error("Error fetching products:", error);
+     }
+     };
+     useEffect(() => {
+         fetchBlogsb(); // Fetch brands once
+     }, []);
 
   return (
     <>
-      {BlogCardData.map((item, idx) => (
+      {blogs.map((item, idx) => (
         <div
           key={idx}
           className="flex flex-col sm:flex-row shadow-shadow2 font-poppins items-center rounded-lg sm:gap-2 lg:gap-4 justify-between px-4 bg-backgroundColor2"
@@ -19,7 +35,7 @@ const Card = () => {
               <h1 className="text-center leading-8 text1 sm:text-sm xs:text-xs lg:text-[11px]">
                 {item.data}
               </h1>
-              <p className="text1">{item.month}</p>
+              <p className="text1">{moment(item.createdAt).format("DD MMM")}</p>
             </div>
 
             <img

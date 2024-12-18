@@ -110,6 +110,10 @@ export const router = createBrowserRouter([
     path: "/brands",
     element: <Brands />,
   },
+  {
+    path: "/brand/:id",
+    element: <GallettiProducts />,
+  },
 
   //  Partner Page End
 ]);

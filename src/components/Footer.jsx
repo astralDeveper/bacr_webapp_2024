@@ -7,9 +7,10 @@ import {
   ServicesLinks,
 } from "../utils/DummyData";
 import { Link, useParams } from "react-router-dom";
-import { fetchSocialLinks } from "../api";
+import { createSubscriber, fetchSocialLinks } from "../api";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
   const [instagram, setInstagram] = useState("");
   const [twitter, setTwitter] = useState("");
   const [linkedin, setLinkedin] = useState("");
@@ -18,7 +19,22 @@ const Footer = () => {
   const [certificate2, setCertificate2] = useState("");
   const [certificate3, setCertificate3] = useState("");
   const [certificate4, setCertificate4] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
   const active = useParams()
+  const handleSubscribe=async()=>{
+    if (email !== "") {
+      setIsLoading(true); // Start loading animation
+      try {
+          const subscribe = await createSubscriber(email);
+          console.log("Subscription successful:", subscribe);
+      } catch (error) {
+          console.error("Error subscribing:", error);
+      } finally {
+          setIsLoading(false); // Stop loading animation
+      }
+  }
+  }
 const fetchSocialLinksb = async () => {
     try {
         const response = await fetchSocialLinks();
@@ -181,11 +197,14 @@ const fetchSocialLinksb = async () => {
                   <div class="flex rounded-lg shadow-sm">
                     <input
                       type="text"
+                      value={email}
+                      onChange={(e)=>setEmail(e.target.value)}
                       placeholder="Your Email"
                       className="py-2 px-4 text-backgroundColor2 bg-transparent border-[1px] border-backgroundColor2 outline-none w-full rounded-s-md text2"
                     />
                     <button
                       type="button"
+                      onClick={handleSubscribe}
                       class="py-2 px-4 inline-flex justify-center items-center gap-x-2 text2 font-semibold rounded-e-md border border-transparent bg-backgroundColor2 text-text4 focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
                     >
                       Subscribe
@@ -193,6 +212,10 @@ const fetchSocialLinksb = async () => {
                   </div>
                 </div>
               </div>
+              {isLoading &&
+              <h2 style={{ color: "green", marginTop: "10px" }}>
+              Thanks for subscribe</h2>
+                   } 
               <div className="mt-4 overflow-y-hidden footer-item">
                 <h2 className="font-semibold pb-3 text2 text-backgroundColor2">
                   CERTIFICATES

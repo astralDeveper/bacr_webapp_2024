@@ -1,10 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { AboutCardData } from "../../../utils/DummyData";
+import { fetchTeams } from "../../../api";
 
 const AboutCard = () => {
 
   const [visibleCards, setVisibleCards] = useState([]);
-
+  const [teams, setTeams] = useState([]);
+    const fetchProjectsb = async () => {
+        
+    try {
+        const response = await fetchTeams();
+        setTeams(response);     
+           
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
+    };
+    useEffect(() => {
+        fetchProjectsb(); // Fetch brands once
+    }, []);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -26,7 +40,7 @@ const AboutCard = () => {
     return () => {
       cards.forEach((card) => observer.unobserve(card));
     };
-  }, []);
+  }, [teams]);
 
 
 
@@ -39,7 +53,7 @@ const AboutCard = () => {
             Air Solutions.</p>
         </div>
         <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-3 grid-cols-1 gap-8">
-          {AboutCardData.map((item, ind) => {
+          {teams.map((item, ind) => {
             return (
               <div
                 key={ind}
@@ -51,7 +65,7 @@ const AboutCard = () => {
                 <div className=" flex items-center justify-center ">
                   <img
                     className=" object-contain"
-                    src={item.img}
+                    src={item.imagePath}
                     alt={item.img}
                     draggable={false}
                   />

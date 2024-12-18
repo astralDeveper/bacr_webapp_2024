@@ -6,7 +6,7 @@ import Button from "./Button";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
-const Navbar = ({ mainStyle, heading, para, home, image, id }) => {
+const Navbar = ({ mainStyle, heading, para, home, image, id ,coverimage}) => {
   const active = useLocation().pathname;
   // const myAnimationLeft = {
   //     initial: { opacity: 0, y: 100 },
@@ -15,6 +15,7 @@ const Navbar = ({ mainStyle, heading, para, home, image, id }) => {
 
   const [menueOpen, SetMenueOpen] = useState(false);
   const [isAnimated, setIsAnimated] = useState(false);
+  console.log(coverimage);
 
   useEffect(() => {
     // Handle animation logic
@@ -48,6 +49,9 @@ const Navbar = ({ mainStyle, heading, para, home, image, id }) => {
 
   return (
     <div
+    style={{
+      backgroundImage: coverimage ? `url(${coverimage})` : '', // Set background image if coverimage is provided
+    }}
       className={`${
         image ? "bg-hero-pattern bg-no-repeat bg-cover w-full" : ""
       }`}

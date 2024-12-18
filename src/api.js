@@ -38,6 +38,15 @@ export const fetchProductsHome = async () => {
     throw error;
   }
 };
+export const fetchBlogsHome = async () => {
+  try {
+    const response = await api.get("/blogs?page=1&limit=4");
+    return response.data.blogs;
+  } catch (error) {
+    console.error("Error fetching brands:", error);
+    throw error;
+  }
+};
 export const fetchProductByBrand = async (filter) => {
   try {
     const response = await api.get(`/product-filter/${filter}`);
@@ -340,8 +349,8 @@ export const createProject = async (formData) => {
 
 export const fetchProdBrands = async () => {
   try {
-    const response = await api.get("/brands");
-    return response.data;
+    const response = await api.get("/allbrands");
+    return response.data.brands;
   } catch (error) {
     console.error("Error fetching brands:", error);
     throw error;
@@ -718,6 +727,25 @@ export const editContact = async (formData,editContactId) => {
 export const fetchSubscribers = async () => {
   try {
     const response = await api.get("/subscribers");
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching subscribers:", error);
+    throw error;
+  }
+};
+export const createSubscriber = async (email) => {
+  try {
+    const response = await api.post("/subscriber",{email});
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching subscribers:", error);
+    throw error;
+  }
+};
+export const createAppointment = async (formData) => {
+  try {
+    
+    const response = await api.post("/appointment",formData);
     return response.data;
   } catch (error) {
     console.error("Error fetching subscribers:", error);

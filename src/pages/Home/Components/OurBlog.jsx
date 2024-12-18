@@ -2,10 +2,24 @@ import React, { useState, useEffect } from "react";
 import { IMAGES } from "../../../utils/Images";
 import Button from "../../../components/Button";
 import { Link } from "react-router-dom";
+import { fetchBlogsHome } from "../../../api";
 
 export default function OurBlog(props) {
   const { title, subTitle, para, card, carouselCard } = props;
-
+const [blogs, setBlogs] = useState([]);
+    const fetchBlogsb = async () => {
+        
+    try {
+        const response = await fetchBlogsHome();
+        setBlogs(response);     
+           
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
+    };
+    useEffect(() => {
+        fetchBlogsb(); // Fetch brands once
+    }, []);
   const [visibleCards, setVisibleCards] = useState([]);
       
         useEffect(() => {
@@ -29,7 +43,7 @@ export default function OurBlog(props) {
           return () => {
             cards.forEach((card) => observer.unobserve(card));
           };
-        }, []);
+        }, [blogs]);
 
 
 
@@ -43,13 +57,13 @@ export default function OurBlog(props) {
         <p className="text1 text-[#000] font-light mx-auto md:w-[60%] mb-3 text-center">{para}</p>
       </div>
       <div className="grid lg:grid-cols-2 lg:gap-16 gap-2 md:grid-cols-2 sm:grid-cols-2 shrink-0 ">
-        {card.map((item,ind) => (
+        {blogs.map((item,ind) => (
           <div id={`blogCard-${ind}`} className={`grid md:grid-cols-2 blogCard ${
             visibleCards.includes(`blogCard-${ind}`) ? "visible" : "" } `}>
             <div
               className="sm:me-4 h-[190px]  mb-2 sm:mb-auto w-full rounded-md  relative bg-cover bg-center bg-no-repeat"
               style={{
-                backgroundImage: `url(${item.img})`,
+                backgroundImage: `url(${item.imagePath})`,
               }}
             >
               <div
@@ -64,7 +78,8 @@ export default function OurBlog(props) {
                 className={`absolute inset-0 bg-[#ffa500] transition-all duration-500 px-2 py-1 rounded-full bottom-[8px] right-auto top-auto left-[8px] `}
               >
                 <p className="text3 font-light text-white leading-none">
-                  HVACR Maintenance
+                  {/* HVACR Maintenance */}
+                  {item?.categoryId?.name}
                 </p>
               </div>
             </div>
@@ -73,7 +88,7 @@ export default function OurBlog(props) {
                 {item.name}
               </h4>
               <p className="text2 text-[#7a7a7a] font-light py-2">
-                {item.para}
+                {item?.excerpt}
               </p>
               <Link to={"/blog-detail"} className="w-full">
                 <Button
