@@ -36,7 +36,7 @@ const ComfortCooling = () => {
         <div
           className="lg:h-[450px] md:h-[450px] h-[250px] md:my-8 my-4 w-full bg-no-repeat bg-cover shadow-2xl bg-center "
           style={{
-            backgroundImage: `url(${IMAGES.COMFORT1})`,
+            backgroundImage: `url(${IMAGES.SERVICEONE})`,
           }}
         ></div>
         <div className="md:py-8 py-4">

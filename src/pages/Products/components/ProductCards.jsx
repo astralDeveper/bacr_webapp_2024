@@ -152,7 +152,7 @@ const ProductCards = () => {
                                 {['AHU', 'Coils', 'Chillers', 'Cooling Towers', 'Heat Exchangers'].map((category, index) => (
                                     <label key={index} className="flex items-center space-x-2">
                                         <input type="checkbox" className="accent-backgroundColor8" />
-                                        <span className='text3 '>{category}</span>
+                                        <span className='text3'>{category}</span>
                                     </label>
                                 ))}
                             </div>

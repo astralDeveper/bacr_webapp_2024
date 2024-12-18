@@ -91,6 +91,37 @@ export const comfortCooling = [
     para: "We prioritize customer satisfaction above all else, striving to exceed expectations at every step of the process. From initial consultation to ongoing support, our dedicated team is committed to delivering exceptional service and ensuring a seamless experience for our clients.",
   },
 ];
+
+
+export const coldChainStorage = [
+  {
+    img: IMAGES.COLDCHAIN1,
+    title: "cutting-edge cold chain systems",
+    para: "At Brothers Air Conditioning, we specialize in providing cutting-edge cold chain systems designed to ensure the safe and efficient storage of perishable goods. Our cold storage solutions cater to a variety of industries, including food, pharmaceuticals, chemicals, and other temperature-sensitive products, maintaining the ideal conditions for preserving quality and safety.",
+  },
+  {
+    img: IMAGES.COLDCHAIN2,
+    title: "Advanced Refrigeration Technology",
+    para: "Our cold storage facilities are equipped with advanced refrigeration technology, precise temperature control systems, and humidity regulation. This ensures a controlled environment that supports the integrity of your products throughout their entire supply chain journey.",
+  },
+  {
+    img: IMAGES.COLDCHAIN3,
+    title: "Reliability and Efficiency",
+    para: "With a strong focus on reliability and efficiency, our systems help minimize spoilage and reduce waste. By extending the shelf life of your goods, we meet the highest industry standards for cold chain management.",
+  },
+  {
+    img: IMAGES.COLDCHAIN4,
+    title: "Commitment Provides Peace",
+    para: "Whether you need short-term storage or long-term preservation, Brothers Air Conditioning ensures your products remain in optimal condition. Our commitment provides peace of mind to clients who require the highest level of precision and care in handling their sensitive goods.",
+  },
+];
+
+
+
+
+
+
+
 export const processCooling = [
   {
     img: IMAGES.PROCESS1,

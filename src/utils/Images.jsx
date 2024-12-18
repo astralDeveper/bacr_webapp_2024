@@ -182,7 +182,11 @@ const imageNames = [
   "clientlogo1", "clientlogo2", "clientlogo3", "clientlogo4", "clientlogo5",
   "clientlogo6", "clientlogo7", "clientlogo8", "clientlogo9", "clientlogo10",
   "clientlogo11", "clientlogo12", "clientlogo13", "clientlogo14", "clientlogo15",
-  "clientlogo16", "clientlogo17", "clientlogo18", "clientlogo19", "clientlogo20"
+  "clientlogo16", "clientlogo17", "clientlogo18", "clientlogo19", "clientlogo20",
+  "coldchain1",
+  "coldchain2",
+  "coldchain3",
+  "coldchain4",
 
 
 

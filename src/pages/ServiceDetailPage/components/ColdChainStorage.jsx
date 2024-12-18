@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { IMAGES } from "../../../utils/Images";
-import { comfortCooling } from "../../../utils/DummyData";
+import { coldChainStorage, comfortCooling } from "../../../utils/DummyData";
 import BookingForm from "../../Home/Components/BookingForm";
 
 const ColdChainStorage = () => {
@@ -44,18 +44,13 @@ const ColdChainStorage = () => {
             id="line-1"
             className={`headingFont1 font-semibold line ${visibleLines.includes("line-1") ? "visible" : ""}`}
           >
-            Welcome to BAC Comfort Cooling Solutions
+            Welcome to BAC Cold Chain Solutions
           </h1>
           <p
             id="line-2"
             className={`textFont1 text-text7 pt-2 pcard line ${visibleLines.includes("line-2") ? "visible" : ""}`}
           >
-            At BAC, we specialize in delivering cutting-edge Comfort Cooling
-            solutions for HVACR chillers and equipment, ensuring optimal
-            performance and enhanced comfort in diverse environments. With a
-            legacy of excellence and innovation spanning decades, we are
-            committed to providing reliable, efficient, and sustainable cooling
-            solutions tailored to meet the unique needs of our clients.
+            Welcome to BAC Cold Chain Solutions, where we specialize in providing cutting-edge cold storage systems for perishable goods. Our solutions are designed to maintain precise temperature and humidity conditions, ensuring the safety and integrity of products such as food, pharmaceuticals, and chemicals. With advanced refrigeration technology and reliable temperature control, we minimize spoilage and extend shelf life.
           </p>
         </div>
         <div className="md:py-8 py-4">
@@ -75,7 +70,7 @@ const ColdChainStorage = () => {
 
         {/* Add more sections with unique IDs for each line */}
         <div className="grid md:grid-cols-2 grid-cols-1  place-items-center items-center justify-center gap-6 py-4">
-          {comfortCooling.map((item, index) => (
+          {coldChainStorage.map((item, index) => (
             <div className="md:py-6 py-2" key={index}>
               <div
                 className="rounded-xl h-[250px] w-full bg-no-repeat bg-cover shadow-md bg-center"

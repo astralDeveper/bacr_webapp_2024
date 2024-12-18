@@ -78,6 +78,23 @@ const JoinOurTeamForm = () => {
                 </div>
                 <div className="mb-2">
                     <label
+                        htmlFor="department"
+                        className="text-backgroundColor2 heading7 "
+                    >
+                        Department
+                    </label>
+                    <select
+                        id="department"
+                        className="block w-[100%] lg:p-[16px] mt-1 rounded-lg outline-none placeholder:text1 placeholder:text-text10 text1 "
+                    >
+                        <option>Choose department</option>
+                        <option>Development</option>
+                        <option>Marketing</option>
+                        <option>HR</option>
+                    </select>
+                </div>
+                <div className="mb-2">
+                    <label
                         htmlFor="upload-cv"
                         className="text-backgroundColor2 text1 font-semiBold"
                     >
