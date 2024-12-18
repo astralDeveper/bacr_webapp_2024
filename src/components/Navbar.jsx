@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router";
 import Button from "./Button";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { fetchSocialLinks } from "../api";
 
 const Navbar = ({ mainStyle, heading, para, home, image, id ,coverimage}) => {
   const active = useLocation().pathname;
@@ -15,7 +16,9 @@ const Navbar = ({ mainStyle, heading, para, home, image, id ,coverimage}) => {
 
   const [menueOpen, SetMenueOpen] = useState(false);
   const [isAnimated, setIsAnimated] = useState(false);
-  console.log(coverimage);
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+
 
   useEffect(() => {
     // Handle animation logic
@@ -41,7 +44,19 @@ const Navbar = ({ mainStyle, heading, para, home, image, id ,coverimage}) => {
   }, [menueOpen]);
 
   const [hasLoaded, setHasLoaded] = useState(false);
-
+const fetchSocialLinksb = async () => {
+    try {
+        const response = await fetchSocialLinks();
+        setEmail(response[0]?.email);
+        setPhone(response[0]?.whatsappno);
+        
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
+    };
+    useEffect(() => {
+      fetchSocialLinksb();
+  }, []);
   useEffect(() => {
     // Trigger the loaded class after the page loads
     setHasLoaded(true);
@@ -103,8 +118,9 @@ const Navbar = ({ mainStyle, heading, para, home, image, id ,coverimage}) => {
                 alt="phone Icon"
                 className="md:w-[15px] w-[8px]"
               />
-              <a href="tel:+92 345 3456563" className="xl:text2 text3">
-                +92 345 3456563
+              <a href={`tel: ${phone}`} className="xl:text2 text3">
+                {/* +92 345 3456563 */}
+                {phone}
               </a>
             </div>
             <div
@@ -118,7 +134,7 @@ const Navbar = ({ mainStyle, heading, para, home, image, id ,coverimage}) => {
                 className="md:w-[15px] w-[8px]"
               />
               <a href="mailto:bacremail@gmail.com" className="xl:text2 text3">
-                bacremail@gmail.com
+                {email}
               </a>
             </div>
           </div>

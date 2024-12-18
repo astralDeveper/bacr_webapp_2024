@@ -63,7 +63,7 @@ const { id } = useParams();
     >
       <div className="max-w-[80%] mx-auto">
         <div className="py-8">
-          <img src={IMAGES.BLOG} alt={IMAGES.BLOG} />
+          <img src={blog.imagePath} alt={IMAGES.BLOG} />
         </div>
         <div
     className="blog-description"

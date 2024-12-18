@@ -10,14 +10,16 @@ import { IMAGES } from '../../../utils/Images';
 
 
 
-const CertifiedAchievements = () => {
-  const images = [
-    IMAGES.CERTIFICATE1,
-    IMAGES.CERTIFICATE2,
-    IMAGES.CERTIFICATE3,
-    IMAGES.CERTIFICATE4,
-    IMAGES.CERTIFICATE5,
-  ];
+const CertifiedAchievements = ({certificates}) => {
+console.log(certificates);
+
+  // const images = [
+  //   IMAGES.CERTIFICATE1,
+  //   IMAGES.CERTIFICATE2,
+  //   IMAGES.CERTIFICATE3,
+  //   IMAGES.CERTIFICATE4,
+  //   IMAGES.CERTIFICATE5,
+  // ];
 
   return (
     <section className=" py-6 w-[80%] mx-auto ">
@@ -80,10 +82,10 @@ const CertifiedAchievements = () => {
             }}
             className="mySwiper"
           >
-            {images.map((image, index) => (
+            {certificates.map((image, index) => (
               <SwiperSlide key={index}>
                 <img
-                  src={image}
+                  src={image.imagePath}
                   alt={`Certificate ${index + 1}`}
                   className="w-[300px] md:h-[400px] h-full mx-auto rounded-3xl object-contain shadow-shadow2 md:py-6 py-4 bg-backgroundColor2"
                 />

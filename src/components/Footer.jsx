@@ -12,7 +12,7 @@ import { createSubscriber, fetchSocialLinks } from "../api";
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [instagram, setInstagram] = useState("");
-  const [twitter, setTwitter] = useState("");
+  const [facebook, setFacebook] = useState("");
   const [linkedin, setLinkedin] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [certificate1, setCertificate1] = useState("");
@@ -44,7 +44,7 @@ const fetchSocialLinksb = async () => {
         setCertificate3(response[0]?.certificate3);
         setCertificate4(response[0]?.certificate4);
         setInstagram(response[0]?.instagram);
-        setTwitter(response[0]?.twitter);
+        setFacebook(response[0]?.facebook);
         setLinkedin(response[0]?.linkedin);
         setWhatsapp(response[0]?.whatsapp);
         
@@ -260,8 +260,8 @@ const fetchSocialLinksb = async () => {
                   <a target="_blank" href={linkedin}>
                   <img
                     className="w-7 cursor-pointer"
-                    src={IMAGES.FACEBOOKWHITE}
-                    alt={IMAGES.FACEBOOKWHITE}
+                    src={IMAGES.LINKEDINWHITE}
+                    alt={IMAGES.LINKEDINWHITE}
                   />
                   </a>
                   <a target="_blank" href={instagram}>
@@ -271,11 +271,18 @@ const fetchSocialLinksb = async () => {
                     alt={IMAGES.INSTAWHITE}
                   />
                   </a>
-                  <a target="_blank" href={twitter}>
+                  {/* <a target="_blank" href={fac}>
                   <img
                     className="w-7 cursor-pointer"
                     src={IMAGES.TWITTER}
                     alt={IMAGES.TWITTER}
+                  />
+                  </a> */}
+                  <a target="_blank" href={facebook}>
+                  <img
+                    className="w-7 cursor-pointer"
+                    src={IMAGES.FACEBOOKWHITE}
+                    alt={IMAGES.FACEBOOKWHITE}
                   />
                   </a>
                   <a target="_blank" href={whatsapp}>

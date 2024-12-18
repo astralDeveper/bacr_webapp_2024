@@ -57,6 +57,7 @@ const imageNames = [
   "search",
   "blog",
   "leftarrow",
+  "linkedinwhite",
   "facebookwhite",
   "instawhite",
   "whatsapp",
