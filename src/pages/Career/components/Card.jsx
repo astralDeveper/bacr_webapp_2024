@@ -57,7 +57,7 @@ const CareerCard = () => {
         <div className='grid lg:grid-cols-2 md:grid-cols-1 gap-4' >
             {jobs?.length > 0 &&
             jobs.map((items, ind) => (
-                    <Link to={items._id} >
+                    <Link to={`/apply_now/${items._id}`} >
                         <div id={`ltr-${ind}`} key={ind} className={`ltr ${visibleCards.includes(`ltr-${ind}`) ? "visible" : ""} lg:max-w-md p-6 bg-backgroundColor2 rounded-lg shadow-shadow1 lg:mb-6 mb-2`}>
                             <div className="text-text9 text1 mb-3">
                             {items.type === "fulltime" ? "Full Time" : items.type === "parttime" ? "Part Time" : "Full Time"}

@@ -78,8 +78,8 @@ const SpareParts = ({ products,clickedIndex }) => {
                         <div className="flex items-center justify-between mt-8">
                             <p className="text1 font-semibold">{item.productName}</p>
                             <div className="flex items-center gap-2 text2">
-                                <span>12</span>
-                                <img src={clickedIndex === ind ? item.iconwhite : item.icon} alt="icon" className="w-4" />
+                                {/* <span>{item.quantity}</span> */}
+                                {/* <img src={clickedIndex === ind ? item.iconwhite : item.icon} alt="icon" className="w-4" /> */}
                             </div>
                         </div>
                         <div className="mt-4">
