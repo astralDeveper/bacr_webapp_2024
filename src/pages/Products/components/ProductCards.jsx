@@ -3,7 +3,7 @@ import { IMAGES } from '../../../utils/Images';
 import { Products } from '../../../utils/DummyData';
 import Button from '../../../components/Button';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
-import TabBar from '../../../components/TabBar';
+import TabBarProduct from '../../../components/TabBarProduct';
 import NewProducts from './NewProducts';
 import UsedEquipments from './UsedEquipments';
 import SpareParts from './SpareParts';
@@ -16,8 +16,24 @@ const ProductCards = () => {
     const [capacityOpen, setCapacityOpen] = useState(false);
     const [products, setProducts] = useState([]);
     const [brands, setBrands] = useState([]);
+    const [selectedBrands, setSelectedBrands] = useState([]); 
+    const [filteredProducts, setFilteredProducts] = useState([]);
     const [searchParams] = useSearchParams();
+    const [searchTerm, setSearchTerm] = useState("");
     const navigate = useNavigate();
+    const [selectedCategories, setSelectedCategories] = useState([]);
+    const [selectedCapacities, setSelectedCapacities] = useState([]);
+
+    const handleCapacityChange = (e, capacity) => {
+        if (e.target.checked) {
+            setSelectedCapacities((prev) => [...prev, capacity]);
+        } else {
+            setSelectedCapacities((prev) =>
+                prev.filter((selectedCapacity) => selectedCapacity !== capacity)
+            );
+        }
+    };
+    
     const [clickedIndex, setClickedIndex] = useState(null); // To store the index of the clicked card
 
     const handleClick = (index) => {
@@ -50,10 +66,10 @@ const ProductCards = () => {
         }
     };
 
-    const filteredProducts = Products.filter(productItem => {
-        const brandMatch = brand ? productItem.brands.toLowerCase().includes(brand.toLowerCase()) : true;
-        return brandMatch;
-    });
+    // const filteredProducts = Products.filter(productItem => {
+    //     const brandMatch = brand ? productItem.brands.toLowerCase().includes(brand.toLowerCase()) : true;
+    //     return brandMatch;
+    // });
 
     const [priceRangeOpen, setPriceRangeOpen] = useState(false);
     const [range, setRange] = useState({
@@ -93,11 +109,21 @@ const ProductCards = () => {
     const handleTabChange = (selectedTab) => {
         setTab(selectedTab);
     };
+    const handleSearch = (e) => {
+        const value = e.target.value.toLowerCase();
+        setSearchTerm(value);
+        const filtered = products.filter((product) =>
+          product.name.toLowerCase().includes(value) // Adjust based on the product field
+        );
+        setFilteredProducts(filtered);
+      };
 
     const fetchProductsb = async () => {
     try {
         const response = await fetchProducts();
+        setFilteredProducts(response.products);
         setProducts(response.products);
+
         const responseb = await fetchProdBrands();
         setBrands(responseb);
         const responsec = await fetchCategories();
@@ -109,26 +135,116 @@ const ProductCards = () => {
     useEffect(() => {
       fetchProductsb();
   }, []);
-  useEffect(() => {
-    console.log("Updated products:", products); // Log to see if the products state is set
+  
+const handleCategoryChange = (e, category) => {
+    if (e.target.checked) {
+        setSelectedCategories((prev) => [...prev, category]);
+    } else {
+        setSelectedCategories((prev) =>
+            prev.filter((selectedCategory) => selectedCategory !== category)
+        );
+    }
+};
+const handleBrandSelect = (brandName) => {
+    const updatedSelectedBrands = selectedBrands.includes(brandName)
+      ? selectedBrands.filter((brand) => brand !== brandName)
+      : [...selectedBrands, brandName];
 
-}, [products]);
+    setSelectedBrands(updatedSelectedBrands);
+    filterProducts(searchTerm, updatedSelectedBrands); // Pass current search term and updated selected brands
+  };
+const filterProducts = (searchTerm, selectedBrands) => {
+    let filtered = products;
 
-    useEffect(() => {
-        // URL se `type` parameter ko read karein
-        const type = searchParams.get("type");
-        if (type) {
-            setTab(type);
-        }
-    }, [searchParams]);
+    if (searchTerm) {
+      filtered = filtered.filter((product) =>
+        product.name.toLowerCase().includes(searchTerm)
+      );
+    }
 
-    const product = "product";
+    if (selectedBrands.length > 0) {
+      filtered = filtered.filter((product) =>
+        selectedBrands.includes(product?.brandId?.name)
+      );
+    }
+
+    setFilteredProducts(filtered);
+  };
+  const filterByCapacity = () => {
+    let filtered = products;
+
+    if (selectedCapacities.length > 0) {
+        filtered = filtered.filter((product) =>
+            selectedCapacities.some(
+                (range) => product.capacity >= range.min && product.capacity <= range.max
+            )
+        );
+    }
+    setFilteredProducts(filtered);
+};
+
+const filterByCategory = () => {
+
+    
+    let filtered = products;
+
+    // Search term filter
+    if (searchTerm) {
+        filtered = filtered.filter((product) =>
+            product.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    }
+    
+    // Category filter
+    if (selectedCategories.length >0) {
+        
+        filtered = filtered.filter((product) =>
+            selectedCategories.some((category) =>
+                category.toLowerCase() === product?.categoryId?.name.toLowerCase()
+            )
+        );
+    }
+    
+    setFilteredProducts(filtered);
+
+};
+
+useEffect(() => {
+
+    filterByCategory();
+    const type = searchParams.get("type");
+    
+    if (type) {
+      setTab(type);
+    }
+  }, [searchParams, selectedCategories, products]);
+useEffect(() => {
+
+    filterByCapacity();
+    const type = searchParams.get("type");
+    
+    if (type) {
+      setTab(type);
+    }
+  }, [searchParams,selectedCapacities, products]);
+  const capacityRanges = [
+    { label: "5 to 10 Tons", min: 5000, max: 10000 },
+    { label: "10 to 20 Tons", min: 10000, max: 20000 },
+    { label: "Above 20 Tons", min: 20000, max: Infinity },
+];
 
     return (
 
         <div className='' >
             <div className='mt-8' >
-                <TabBar handleTabChange={handleTabChange} product tab={tab} search tabtext1={"New Products"} tabtext2={"Used Equipments"} tabtext3={"Spare Parts"} setBrand={setBrand} />
+                <TabBarProduct  handleTabChange={handleTabChange}
+        product
+        tab={tab}
+        tabtext1={"New Products"}
+        tabtext2={"Used Equipments"}
+        tabtext3={"Spare Parts"}
+        search
+        setBrand={handleSearch} />
             </div>
             <div className="flex  md:flex-row flex-col mt-4 gap-4 w-full ">
                 {/* Filter Sidebar */}
@@ -148,7 +264,10 @@ const ProductCards = () => {
                             <div className=" space-y-2">
                                 {brands.map((brand, index) => (
                                     <label key={index} className="flex items-center space-x-2">
-                                        <input type="checkbox" className="accent-backgroundColor8 cursor-pointer " />
+                                        <input type="checkbox" className="accent-backgroundColor8 cursor-pointer"
+                                        onChange={() => handleBrandSelect(brand.name)}
+                                        checked={selectedBrands.includes(brand.name)}
+                                        />
                                         <span className='text3'>{brand.name}</span>
                                     </label>
                                 ))}
@@ -168,8 +287,8 @@ const ProductCards = () => {
                         {categoryOpen && (
                             <div className=" space-y-2">
                                 {categories.map((category, index) => (
-                                    <label key={index} className="flex items-center space-x-2">
-                                        <input type="checkbox" className="accent-backgroundColor8" />
+                                    <label key={index} className="flex items-center space-x-2" >
+                                        <input type="checkbox" onChange={(e) => handleCategoryChange(e, category.name)} className="accent-backgroundColor8" />
                                         <span className='text3 '>{category.name}</span>
                                     </label>
                                 ))}
@@ -187,11 +306,12 @@ const ProductCards = () => {
                             <span>{capacityOpen ? '-' : '+'}</span>
                         </button>
                         {capacityOpen && (
-                            <div className=" space-y-2">
-                                {['5 to 10 Tons', '10 to 20 Tons', 'Above 20 Tons'].map((capacity, index) => (
+                            <div className="ml-4 space-y-2">
+                                {capacityRanges?.map((capacity, index) => (
                                     <label key={index} className="flex items-center space-x-2">
-                                        <input type="checkbox" className="accent-backgroundColor8 cursor-pointer " />
-                                        <span className='text3 '>{capacity}</span>
+                                        <input type="checkbox" className="accent-backgroundColor8 cursor-pointer" onChange={(e) => handleCapacityChange(e, capacity)}
+ />
+                                        <span className='text3 '>{capacity.label}</span>
                                     </label>
                                 ))}
                             </div>
@@ -199,7 +319,7 @@ const ProductCards = () => {
                     </div>
 
                     {/* Price Range Section */}
-                    <div className="mt-4">
+                    {/* <div className="mt-4">
                         <button
                             onClick={() => toggleSections('priceRange')}
                             className="w-full text-left flex justify-between items-center mb-2"
@@ -221,7 +341,7 @@ const ProductCards = () => {
                                 </select> */}
 
                                 {/* Range slider */}
-                                <div className="range-slider flex items-center flex-col gap-4 ">
+                                {/* <div className="range-slider flex items-center flex-col gap-4 ">
                                     <input
                                         type="range"
                                         id="minRange"
@@ -240,32 +360,32 @@ const ProductCards = () => {
                                         onChange={(e) => setMaxValue(e.target.value)}
                                         className="w-full accent-backgroundColor5"
                                     />
-                                </div>
+                                </div> */}
 
                                 {/* Display min and max values */}
-                                <div className="flex gap-2 flex-col">
+                                {/* <div className="flex gap-2 flex-col">
                                     <span className='border p-2 text2 rounded-lg'>{`RS.${range.minValue?.toLocaleString()}`}</span>
                                     <span className='border p-2 text2 rounded-lg'>{`RS.${range.maxValue?.toLocaleString()}`}</span>
                                 </div>
                             </div>
                         )}
-                    </div>
+                    </div> */}
                 </div>
                 {/* Product Cards */}
                 <div className="flex justify-center items-center mx-auto w-full">
                     {
                         tab == "new" && (
-                            <NewProducts products={products} clickedIndex={clickedIndex} />
+                            <NewProducts products={filteredProducts} clickedIndex={clickedIndex} />
                         )
                     }
                     {
                         tab == "used" && (
-                            <UsedEquipments products={products} clickedIndex={clickedIndex} />
+                            <UsedEquipments products={filteredProducts} clickedIndex={clickedIndex} />
                         )
                     }
                     {
                         tab == "spareParts" && (
-                            <SpareParts products={products} clickedIndex={clickedIndex} />
+                            <SpareParts products={filteredProducts} clickedIndex={clickedIndex} />
                         )
                     }
                 </div>

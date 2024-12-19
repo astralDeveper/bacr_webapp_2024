@@ -43,10 +43,10 @@ const filteredProjects = projects?.filter(project => project.category === catego
     <div>
       <div className="bg-Navbar">
         <div className="w-[80%] mx-auto py-8">
-          <div className={`w-full  ${filteredProjects.length > 0 ?"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5":""}`}>
-            {filteredProjects.length > 0 ? (
+          <div className={`w-full  ${filteredProjects && filteredProjects.length > 0 ?"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5":""}`}>
+            {filteredProjects && filteredProjects?.length > 0 ? (
             <>
-            {filteredProjects.map((item, ind) => {
+            {filteredProjects?.map((item, ind) => {
               return (
                 <div
                   key={ind}
@@ -58,8 +58,8 @@ const filteredProjects = projects?.filter(project => project.category === catego
                   <div className="relative">
                     <img
                       className="w-full h-[180px] rounded-t-2xl object-cover group-transition group-duration-300 group-ease-in-out group-hover:scale-110 group-hover:duration-200"
-                      src={item?.image ? item?.image : IMAGES.THUMBNAIL}
-                      alt={item.image}
+                      src={item?.mainimage ? item?.mainimage : IMAGES.THUMBNAIL}
+                      alt={item.name}
                       draggable={false}
                     />
 
@@ -72,8 +72,8 @@ const filteredProjects = projects?.filter(project => project.category === catego
                     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex items-center justify-center bg-white rounded-xl shadow-black shadow-xs">
                       <img
                         className="rounded-lg p-2 object-contain w-[50px] h-[50px]"
-                        src={item.logo}
-                        alt={item.logo}
+                        src={item?.logo ? item?.logo : IMAGES.THUMBNAIL}
+                        alt={item?.name}
                         draggable={false}
                       />
                     </div>

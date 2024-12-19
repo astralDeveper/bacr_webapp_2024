@@ -14,29 +14,28 @@ const GallettiProducts = () => {
 const fetchBrand = async () => {
     try {
         const response = await fetchProdBrandById(id);
-        setBrand(response);    
+        const brands = response ? response : [];
+         setBrand(brands); 
         const responseb = await fetchthreeProducts(id);
-        setProducts(responseb);    
+        const brandsb = responseb ? responseb : [];
+        setProducts(brandsb);    
            
     } catch (error) {
         console.error("Error fetching products:", error);
     }
     };
-console.log(products);
 
     useEffect(() => {
         fetchBrand();
       }, [id]);
   return (
     <InfoPage
-    coverimage={brand?.coverimage}
-      heading={brand?.name}
-      brandsLink={brand?.website}
+    coverimage={brand && brand?.coverimage ? brand && brand?.coverimage : null}
+      heading={brand && brand?.name ? brand && brand?.name : "" }
       children={
         <div className='md:w-[80%] w-[90%] mx-auto my-16 p-2'>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-4">
-            {products?.length > 0 &&
-          products?.map((item, ind) => (
+            {products && products?.length > 0 && products?.map((item, ind) => (
               <div
                 key={ind}
                 id={`card-${ind}`} // Set unique id for each card
@@ -46,8 +45,8 @@ console.log(products);
                 <div className="relative">
                   <img
                     className="w-full h-[180px] rounded-t-2xl object-cover"
-                    src={item?.imagePath}
-                    alt={item?.imagePath}
+                    src={item?.imagePath ? item?.imagePath : IMAGES.THUMBNAIL}
+                    alt={item?.name}
                     draggable={false}
                   />
 
@@ -67,18 +66,17 @@ console.log(products);
                   </div>
                 </div>
                 <p className="pl-3 w-[100%] mx-auto rounded-xl text-black md:mt-8 mt-4 heading7 font-semibold">
-                  {item.name}
+                  {item?.name}
                 </p>
                 <div className="p-3 bg-BackgroundColor1">
                   <p className="text-text6 text3 text-start">
                     {item?.detail?.slice(0, 90)}...
                   </p>
                   <div className="mt-6 flex items-center justify-center  rounded-md">
-                    <Link to={"/services-detail"} className="w-full" >
+                    <Link to={`/detail/${item._id}`} className="w-full" >
                       <Button
                         btnStyle="bg-backgroundColor1 w-full rounded-md text2 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 lg:font-semibold "
                         title={"Learn More"}
-                        onclick={() => { setTitle(item.text) }}
                       />
                     </Link>
                   </div>

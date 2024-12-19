@@ -254,7 +254,7 @@ const fetchSocialLinksb = async () => {
               {/* social media links start here  */}
               <div>
                 <h2 className="font-semibold py-3 text2 text-backgroundColor2 footer-item cursor-default">
-                  Join US
+                  JOIN US
                 </h2>
                 <div className="flex items-center justify-start gap-2 footer-item">
                   <a target="_blank" href={linkedin}>

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Products } from "../../../utils/DummyData";
-import { Link } from "react-router-dom";
-import Button from "../../../components/Button";
+import React, { useEffect, useState } from 'react'
+import { Products } from '../../../utils/DummyData'
+import { Link } from 'react-router-dom'
+import Button from '../../../components/Button'
+import { IMAGES } from '../../../utils/Images'
 
 const NewProducts = ({ products, clickedIndex }) => {
   const [visibleCards, setVisibleCards] = useState([]);
