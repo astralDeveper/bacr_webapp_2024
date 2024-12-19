@@ -72,7 +72,7 @@ const NewProducts = ({ products,clickedIndex }) => {
                             : "bg-backgroundColor9"
                             } cursor-pointer ${visibleCards.includes(`pcard-${ind}`) ? "visible" : ""
                             } `}
-                        onClick={() => handleClick(ind)}
+                        // onClick={() => handleClick(ind)}
                     >
                         <img
                             src={item.imagePath}

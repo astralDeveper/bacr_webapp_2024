@@ -1,6 +1,7 @@
 import React from 'react'
 import { processCooling } from '../../../utils/DummyData'
 import { IMAGES } from '../../../utils/Images'
+import BookingForm from '../../Home/Components/BookingForm'
 
 const ProcessCoolong = () => {
     return (
@@ -65,6 +66,7 @@ const ProcessCoolong = () => {
                     </p>
                 </div>
             </div>
+            <BookingForm title="Book an Appointment" id="bookingForm" />
         </div>
     )
 }

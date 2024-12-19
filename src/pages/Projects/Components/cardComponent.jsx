@@ -3,13 +3,14 @@ import Button from "../../../components/Button";
 import { projectCardData } from "../../../utils/DummyData";
 import { useEffect, useState } from "react";
 import Modal from '../Components/Modal'
+import { IMAGES } from "../../../utils/Images";
 
 const ProjectsCardComponent = ({projects,category }) => {
   const navigation = useNavigate();
 const [visibleCards, setVisibleCards] = useState([]);
+const [id,setId]=useState("");
 const [isModalOpen, setIsModalOpen] = useState(false)
 const filteredProjects = projects?.filter(project => project.category === category);
-
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,28 +34,31 @@ const filteredProjects = projects?.filter(project => project.category === catego
       cards.forEach((card) => observer.unobserve(card));
     };
   }, [projects,category]);
-  const handleModal=()=>{
-    console.log("Test");
-    setIsModalOpen(!isModalOpen)
+  const handleModal=(id)=>{
+    console.log("TEST MODAL");
+    setId(id);
+    setIsModalOpen(!isModalOpen);
   }
   return (
     <div>
       <div className="bg-Navbar">
         <div className="w-[80%] mx-auto mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className={`w-full  ${filteredProjects.length > 0 ?"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5":""}`}>
+            {filteredProjects.length > 0 ? (
+            <>
             {filteredProjects.map((item, ind) => {
               return (
                 <div
                   key={ind}
                   id={`card-${ind}`}
-                  className={`rounded-lg card  shadow-md flex flex-col ${
+                  className={`rounded-lg card group shadow-md flex flex-col ${
                     visibleCards.includes(`card-${ind}`) ? "visible" : "" 
                   } `}
                 >
                   <div className="relative">
                     <img
-                      className="w-full h-[180px] rounded-t-2xl object-cover"
-                      src={item.image}
+                      className="w-full h-[180px] rounded-t-2xl object-cover group-transition group-duration-300 group-ease-in-out group-hover:scale-110 group-hover:duration-200"
+                      src={item?.image ? item?.image : IMAGES.THUMBNAIL}
                       alt={item.image}
                       draggable={false}
                     />
@@ -81,7 +85,7 @@ const filteredProjects = projects?.filter(project => project.category === catego
                     </p>
 
                     <p className="text-text6 text3 ">
-                      {item.description}
+                      {item?.description}
                     </p>
                     <div className="md:mt-4 mt-2 flex items-center justify-center  rounded-md">
                       <div className=" w-full">
@@ -93,10 +97,11 @@ const filteredProjects = projects?.filter(project => project.category === catego
                           
                         </Link> */}
                         <Button
-                          btnStyle="bg-backgroundColor1 w-full  text2 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 lg:font-semibold "
+                          btnStyle="bg-backgroundColor1 w-full  text2 text-backgroundColor6 lg:font-semibold "
                           title="Learn More"
-                          onclick={() => { setIsModalOpen(!isModalOpen) }}
-                          // onClick={() => handleModal}
+                          // onclick={() => { setIsModalOpen(!isModalOpen) }}
+                          // onClick={()=>handleModal}
+                          onclick={()=>handleModal(item._id)}
                         />
                       </div>
                     </div>
@@ -104,11 +109,20 @@ const filteredProjects = projects?.filter(project => project.category === catego
                 </div>
               );
             })}
+            </>
+            ):(
+            <div className="w-full">
+              <p className=" w-[100%] mx-auto rounded-xl md:py-4 py-2  text-black text1 text-center">
+              No product found
+            </p>
+            </div>
+            )
+              }
           </div>
         </div>
       </div>
       {isModalOpen && (
-                          <Modal setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
+                          <Modal setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} id={id} />
                       )
                   }
     </div>

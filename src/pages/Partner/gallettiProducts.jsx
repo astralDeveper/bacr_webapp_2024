@@ -9,11 +9,9 @@ const GallettiProducts = () => {
   const [brand, setBrand] = useState([]);
 
 const fetchBrand = async () => {
-        
     try {
         const response = await fetchProdBrandById(id);
-        setBrand(response);     
-           console.log(response);
+        setBrand(response);    
            
     } catch (error) {
         console.error("Error fetching products:", error);
@@ -25,8 +23,8 @@ const fetchBrand = async () => {
       }, [id]);
   return (
     <InfoPage
-    coverimage={brand.coverimage}
-      heading={brand.name}
+    coverimage={brand?.coverimage}
+      heading={brand?.name}
       children={
         <div className='md:w-[80%] w-[90%] mx-auto my-16 p-2'>
           {/* <p className='text-text9 heading7'>
@@ -54,7 +52,7 @@ const fetchBrand = async () => {
             and efficiency, offering tailored solutions for a variety of
             commercial and industrial applications.
           </p> */}
-          {brand.details}
+          {brand?.details}
         </div>
       }
     ></InfoPage>

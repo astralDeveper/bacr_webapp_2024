@@ -1,6 +1,7 @@
 import React from 'react'
 import { comfortCooling, turnkeyProjects } from '../../../utils/DummyData'
 import { IMAGES } from '../../../utils/Images'
+import BookingForm from '../../Home/Components/BookingForm'
 
 const TurnkeyProjects = () => {
   return (
@@ -65,6 +66,7 @@ const TurnkeyProjects = () => {
             </p>
         </div>
     </div>
+    <BookingForm title="Book an Appointment" id="bookingForm" />
 </div>
   )
 }

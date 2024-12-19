@@ -1,6 +1,7 @@
 import React from 'react'
 import { IMAGES } from '../../../utils/Images'
 import { comfortCooling, operationMaintenance } from '../../../utils/DummyData'
+import BookingForm from '../../Home/Components/BookingForm'
 
 const OperationMaintenance = () => {
     return (
@@ -65,6 +66,7 @@ const OperationMaintenance = () => {
                     </p>
                 </div>
             </div>
+            <BookingForm title="Book an Appointment" id="bookingForm" />
         </div>
     )
 }

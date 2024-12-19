@@ -57,7 +57,7 @@ backed by industry-leading partners.">
                         return (
                             <div id={`trustCard-${ind}`}
                                 key={ind}
-                                className={`trustCard rounded-3xl overflow-hidden shadow-shadow1 flex flex-col ${visibleCards.includes(`trustCard-${ind}`) ? "visible" : ""}`}
+                                className={`trustCard group rounded-3xl overflow-hidden shadow-shadow1 flex flex-col ${visibleCards.includes(`trustCard-${ind}`) ? "visible" : ""}`}
                             >
                                 {/* button content start here */}
                                 <div className="relative p-4">
@@ -77,10 +77,11 @@ backed by industry-leading partners.">
                                 {/* button content start here */}
 
                                 <div className="bg-BackgroundColor1 px-4">
-                                    <div className=" bg-backgroundColor13 mt-2 flex items-center justify-center px-4 py-16 rounded-3xl">
+                                    <div className="  mt-2 flex items-center justify-center px-4 py-6 rounded-3xl">
                                         <img
-                                            className=" h-[60px] object-contain"
-                                            src={item.image}
+                                            // className=" h-[60px] object-contain"
+                                            className="w-full h-[180px] rounded-t-2xl object-cover group-transition group-duration-300 group-ease-in-out group-hover:scale-110 group-hover:duration-200"
+                                            src={item?.image ? item?.image : IMAGES.THUMBNAIL}
                                             alt={item.name}
                                             draggable={false}
                                         />
@@ -88,7 +89,7 @@ backed by industry-leading partners.">
                                     <p className="text-text6 text-sm mt-4">{item.description}</p>
                                     <Link to={`/brand/${item._id}`} className="flex items-center justify-center w-full mb-4">
                                         <Button
-                                            btnStyle="bg-backgroundColor1 rounded-md mt-4 w-full text1 text-backgroundColor6 group-hover:bg-backgroundColor2 group-hover:text-backgroundColor1 lg:font-semibold "
+                                            btnStyle="bg-backgroundColor1 rounded-md mt-4 w-full text1 text-backgroundColor6 lg:font-semibold "
                                             title={"Learn More"}
                                         />
                                     </Link>

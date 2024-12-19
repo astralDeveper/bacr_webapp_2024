@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { AboutCardData } from "../../../utils/DummyData";
 import { fetchTeams } from "../../../api";
+import { IMAGES } from "../../../utils/Images";
 
 const AboutCard = () => {
 
@@ -65,7 +66,7 @@ const AboutCard = () => {
                 <div className=" flex items-center justify-center ">
                   <img
                     className=" object-contain"
-                    src={item.imagePath}
+                    src={item?.imagePath ? item?.imagePath : IMAGES.THUMBNAIL}
                     alt={item.img}
                     draggable={false}
                   />

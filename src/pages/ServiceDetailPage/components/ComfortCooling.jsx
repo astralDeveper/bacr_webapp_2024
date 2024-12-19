@@ -1,6 +1,7 @@
 import React from 'react'
 import { comfortCooling } from '../../../utils/DummyData'
 import { IMAGES } from '../../../utils/Images'
+import BookingForm from '../../Home/Components/BookingForm'
 
 const ComfortCooling = () => {
     return (
@@ -71,6 +72,7 @@ const ComfortCooling = () => {
                     </p>
                 </div>
             </div>
+            <BookingForm title="Book an Appointment" id="bookingForm" />
         </div>
     )
 }

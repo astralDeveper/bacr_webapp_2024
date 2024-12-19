@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { IMAGES } from "../../../utils/Images";
+import Button from "../../../components/Button";
 export default function CompanyProfile(props) {
   const { title, subTitle, CompanyProfileData } = props;
 
@@ -29,6 +31,15 @@ export default function CompanyProfile(props) {
   }, []);
 
 
+  const onButtonClick = () => {
+    const pdfUrl = "/profile/BacrProfile.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Company_Profile.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
 
 
@@ -40,7 +51,7 @@ export default function CompanyProfile(props) {
 
 
   return (
-    <section className="max-w-[80%] mx-auto p-6 my-6 ">
+    <section className="max-w-[80%] mx-auto ">
       <div className="flex flex-col justify-center items-center text- mb-6">
         {/* <div className="text-sm text-[#ee8c33] font-light">{subTitle}</div> */}
 
@@ -48,7 +59,7 @@ export default function CompanyProfile(props) {
           {title}
         </h2>
         {CompanyProfileData.map((item, ind) => (
-          <div  className={``}>
+          <div className={``}>
             <p className="text-[13px] lg:text-[14px] text-[#000] font-light mx-auto md:mb-4 mb-2">
               {item.ProfileDes}
             </p>
@@ -60,6 +71,11 @@ export default function CompanyProfile(props) {
             ))}
           </div>
         ))}
+        <div className="bg-backgroundColor1 flex items-center    md:pr-8 pr-2  rounded-lg "  >
+          <Button onclick={onButtonClick} title={"Download Company Profile PDF"} btnStyle="text-backgroundColor2 text3 font-semibold" onClick={onButtonClick} />
+          {/* <Button onclick={onButtonClick} title={"Download Company Profile PDF"} btnStyle="text-backgroundColor2 text3 font-semibold" onClick={onButtonClick} /> */}
+          <img src={IMAGES.DOWNLOADPDF} alt="load" className="md:w-[24px] w-[18px]" />
+        </div>
       </div>
     </section>
   );

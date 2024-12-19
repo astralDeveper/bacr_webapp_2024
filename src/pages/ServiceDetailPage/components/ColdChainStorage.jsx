@@ -1,6 +1,7 @@
 import React from 'react'
 import { IMAGES } from '../../../utils/Images'
 import { comfortCooling } from '../../../utils/DummyData'
+import BookingForm from '../../Home/Components/BookingForm'
 
 const ColdChainStorage = () => {
     return (
@@ -71,6 +72,8 @@ const ColdChainStorage = () => {
                     </p>
                 </div>
             </div>
+            <BookingForm title="Book an Appointment" id="bookingForm" />
+            
         </div>
     )
 }

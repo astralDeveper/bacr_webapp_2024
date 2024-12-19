@@ -4,7 +4,7 @@ import { IMAGES } from '../../utils/Images'
 import { address } from '../../utils/DummyData'
 import Button from '../../components/Button'
 import { Link } from 'react-router-dom'
-import { fetchContacts, fetchSocialLinks } from '../../api'
+import { createContact, fetchContacts, fetchSocialLinks } from '../../api'
 
 const ContactUs = () => {
     const [address1, setAddress1] = useState("");
@@ -23,33 +23,54 @@ const ContactUs = () => {
     const [email, setEmail] = useState("");
     const [telephone2, setTelephone2] = useState("");
     const [whatsappno, setWhatsappno] = useState("");
+    const [FormData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+      });
     const [visibleCards, setVisibleCards] = useState([]);
     const [visibleText, setVisibleText] = useState([]);
 const fetchContactsb = async () => {
     try {
         const response = await fetchSocialLinks();
-        setWhatsappno(response[0].whatsappno);     
-        setTelephone1(response[0].telephone1);
-        setTelephone2(response[0].telephone2);
-        setEmail(response[0].email);
-        setAddress1(response[0].address1);
-        setAddress1url(response[0].address1url);
-        setAddress1head(response[0].address1head);
-        setAddress2(response[0].address2);
-        setAddress2url(response[0].address2url);
-        setAddress2head(response[0].address2head);
-        setAddress3(response[0].address3);
-        setAddress3url(response[0].address3url);
-        setAddress3head(response[0].address3head);
-        setAddress4(response[0].address4);
-        setAddress4url(response[0].address4url);
-        setAddress4head(response[0].address4head);
+        setWhatsappno(response[0]?.whatsappno ?? "");     
+        setTelephone1(response[0]?.telephone1 ?? "");
+        setTelephone2(response[0]?.telephone2 ?? "");
+        setEmail(response[0]?.email ?? "");
+        setAddress1(response[0]?.address1 ?? "");
+        setAddress1url(response[0]?.address1url ?? "");
+        setAddress1head(response[0]?.address1head ?? "");
+        setAddress2(response[0]?.address2 ?? "");
+        setAddress2url(response[0]?.address2url ?? "");
+        setAddress2head(response[0]?.address2head ?? "");
+        setAddress3(response[0]?.address3 ?? "");
+        setAddress3url(response[0]?.address3url ?? "");
+        setAddress3head(response[0]?.address3head ?? "");
+        setAddress4(response[0]?.address4 ?? "");
+        setAddress4url(response[0]?.address4url ?? "");
+        setAddress4head(response[0]?.address4head ?? "");
         
            
     } catch (error) {
         console.error("Error fetching products:", error);
     }
     };
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...FormData, [name]: value });
+      };
+
+    const handleSubmit=async(e)=>{
+        e.preventDefault();
+       await createContact(FormData)
+       setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+      })
+    }
     useEffect(() => {
       fetchContactsb();
   }, []);
@@ -131,25 +152,25 @@ const fetchContactsb = async () => {
                             transform: 'translateY(20px)',  // Initially positioned below
                         }}
                         className='border md:p-6 p-2 rounded-2xl shadow-shadow2 md:mt-0 mt-2' >
-                        <form
-
-                            className='flex items-center flex-col justify-center md:gap-10 gap-4 w-full ' >
-                            <input type="text" placeholder='Your Name' className='border placeholder:text1 placeholder:text-text8 w-full md:py-3 py-2 md:px-2 px-1 border-text8 rounded-full outline-none' autoComplete={false} />
+                        <form onSubmit={handleSubmit} className='flex items-center flex-col justify-center md:gap-10 gap-4 w-full ' >
+                            <input value={FormData.name} name="name" onChange={handleChange} type="text" placeholder='Your Name' className='border placeholder:text1 placeholder:text-text8 w-full md:py-3 py-2 md:px-2 px-1 border-text8 rounded-full outline-none' autoComplete={false} />
                             <div className='grid lg:grid-cols-2 sm:grid-cols-1 items-center gap-4 w-full' >
-                                <input type="text" placeholder='Phone no' className='border placeholder:text1 placeholder:text-text8 w-full md:py-3 py-2 md:px-2 px-1 border-text8 rounded-full outline-none' autoComplete={false} />
-                                <input type="text" placeholder='Email' className='border placeholder:text1 placeholder:text-text8 w-full md:py-3 py-2 md:px-2 px-1 border-text8 rounded-full outline-none' autoComplete={false} />
+                                <input onChange={handleChange} name="phone" value={FormData.phone} type="text" placeholder='Phone no' className='border placeholder:text1 placeholder:text-text8 w-full md:py-3 py-2 md:px-2 px-1 border-text8 rounded-full outline-none' autoComplete={false} />
+                                <input onChange={handleChange} name="email" type="text" value={FormData.email} placeholder='Email' className='border placeholder:text1 placeholder:text-text8 w-full md:py-3 py-2 md:px-2 px-1 border-text8 rounded-full outline-none' autoComplete={false} />
                             </div>
-                            <textarea placeholder='Message (Option)' className='border placeholder:text1 placeholder:text-text8 w-full md:p-6 p-4 border-text8 md:h-[170px] h-[120px] rounded-2xl outline-none' autoComplete={false} ></textarea>
+                            <textarea onChange={handleChange} name="message" value={FormData.message} placeholder='Message (Option)' className='border placeholder:text1 placeholder:text-text8 w-full md:p-6 p-4 border-text8 md:h-[170px] h-[120px] rounded-2xl outline-none' autoComplete={false} ></textarea>
                             <Button title={"Send Message"} btnStyle={"bg-backgroundColor1 heading7 text-backgroundColor2 lg:w-[310px] md:w-[200px] sm:w-[180px] w-full rounded-lg "} />
                         </form>
                     </div>
                 </div>
 
                 <div className='lg:mt-20 md-mt-10 mt-6 grid lg:grid-cols-2 md:grid-cols-1 lg:gap-20 md:gap-10 gap-4 items-center'>
-                    <div id='ltr' className={` w-full ltr ${visibleCards.includes(`ltr`) ? "visible" : ""}`}>
+                    {/* <div id='ltr' className={` w-full ltr ${visibleCards.includes(`ltr`) ? "visible" : ""}`}>
                         <img src="https://www.thestatesman.com/wp-content/uploads/2020/04/googl_ED.jpg" alt="MAp" className='h-full border rounded-md shadow-shadow1 border-backgroundColor5' />
+                    </div> */}
+<div id='ltr' className={` w-full h-full ltr ${visibleCards.includes(`ltr`) ? "visible" : ""}`}>
+                        <img src="https://www.thestatesman.com/wp-content/uploads/2020/04/googl_ED.jpg" alt="MAp" className='h-full object-cover border w-full rounded-md shadow-shadow1 border-backgroundColor5' />
                     </div>
-
                     <div className='lg:w-[80%] flex flex-col justify-center'>
                         <p className='heading5' >Addresses</p>
 
@@ -166,30 +187,28 @@ address.map((item, ind) => (
                         } */}
 <div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
                                     <p className='heading7 font-bold text-text8'>{address1head}</p>
-                                    <p className='text2 text-text9 cursor-pointer '>{address1}</p>
                                     <Link to={address1url}>
-                                        <p className='text1 text-text8 cursor-pointer '>{address1url}</p>
+                                    <p className='text2 text-text9 cursor-pointer '>{address1}</p>
+                                    
                                     </Link>
+                                        {/* <p className='text1 text-text8 cursor-pointer '>{address1url}</p> */}
                                 </div>
 <div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
                                     <p className='heading7 font-bold text-text8'>{address2head}</p>
-                                    <p className='text2 text-text9 cursor-pointer '>{address2}</p>
                                     <Link to={address2url}>
-                                        <p className='text1 text-text8 cursor-pointer '>{address2url}</p>
+                                    <p className='text2 text-text9 cursor-pointer '>{address2}</p>
                                     </Link>
                                 </div>
 <div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
                                     <p className='heading7 font-bold text-text8'>{address3head}</p>
-                                    <p className='text2 text-text9 cursor-pointer '>{address3}</p>
                                     <Link to={address3url}>
-                                        <p className='text1 text-text8 cursor-pointer '>{address3url}</p>
+                                    <p className='text2 text-text9 cursor-pointer '>{address3}</p>
                                     </Link>
                                 </div>
 <div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
                                     <p className='heading7 font-bold text-text8'>{address4head}</p>
-                                    <p className='text2 text-text9 cursor-pointer '>{address4}</p>
                                     <Link to={address4url}>
-                                        <p className='text1 text-text8 cursor-pointer '>{address4url}</p>
+                                    <p className='text2 text-text9 cursor-pointer '>{address4}</p>
                                     </Link>
                                 </div>
                     </div>

@@ -161,7 +161,15 @@ export const editTeam = async (formData,editTeamId) => {
     throw error;
   }
 };
-
+export const addJob = async (formData) => {
+  try {
+    const response = await api.post("/add-jobapp", formData);
+    return response.data;
+  } catch (error) {
+   
+    throw error;
+  }
+};
 export const fetchJobs = async () => {
   try {
     const response = await api.get("/jobs");
