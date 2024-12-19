@@ -47,42 +47,21 @@ const ApplyNowCard = () => {
           </div>
         ))} */}
             <h1 className="heading6  text-text4">Requirements</h1>
+            <ul className="list-disc pl-5">
         {job?.requirements?.split(",").map((items, ind) => (
-          <div key={ind}>
-            {console.log(items)}
-            <p className="text2  text-text9">{items}</p>
+          
+           <li key={ind}> {items}</li>
 
-            {/* {items.Description.map((item, i) => (
-              <div className="flex items-center py-2 gap-3" key={i}>
-                <img
-                  className="lg:w-4 md:w-3 sm:w-2 w-2 object-contain"
-                  src={item.img}
-                  alt={item.img}
-                />
-                <p className="text2  text-text9">{items.trim()}</p>
-              </div>
-            ))} */}
-          </div>
         ))}
+        </ul>
 
 <h1 className="heading6  text-text4">Responsibilities</h1>
+<ul className="list-disc pl-5">
         {job?.responsb?.split(",").map((items, ind) => (
-          <div key={ind}>
-            <p className="text2  text-text9">{items}</p>
-
-            {/* {items.Description.map((item, i) => (
-              <div className="flex items-center py-2 gap-3" key={i}>
-                <img
-                  className="lg:w-4 md:w-3 sm:w-2 w-2 object-contain"
-                  src={item.img}
-                  alt={item.img}
-                />
-                <p className="text2  text-text9">{items.trim()}</p>
-              </div>
-            ))} */}
-          </div>
+            <li>{items}</li>
         ))}
-      </div>
+        </ul>
+    </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Products } from '../../../utils/DummyData'
 import { Link } from 'react-router-dom'
 import Button from '../../../components/Button'
+import { IMAGES } from '../../../utils/Images'
 
 const NewProducts = ({ products,clickedIndex }) => {
 
@@ -75,7 +76,7 @@ const NewProducts = ({ products,clickedIndex }) => {
                         // onClick={() => handleClick(ind)}
                     >
                         <img
-                            src={item.imagePath}
+                            src={item.imagePath ? item.imagePath :IMAGES.THUMBNAIL}
                             alt={item.name}
                             className="w-[150px] h-auto mb-4 mx-auto"
                         />

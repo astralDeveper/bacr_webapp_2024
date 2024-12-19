@@ -113,7 +113,7 @@ const filteredProjects = projects?.filter(project => project.category === catego
             ):(
             <div className="w-full">
               <p className=" w-[100%] mx-auto rounded-xl md:py-4 py-2  text-black text1 text-center">
-              No product found
+              No project found
             </p>
             </div>
             )
