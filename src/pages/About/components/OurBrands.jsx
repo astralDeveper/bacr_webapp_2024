@@ -42,7 +42,7 @@ export default function OurBrands(props) {
           return () => {
               cards.forEach((card) => observer.unobserve(card));
           };
-      }, []);
+      }, [brands]);
 
   return (
     <section className="max-w-[80%] mx-auto px-6 py-8">
