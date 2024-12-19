@@ -58,8 +58,8 @@ const filteredProjects = projects?.filter(project => project.category === catego
                   <div className="relative">
                     <img
                       className="w-full h-[180px] rounded-t-2xl object-cover group-transition group-duration-300 group-ease-in-out group-hover:scale-110 group-hover:duration-200"
-                      src={item?.image ? item?.image : IMAGES.THUMBNAIL}
-                      alt={item.image}
+                      src={item?.mainimage ? item?.mainimage : IMAGES.THUMBNAIL}
+                      alt={item.name}
                       draggable={false}
                     />
 
@@ -73,7 +73,7 @@ const filteredProjects = projects?.filter(project => project.category === catego
                       <img
                         className="rounded-lg p-2 object-contain w-[50px] h-[50px]"
                         src={item?.logo ? item?.logo : IMAGES.THUMBNAIL}
-                        alt={item?.logo}
+                        alt={item?.name}
                         draggable={false}
                       />
                     </div>
