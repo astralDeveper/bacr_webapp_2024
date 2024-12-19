@@ -9,7 +9,6 @@ const CardComponent = () => {
   }
 
 
-
   const [visibleCards, setVisibleCards] = useState([]);
 
   useEffect(() => {
@@ -34,9 +33,6 @@ const CardComponent = () => {
       cards.forEach((card) => observer.unobserve(card));
     };
   }, []);
-
-
-
 
   return (
     <>

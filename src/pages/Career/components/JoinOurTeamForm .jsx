@@ -1,11 +1,59 @@
 import React, { useEffect, useState } from "react";
 import Button from "../../../components/Button";
 import { IMAGES } from "../../../utils/Images";
+import { createCareer, fetchDepartments } from "../../../api";
 
 const JoinOurTeamForm = () => {
     const [visibleCards, setVisibleCards] = useState([]);
     const [visibleText, setVisibleText] = useState([]);
+    const [dep, setDep] = useState([]);
+    const [formData, serformData]=useState({
+        name:"",
+        phone:"",
+        email:"",
+        department:"",
+        resume: null,
+    });
 
+    const handleChange = (e) => {
+        const { name, value, type, files } = e.target;
+        serformData({
+          ...formData,
+          [name]: type === "file" ? files[0] : value, // Store the file if input type is file
+        });
+      };
+
+      const handleSubmit = async(e) => {
+        e.preventDefault();
+        const data = new FormData();
+          data.append("name", formData.name);
+          data.append("phone", formData.phone);
+          data.append("email", formData.email);
+          data.append("department", formData.department);
+          data.append("resume", formData.resume);
+        await createCareer(data);
+        serformData({
+            name:"",
+            phone:"",
+            email:"",
+            department:"",
+            resume: null,
+        });
+      };
+    
+    
+    const fetchDepartmentsb = async () => {
+        try {
+            const response = await fetchDepartments();
+            setDep(response);
+            
+        } catch (error) {
+            console.error("Error fetching products:", error);
+        }
+        };
+    useEffect(() => {
+        fetchDepartmentsb();
+      }, []);
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -42,7 +90,7 @@ const JoinOurTeamForm = () => {
             <h2 className="heading6 text-backgroundColor2 text-center font-semibold">
                 Join Our Team
             </h2>
-            <form className="w-full">
+            <form onSubmit={handleSubmit} className="w-full">
                 <div className="mb-2">
                     <label htmlFor="name" className="text-backgroundColor2 text1 font-semiBold">
                         Name
@@ -50,6 +98,9 @@ const JoinOurTeamForm = () => {
                     <input
                         type="text"
                         id="name"
+                        name="name"
+                        onChange={handleChange}
+                        value={formData.name}
                         placeholder="Your name"
                         className="block w-full py-2 pl-4 lg:p-[16px] mt-1 rounded-lg focus:outline-none placeholder:text2 placeholder:text-text10 text2 "
                     />
@@ -61,6 +112,9 @@ const JoinOurTeamForm = () => {
                     <input
                         type="tel"
                         id="phone"
+                        name="phone"
+                        onChange={handleChange}
+                        value={formData.phone}
                         placeholder="Your phone number"
                         className="block w-full py-2 pl-4 lg:p-[16px] mt-1 rounded-lg outline-none placeholder:text2 placeholder:text-text10 text2 "
                     />
@@ -72,6 +126,9 @@ const JoinOurTeamForm = () => {
                     <input
                         type="email"
                         id="email"
+                        name="email"
+                        onChange={handleChange}
+                        value={formData.email}
                         placeholder="Your email"
                         className="block w-full py-2 pl-4 lg:p-[16px] mt-1 rounded-lg outline-none placeholder:text2 placeholder:text-text10 text2 "
                     />
@@ -84,20 +141,27 @@ const JoinOurTeamForm = () => {
                         Department
                     </label>
                     <select
+                        onChange={handleChange}
+                        value={formData.department}
                         id="department"
+                        name="department"
                         className="block w-[100%] lg:p-[16px] mt-1 rounded-lg outline-none placeholder:text1 placeholder:text-text10 text1 "
-                    >
-                        <option>Choose department</option>
-                        <option>Development</option>
+                        >
+                        <option >Select Department</option>
+                        {dep.map((item, index) => (
+                            <>
+                            <option key={index} value={item?._id}>{item?.name}</option>
+                            </>
+                            ))}
+                            {/* <option>Development</option>
                         <option>Marketing</option>
-                        <option>HR</option>
+                        <option>HR</option> */}
                     </select>
                 </div>
                 <div className="mb-2">
                     <label
                         htmlFor="upload-cv"
-                        className="text-backgroundColor2 text1 font-semiBold"
-                    >
+                        className="text-backgroundColor2 text1 font-semiBold">
                         Upload CV
                     </label>
                     <div className="bg- rounded-lg p-2 text-center bg-backgroundColor2 mt-1">
@@ -123,6 +187,9 @@ const JoinOurTeamForm = () => {
                             className="sr-only"
                             id="fileInput"
                             accept=".pdf"
+                            name="resume"
+                            onChange={handleChange}
+
                         />
                     </div>
 

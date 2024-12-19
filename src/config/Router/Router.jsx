@@ -20,6 +20,7 @@ import Carrier from "../../pages/Partner/carrier";
 import York from "../../pages/Partner/york";
 import Echochillers from "../../pages/Partner/echochillers";
 import Trane from "../../pages/Partner/trane";
+import ApplyNow from "../../pages/ApplyNow";
 
 export const router = createBrowserRouter([
   {
@@ -109,6 +110,14 @@ export const router = createBrowserRouter([
   {
     path: "/trane",
     element: <Trane />,
+  },
+  {
+    path: "/apply_now",
+    element: <ApplyNow />,
+  },
+  {
+    path: "/apply_now/:id",
+    element: <ApplyNow />,
   },
   {
     path: "/brands",

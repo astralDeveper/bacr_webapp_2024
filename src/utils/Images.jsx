@@ -7,6 +7,7 @@ const imageNames = [
   "logowhite",
   "phone",
   "mail",
+  "thumbnail",
   "arrowdown",
   "facebook",
   "insta",

@@ -179,10 +179,28 @@ export const fetchJobs = async () => {
     throw error;
   }
 };
+export const fetchthreeProducts = async (id) => {
+  try {
+    const response = await api.get(`/threeproducts/${id}`);
+    return response.data.products;
+  } catch (error) {
+    console.error("Error fetching jobs:", error);
+    throw error;
+  }
+};
 
 export const fetchJobById = async (id) => {
   try {
     const response = await api.get(`/job/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching job:", error);
+    throw error;
+  }
+};
+export const fetchJobByIdFront = async (id) => {
+  try {
+    const response = await api.get(`/job-front/${id}`);
     return response.data;
   } catch (error) {
     console.error("Error fetching job:", error);
