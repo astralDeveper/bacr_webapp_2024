@@ -7,7 +7,7 @@ const TurnkeyProjects = () => {
   return (
     <div className="w-full py-14">
       <div className="relative max-w-[80%] mx-auto">
-        <img src={IMAGES.SERVICEFOUR} alt={IMAGES.SERVICEFOUR} />
+        {/* <img src={IMAGES.SERVICEFOUR} alt={IMAGES.SERVICEFOUR} /> */}
         <div className="py-8">
           <h1 className="heading1 py-2">
           Seamless Turnkey Solutions: From Design to Commissioning

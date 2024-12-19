@@ -7,7 +7,7 @@ const ColdChainStorage = () => {
   return (
     <div className="w-full py-14">
       <div className="relative max-w-[80%] mx-auto">
-        <img src={IMAGES.SERVICETHREE} alt={IMAGES.SERVICETHREE} />
+        {/* <img src={IMAGES.SERVICETHREE} alt={IMAGES.SERVICETHREE} /> */}
         <div className="py-8">
           <h1 className="heading1 py-2">Welcome to BAC Cold Chain Solutions</h1>
           <p className="text1 text-text7 text-justify">

@@ -191,7 +191,9 @@ const imageNames = [
   "qualityicon",
   "pricing",
   "labor",
-  "spareparts"
+  "spareparts",
+  "mission",
+  "vision"
 
 
 

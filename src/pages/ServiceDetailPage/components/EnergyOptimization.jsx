@@ -7,7 +7,7 @@ const EnergyOptimization = () => {
   return (
     <div className="w-full py-14">
       <div className="relative max-w-[80%] mx-auto">
-        <img src={IMAGES.SERVICEFIVE} alt={IMAGES.SERVICEFIVE} />
+        {/* <img src={IMAGES.SERVICEFIVE} alt={IMAGES.SERVICEFIVE} /> */}
         <div className="py-8">
           <h1 className="heading1 py-2">
             We provide professional Industrial process Annual Maintenance as per

@@ -7,7 +7,7 @@ const ComfortCooling = () => {
     return (
         <div className="w-full py-14">
             <div className="relative max-w-[80%] mx-auto">
-                <img src={IMAGES.SERVICEONE} alt={IMAGES.SERVICEONE} />
+                {/* <img src={IMAGES.SERVICEONE} alt={IMAGES.SERVICEONE} /> */}
                 <div className="py-0">
                     <h1 className="heading1 py-2">
                         Welcome to BAC Comfort Cooling Solutions

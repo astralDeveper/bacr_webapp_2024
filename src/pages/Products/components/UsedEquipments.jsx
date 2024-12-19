@@ -59,7 +59,8 @@ useEffect(() => {
     }, [products]);
 
     return (
-        <div className=''>
+        <div className='w-full'>
+        {currentProducts && currentProducts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
                 {currentProducts.map((item, ind) => (
                     <div
@@ -112,7 +113,16 @@ useEffect(() => {
                     </div>
                 ))}
             </div>
+              ) : (
+                <div>
+                  <p className="w-[100%] mx-auto rounded-xl md:py-4 py-2 text-black text1 text-center">
+                    No Product Found
+                  </p>
+                </div>
+              )}
             {/* Pagination */}
+            {currentProducts && currentProducts.length > 0 && (
+
       <div className="flex justify-center mt-6">
              {currentProducts.length > 0 && 
         <ul className="flex gap-2">
@@ -163,6 +173,7 @@ useEffect(() => {
         </ul>
              }
         </div>
+            )}
         </div>
     )
 }

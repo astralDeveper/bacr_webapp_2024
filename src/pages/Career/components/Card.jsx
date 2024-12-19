@@ -53,9 +53,16 @@ const CareerCard = () => {
         };
     }, [jobs]);
     return (
+<div className='w-full '>
 
+<div className='flex-col justify-start'>
+            <p className='heading2'>Opportunities At BACR</p>
+            <p className='text6'>Join Our Dynamic Team Dedicated to Innovation, Collaboration, and Excellence. Explore Open Positions and Play a Vital Role in Shaping the Future of Air Conditioning Solutions.</p>
+            </div>
+            <p className='heading3 mt-12'>Current Job Openings</p>
         <div className='grid lg:grid-cols-2 md:grid-cols-1 gap-4' >
-            {jobs?.length > 0 &&
+            
+            {jobs?.length > 0 ?
             jobs.map((items, ind) => (
                     <Link to={`/apply_now/${items._id}`} >
                         <div id={`ltr-${ind}`} key={ind} className={`ltr ${visibleCards.includes(`ltr-${ind}`) ? "visible" : ""} lg:max-w-md p-6 bg-backgroundColor2 rounded-lg shadow-shadow1 lg:mb-6 mb-2`}>
@@ -74,7 +81,16 @@ const CareerCard = () => {
                         </div>
                     </Link>
                 ))
+                :
+                (
+                    <div className='w-full'>
+          <p className="w-[100%] rounded-xl  h-screen text-black text1">
+            No Vacancy Available
+          </p>
+        </div>
+                )
             }
+        </div>
         </div>
     )
 }

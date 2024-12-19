@@ -7,7 +7,7 @@ const ProcessCoolong = () => {
   return (
     <div className="w-full py-14">
       <div className="relative max-w-[80%] mx-auto">
-        <img src={IMAGES.COMFORT1} alt={IMAGES.COMFORT1} />
+        {/* <img src={IMAGES.SERVICETWO} alt={IMAGES.SERVICETWO} /> */}
         <div className="py-8">
           <h1 className="heading1 py-2">
             Welcome to BAC Process Cooling Solutions

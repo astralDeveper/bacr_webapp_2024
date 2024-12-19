@@ -931,12 +931,12 @@ of mind for your HVAC needs.`,
 ];
 export const OverviewData = [
   {
-    img: IMAGES.BULB,
+    img: IMAGES.VISION,
     name: "Our Vision",
     para: `At Brothers Air Conditioning, we aim to be the preferred choice for reliable and cost effective HVACR solutions, addressing every need and challenge with excellence.`,
   },
   {
-    img: IMAGES.BULB,
+    img: IMAGES.MISSION,
     name: "Our Mission",
     para: `Our mission is to create a comfortable, efficient and healthy environment by consistently delivering high quality services that enhance the well being and productivity of our clients regardless of climate or conditions.
 `,

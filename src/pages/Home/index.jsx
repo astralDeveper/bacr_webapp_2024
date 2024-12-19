@@ -88,7 +88,7 @@ culpa ut irure nisi occaecat dolore adipisicing do pariatur."
         card={TrustUsCardData}
         carouselCard={TrustUsCarouselCardData}
       />
-      <div className="-translate-y-20">
+      <div className="-translate-y-[200px]">
         <OurBlog
           title="Our Blogs"
           subTitle="Blogs"

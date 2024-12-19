@@ -34,9 +34,9 @@ export default function OurProducts(props) {
   }, []);
 
   return (
-    <section className="w-[80%] mx-auto px-6 py-12">
+    <section className="w-[80%] mx-auto py-6">
       <div className="flex flex-col justify-center items-center text-center mb-6">
-        <h2 className="my-4 outfit-font text-[18px] sm:text-[26px] lg:text-[34px] font-semibold text-[#000] leading-0">
+        <h2 className="my-2 outfit-font text-[18px] sm:text-[26px] lg:text-[34px] font-semibold text-[#000] leading-0">
           {title}
         </h2>
       </div>

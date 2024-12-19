@@ -126,7 +126,7 @@ const fetchSocialLinksb = async () => {
                           return (
                             <div key={ind}>
                               <Link to={`${items.href}?type=${items.link}`}>
-                                <li className="text2 py-1 cursor-pointer hover:underline footer-item">
+                                <li className="text2  cursor-pointer hover:underline footer-item">
                                   {items.link}
                                 </li>
                               </Link>

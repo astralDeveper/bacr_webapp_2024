@@ -51,7 +51,7 @@ const [blogs, setBlogs] = useState([]);
   return (
     <section className="md:w-[80%] w-[98%] mx-auto ">
       <div className="flex flex-col items-center justify-center">
-        <h2 className="outfit-font heading6 font-semibold mb-4 text-[#000]">
+        <h2 className="outfit-font heading5 font-bold text-center text-black py-6">
           {title}
         </h2>
         {/* <p className="text1 text-[#000] font-light mx-auto md:w-[60%] mb-3 text-center">{para}</p> */}
