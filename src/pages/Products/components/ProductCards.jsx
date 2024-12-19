@@ -130,7 +130,7 @@ const ProductCards = () => {
             <div className='mt-8' >
                 <TabBar handleTabChange={handleTabChange} product tab={tab} search tabtext1={"New Products"} tabtext2={"Used Equipments"} tabtext3={"Spare Parts"} setBrand={setBrand} />
             </div>
-            <div className="flex md:flex-row flex-col mt-4 gap-4  ">
+            <div className="flex  md:flex-row flex-col mt-4 gap-4 w-full ">
                 {/* Filter Sidebar */}
                 <div className="xl:w-1/6 md:w-1/6 h-fit bg-backgroundColor2 p-4 border rounded-2xl shadow-md">
                     <h2 className="text2 font-bold mb-4">Filters</h2>
@@ -141,11 +141,11 @@ const ProductCards = () => {
                             onClick={() => toggleSection('brands')}
                             className="w-full text-left flex justify-between items-center mb-2"
                         >
-                            <span className="text2 font-bold">Brands</span>
+                            <span className="text2">Brands</span>
                             <span>{brandsOpen ? '-' : '+'}</span>
                         </button>
                         {brandsOpen && (
-                            <div className="ml-4 space-y-2">
+                            <div className=" space-y-2">
                                 {brands.map((brand, index) => (
                                     <label key={index} className="flex items-center space-x-2">
                                         <input type="checkbox" className="accent-backgroundColor8 cursor-pointer " />
@@ -162,11 +162,11 @@ const ProductCards = () => {
                             onClick={() => toggleSection('category')}
                             className="w-full text-left flex justify-between items-center mb-2"
                         >
-                            <span className="text2 font-bold">Category</span>
+                            <span className="text2">Category</span>
                             <span>{categoryOpen ? '-' : '+'}</span>
                         </button>
                         {categoryOpen && (
-                            <div className="ml-4 space-y-2">
+                            <div className=" space-y-2">
                                 {categories.map((category, index) => (
                                     <label key={index} className="flex items-center space-x-2">
                                         <input type="checkbox" className="accent-backgroundColor8" />
@@ -183,11 +183,11 @@ const ProductCards = () => {
                             onClick={() => toggleSection('capacity')}
                             className="w-full text-left flex justify-between items-center mb-2"
                         >
-                            <span className="text2 font-bold">Capacity</span>
+                            <span className="text2">Capacity</span>
                             <span>{capacityOpen ? '-' : '+'}</span>
                         </button>
                         {capacityOpen && (
-                            <div className="ml-4 space-y-2">
+                            <div className=" space-y-2">
                                 {['5 to 10 Tons', '10 to 20 Tons', 'Above 20 Tons'].map((capacity, index) => (
                                     <label key={index} className="flex items-center space-x-2">
                                         <input type="checkbox" className="accent-backgroundColor8 cursor-pointer " />
@@ -204,11 +204,11 @@ const ProductCards = () => {
                             onClick={() => toggleSections('priceRange')}
                             className="w-full text-left flex justify-between items-center mb-2"
                         >
-                            <span className="text2 font-bold">Price Range</span>
+                            <span className="text2">Price Range</span>
                             <span>{priceRangeOpen ? '-' : '+'}</span>
                         </button>
                         {priceRangeOpen && (
-                            <div className="ml-4 space-y-4">
+                            <div className=" space-y-4">
                                 {/* Dropdown for predefined ranges */}
                                 {/* <select
                                     className="w-full border rounded-lg p-2"
@@ -252,7 +252,7 @@ const ProductCards = () => {
                     </div>
                 </div>
                 {/* Product Cards */}
-                <div className="">
+                <div className="flex justify-center items-center mx-auto w-full">
                     {
                         tab == "new" && (
                             <NewProducts products={products} clickedIndex={clickedIndex} />

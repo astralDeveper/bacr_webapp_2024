@@ -34,7 +34,7 @@ export default function BookingForm(props) {
 
 
   return (
-    <section id={id} className="md:w-[80%] mx-auto p-6 ">
+    <section id={id} className="md:w-[80%] mx-auto pb-10">
       <div className="border rounded-md bg-[#D8EEFB] md:px-6 px-2 md:py-8 py-4">
         <h4 className="text-[18px] text-[#000] font-medium leading-none ">
           {title}

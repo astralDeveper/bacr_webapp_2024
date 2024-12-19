@@ -59,6 +59,7 @@ const SpareParts = ({ products,clickedIndex }) => {
     return (
         <div className=''>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+                
                 {currentProducts.map((item, ind) => (
                     <div
                         id={`pcard-${ind}`}
@@ -109,6 +110,7 @@ const SpareParts = ({ products,clickedIndex }) => {
                         </div>
                     </div>
                 ))}
+                
             </div>
              {/* Pagination */}
       <div className="flex justify-center mt-6">

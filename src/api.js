@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Base URL configuration
 const api = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: "http://192.168.100.61:3000/api",
 });
 
 // Function to create a product
@@ -31,7 +31,7 @@ export const fetchProducts = async () => {
 };
 export const fetchProductsHome = async () => {
   try {
-    const response = await api.get("/products?page=1&limit=4");
+    const response = await api.get("/products?page=1&limit=3");
     return response.data;
   } catch (error) {
     console.error("Error fetching products:", error);

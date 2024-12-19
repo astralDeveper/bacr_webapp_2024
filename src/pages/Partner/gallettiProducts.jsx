@@ -31,6 +31,7 @@ console.log(products);
     <InfoPage
     coverimage={brand?.coverimage}
       heading={brand?.name}
+      brandsLink={brand?.website}
       children={
         <div className='md:w-[80%] w-[90%] mx-auto my-16 p-2'>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-4">

@@ -41,12 +41,9 @@ export default function OurPartner(props) {
           <Link target="_blank" to={item.href} key={ind}>
             <div
               id={`pimage-${ind}`}
-              className={`pimage border h-full min-h-[50px] lg:px-16 px-8 group rounded-md hover:bg-backgroundColor1 hover:transition-colors duration-200 delay-75 ease-linear mx-auto flex items-center relative 
-              ${
-                visibleCards.includes(`pimage-${ind}`)
-                  ? "animate-fadeInUp"
-                  : "opacity-0"
-              }`}
+              className={` border h-full min-h-[50px] lg:px-16 px-8 group rounded-md hover:bg-backgroundColor1 hover:transition-colors duration-200 delay-75 ease-linear mx-auto flex items-center relative 
+              
+              `}
             >
               {/* Image */}
               <img

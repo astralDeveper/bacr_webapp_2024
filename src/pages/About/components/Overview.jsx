@@ -20,7 +20,7 @@ export default function Overview(props) {
   };
 
   return (
-    <section className="w-[80%] mx-auto p-4 ">
+    <section className="w-[80%] mx-auto py-4 ">
       <div className="flex items-center justify-center flex-col overflow-hidden">
         <div className="py-0 overflow-hidden w-full">
           {/* <div className="text-sm text-[#ee8c33] font-light">{subTitle}</div> */}
@@ -33,71 +33,70 @@ export default function Overview(props) {
           {para}
         </p>
       </div>
-      <div className="grid md:grid-cols-2 md:gap-6 gap-4 overflow-hidden mt-6">
-        <div className="relative w-full h-[100%]">
-          {/* Video */}
-          <video
-            ref={videoRef}
-            poster="/images/Background.png"
-            src="/images/brothers.mp4" // Your video file
-            className="w-full h-full object-cover rounded-lg"
-            onPause={() => setIsPlaying(false)} // Pause event
-            onPlay={() => setIsPlaying(true)} // Play event
-          ></video>
+      <div className="grid md:grid-cols-2 md:gap-6 gap-4 overflow-hidden mt-6 ">
+  {/* Left Video Section */}
+  <div className="relative w-full h-auto flex-1">
+    <video
+      ref={videoRef}
+      poster="/images/Background.png"
+      src="/images/brothers.mp4" // Your video file
+      className="w-full h-full object-cover rounded-lg"
+      onPause={() => setIsPlaying(false)} // Pause event
+      onPlay={() => setIsPlaying(true)} // Play event
+    ></video>
 
-          {/* Play Button - Show only when video is paused */}
-          {!isPlaying && (
-            <button
-              onClick={handleVideoClick}
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 
-                     z-10 focus:outline-none"
-            >
-              <img
-                src="/images/playbutton.png" // Custom Play Button Image
-                alt="Play"
-                className="w-[90px] rounded-full shadow-xl shadow-backgroundColor1 animate-pulse hover:scale-110 transition-transform duration-300"
-              />
-            </button>
-          )}
+    {/* Play Button - Show only when video is paused */}
+    {!isPlaying && (
+      <button
+        onClick={handleVideoClick}
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 focus:outline-none"
+      >
+        <img
+          src="/images/playbutton.png" // Custom Play Button Image
+          alt="Play"
+          className="w-[90px] rounded-full shadow-xl shadow-backgroundColor1 animate-pulse hover:scale-110 transition-transform duration-300"
+        />
+      </button>
+    )}
 
-          {/* Invisible Overlay to Pause Video */}
-          {isPlaying && (
-            <div
-              className="absolute inset-0 cursor-pointer"
-              onClick={handleVideoClick} // Pause video when overlay is clicked
-            ></div>
-          )}
+    {/* Invisible Overlay to Pause Video */}
+    {isPlaying && (
+      <div
+        className="absolute inset-0 cursor-pointer"
+        onClick={handleVideoClick} // Pause video when overlay is clicked
+      ></div>
+    )}
+  </div>
+
+  {/* Right Cards Section */}
+  <div className="flex flex-col justify-between gap-4 ">
+    {card.map((item, ind) => (
+      <div
+        key={ind}
+        style={{
+          animation: `slideRtl 2s ease-out forwards`,
+          animationDelay: `${ind * 0.2}s`,
+          opacity: 0,
+          transform: 'translateY(20px)',
+        }}
+        className="flex flex-col sm:flex-row shadow-xl bg-[#004671] rounded-md p-5 h-[48%]" // Adjust height
+      >
+        <div className="size-5 p-4 rounded-full  bg-white transition-all duration-500">
+          <img src={item.img} className=" " />
         </div>
-
-
-
-        <div className="flex gap-4 flex-col ">
-          {card.map((item, ind) => (
-            <div
-              style={{
-                animation: `slideRtl 2s ease-out forwards`,
-                animationDelay: `${ind * 0.2}s`,  // Delay based on index
-                opacity: 0,  // Initially invisible
-                transform: 'translateY(20px)',  // Initially positioned below
-              }}
-              className="flex flex-col sm:flex-row shadow-xl min-h-[130px] md:gap-4 gap-2 bg-[#004671] rounded-md p-5">
-              <div className="">
-                <div className=" w-[50px] h-[50px] p-4 rounded-full border flex justify-center items-center bg-[#fff] transition-all duration-500  relative bg-cover bg-center bg-no-repeat">
-                  <img src={item.img} className="object-fill w-[20px] " />
-                </div>
-              </div>
-              <div className="col-span-10 flex flex-col justify-center ">
-                <h4 className="text2 text-[#fff] font-medium leading-none text-justify">
-                  {item.name}
-                </h4>
-                <p className="text3 text-[#fff] font-light pt-2 text-justify">
-                  {item.para}
-                </p>
-              </div>
-            </div>
-          ))}
+        <div className="flex flex-col justify-center ml-4">
+          <h4 className="text2 text-[#fff] font-medium leading-none">
+            {item.name}
+          </h4>
+          <p className="text3 text-[#fff] font-light pt-4">
+            {item.para}
+          </p>
         </div>
       </div>
+    ))}
+  </div>
+</div>
+
     </section>
   );
 }

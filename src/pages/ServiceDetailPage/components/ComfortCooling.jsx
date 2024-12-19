@@ -7,12 +7,12 @@ const ComfortCooling = () => {
     return (
         <div className="w-full py-14">
             <div className="relative max-w-[80%] mx-auto">
-                <img src={IMAGES.COMFORT1} alt={IMAGES.COMFORT1} />
-                <div className="py-8">
+                <img src={IMAGES.SERVICEONE} alt={IMAGES.SERVICEONE} />
+                <div className="py-0">
                     <h1 className="heading1 py-2">
                         Welcome to BAC Comfort Cooling Solutions
                     </h1>
-                    <p className="text1 text-text7">
+                    <p className="text1 text-text7 text-justify">
                         At BAC, we specialize in delivering cutting-edge Comfort Cooling
                         solutions for HVACR chillers and equipment, ensuring optimal
                         performance and enhanced comfort in diverse environments. With a
@@ -24,7 +24,7 @@ const ComfortCooling = () => {
                 </div>
                 <div className="py-6">
                     <h1 className="heading1 py-2">Your Comfort, Our Mission</h1>
-                    <p className="text1 text-text7">
+                    <p className="text1 text-text7 text-justify">
                         Upgrading your existing air conditioning system to more
                         energy-efficient models, helping you save on energy bills and
                         reduce your carbon footprint Lubrication of moving parts,
@@ -33,10 +33,10 @@ const ComfortCooling = () => {
                 </div>
                 <div className="w-[100%] grid md:grid-cols-2 grid-cols-1 place-items-center items-center justify-center gap-4 py-4">
                     {comfortCooling.map((item, index) => (
-                        <div className='p-4'>
+                        <div className='py-4 '>
                             <div>
                                 <img
-                                    className="rounded-xl font-semibold object-contain md:w-[748px] w-[500px] h-[463px]"
+                                    className=" object-cover md:w-[748px] w-[500px]  h-[300px]"
                                     src={item.img}
                                     alt={item.img}
                                 />
@@ -45,7 +45,7 @@ const ComfortCooling = () => {
                                 <h1 className="heading5 lg:w-full md:w-[80%] md:line-clamp-1 ">
                                     {item.title}
                                 </h1>
-                                <p className="text1 font-poppins font-bold  text-text7">
+                                <p className="text1 font-poppins text-justify text-text7 line-clamp-4">
                                     {item.para}
                                 </p>
                             </div>
@@ -54,7 +54,7 @@ const ComfortCooling = () => {
                 </div>
                 <div className="py-8">
                     <h1 className="heading4">HVAC Systems</h1>
-                    <p className="text1 text-text7">
+                    <p className="text1 text-text7 text-justify">
                         We prioritize customer satisfaction above all else, striving to
                         exceed expectations at every step of the process. From initial
                         consultation to ongoing support, our dedicated team is committed
@@ -62,7 +62,7 @@ const ComfortCooling = () => {
                         experience for our clients.
                     </p>
                     <br />
-                    <p className="text1 text-text7">
+                    <p className="text1 text-text7 text-justify ">
                         At BAC, we are committed to sustainability and environmental
                         responsibility. Our cooling solutions are designed to minimize
                         environmental impact while maximizing energy efficiency. By

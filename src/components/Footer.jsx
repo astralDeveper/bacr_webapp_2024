@@ -86,7 +86,7 @@ const fetchSocialLinksb = async () => {
           <div className="text-backgroundColor2 flex justify-between xl:items-end lg:items-end items-center lg:flex-row flex-col md:gap-2  w-full  ">
             <Link to={"/"}>
               <img
-                className="md:w-40 w-20"
+                className="md:w-20 w-12"
                 src={IMAGES.LOGOWHITE}
                 alt={IMAGES.LOGOWHITE}
               />
@@ -120,7 +120,7 @@ const fetchSocialLinksb = async () => {
                 {ServicesLinks.map((item, i) => {
                   return (
                     <div key={i}>
-                      <h2 className="font-bold text2 py-2 underline footer-item">{item.heading}</h2>
+                      <h2 className="font-bold text2 py-2 underline footer-item cursor-default">{item.heading}</h2>
                       <ul className="border-backgroundColor2">
                         {item.links.map((items, ind) => {
                           return (
@@ -146,7 +146,7 @@ const fetchSocialLinksb = async () => {
               {ProductsLinks.map((item, i) => {
                 return (
                   <div key={i}>
-                    <h2 className="font-bold py-2 underline text2 footer-item">{item.heading}</h2>
+                    <h2 className="font-bold py-2 underline text2 footer-item cursor-default">{item.heading}</h2>
                     <ul className=" border-backgroundColor2">
                       {item.links.map((items, ind) => {
                         return (
@@ -171,13 +171,13 @@ const fetchSocialLinksb = async () => {
               {ProjectsLinks.map((item, i) => {
                 return (
                   <div key={i}>
-                    <h2 className="font-bold py-2 underline text2 footer-item">{item.heading}</h2>
+                    <h2 className="font-bold py-2 underline text2 footer-item cursor-default">{item.heading}</h2>
                     <ul className=" border-backgroundColor2">
                       {item.links.map((items, ind) => {
                         return (
                           <div key={ind}>
                             <Link to={`${items.href}?type=${items.type}`}>
-                              <li className="text2 py-1 cursor-pointer hover:underline footer-item">
+                              <li className="text2  cursor-pointer hover:underline footer-item">
                                 {items.link}
                               </li>
                             </Link>
@@ -217,7 +217,7 @@ const fetchSocialLinksb = async () => {
               Thanks for subscribe</h2>
                    } 
               <div className="mt-4 overflow-y-hidden footer-item">
-                <h2 className="font-semibold pb-3 text2 text-backgroundColor2">
+                <h2 className="font-semibold pb-3 text2 text-backgroundColor2 cursor-default">
                   CERTIFICATES
                 </h2>
                 <div className="flex items-center gap-2">
@@ -253,7 +253,7 @@ const fetchSocialLinksb = async () => {
               </div>
               {/* social media links start here  */}
               <div>
-                <h2 className="font-semibold py-3 text2 text-backgroundColor2 footer-item">
+                <h2 className="font-semibold py-3 text2 text-backgroundColor2 footer-item cursor-default">
                   Join US
                 </h2>
                 <div className="flex items-center justify-start gap-2 footer-item">

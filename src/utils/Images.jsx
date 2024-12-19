@@ -188,6 +188,10 @@ const imageNames = [
   "coldchain2",
   "coldchain3",
   "coldchain4",
+  "qualityicon",
+  "pricing",
+  "labor",
+  "spareparts"
 
 
 

@@ -42,7 +42,7 @@ const filteredProjects = projects?.filter(project => project.category === catego
   return (
     <div>
       <div className="bg-Navbar">
-        <div className="w-[80%] mx-auto mt-8">
+        <div className="w-[80%] mx-auto py-8">
           <div className={`w-full  ${filteredProjects.length > 0 ?"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5":""}`}>
             {filteredProjects.length > 0 ? (
             <>
@@ -51,7 +51,7 @@ const filteredProjects = projects?.filter(project => project.category === catego
                 <div
                   key={ind}
                   id={`card-${ind}`}
-                  className={`rounded-lg card group shadow-md flex flex-col ${
+                  className={`rounded-lg card group shadow-md flex overflow-hidden flex-col ${
                     visibleCards.includes(`card-${ind}`) ? "visible" : "" 
                   } `}
                 >
@@ -113,7 +113,7 @@ const filteredProjects = projects?.filter(project => project.category === catego
             ):(
             <div className="w-full">
               <p className=" w-[100%] mx-auto rounded-xl md:py-4 py-2  text-black text1 text-center">
-              No product found
+              No Project Found
             </p>
             </div>
             )

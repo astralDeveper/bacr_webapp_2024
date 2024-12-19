@@ -2,7 +2,6 @@ import { IMAGES } from "./Images";
 
 console.log(IMAGES?.CEO);
 
-
 export const navManue = [
   {
     title: "Home",
@@ -92,7 +91,6 @@ export const comfortCooling = [
   },
 ];
 
-
 export const coldChainStorage = [
   {
     img: IMAGES.COLDCHAIN1,
@@ -115,12 +113,6 @@ export const coldChainStorage = [
     para: "Whether you need short-term storage or long-term preservation, Brothers Air Conditioning ensures your products remain in optimal condition. Our commitment provides peace of mind to clients who require the highest level of precision and care in handling their sensitive goods.",
   },
 ];
-
-
-
-
-
-
 
 export const processCooling = [
   {
@@ -253,15 +245,6 @@ export const troubleshooting = [
   },
 ];
 
-
-
-
-
-
-
-
-
-
 export const Products = [
   {
     brands: "Flakt Group",
@@ -373,7 +356,6 @@ export const Products = [
     iconwhite: IMAGES.ICONWHITE,
     id: 9,
   },
-
 ];
 
 export const contactUs = [
@@ -387,12 +369,14 @@ export const contactUs = [
 export const address = [
   {
     title: "Head Office",
-    addtess: "Suite # 404, 4th Floor, Tahir Plaza Plot No. A-20 K, C.H.S.U Block 7/8 Karachi, Pakistan",
+    addtess:
+      "Suite # 404, 4th Floor, Tahir Plaza Plot No. A-20 K, C.H.S.U Block 7/8 Karachi, Pakistan",
     // Location: "https://maps.app.goo.gl/yeykrWDyro7mf6dD7"
   },
   {
     title: "U.A.E Office",
-    addtess: "Office # 110, Al Sheikha Mahara Ahmed, Al Ghurair Building, Al Nadha Road, Al Qusais 2, Dubai, UAE",
+    addtess:
+      "Office # 110, Al Sheikha Mahara Ahmed, Al Ghurair Building, Al Nadha Road, Al Qusais 2, Dubai, UAE",
     // Location: "https://maps.app.goo.gl/ULnFdAwMAY4WHwrG9"
   },
   {
@@ -554,28 +538,28 @@ export const careerCardData = [
     jobTitle: "HVAC Technician",
     jobDescription:
       "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification.",
-      link:"/apply_now"
+    link: "/apply_now",
   },
   {
     jobType: "Full Time/Part Time",
     jobTitle: "HVAC Technician",
     jobDescription:
       "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification.",
-      link:"/apply_now"
+    link: "/apply_now",
   },
   {
     jobType: "Full Time/Part Time",
     jobTitle: "HVAC Technician",
     jobDescription:
       "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification.",
-      link:"/apply_now"
+    link: "/apply_now",
   },
   {
     jobType: "Full Time/Part Time",
     jobTitle: "HVAC Technician",
     jobDescription:
       "Responsible for installing, maintaining, and repairing HVAC systems while ensuring safety standards and customer satisfaction. Requires troubleshooting skills and HVAC certification.",
-      link:"/apply_now"
+    link: "/apply_now",
   },
 ];
 
@@ -635,8 +619,9 @@ export const serviceCardData = [
     image: IMAGES.SERVICEONE,
     text: "Comfort Cooling",
     logo: IMAGES.SERVICELOGOONE,
-    description: "Our comprehensive comfort cooling solutions designed for residential, commercial, and institutional applications ensure.",
-    id: 1
+    description:
+      "Our comprehensive comfort cooling solutions designed for residential, commercial, and institutional applications ensure.",
+    id: 1,
   },
   {
     image: IMAGES.SERVICETWO,
@@ -644,7 +629,7 @@ export const serviceCardData = [
     logo: IMAGES.SERVICELOGOTWO,
     description:
       "Maintain optimal conditions for your industrial processes and equipment with our specialized process cooling systems.",
-    id: 2
+    id: 2,
   },
   {
     image: IMAGES.SERVICETHREE,
@@ -652,7 +637,7 @@ export const serviceCardData = [
     logo: IMAGES.SERVICELOGOTHREE,
     description:
       "We offer a wide range of high-quality new and used chillers to meet your specific cooling needs, ensuring both cost-effi...",
-    id: 3
+    id: 3,
   },
   {
     image: IMAGES.SERVICEFOUR,
@@ -660,7 +645,7 @@ export const serviceCardData = [
     logo: IMAGES.SERVICELOGOFOUR,
     description:
       "Experience seamless turnkey solutions from design to commissioning, ensuring optimal performance and timely completion.",
-    id: 4
+    id: 4,
   },
   {
     image: IMAGES.SERVICEFIVE,
@@ -668,7 +653,7 @@ export const serviceCardData = [
     logo: IMAGES.SERVICELOGOFIVE,
     description:
       "Maximize efficiency with our energy optimization services, designed to reduce costs and enhance performance.",
-    id: 5
+    id: 5,
   },
   {
     image: IMAGES.SERVICESIX,
@@ -676,7 +661,7 @@ export const serviceCardData = [
     logo: IMAGES.SERVICELOGOSIX,
     description:
       "Ensure peak performance with our comprehensive operation and maintenance services, designed to keep your systems running smoothly and efficiently.",
-    id: 6
+    id: 6,
   },
   {
     image: IMAGES.SERVICESEVEN,
@@ -684,7 +669,7 @@ export const serviceCardData = [
     logo: IMAGES.SERVICELOGOSEVEN,
     description:
       "Get expert troubleshooting, programming, and configuration services to ensure your systems run flawlessly and efficiently.",
-    id: 7
+    id: 7,
   },
 ];
 
@@ -695,7 +680,7 @@ export const brandsCardData = [
       "With a rich legacy spanning a century, Galletti brings unparalleled expertise to the HVAC industry. ...",
     image: IMAGES.BRANDONE,
     tickImg: IMAGES.AUTH_TICK,
-    link: "/brands/galleti"
+    link: "/brands/galleti",
   },
   {
     name: "Flakt Group",
@@ -703,7 +688,7 @@ export const brandsCardData = [
       "FläktGroup is a leading global provider of energy-efficient indoor air technology solutions, special...",
     image: IMAGES.BRANDTWO,
     tickImg: IMAGES.AUTH_TICK,
-    link: "/flakt"
+    link: "/flakt",
   },
   {
     name: "Carrier",
@@ -711,7 +696,7 @@ export const brandsCardData = [
       "Discover an extensive range of services tailored to suit the diverse needs of our valued clients at ...",
     image: IMAGES.BRANDTHREE,
     tickImg: IMAGES.AUTH_TICK,
-    link: "/brands/carrier"
+    link: "/brands/carrier",
   },
   {
     name: "York",
@@ -719,7 +704,7 @@ export const brandsCardData = [
       "Brothers Air Conditioning offers an extensive array of services tailored to meet the diverse needs o...",
     image: IMAGES.BRANDFOUR,
     tickImg: IMAGES.AUTH_TICK,
-    link: "/brands/york"
+    link: "/brands/york",
   },
   {
     name: "Echochillers",
@@ -727,7 +712,7 @@ export const brandsCardData = [
       "Based in the USA, Eco Chillers Inc sets the standard for excellence in HVAC solutions. Compliant wit...",
     image: IMAGES.BRANDFIVE,
     tickImg: IMAGES.AUTH_TICK,
-    link: "/brands/echochillers"
+    link: "/brands/echochillers",
   },
   {
     name: "Trane",
@@ -735,7 +720,7 @@ export const brandsCardData = [
       "Brothers Air Conditioning offers a comprehensive range of services featuring Trane products to meet ...",
     image: IMAGES.BRANDSIX,
     tickImg: IMAGES.AUTH_TICK,
-    link: "/brands/trane"
+    link: "/brands/trane",
   },
   {
     name: "Tica",
@@ -743,7 +728,7 @@ export const brandsCardData = [
       "Brothers Air Conditioning offers a comprehensive range of services featuring Trane products to meet ...",
     image: IMAGES.TICA,
     tickImg: IMAGES.AUTH_TICK,
-    link: "/brands/tica"
+    link: "/brands/tica",
   },
 ];
 
@@ -751,65 +736,65 @@ export const ourTeamCardData = [
   {
     name: "Jake Anderson",
     designation: "Service Manager",
-    image: IMAGES.WORKER1
+    image: IMAGES.WORKER1,
   },
   {
     name: "Jake Anderson",
     designation: "Service Manager",
-    image: IMAGES.WORKER2
+    image: IMAGES.WORKER2,
   },
   {
     name: "Jake Anderson",
     designation: "Service Manager",
-    image: IMAGES.WORKER3
+    image: IMAGES.WORKER3,
   },
   {
     name: "Jake Anderson",
     designation: "Service Manager",
-    image: IMAGES.WORKER4
+    image: IMAGES.WORKER4,
   },
   {
     name: "Jake Anderson",
     designation: "Service Manager",
-    image: IMAGES.WORKER1
+    image: IMAGES.WORKER1,
   },
   {
     name: "Jake Anderson",
     designation: "Service Manager",
-    image: IMAGES.WORKER2
+    image: IMAGES.WORKER2,
   },
   {
     name: "Jake Anderson",
     designation: "Service Manager",
-    image: IMAGES.WORKER3
+    image: IMAGES.WORKER3,
   },
   {
     name: "Jake Anderson",
     designation: "Service Manager",
-    image: IMAGES.WORKER4
+    image: IMAGES.WORKER4,
   },
-]
+];
 
 // AboutUs Page Start
 export const WhatWeDoData = [
   {
     image: IMAGES.AIRCONDITION,
     text: "Comfort Cooling",
-    logo: IMAGES.COOLINGICON,
+    logo: IMAGES.SERVICELOGOONE,
     description:
       "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
   },
   {
     image: IMAGES.SERVICETWO,
     text: "Process Cooling",
-    logo: IMAGES.COOLINGICON,
+    logo: IMAGES.SERVICELOGOTWO,
     description:
       "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
   },
   {
     image: IMAGES.SERVICETHREE,
     text: "Cold Chain Storage",
-    logo: IMAGES.COOLINGICON,
+    logo: IMAGES.SERVICELOGOTHREE,
     description:
       "Trust us to deliver reliable solutions,  exceptional service, and peace of mind for all your HVAC needs.",
   },
@@ -818,15 +803,15 @@ export const WhatWeDoData = [
 export const OurPartnerImagesData = [
   {
     img: IMAGES.FLAKTGROUP,
-    href: "https://www.flaktgroup.com/en/"
+    href: "https://www.flaktgroup.com/en/",
   },
   {
     img: IMAGES.GALLETTI,
-    href: "https://www.galletti.com/en"
+    href: "https://www.galletti.com/en",
   },
   {
     img: IMAGES.TICA,
-    href: "https://global.tica.com/"
+    href: "https://global.tica.com/",
   },
 ];
 export const OurBrandsImagesData = [
@@ -857,8 +842,8 @@ export const OurClientImagesData = [
 
 export const TrustUsCardData = [
   {
-    img: IMAGES.SCHEDULEICON,
-    name: "Flexible Scheduling",
+    img: IMAGES.LABOR,
+    name: "Expert Technicians",
     para: `Trust us to deliver reliable solutions
 and exceptional service, and peace
 of mind for your HVAC needs.`,
@@ -871,15 +856,15 @@ and exceptional service, and peace
 of mind for your HVAC needs.`,
   },
   {
-    img: IMAGES.SCHEDULEICON,
-    name: "Flexible Scheduling",
+    img: IMAGES.PRICING,
+    name: "Transparent Pricing",
     para: `Trust us to deliver reliable solutions
 and exceptional service, and peace
 of mind for your HVAC needs.`,
   },
   {
-    img: IMAGES.SCHEDULEICON,
-    name: "Flexible Scheduling",
+    img: IMAGES.SPAREPARTS,
+    name: "Quality Parts",
     para: `Trust us to deliver reliable solutions
 and exceptional service, and peace
 of mind for your HVAC needs.`,
@@ -890,17 +875,17 @@ export const TrustUsCarouselCardData = [
   {
     avatar: IMAGES.AVATAR1,
     title: "Tim W.",
-    des: "Their technicians are always prompt, professional, and knowledgeable. From regular maintenance to emergency repairs, they've got us covered.Highly recommend!"
+    des: "Their technicians are always prompt, professional, and knowledgeable. From regular maintenance to emergency repairs, they've got us covered.Highly recommend!",
   },
   {
     avatar: IMAGES.AVATAR2,
     title: "Tim W.",
-    des: "Their technicians are always prompt, professional, and knowledgeable. From regular maintenance to emergency repairs, they've got us covered.Highly recommend!"
+    des: "Their technicians are always prompt, professional, and knowledgeable. From regular maintenance to emergency repairs, they've got us covered.Highly recommend!",
   },
   {
     avatar: IMAGES.AVATAR3,
     title: "Tim W.",
-    des: "Their technicians are always prompt, professional, and knowledgeable. From regular maintenance to emergency repairs, they've got us covered.Highly recommend!"
+    des: "Their technicians are always prompt, professional, and knowledgeable. From regular maintenance to emergency repairs, they've got us covered.Highly recommend!",
   },
   // {
   //   avatar:IMAGES.AVATAR3,
@@ -912,7 +897,6 @@ export const TrustUsCarouselCardData = [
   //   title:"Tim W.",
   //   des:"Their technicians are always prompt, professional, and knowledgeable. From regular maintenance to emergency repairs, they've got us covered.Highly recommend!"
   // },
-
 ];
 
 export const OurBlogCardData = [
@@ -965,18 +949,18 @@ export const CompanyProfileData2 = [
 ];
 export const CompanyProfileData = [
   {
-    ProfileDes: "Explore Brothers Air Conditioning’s journey, achievements, and offerings in detail by downloading our comprehensive company profile.",
+    ProfileDes:
+      "Explore Brothers Air Conditioning’s journey, achievements, and offerings in detail by downloading our comprehensive company profile.",
     head: "Our profile includes:",
-    bullets: ["A detailed look into our history, vision, and mission.", "An overview of our innovative product range, including new and refurbished equipment.", "Insights into our partnerships with global leaders like Flakt Group, Gelleti and TICA.", "Information about our services, including maintenance parts and consultant-focused solutions.", "Key milestones and success stories that highlight our industry expertise."]
-  }
+    bullets: [
+      "A detailed look into our history, vision, and mission.",
+      "An overview of our innovative product range, including new and refurbished equipment.",
+      "Insights into our partnerships with global leaders like Flakt Group, Gelleti and TICA.",
+      "Information about our services, including maintenance parts and consultant-focused solutions.",
+      "Key milestones and success stories that highlight our industry expertise.",
+    ],
+  },
 ];
-
-
-
-
-
-
-
 
 export const OurBrandsData = [
   IMAGES.FLAKTGROUP,
@@ -993,7 +977,7 @@ export const OurBrandsData = [
 export const MeetParaData = [
   "I am proud to share that, in a relatively short span, Brothers Air Conditioning has achieved remarkable success and sustained growth. Today, we stand as one of the leading HVACR service providers in the region, known for our expertise, commitment, and customer-focused approach. Our profile reflects the achievements and project milestones we've reached over 20 years of experience, delivering HVACR solutions across Pakistan and internationally.",
   "Brothers Air Conditioning was built on a foundation of integrity, transparency, and respect for every client. As an independent company, we focus on meeting the unique needs of each project with a deep commitment to quality and customer satisfaction. Our team is our greatest asset - a dedicated group of skilled technicians and professionals who bring passion, technical knowledge, and a relentless drive to exceed expectations. Every project we undertake is guided by their expertise and our collective commitment to high standards.",
-  "We understand that each client has unique concerns and requirements, and we're here to address them with the utmost care and precision. At Brothers Air Conditioning, we are not just building systems but building relationships founded on trust and excellence. As we move forward, our commitment remains steadfast: to bring the best HVACR solutions to our clients in Pakistan and beyond, ensuring comfort, energy efficiency, and reliability in every environment we serve"
+  "We understand that each client has unique concerns and requirements, and we're here to address them with the utmost care and precision. At Brothers Air Conditioning, we are not just building systems but building relationships founded on trust and excellence. As we move forward, our commitment remains steadfast: to bring the best HVACR solutions to our clients in Pakistan and beyond, ensuring comfort, energy efficiency, and reliability in every environment we serve",
 ];
 
 export const OurProductsData = [
@@ -1081,17 +1065,17 @@ export const ProductsLinks = [
       {
         link: "New Products",
         href: "/products",
-        type: "new"
+        type: "new",
       },
       {
         link: "Used Equipments",
         href: "/products",
-        type: "used"
+        type: "used",
       },
       {
         link: "Spare Parts",
         href: "/products",
-        type: "spareParts"
+        type: "spareParts",
       },
     ],
   },
@@ -1125,22 +1109,22 @@ export const ProjectsLinks = [
       {
         link: "Overseas Project",
         href: "/projects",
-        type: "overseas"
+        type: "overseas",
       },
       {
         link: "Turnkey Projects",
         href: "/projects",
-        type: "turnkey"
+        type: "turnkey",
       },
       {
         link: "Supply and Comissioning",
         href: "/projects",
-        type: "supply"
+        type: "supply",
       },
       {
         link: "Operations and Services",
         href: "/projects",
-        type: "operations"
+        type: "operations",
       },
     ],
   },
@@ -1263,11 +1247,7 @@ export const AboutCardData = [
 // about card content end here
 
 // OurServices Data start
-export const OurServicesData = [
-  {
-
-  }
-]
+export const OurServicesData = [{}];
 // OurServices Data end
 // Blog Data start
 export const BlogCardData = [
@@ -1332,7 +1312,6 @@ export const BlogCardData = [
     maint: "HVACR Maintenance",
   },
 ];
-
 
 // Apply Now Page Content start here
 export const data = `We are seeking a talented Junior UI/UX Designer - Figma to join our

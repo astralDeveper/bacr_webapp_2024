@@ -32,15 +32,14 @@ const Home = () => {
   };
   const fetchProductsb = async () => {
     try {
-        const response = await fetchProductsHome();
-        setProducts(response.products);
-        
+      const response = await fetchProductsHome();
+      setProducts(response.products);
     } catch (error) {
-        console.error("Error fetching products:", error);
+      console.error("Error fetching products:", error);
     }
-    };
-    useEffect(() => {
-      fetchProductsb();
+  };
+  useEffect(() => {
+    fetchProductsb();
   }, []);
   return (
     <Container
@@ -62,8 +61,8 @@ const Home = () => {
           <div className="flex  lg:gap-10 md:gap-6 gap-4 lg:flex-row md:flex-row flex-col lg:mt-10 md:mt-4 mt-4  ">
             <Button
               className=""
-              btnStyle="bg-backgroundColor2 w-full rounded-md text2"
-              title={"Book Now"}
+              btnStyle="text-backgroundColor2 w-full border rounded-md text2"
+              title={"Book an Appointment"}
               onclick={scrollToElement}
             />
           </div>
@@ -75,11 +74,7 @@ const Home = () => {
     >
       {/* <main className=""> */}
       <WhatWeDo card={WhatWeDoData} title="What We Do" subTitle="What we do" />
-      <OurProducts
-        title="Our Products"
-        slides={products}
-        options={OPTIONS}
-      />
+      <OurProducts title="Our Products" slides={products} options={OPTIONS} />
       <OurPartner title="Our Partner" images={OurPartnerImagesData} />
 
       <OurClient title="Our Client" images={OurClientImagesData} />
@@ -89,17 +84,19 @@ const Home = () => {
         title="Why Trust Us"
         subTitle="Top 4 Reasons"
         para="Qui culpa qui consequat officia cillum quis irure aliquip ut dolore sit eu
-          culpa ut irure nisi occaecat dolore adipisicing do pariatur."
+culpa ut irure nisi occaecat dolore adipisicing do pariatur."
         card={TrustUsCardData}
         carouselCard={TrustUsCarouselCardData}
       />
-      <OurBlog
-        title="Our Blogs"
-        subTitle="Blogs"
-        para="We specialize in providing top-quality HVACR solutions, offering everything 
+      <div className="-translate-y-20">
+        <OurBlog
+          title="Our Blogs"
+          subTitle="Blogs"
+          para="We specialize in providing top-quality HVACR solutions, offering everything 
           from installation to maintenance, and even consulting services for businesses in need of expert guidance."
-        card={OurBlogCardData}
-      />
+          card={OurBlogCardData}
+        />
+      </div>
       <div id="bookingForm">
         <BookingForm title="Book an Appointment" id="bookingForm" />
       </div>

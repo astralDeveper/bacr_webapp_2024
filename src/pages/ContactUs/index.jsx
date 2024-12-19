@@ -108,11 +108,11 @@ const fetchContactsb = async () => {
     }, []);
     
     return (
-        <Container image heading={"Contact US"} >
+        <Container image heading={"Contact Us"} >
 
-            <div className=' md:w-[80%] w-[96%] mx-auto md:p-10 p-2 mb-10' >
+            <div className=' md:w-[80%] w-[96%] mx-auto py-10' >
 
-                <div className='grid lg:grid-cols-2 md:grid-cols-2 gap-4 justify-between' >
+                <div className='grid lg:grid-cols-2 md:grid-cols-2 gap-16 justify-between' >
                     <div
                         style={{
                             animation: `slideLtr 2s ease-out forwards`,
@@ -120,10 +120,10 @@ const fetchContactsb = async () => {
                             opacity: 0,  // Initially invisible
                             transform: 'translateY(20px)',  // Initially positioned below
                         }}
-                        className='flex flex-col gap-4 xl:w-[77%]' >
+                        className='flex flex-col gap-4 ' >
                         {/* <p className='text-text1 text-1' >Contact Us</p> */}
                         <p className='heading4 font-semibold'>Get in Touch</p>
-                        <p className='text2 text-text7' >Contact us if you have any questions about some of our HVAC services. You can also call if you need help with a heating, cooling or air quality issues. We provide free quotes for any new heating or AC equipment installation. Whether you need residential or commercial services, our experienced HVAC specialists are ready to serve you.</p>
+                        <p className='text2 text-text7 text-justify' >Contact us if you have any questions about some of our HVAC services. You can also call if you need help with a heating, cooling or air quality issues. We provide free quotes for any new heating or AC equipment installation. Whether you need residential or commercial services, our experienced HVAC specialists are ready to serve you.</p>
                         <div className='flex items-start md:gap-4 gap-2 flex-col'>
                             <div className='flex items-center gap-2 md:mt-4'>
                                 <img src={IMAGES.PHONE} alt={IMAGES.PHONE} className='md:w-[16px] w-[10px]' />
@@ -134,7 +134,7 @@ const fetchContactsb = async () => {
                                 <p className='text2'>{telephone2}</p>
                             </div>
                             <div className='flex items-center gap-2'>
-                                <img src={IMAGES.PHONE} alt={IMAGES.PHONE} className='md:w-[16px] w-[10px]' />
+                                <img src={IMAGES.WHATSAPPLOGO} alt={IMAGES.PHONE} className='md:w-[16px] w-[10px]' />
                                 <p className='text2'>{whatsappno}</p>
                             </div>
                             <div className='flex items-center gap-2'>
@@ -188,7 +188,7 @@ address.map((item, ind) => (
 <div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
                                     <p className='heading7 font-bold text-text8'>{address1head}</p>
                                     <Link to={address1url}>
-                                    <p className='text2 text-text9 cursor-pointer '>{address1}</p>
+                                    <p className='text2 text-text9 cursor-pointer text-justify'>{address1}</p>
                                     
                                     </Link>
                                         {/* <p className='text1 text-text8 cursor-pointer '>{address1url}</p> */}
@@ -196,19 +196,19 @@ address.map((item, ind) => (
 <div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
                                     <p className='heading7 font-bold text-text8'>{address2head}</p>
                                     <Link to={address2url}>
-                                    <p className='text2 text-text9 cursor-pointer '>{address2}</p>
+                                    <p className='text2 text-text9 cursor-pointer text-justify'>{address2}</p>
                                     </Link>
                                 </div>
 <div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
                                     <p className='heading7 font-bold text-text8'>{address3head}</p>
                                     <Link to={address3url}>
-                                    <p className='text2 text-text9 cursor-pointer '>{address3}</p>
+                                    <p className='text2 text-text9 cursor-pointer text-justify'>{address3}</p>
                                     </Link>
                                 </div>
 <div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
                                     <p className='heading7 font-bold text-text8'>{address4head}</p>
                                     <Link to={address4url}>
-                                    <p className='text2 text-text9 cursor-pointer '>{address4}</p>
+                                    <p className='text2 text-text9 cursor-pointer text-justify'>{address4}</p>
                                     </Link>
                                 </div>
                     </div>

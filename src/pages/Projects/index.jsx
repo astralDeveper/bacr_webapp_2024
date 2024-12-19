@@ -43,7 +43,7 @@ const fetchProjectsb = async () => {
         <Container image heading="Our Projects" para="Providing high-quality HVACR products, services, and solutions backed by industry-leading partners.">
 
             <div className='mx-auto mt-14'>
-                <TabBar handleTabChange={handleTabChange} tab={tab} setTab={setTab} tabtext1="Overseas Project" tabtext2="Turnkey Projects" tabtext3="Supply and Comissioning" tabtext4="Operations and Maintenance" topbarStyle="w-full" />
+                <TabBar handleTabChange={handleTabChange} tab={tab} setTab={setTab} tabtext1="Overseas Project" tabtext2="Turnkey Projects" tabtext3="Supply and Comissioning" tabtext4="Operations and Maintenance" topbarStyle="w-[80%]" />
             </div>
             {
                 tab === "overseas" && (

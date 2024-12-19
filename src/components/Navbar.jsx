@@ -7,7 +7,16 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { fetchSocialLinks } from "../api";
 
-const Navbar = ({ mainStyle, heading, para, home, image, id ,coverimage}) => {
+const Navbar = ({
+  mainStyle,
+  heading,
+  para,
+  home,
+  image,
+  id,
+  coverimage,
+  brandsLink,
+}) => {
   const active = useLocation().pathname;
   // const myAnimationLeft = {
   //     initial: { opacity: 0, y: 100 },
@@ -18,7 +27,6 @@ const Navbar = ({ mainStyle, heading, para, home, image, id ,coverimage}) => {
   const [isAnimated, setIsAnimated] = useState(false);
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-
 
   useEffect(() => {
     // Handle animation logic
@@ -44,18 +52,17 @@ const Navbar = ({ mainStyle, heading, para, home, image, id ,coverimage}) => {
   }, [menueOpen]);
 
   const [hasLoaded, setHasLoaded] = useState(false);
-const fetchSocialLinksb = async () => {
+  const fetchSocialLinksb = async () => {
     try {
-        const response = await fetchSocialLinks();
-        setEmail(response[0]?.email);
-        setPhone(response[0]?.whatsappno);
-        
+      const response = await fetchSocialLinks();
+      setEmail(response[0]?.email);
+      setPhone(response[0]?.whatsappno);
     } catch (error) {
-        console.error("Error fetching products:", error);
+      console.error("Error fetching products:", error);
     }
-    };
-    useEffect(() => {
-      fetchSocialLinksb();
+  };
+  useEffect(() => {
+    fetchSocialLinksb();
   }, []);
   useEffect(() => {
     // Trigger the loaded class after the page loads
@@ -64,9 +71,9 @@ const fetchSocialLinksb = async () => {
 
   return (
     <div
-    style={{
-      backgroundImage: coverimage ? `url(${coverimage})` : '', // Set background image if coverimage is provided
-    }}
+      style={{
+        backgroundImage: coverimage ? `url(${coverimage})` : "", // Set background image if coverimage is provided
+      }}
       className={`${
         image ? "bg-hero-pattern bg-no-repeat bg-cover w-full" : ""
       }`}
@@ -219,11 +226,7 @@ const fetchSocialLinksb = async () => {
       </div>
       {/*   gap-6 flex items-center justify-center flex-col */}
       {image && (
-        <div
-          className={`w-[80%] mx-auto ${
-            para ? "md:py-16 py-8" : "py-6 pb-28"
-          } `}
-        >
+        <div className={`w-[80%] mx-auto ${para ? "md:py-16 py-8" : "py-10"} `}>
           <div
             className={` ${
               active === "/"
@@ -231,7 +234,7 @@ const fetchSocialLinksb = async () => {
                 : "flex flex-col items-center justify-center  text-center"
             }  `}
           >
-            <p className={`heading4  text-backgroundColor2 md:w-[82%] w-full`}>
+            <p className={`heading4 text-backgroundColor2 md:w-[82%] w-full`}>
               <Typewriter
                 words={[heading]} // Make sure heading is an array of strings
                 loop={1} // Use the length of the array for the loop
@@ -245,7 +248,7 @@ const fetchSocialLinksb = async () => {
 
             {para && (
               <p
-                className={`text2 ${
+                className={`text2  ${
                   para ? "mt-4" : ""
                 } text-backgroundColor2 xl:w-[34%] w-full`}
               >
@@ -255,6 +258,17 @@ const fetchSocialLinksb = async () => {
           </div>
           {home}
         </div>
+      )}
+      {brandsLink && (
+        <Link
+          target="_blank"
+          to={brandsLink}
+          className="flex items-end justify-end px-4 py-2  text1 text-backgroundColor6"
+        >
+          <p className="border px-4 py-2 rounded-lg hover:bg-backgroundColor5 hover:transition-all hover:duration-200 ">
+            Visit Website
+          </p>
+        </Link>
       )}
     </div>
   );

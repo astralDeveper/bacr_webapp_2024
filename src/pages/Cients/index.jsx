@@ -1,11 +1,10 @@
 import React from 'react'
-import Container from '../../components/Container'
+import Container from '../../components/Container' 
 import ClientCrad from './components/ClientCrad'
-// import ClientCrad from './components/ClientCrad'
 
-const OurClients = ({ imageUrl, altText }) => {
+const OurClients = () => {
   return (
-    <Container image heading={"Our Client"} >
+    <Container image heading={"Client"} >
       <ClientCrad />
 
     </Container>
