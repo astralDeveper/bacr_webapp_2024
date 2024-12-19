@@ -155,7 +155,7 @@ const ProjectDetailPage = () => {
               <p className="heading7">Part no: <span className="font-semibold">{product?.part}</span></p>
               <p className="heading7">Serial no: <span className="font-semibold">{product?.sr_nop}</span></p>
               <p className="heading7">Capacity: <span className="font-semibold">{product?.capacity}</span></p>
-              <p className="heading7">Brand Name: <span className="font-semibold">{product?.brandId?.name}</span></p>
+              {/* <p className="heading7">Brand Name: <span className="font-semibold">{product?.brandId?.name}</span></p> */}
             </div>
             <div className="w-full border-[1px] border-dashed border-text6 my-5"></div>
             <div className="my-5">

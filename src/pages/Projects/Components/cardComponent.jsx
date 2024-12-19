@@ -72,8 +72,8 @@ const filteredProjects = projects?.filter(project => project.category === catego
                     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex items-center justify-center bg-white rounded-xl shadow-black shadow-xs">
                       <img
                         className="rounded-lg p-2 object-contain w-[50px] h-[50px]"
-                        src={item.logo}
-                        alt={item.logo}
+                        src={item?.logo ? item?.logo : IMAGES.THUMBNAIL}
+                        alt={item?.logo}
                         draggable={false}
                       />
                     </div>

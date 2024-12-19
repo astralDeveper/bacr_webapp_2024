@@ -80,7 +80,7 @@ console.log(id);
               <div className="w-full md:w-[40%]">
                 <img
                   draggable={false}
-                  src={mainImage}
+                  src={mainImage ? mainImage:IMAGES.THUMBNAIL}
                   alt="Product"
                   className="md:w-full w-[200px] md:h-[350px] h-[200px] rounded-lg shadow-md mb-4 mx-auto"
                 />
@@ -90,7 +90,7 @@ console.log(id);
                     <img
                       key={index}
                       draggable={false}
-                      src={img}
+                      src={img ? img:IMAGES.THUMBNAIL}
                       alt={`Thumbnail ${index + 1}`}
                       className="md:w-[114px] md:h-[114px] w-[50px] rounded-md cursor-pointer"
                       onClick={() => changeMainImage(img)}
