@@ -17,6 +17,7 @@ import Projects from "../../pages/Projects";
 import Services from "../../pages/Services";
 import ProjectDetailPage from "../../pages/ProjectDetail";
 import Brands from "../../pages/Brands";
+import ApplyNow from "../../pages/ApplyNow";
 
 export const router = createBrowserRouter([
   {
@@ -93,6 +94,10 @@ export const router = createBrowserRouter([
   {
     path: "/brands",
     element: <Brands />,
+  },
+  {
+    path: "/applynow",
+    element: <ApplyNow />,
   },
 
   //  Partner Page End

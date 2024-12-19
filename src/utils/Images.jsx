@@ -107,6 +107,10 @@ const imageNames = [
   "insta",
   "facebook",
   // worker images end
+
+  // Apply now 
+  "arrow",
+  "circle"
 ];
 
 const IMAGES = imageNames.reduce((acc, name) => {

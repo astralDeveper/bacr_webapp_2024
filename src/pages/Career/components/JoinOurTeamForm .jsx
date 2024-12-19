@@ -21,7 +21,7 @@ const JoinOurTeamForm = () => {
                         type="text"
                         id="name"
                         placeholder="Your name"
-                        className="block w-full lg:p-[16px] mt-1 rounded-lg focus:outline-none placeholder:text1 placeholder:text-text10 text1 "
+                        className="block w-full py-2 pl-4 lg:p-[16px] mt-1 rounded-lg focus:outline-none placeholder:text1 placeholder:text-text10 text1 "
                     />
                 </div>
                 <div className="mb-2">
@@ -35,7 +35,7 @@ const JoinOurTeamForm = () => {
                         type="tel"
                         id="phone"
                         placeholder="Your phone number"
-                        className="block w-full lg:p-[16px] mt-1 rounded-lg outline-none placeholder:text1 placeholder:text-text10 text1 "
+                        className="block w-full py-2 pl-4 lg:p-[16px] mt-1 rounded-lg outline-none placeholder:text1 placeholder:text-text10 text1 "
                     />
                 </div>
                 <div className="mb-2">
@@ -49,7 +49,7 @@ const JoinOurTeamForm = () => {
                         type="email"
                         id="email"
                         placeholder="Your email"
-                        className="block w-full lg:p-[16px] mt-1 rounded-lg outline-none placeholder:text1 placeholder:text-text10 text1 "
+                        className="block w-full py-2 pl-4 lg:p-[16px] mt-1 rounded-lg outline-none placeholder:text1 placeholder:text-text10 text1 "
                     />
                 </div>
                 <div className="mb-2">
@@ -61,7 +61,7 @@ const JoinOurTeamForm = () => {
                     </label>
                     <select
                         id="department"
-                        className="block w-[100%] lg:p-[16px] mt-1 rounded-lg outline-none placeholder:text1 placeholder:text-text10 text1 "
+                        className="block w-[100%] py-2 pl-4 lg:p-[16px] mt-1 rounded-lg outline-none placeholder:text1 placeholder:text-text10 text1 "
                     >
                         <option>Choose department</option>
                         <option>Development</option>
