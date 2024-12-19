@@ -148,7 +148,7 @@ const ProjectDetailPage = () => {
             </div>
 
             <div>
-              <img src={IMAGES.PROJECTLOGOONE} alt={IMAGES.PROJECTLOGOONE} className="w-[40px] h-[40px]" />
+              <img src={product?.logo ? product?.logo : IMAGES.THUMBNAIL} alt={IMAGES.PROJECTLOGOONE} className="w-[40px] h-[40px]" />
             </div>
             <div className="my-5">
               <p className="heading7">Model no: <span className="font-semibold">{product?.model}</span></p>
