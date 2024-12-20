@@ -28,52 +28,63 @@ const ContactUs = () => {
         email: '',
         phone: '',
         message: '',
-      });
+    });
     const [visibleCards, setVisibleCards] = useState([]);
     const [visibleText, setVisibleText] = useState([]);
-const fetchContactsb = async () => {
-    try {
-        const response = await fetchSocialLinks();
-        setWhatsappno(response[0]?.whatsappno ?? "");     
-        setTelephone1(response[0]?.telephone1 ?? "");
-        setTelephone2(response[0]?.telephone2 ?? "");
-        setEmail(response[0]?.email ?? "");
-        setAddress1(response[0]?.address1 ?? "");
-        setAddress1url(response[0]?.address1url ?? "");
-        setAddress1head(response[0]?.address1head ?? "");
-        setAddress2(response[0]?.address2 ?? "");
-        setAddress2url(response[0]?.address2url ?? "");
-        setAddress2head(response[0]?.address2head ?? "");
-        setAddress3(response[0]?.address3 ?? "");
-        setAddress3url(response[0]?.address3url ?? "");
-        setAddress3head(response[0]?.address3head ?? "");
-        setAddress4(response[0]?.address4 ?? "");
-        setAddress4url(response[0]?.address4url ?? "");
-        setAddress4head(response[0]?.address4head ?? "");
-        
-           
-    } catch (error) {
-        console.error("Error fetching products:", error);
-    }
+    const fetchContactsb = async () => {
+        try {
+            const response = await fetchSocialLinks();
+            setWhatsappno(response[0]?.whatsappno ?? "");
+            setTelephone1(response[0]?.telephone1 ?? "");
+            setTelephone2(response[0]?.telephone2 ?? "");
+            setEmail(response[0]?.email ?? "");
+            setAddress1(response[0]?.address1 ?? "");
+            setAddress1url(response[0]?.address1url ?? "");
+            setAddress1head(response[0]?.address1head ?? "");
+            setAddress2(response[0]?.address2 ?? "");
+            setAddress2url(response[0]?.address2url ?? "");
+            setAddress2head(response[0]?.address2head ?? "");
+            setAddress3(response[0]?.address3 ?? "");
+            setAddress3url(response[0]?.address3url ?? "");
+            setAddress3head(response[0]?.address3head ?? "");
+            setAddress4(response[0]?.address4 ?? "");
+            setAddress4url(response[0]?.address4url ?? "");
+            setAddress4head(response[0]?.address4head ?? "");
+
+
+        } catch (error) {
+            console.error("Error fetching products:", error);
+        }
     };
+
+    const [selectedAddress, setSelectedAddress] = useState(address1url ? address1url : "")
+
+    const changeAddress = (link) => {
+        setSelectedAddress(link)
+
+    }
+
+    console.log("locaklink", selectedAddress);
+
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...FormData, [name]: value });
-      };
+    };
 
-    const handleSubmit=async(e)=>{
+    const handleSubmit = async (e) => {
         e.preventDefault();
-       await createContact(FormData)
-       setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-      })
+        await createContact(FormData)
+        setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            message: '',
+        })
     }
     useEffect(() => {
-      fetchContactsb();
-  }, []);
+        fetchContactsb();
+    }, []);
 
 
     useEffect(() => {
@@ -94,25 +105,25 @@ const fetchContactsb = async () => {
                 threshold: 0.2, // Trigger when 20% of the element is visible
             }
         );
-    
+
         const cards = document.querySelectorAll(".ltr");
         const texts = document.querySelectorAll(".rtl");
-    
+
         cards.forEach((card) => observer.observe(card));
         texts.forEach((text) => observer.observe(text));
-    
+
         return () => {
             cards.forEach((card) => observer.unobserve(card));
             texts.forEach((text) => observer.unobserve(text));
         };
     }, []);
-    
+
     return (
-        <Container image heading={"Contact Us"} >
+        <Container image heading={"Contact US"} >
 
-            <div className=' md:w-[80%] w-[96%] mx-auto py-10' >
+            <div className=' md:w-[80%] w-[96%] mx-auto md:p-10 p-2 mb-10' >
 
-                <div className='grid lg:grid-cols-2 md:grid-cols-2 gap-16 justify-between' >
+                <div className='grid lg:grid-cols-2 md:grid-cols-2 gap-4 justify-between' >
                     <div
                         style={{
                             animation: `slideLtr 2s ease-out forwards`,
@@ -120,10 +131,10 @@ const fetchContactsb = async () => {
                             opacity: 0,  // Initially invisible
                             transform: 'translateY(20px)',  // Initially positioned below
                         }}
-                        className='flex flex-col gap-4 ' >
+                        className='flex flex-col gap-4 xl:w-[77%]' >
                         {/* <p className='text-text1 text-1' >Contact Us</p> */}
                         <p className='heading4 font-semibold'>Get in Touch</p>
-                        <p className='text2 text-text7 text-justify' >Contact us if you have any questions about some of our HVAC services. You can also call if you need help with a heating, cooling or air quality issues. We provide free quotes for any new heating or AC equipment installation. Whether you need residential or commercial services, our experienced HVAC specialists are ready to serve you.</p>
+                        <p className='text2 text-text7' >Contact us if you have any questions about some of our HVAC services. You can also call if you need help with a heating, cooling or air quality issues. We provide free quotes for any new heating or AC equipment installation. Whether you need residential or commercial services, our experienced HVAC specialists are ready to serve you.</p>
                         <div className='flex items-start md:gap-4 gap-2 flex-col'>
                             <div className='flex items-center gap-2 md:mt-4'>
                                 <img src={IMAGES.PHONE} alt={IMAGES.PHONE} className='md:w-[16px] w-[10px]' />
@@ -134,7 +145,7 @@ const fetchContactsb = async () => {
                                 <p className='text2'>{telephone2}</p>
                             </div>
                             <div className='flex items-center gap-2'>
-                                <img src={IMAGES.WHATSAPPLOGO} alt={IMAGES.PHONE} className='md:w-[16px] w-[10px]' />
+                                <img src={IMAGES.PHONE} alt={IMAGES.PHONE} className='md:w-[16px] w-[10px]' />
                                 <p className='text2'>{whatsappno}</p>
                             </div>
                             <div className='flex items-center gap-2'>
@@ -168,8 +179,9 @@ const fetchContactsb = async () => {
                     {/* <div id='ltr' className={` w-full ltr ${visibleCards.includes(`ltr`) ? "visible" : ""}`}>
                         <img src="https://www.thestatesman.com/wp-content/uploads/2020/04/googl_ED.jpg" alt="MAp" className='h-full border rounded-md shadow-shadow1 border-backgroundColor5' />
                     </div> */}
-<div id='ltr' className={` w-full h-full ltr ${visibleCards.includes(`ltr`) ? "visible" : ""}`}>
-                        <img src="https://www.thestatesman.com/wp-content/uploads/2020/04/googl_ED.jpg" alt="MAp" className='h-full object-cover border w-full rounded-md shadow-shadow1 border-backgroundColor5' />
+                    <div id='ltr' className={` w-[70%] h-full ltr ${visibleCards.includes(`ltr`) ? "visible" : ""}`}>
+                        {/* <img src="https://www.thestatesman.com/wp-content/uploads/2020/04/googl_ED.jpg" alt="MAp" className='h-full object-cover border w-full rounded-md shadow-shadow1 border-backgroundColor5' /> */}
+                        <iframe src={selectedAddress?selectedAddress:address1url} className='md:w-[500px] w-[650px] h-[450px]' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div className='lg:w-[80%] flex flex-col justify-center'>
                         <p className='heading5' >Addresses</p>
@@ -185,42 +197,28 @@ address.map((item, ind) => (
                                 </div>
                             ))
                         } */}
-<div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
-                                    <p className='heading7 font-bold text-text8'>{address1head}</p>
-                                    <Link to={address1url}>
-                                    <p className='text2 text-text9 cursor-pointer text-justify'>{address1}</p>
-                                    
-                                    </Link>
-                                        {/* <p className='text1 text-text8 cursor-pointer '>{address1url}</p> */}
-                                </div>
-<div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
-                                    <p className='heading7 font-bold text-text8'>{address2head}</p>
-                                    <Link to={address2url}>
-                                    <p className='text2 text-text9 cursor-pointer text-justify'>{address2}</p>
-                                    </Link>
-                                </div>
-<div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
-                                    <p className='heading7 font-bold text-text8'>{address3head}</p>
-                                    <Link to={address3url}>
-                                    <p className='text2 text-text9 cursor-pointer text-justify'>{address3}</p>
-                                    </Link>
-                                </div>
-<div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
-                                    <p className='heading7 font-bold text-text8'>{address4head}</p>
-                                    <Link to={address4url}>
-                                    <p className='text2 text-text9 cursor-pointer text-justify'>{address4}</p>
-                                    </Link>
-                                </div>
+                        <div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
+                            <p className='heading7 font-bold text-text8'>{address1head}</p>
+                            <p className='text2 text-text9 cursor-pointer ' onClick={() => { changeAddress(address1url) }} >{address1}</p>
+                            {/* <p className='text1 text-text8 cursor-pointer '>{address1url}</p> */}
+                        </div>
+                        <div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
+                            <p className='heading7 font-bold text-text8'>{address2head}</p>
+                            <p className='text2 text-text9 cursor-pointer ' onClick={() => { changeAddress(address2url) }} >{address2}</p>
+                        </div>
+                        <div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
+                            <p className='heading7 font-bold text-text8'>{address3head}</p>
+
+                            <p className='text2 text-text9 cursor-pointer ' onClick={() => { changeAddress(address3url) }}>{address3}</p>
+                        </div>
+                        <div id={`rtl`} className={`rtl ${visibleText.includes(`rtl`) ? "visible" : ""}`}>
+                            <p className='heading7 font-bold text-text8'>{address4head}</p>
+                            <p className='text2 text-text9 cursor-pointer ' onClick={() => { changeAddress(address4url) }}>{address4}</p>
+                        </div>
                     </div>
+                    
 
                 </div>
-
-
-
-
-
-
-
 
 
             </div>

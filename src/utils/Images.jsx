@@ -193,7 +193,8 @@ const imageNames = [
   "labor",
   "spareparts",
   "mission",
-  "vision"
+  "vision",
+  "linkedinwhite"
 
 
 

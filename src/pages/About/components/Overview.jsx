@@ -81,9 +81,9 @@ export default function Overview(props) {
         }}
         className="flex flex-col sm:flex-row shadow-xl bg-[#004671] rounded-md p-5 h-[48%]" // Adjust height
       >
-        <div className="size-5 p-4 rounded-full  bg-white transition-all duration-500">
-          <img src={item.img} className="w-4 h-4"/>
-        </div>
+        
+        <img src={item.img} className="w-10 h-10"/>
+
         <div className="flex flex-col justify-center ml-4">
           <h4 className="text2 text-[#fff] font-medium leading-none">
             {item.name}

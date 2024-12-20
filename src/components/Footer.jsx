@@ -14,6 +14,7 @@ const Footer = () => {
   const [instagram, setInstagram] = useState("");
   const [facebook, setFacebook] = useState("");
   const [linkedin, setLinkedin] = useState("");
+  const [youtube, setYoutube] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [certificate1, setCertificate1] = useState("");
   const [certificate2, setCertificate2] = useState("");
@@ -21,39 +22,39 @@ const Footer = () => {
   const [certificate4, setCertificate4] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const active = useParams()
-  const handleSubscribe=async()=>{
+  const active = useParams();
+  const handleSubscribe = async () => {
     if (email !== "") {
       setIsLoading(true); // Start loading animation
       try {
-          const subscribe = await createSubscriber(email);
-          console.log("Subscription successful:", subscribe);
+        const subscribe = await createSubscriber(email);
+        console.log("Subscription successful:", subscribe);
       } catch (error) {
-          console.error("Error subscribing:", error);
+        console.error("Error subscribing:", error);
       } finally {
-          setIsLoading(false); // Stop loading animation
+        setIsLoading(false); // Stop loading animation
       }
-  }
-  }
-const fetchSocialLinksb = async () => {
-    try {
-        const response = await fetchSocialLinks();
-        
-        setCertificate1(response[0]?.certificate1);
-        setCertificate2(response[0]?.certificate2);
-        setCertificate3(response[0]?.certificate3);
-        setCertificate4(response[0]?.certificate4);
-        setInstagram(response[0]?.instagram);
-        setFacebook(response[0]?.facebook);
-        setLinkedin(response[0]?.linkedin);
-        setWhatsapp(response[0]?.whatsapp);
-        
-    } catch (error) {
-        console.error("Error fetching products:", error);
     }
-    };
-    useEffect(() => {
-      fetchSocialLinksb();
+  };
+  const fetchSocialLinksb = async () => {
+    try {
+      const response = await fetchSocialLinks();
+
+      setCertificate1(response[0]?.certificate1);
+      setCertificate2(response[0]?.certificate2);
+      setCertificate3(response[0]?.certificate3);
+      setCertificate4(response[0]?.certificate4);
+      setInstagram(response[0]?.instagram);
+      setFacebook(response[0]?.facebook);
+      setLinkedin(response[0]?.linkedin);
+      setWhatsapp(response[0]?.whatsapp);
+      setWhatsapp(response[0]?.youtube);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  };
+  useEffect(() => {
+    fetchSocialLinksb();
   }, [certificate1]);
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -120,7 +121,9 @@ const fetchSocialLinksb = async () => {
                 {ServicesLinks.map((item, i) => {
                   return (
                     <div key={i}>
-                      <h2 className="font-bold text2 py-2 underline footer-item cursor-default">{item.heading}</h2>
+                      <h2 className="font-bold text2 py-2 underline footer-item cursor-default">
+                        {item.heading}
+                      </h2>
                       <ul className="border-backgroundColor2">
                         {item.links.map((items, ind) => {
                           return (
@@ -146,7 +149,9 @@ const fetchSocialLinksb = async () => {
               {ProductsLinks.map((item, i) => {
                 return (
                   <div key={i}>
-                    <h2 className="font-bold py-2 underline text2 footer-item cursor-default">{item.heading}</h2>
+                    <h2 className="font-bold py-2 underline text2 footer-item cursor-default">
+                      {item.heading}
+                    </h2>
                     <ul className=" border-backgroundColor2">
                       {item.links.map((items, ind) => {
                         return (
@@ -171,7 +176,9 @@ const fetchSocialLinksb = async () => {
               {ProjectsLinks.map((item, i) => {
                 return (
                   <div key={i}>
-                    <h2 className="font-bold py-2 underline text2 footer-item cursor-default">{item.heading}</h2>
+                    <h2 className="font-bold py-2 underline text2 footer-item cursor-default">
+                      {item.heading}
+                    </h2>
                     <ul className=" border-backgroundColor2">
                       {item.links.map((items, ind) => {
                         return (
@@ -198,7 +205,7 @@ const fetchSocialLinksb = async () => {
                     <input
                       type="text"
                       value={email}
-                      onChange={(e)=>setEmail(e.target.value)}
+                      onChange={(e) => setEmail(e.target.value)}
                       placeholder="Your Email"
                       className="py-2 px-4 text-backgroundColor2 bg-transparent border-[1px] border-backgroundColor2 outline-none w-full rounded-s-md text2"
                     />
@@ -212,10 +219,11 @@ const fetchSocialLinksb = async () => {
                   </div>
                 </div>
               </div>
-              {isLoading &&
-              <h2 style={{ color: "green", marginTop: "10px" }}>
-              Thanks for subscribe</h2>
-                   } 
+              {isLoading && (
+                <h2 style={{ color: "green", marginTop: "10px" }}>
+                  Thanks for subscribe
+                </h2>
+              )}
               <div className="mt-4 overflow-y-hidden footer-item">
                 <h2 className="font-semibold pb-3 text2 text-backgroundColor2 cursor-default">
                   CERTIFICATES
@@ -258,39 +266,40 @@ const fetchSocialLinksb = async () => {
                 </h2>
                 <div className="flex items-center justify-start gap-2 footer-item">
                   <a target="_blank" href={linkedin}>
-                  <img
-                    className="w-7 cursor-pointer"
-                    src={IMAGES.LINKEDINWHITE}
-                    alt={IMAGES.LINKEDINWHITE}
-                  />
+                    <img
+                      className="w-7 cursor-pointer"
+                      src={IMAGES.LINKEDINWHITE}
+                      alt={IMAGES.LINKEDINWHITE}
+                    />
+                  </a>
+                  <a target="_blank" href={facebook}>
+                    <img
+                      className="w-7 cursor-pointer"
+                      src={IMAGES.FACEBOOKWHITE}
+                      alt={IMAGES.FACEBOOKWHITE}
+                    />
                   </a>
                   <a target="_blank" href={instagram}>
+                    <img
+                      className="w-7 cursor-pointer"
+                      src={IMAGES.INSTAWHITE}
+                      alt={IMAGES.INSTAWHITE}
+                    />
+                  </a>
+                  <a target="_blank" href={youtube}>
                   <img
                     className="w-7 cursor-pointer"
-                    src={IMAGES.INSTAWHITE}
-                    alt={IMAGES.INSTAWHITE}
+                    src={IMAGES.YOUTUBE}
+                    alt={IMAGES.YOUTUBE}
                   />
                   </a>
-                  {/* <a target="_blank" href={fac}>
-                  <img
-                    className="w-7 cursor-pointer"
-                    src={IMAGES.TWITTER}
-                    alt={IMAGES.TWITTER}
-                  />
-                  </a> */}
-                  <a target="_blank" href={facebook}>
-                  <img
-                    className="w-7 cursor-pointer"
-                    src={IMAGES.FACEBOOKWHITE}
-                    alt={IMAGES.FACEBOOKWHITE}
-                  />
-                  </a>
+                  
                   <a target="_blank" href={whatsapp}>
-                  <img
-                    className="w-7 cursor-pointer"
-                    src={IMAGES.WHATSAPP}
-                    alt={IMAGES.WHATSAPP}
-                  />
+                    <img
+                      className="w-7 cursor-pointer"
+                      src={IMAGES.WHATSAPP}
+                      alt={IMAGES.WHATSAPP}
+                    />
                   </a>
                 </div>
               </div>
@@ -309,7 +318,10 @@ const fetchSocialLinksb = async () => {
             <p className="text2 hover:underline cursor-pointer">
               All rights reserved.Brothers Air Conditioning
             </p>
-            <Link to={"/privacy-policy"} className="text2 py-1 cursor-pointer hover:underline footer-item" >
+            <Link
+              to={"/privacy-policy"}
+              className="text2 py-1 cursor-pointer hover:underline footer-item"
+            >
               Privacy Policy
             </Link>
           </div>
